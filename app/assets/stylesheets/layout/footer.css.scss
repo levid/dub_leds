@@ -1,0 +1,169 @@
+/* Include Mixins & CSS3 Stuff */
+@import "../variables";
+
+footer
+{
+    height: 67px;
+    width: 100%;
+    background: url( 'bg-footer-bar.png' ) repeat-x top left transparent;
+
+	.footer-container
+    {
+        margin: 0px auto;
+        height: 67px;
+        width: 980px;
+        position: relative;
+        z-index: 20;
+
+        .left-column
+        {
+            width: auto;
+            height: auto;
+            float: left;
+
+            .logo
+            {
+                margin: 23px 0px 0px 0px;
+                height: 15px;
+                width: 102px;
+                float: left;
+                background: url( 'img-footer-logo.png' ) no-repeat top left transparent;
+            }
+
+            .email-updates
+            {
+                margin: 13px 0px 0px 20px;
+                width: auto;
+                height: auto;
+                float: left;
+
+                input[type=text]
+                {
+                    padding: 0px 0px 0px 8px;
+                    height: 32px;
+                    width: 250px;
+                    font-size: 15px;
+                    line-height: 12px;
+                    background: url( 'input-email.png' ) no-repeat 1px 3px transparent;
+                    border: none;
+                    color: #aaaaaa;
+                }
+
+                input[type=submit]
+                {
+                    margin: 3px 0px 0px -7px;
+                    height: 31px;
+                    width: 32px;
+                    text-indent: -9000px;
+                    background: url( 'button-submit.png' ) no-repeat top left transparent;
+                    border: none;
+                }
+            }
+        }
+
+        .right-column
+        {
+            width: auto;
+            height: auto;
+            float: right;
+
+            .order
+            {
+                margin: 10px 0px 0px 0px;
+                width: 106px;
+                height: 43px;
+                background: url( 'button-order.png' ) no-repeat top left transparent;
+                float: left;
+
+                a
+                {
+                    width: 106px;
+                    height: 43px;
+                    float: left;
+                    text-indent: -9000px;
+                }
+            }
+
+            ul
+            {
+                margin: 16px 0px 0px 10px;
+                width: auto;
+                height: auto;
+                float: right;
+                
+                li
+                {
+                    width: 31px;
+                    height: 31px;
+                    float: left;
+                    list-style-type: none;
+                    
+                    a
+                    {
+                        width: 31px;
+                        height: 31px;
+                        text-indent: -9000px;
+                        float: left;
+
+                        &.facebook
+                        {
+                            background: url( 'img-sharing-facebook.png' ) no-repeat top left transparent;
+                        }
+
+                        &.twitter
+                        {
+                            background: url( 'img-sharing-twitter.png' ) no-repeat top left transparent;
+                        }
+
+                        &.flickr
+                        {
+                            background: url( 'img-sharing-flickr.png' ) no-repeat top left transparent;
+                        }
+
+                        &.linkedin
+                        {
+                            background: url( 'img-sharing-linkedin.png' ) no-repeat top left transparent;
+                        }
+
+                        &:active
+                        {
+                            background-position: bottom center;
+                        }
+
+                        &:hover
+                        {
+                            background-position: bottom center;;
+                        }
+
+                        &.active
+                        {
+                            background-position: bottom center;;
+                        }
+                    }
+                }
+
+                li + li
+                {
+                    padding: 0px 0px 0px 10px;
+                }
+            }
+        }
+    }
+
+    .spacer
+    {
+        height: 100px;
+        width: 100%;
+        background: url( 'bg-footer.png' ) repeat top left transparent;
+
+        .copyright
+        {
+            margin: 10px auto;
+            height: 67px;
+            width: 980px;
+
+            font-size: 15px;
+            color: #777777;
+        }
+    }
+}

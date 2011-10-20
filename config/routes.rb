@@ -1,17 +1,13 @@
 DubLeds::Application.routes.draw do
-  get "contact/index"
 
-  get "generator/index"
+  match "home" => "Home#index"
+  match "contact" => "Contact#index"
+  match "generator" => "Generator#index"
+  match "order" => "Order#index"
+  match "media" => "Media#index"
+  match "technology" => "Technology#index"
 
-  get "order/index"
-
-  get "media/index"
-
-  get "technology/index"
-
-  get "home/index"
-
-  root :to => 'home#index'
+  root :to => "Home#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

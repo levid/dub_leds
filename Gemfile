@@ -13,11 +13,12 @@ gem 'mysql2'
 group :assets do
   gem 'sass-rails',   '~> 3.1.4'
   gem 'coffee-rails', '~> 3.1.1'
-  gem 'uglifier', '>= 1.0.3'
+  gem 'uglifier',     '>= 1.0.3'
 end
 
 gem 'jquery-rails'
-gem 'rack' , '1.3.3'
+gem 'rack', '1.3.3'
+gem "compass",      '>= 0.10'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
