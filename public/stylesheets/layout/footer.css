@@ -1,0 +1,144 @@
+/* Include Mixins & CSS3 Stuff */
+/* line 5, ../../../app/assets/stylesheets/layout/footer.scss */
+footer {
+  height: 67px;
+  width: 100%;
+  background: url("bg-footer-bar.png") repeat-x top left transparent;
+}
+/* line 11, ../../../app/assets/stylesheets/layout/footer.scss */
+footer .footer-container {
+  margin: 0px auto;
+  height: 67px;
+  width: 980px;
+  position: relative;
+  z-index: 20;
+}
+/* line 19, ../../../app/assets/stylesheets/layout/footer.scss */
+footer .footer-container .left-column {
+  width: auto;
+  height: auto;
+  float: left;
+}
+/* line 25, ../../../app/assets/stylesheets/layout/footer.scss */
+footer .footer-container .left-column .logo {
+  margin: 23px 0px 0px 0px;
+  height: 15px;
+  width: 102px;
+  float: left;
+  background: url("img-footer-logo.png") no-repeat top left transparent;
+}
+/* line 34, ../../../app/assets/stylesheets/layout/footer.scss */
+footer .footer-container .left-column .email-updates {
+  margin: 13px 0px 0px 20px;
+  width: auto;
+  height: auto;
+  float: left;
+}
+/* line 41, ../../../app/assets/stylesheets/layout/footer.scss */
+footer .footer-container .left-column .email-updates input[type=text] {
+  padding: 0px 0px 0px 8px;
+  height: 32px;
+  width: 250px;
+  font-size: 15px;
+  line-height: 12px;
+  background: url("input-email.png") no-repeat 1px 3px transparent;
+  border: none;
+  color: #aaaaaa;
+}
+/* line 53, ../../../app/assets/stylesheets/layout/footer.scss */
+footer .footer-container .left-column .email-updates input[type=submit] {
+  margin: 3px 0px 0px -7px;
+  height: 31px;
+  width: 32px;
+  text-indent: -9000px;
+  background: url("button-submit.png") no-repeat top left transparent;
+  border: none;
+}
+/* line 65, ../../../app/assets/stylesheets/layout/footer.scss */
+footer .footer-container .right-column {
+  width: auto;
+  height: auto;
+  float: right;
+}
+/* line 71, ../../../app/assets/stylesheets/layout/footer.scss */
+footer .footer-container .right-column .order {
+  margin: 10px 0px 0px 0px;
+  width: 106px;
+  height: 43px;
+  background: url("button-order.png") no-repeat top left transparent;
+  float: left;
+}
+/* line 79, ../../../app/assets/stylesheets/layout/footer.scss */
+footer .footer-container .right-column .order a {
+  width: 106px;
+  height: 43px;
+  float: left;
+  text-indent: -9000px;
+}
+/* line 88, ../../../app/assets/stylesheets/layout/footer.scss */
+footer .footer-container .right-column ul {
+  margin: 16px 0px 0px 10px;
+  width: auto;
+  height: auto;
+  float: right;
+}
+/* line 95, ../../../app/assets/stylesheets/layout/footer.scss */
+footer .footer-container .right-column ul li {
+  width: 31px;
+  height: 31px;
+  float: left;
+  list-style-type: none;
+}
+/* line 102, ../../../app/assets/stylesheets/layout/footer.scss */
+footer .footer-container .right-column ul li a {
+  width: 31px;
+  height: 31px;
+  text-indent: -9000px;
+  float: left;
+}
+/* line 109, ../../../app/assets/stylesheets/layout/footer.scss */
+footer .footer-container .right-column ul li a.facebook {
+  background: url("img-sharing-facebook.png") no-repeat top left transparent;
+}
+/* line 114, ../../../app/assets/stylesheets/layout/footer.scss */
+footer .footer-container .right-column ul li a.twitter {
+  background: url("img-sharing-twitter.png") no-repeat top left transparent;
+}
+/* line 119, ../../../app/assets/stylesheets/layout/footer.scss */
+footer .footer-container .right-column ul li a.flickr {
+  background: url("img-sharing-flickr.png") no-repeat top left transparent;
+}
+/* line 124, ../../../app/assets/stylesheets/layout/footer.scss */
+footer .footer-container .right-column ul li a.linkedin {
+  background: url("img-sharing-linkedin.png") no-repeat top left transparent;
+}
+/* line 129, ../../../app/assets/stylesheets/layout/footer.scss */
+footer .footer-container .right-column ul li a:active {
+  background-position: bottom center;
+}
+/* line 134, ../../../app/assets/stylesheets/layout/footer.scss */
+footer .footer-container .right-column ul li a:hover {
+  background-position: bottom center;
+}
+/* line 139, ../../../app/assets/stylesheets/layout/footer.scss */
+footer .footer-container .right-column ul li a.active {
+  background-position: bottom center;
+}
+/* line 146, ../../../app/assets/stylesheets/layout/footer.scss */
+footer .footer-container .right-column ul li + li {
+  padding: 0px 0px 0px 10px;
+}
+/* line 154, ../../../app/assets/stylesheets/layout/footer.scss */
+footer .spacer {
+  height: 100px;
+  width: 100%;
+  background: url("bg-footer.png") repeat top left transparent;
+}
+/* line 160, ../../../app/assets/stylesheets/layout/footer.scss */
+footer .spacer .copyright {
+  margin: 10px auto;
+  height: 67px;
+  width: 980px;
+  font-size: 15px;
+  color: #777777;
+}

@@ -9,7 +9,7 @@ group :production do
   gem 'pg'
 end
 group :development, :test do
-  gem 'pg'
+  gem 'mysql2'
 end
 
 gem 'jquery-rails'

@@ -1,0 +1,61 @@
+/* line 6, ../../app/assets/stylesheets/page-overrides.scss */
+.Home .body {
+  background: none;
+}
+/* line 12, ../../app/assets/stylesheets/page-overrides.scss */
+.Home header .logo {
+  margin: 60px auto;
+  width: 708px;
+  height: 339px;
+  background: url("dub-logo-home.png") no-repeat top left transparent;
+}
+
+/* line 24, ../../app/assets/stylesheets/page-overrides.scss */
+.Generator .content-container {
+  padding: 0px 0px 10px 0px;
+}
+/* line 28, ../../app/assets/stylesheets/page-overrides.scss */
+.Generator .content-container.interior {
+  background: url("content-generator.png") no-repeat top center transparent;
+  height: 534px;
+}
+
+/* line 38, ../../app/assets/stylesheets/page-overrides.scss */
+.Contact .content-container {
+  padding: 0px 0px 10px 0px;
+}
+/* line 42, ../../app/assets/stylesheets/page-overrides.scss */
+.Contact .content-container.interior {
+  background: url("content-contact.png") no-repeat top center transparent;
+  height: 532px;
+}
+
+/* line 52, ../../app/assets/stylesheets/page-overrides.scss */
+.Order .content-container {
+  padding: 0px 0px 10px 0px;
+}
+/* line 56, ../../app/assets/stylesheets/page-overrides.scss */
+.Order .content-container.interior {
+  background: url("content-order.png") no-repeat top center transparent;
+  height: 533px;
+}
+
+/* line 66, ../../app/assets/stylesheets/page-overrides.scss */
+.Media .content-container {
+  padding: 0px 0px 10px 0px;
+}
+/* line 70, ../../app/assets/stylesheets/page-overrides.scss */
+.Media .content-container.interior {
+  background: url("content-media.png") no-repeat top center transparent;
+  height: 532px;
+}
+
+/* line 80, ../../app/assets/stylesheets/page-overrides.scss */
+.Technology .content-container {
+  padding: 0px 0px 10px 0px;
+}
+/* line 84, ../../app/assets/stylesheets/page-overrides.scss */
+.Technology .content-container.interior {
+  background: url("content-technology.png") no-repeat top center transparent;
+  height: 533px;
+}
