@@ -60,19 +60,11 @@
     <!--<script type="text/javascript" src="<?php echo $this->getThemePath() ?>/ie9.js"></script>-->
     <!--<![endif]&ndash;&gt;-->
 
-
-
-    <!--[if IE]>
-        <%= stylesheet_link_tag 'ie.css', :media => 'screen, projection' %>
-    <![endif]-->
-
     <%= stylesheet_link_tag "application" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
 
     <%= javascript_tag :defer => 'defer' do -%>
-
-
 
     <% end -%>
 </head>
