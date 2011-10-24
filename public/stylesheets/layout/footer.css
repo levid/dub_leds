@@ -43,7 +43,7 @@ footer .footer-container .left-column .email-updates input[type=text] {
   line-height: 12px;
   background: url("input-email.png") no-repeat 1px 3px transparent;
   border: none;
-  color: #aaaaaa;
+  color: #7f7f7f;
 }
 /* line 53, ../../../app/assets/stylesheets/layout/footer.scss */
 footer .footer-container .left-column .email-updates input[type=submit] {

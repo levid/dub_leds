@@ -26,7 +26,8 @@
 
         &.interior
         {
-            background: url( 'content-generator.png' ) no-repeat top center transparent;
+            //background: url( 'content-generator.png' ) no-repeat top center transparent;
+            background: none;
             height: 534px;
         }
     }
@@ -40,7 +41,8 @@
 
         &.interior
         {
-            background: url( 'content-contact.png' ) no-repeat top center transparent;
+            //background: url( 'content-contact.png' ) no-repeat top center transparent;
+            background: none;
             height: 532px;
         }
     }
@@ -68,7 +70,8 @@
 
         &.interior
         {
-            background: url( 'content-media.png' ) no-repeat top center transparent;
+            //background: url( 'content-media.png' ) no-repeat top center transparent;
+            background: none;
             height: 532px;
         }
     }
@@ -82,7 +85,8 @@
 
         &.interior
         {
-            background: url( 'content-technology.png' ) no-repeat top center transparent;
+            //background: url( 'content-technology.png' ) no-repeat top center transparent;
+            background: none;
             height: 533px;
         }
     }

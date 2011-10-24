@@ -40,6 +40,13 @@ Cufon.replace('.text-container h4',
     fontStyle: 'normal'
 });
 
+Cufon.replace('label, input, textarea',
+{
+    fontFamily: 'Eurostile',
+    fontWeight: 400,
+    fontStyle: 'normal'
+});
+
 Cufon.replace('.text-container p',
 {
     fontFamily: 'Eurostile',
@@ -68,6 +75,7 @@ Cufon.replace('email-address',
     fontStyle: 'normal'
 });
 
+
 Cufon.now();
 
 $(document).ready(function()
@@ -86,26 +94,37 @@ $(document).ready(function()
          });
          */
 
-        setTimeout(function()
+        function setGlowEffect()
         {
-            $('nav ul').fadeIn(function()
+            setTimeout(function()
             {
-                var activeLink = $('nav a.active');
-                var glowLink = $('.glow');
+                $('nav ul').fadeIn(function()
+                {
+                    var activeLink = $('nav a.active');
+                    var glowLink = $('.glow');
 
-                var position = activeLink.offset();
+                    var position = activeLink.offset();
 
-                var pos;
+                    var pos;
 
-                pos = position.left;
-                var newPos = (pos + (activeLink.width() / 2)) - (glowLink.width() / 2);
+                    pos = position.left;
+                    var newPos = (pos + (activeLink.width() / 2)) - (glowLink.width() / 2);
 
-                glowLink.fadeIn();
-                glowLink.css('left', newPos);
+                    glowLink.fadeIn();
+                    glowLink.css('margin-left', newPos);
 
-                var glowPosition = glowLink.offset();
-            });
-        }, 300);
+                    var glowPosition = glowLink.offset();
+                });
+            }, 300);
+        }
+
+        setGlowEffect();
+
+        $(window).resize(function() {
+            var glowLink = $('.glow');
+            glowLink.hide();
+            setGlowEffect();
+        });
     });
 
     $(".topnav li").prepend("<span></span>"); //Throws an empty span tag right before the a tag
