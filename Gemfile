@@ -14,16 +14,7 @@ end
 
 gem 'jquery-rails'
 gem 'rack', '1.3.3'
-gem "compass",      '>= 0.10'
-
-# Gems used only for assets and not required
-# in production environments by default.
-group :assets do
-  gem 'sass-rails',   '~> 3.1.4'
-  gem 'coffee-rails', '~> 3.1.1'
-  gem 'uglifier',     '>= 1.0.3'
-  gem "therubyracer", :require => 'v8'
-end
+gem 'haml'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -38,6 +29,22 @@ end
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
 group :test do
-  # Pretty printed test output
-  gem 'turn', :require => false
+  gem 'rb-fsevent'   if RUBY_PLATFORM.downcase =~ /darwin/
+  gem 'growl_notify' if RUBY_PLATFORM.downcase =~ /darwin/
+  gem 'spork-testunit'
+  gem 'guard'
+  gem 'guard-test'
+  gem 'mocha', :require => false
+  gem 'vcr'
+  gem 'fakeweb'
+end
+
+# Gems used only for assets and not required
+# in production environments by default.
+group :assets do
+  gem 'sass-rails',   '~> 3.1.4'
+  gem 'coffee-rails', '~> 3.1.1'
+  gem 'uglifier',     '>= 1.0.3'
+  gem "therubyracer", :require => 'v8'
+  gem "compass",      '>= 0.10'
 end

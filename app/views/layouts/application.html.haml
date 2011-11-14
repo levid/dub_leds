@@ -1,0 +1,106 @@
+!!!
+%html
+  %head
+    /
+      _  _  _  _     _            _  _  _  _  _              _              _  _  _  _  _  _  _  _  _       _  _  _  _
+      (_)(_)(_)(_)   (_)          (_)(_)(_)(_)(_) _          (_)            (_)(_)(_)(_)(_)(_)(_)(_)(_)    _(_)(_)(_)(_)_
+      (_)      (_)_ (_)          (_) (_)        (_)         (_)            (_)             (_)      (_)_ (_)          (_)
+      (_)        (_)(_)          (_) (_) _  _  _(_)         (_)            (_) _  _        (_)        (_)(_)_  _  _  _
+      (_)        (_)(_)          (_) (_)(_)(_)(_)_          (_)            (_)(_)(_)       (_)        (_)  (_)(_)(_)(_)_
+      (_)       _(_)(_)          (_) (_)        (_)         (_)            (_)             (_)       _(_) _           (_)
+      (_)_  _  (_)  (_)_  _  _  _(_) (_)_  _  _ (_)         (_) _  _  _  _ (_) _  _  _  _  (_)_  _  (_)  (_)_  _  _  _(_)
+      (_)(_)(_)(_)     (_)(_)(_)(_)  (_)(_)(_)(_)            (_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)     (_)(_)(_)(_)
+
+    %title DUB LEDS
+
+    %meta{:content => "text/html; charset=iso-8859-1", "http-equiv" => "Content-Type"}
+      /
+        *  Mobile Viewport Fix
+        j.mp/mobileviewport &amp; davidbcalhoun.com/2010/viewport-metatag
+        device-width : Occupy full width of the screen in its current orientation
+        initial-scale = 1.0 retains dimensions instead of zooming out if page height > device height
+        maximum-scale = 1.0 retains dimensions instead of zooming in if page width < device width
+      / @todo: Write an images helper for all images in all elements. //
+      / * paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+      /[if lt IE 7 ] <html lang="en" class="no-js ie6">
+      /[if IE 7 ] <html lang="en" class="no-js ie7">
+      /[if IE 8 ] <html lang="en" class="no-js ie8">
+      /[if IE 9 ] <html lang="en" class="no-js ie9">
+      / [if (gt IE 9)|!(IE)]><!
+      %html.no-js{:lang => "en"}
+        / <![endif]
+        %meta{:content => "width=980; maximum-scale=1.0;", :name => "viewport"}/
+        %meta{:content => "index,follow", :name => "robots"}/
+        %meta{:content => "noodp,noydir", :name => "robots"}/
+        %meta{:content => "DUB LED'S &copy; #{@year} All Rights Reserved", :name => "copyright"}/
+        / <link rel="canonical" href="<?php echo $_SERVER['SERVER_NAME'] ?>" />
+        / <link rel="shortcut icon" href="<?php echo $this->getThemePath() ?>/favicon.ico" />
+        / <link rel="apple-touch-icon" href="<?php echo $this->getThemePath() ?>/apple-touch-icon.png" />
+        / <link rel="stylesheet" type="text/css" href="<?php echo $this->getThemePath() ?>/css/screen.css" />
+        / <?php Loader::element('header_required'); ?>
+        / &amp;lt;!&amp;ndash;	    <script type="text/javascript">jQuery.noConflict();</script>&amp;ndash;&amp;gt;
+        / <script type="text/javascript" src="<?php echo $this->getThemePath() ?>/js/modernizr.js"></script>
+        / <script type="text/javascript" src="<?php echo $this->getThemePath() ?>/js/mootools/mootools-core-1.3.2-full-compat-min.js"></script>
+        / <script type="text/javascript" src="<?php echo $this->getThemePath() ?>/js/mootools/mootools-plugins-min.js"></script>
+        / <script type="text/javascript" src="<?php echo $this->getThemePath() ?>/js/cufon-yui-min.js"></script>
+        / <script type="text/javascript" src="<?php echo $this->getThemePath() ?>/js/Eurostile_400-Eurostile_700.font.js"></script>
+        / <script type="text/javascript" src="<?php echo $this->getThemePath() ?>/js/<?php echo $this->dub_controller ?>.<?php echo $this->dub_action ?>.js"></script>
+        / &amp;lt;!&amp;ndash;[if (gt IE 9)|!(IE)]>
+        / <script type="text/javascript" src="<?php echo $this->getThemePath() ?>/ie9.js"></script>
+        / <![endif]&amp;ndash;&amp;gt;
+        = stylesheet_link_tag "application"
+        = javascript_include_tag "application"
+        = csrf_meta_tags
+
+  %body{:class => "#{controller_name.capitalize} #{action_name.capitalize}"}
+    %section#dub
+      %section.wrapper
+        - if controller_name == "home"
+          %header
+            %nav
+              %ul.topnav
+                %li= (link_to "Home", home_path, :id => "home", :class => controller_name === "home" ? "active" : "")
+                %li= (link_to "Technology", technology_path, :id => "technology", :class => controller_name === "technology" ? "active" : "")
+                %li= (link_to "Media", media_path, :id => "media", :class => controller_name === "media" ? "active" : "")
+                %li= (link_to "Generator", generator_path, :id => "generator", :class => controller_name === "generator" ? "active" : "")
+                %li= (link_to "Order", order_path, :id => "order", :class => controller_name === "order" ? "active" : "")
+                %li= (link_to "Contact", contact_path, :id => "contact", :class => controller_name === "contact" ? "active" : "")
+              .glow
+            %section.logo
+        - else
+          %header
+            %nav
+              %ul.topnav
+                %li= (link_to "Home", home_path, :id => "home", :class => controller_name === "home" ? "active" : "")
+                %li= (link_to "Technology", technology_path, :id => "technology", :class => controller_name === "technology" ? "active" : "")
+                %li= (link_to "Media", media_path, :id => "media", :class => controller_name === "media" ? "active" : "")
+                %li= (link_to "Generator", generator_path, :id => "generator", :class => controller_name === "generator" ? "active" : "")
+                %li= (link_to "Order", order_path, :id => "order", :class => controller_name === "order" ? "active" : "")
+                %li= (link_to "Contact", contact_path, :id => "contact", :class => controller_name === "contact" ? "active" : "")
+              .glow
+            %section.logo
+        = yield
+        %footer
+          %section.footer-container
+            .left-column
+              .logo
+              .email-updates
+                %form
+                  %input#email-address{:name => "email-address", :type => "text", :value => "enter email for updates"}/
+                  %input{:type => "submit"}/
+            .right-column
+              .order
+                %a{:href => "#"} Order
+              %ul
+                %li
+                  %a.facebook.active{:href => "#"} Facebook
+                %li
+                  %a.twitter{:href => "#"} Twitter
+                %li
+                  %a.flickr{:href => "#"} Flickr
+                %li
+                  %a.linkedin{:href => "#"} Linkedin
+          %section.spacer
+            .copyright (c) 2011 LED Wheels, Inc.
+    = javascript_tag :defer => 'defer' do
+      Cufon.now();
