@@ -14,7 +14,7 @@ class RimSelect extends window._Dub
     this.animateRim(@rimContainer,
       method:       'slideNext'
       direction:    'right'
-      startLeft:    '+=1500px'
+      startLeft:    '-=1500px'
       endLeft:      '0px'
       startOpacity: 0
       endOpacity:   1
@@ -27,7 +27,7 @@ class RimSelect extends window._Dub
     this.animateRim(@rimContainer,
       method:       'slidePrev'
       direction:    'left'
-      startLeft:    '-=1500px'
+      startLeft:    '+=1500px'
       endLeft:      '0px'
       startOpacity: 0
       endOpacity:   1
@@ -39,7 +39,7 @@ class RimSelect extends window._Dub
     this.animateRim(@rimContainer,
       method:       'slideToRight'
       direction:    'right'
-      startLeft:    '+=1500px'
+      startLeft:    '-=1500px'
       endLeft:      '0px'
       startOpacity: 0
       endOpacity:   1
@@ -51,7 +51,7 @@ class RimSelect extends window._Dub
     this.animateRim(@rimContainer,
       method:       'slideToLeft'
       direction:    'left'
-      startLeft:    '-=1500px'
+      startLeft:    '+=1500px'
       endLeft:      '0px'
       startOpacity: 0
       endOpacity:   1

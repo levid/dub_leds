@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id: 1
+  creation_date: 2011-11-13 18:34:14
+  modified_date: 2011-11-13 18:34:14
+  title: MyString
+  description: MyText
+  color: MyString
+  size: MyString
+  fitting: MyString
+  color: MyString
+
+two:
+  id: 1
+  creation_date: 2011-11-13 18:34:14
+  modified_date: 2011-11-13 18:34:14
+  title: MyString
+  description: MyText
+  color: MyString
+  size: MyString
+  fitting: MyString
+  color: MyString
