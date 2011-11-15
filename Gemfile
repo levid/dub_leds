@@ -29,8 +29,6 @@ gem 'haml'
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
 group :test do
-  gem 'rb-fsevent'   if RUBY_PLATFORM.downcase =~ /darwin/
-  gem 'growl_notify' if RUBY_PLATFORM.downcase =~ /darwin/
   gem 'spork-testunit'
   gem 'guard'
   gem 'guard-test'
