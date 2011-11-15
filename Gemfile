@@ -15,7 +15,6 @@ end
 gem 'jquery-rails'
 gem 'rack', '1.3.3'
 gem 'haml'
-gem 'rb-fsevent'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
