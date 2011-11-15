@@ -15,7 +15,6 @@ end
 gem 'jquery-rails'
 gem 'rack', '1.3.3'
 gem 'haml'
-gem 'growl_notify'
 gem 'rb-fsevent'
 
 # To use ActiveModel has_secure_password
