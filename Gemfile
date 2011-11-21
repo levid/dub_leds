@@ -15,6 +15,7 @@ end
 gem 'jquery-rails'
 gem 'rack', '1.3.3'
 gem 'haml'
+gem 'draper'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -35,6 +36,7 @@ group :test do
   gem 'mocha', :require => false
   gem 'vcr'
   gem 'fakeweb'
+  gem 'simplecov', :require => false
 end
 
 # Gems used only for assets and not required

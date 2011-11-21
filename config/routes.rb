@@ -1,14 +1,21 @@
 DubLeds::Application.routes.draw do
 
-  match "home" => "Home#index"
-  match "contact" => "Contact#index"
-  match "generator" => "Generator#index"
-  match "order" => "Order#index"
-  match "media" => "Media#index"
-  match "technology" => "Technology#index"
+  root :to => 'home#index'
 
-  root :to => "Home#index"
+  get '/home'             => 'home#index',        :as => :home
+  get '/home/new'         => 'home#new',          :as => :home_new
+  get '/home/:id'         => 'home#show',         :as => :home_show
+  post '/home/create'     => 'home#create',       :as => :home_create
+  get '/home/:id/edit'    => 'home#edit',         :as => :home_edit
+  put '/home/:id'         => 'home#update',       :as => :home_update
+  delete '/home/:id'      => 'home#destroy',      :as => :home_destroy
 
+  get '/contact'          => 'contact#index',     :as => :contact
+  get '/generator'        => 'generator#index',   :as => :generator
+  get '/order'            => 'order#index',       :as => :order
+  get '/media'            => 'media#index',       :as => :media
+  get '/technology'       => 'technology#index',  :as => :technology
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

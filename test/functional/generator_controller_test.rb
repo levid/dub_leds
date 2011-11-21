@@ -1,9 +1,14 @@
 require 'test_helper'
 
 class GeneratorControllerTest < ActionController::TestCase
-  test "should get index" do
-    get :index
-    assert_response :success
-  end
+  test "that it GET index" do
+    VCR.use_cassette('controllers/generator') do
+      get :index, :use_route => :generator
 
+      assert_response :success
+      assert_kind_of Array, assigns(:rims)
+      assert_equal :generator_path, assigns(:path)
+      assert_template 'generator'
+    end
+  end
 end

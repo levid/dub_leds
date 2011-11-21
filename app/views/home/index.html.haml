@@ -2,20 +2,9 @@
   %section.rim-container
     .rims-large
       %ul
-        %li
-          %img{:src => "assets/img-home-rim-large1.png"}/
-        %li
-          %img{:src => "assets/img-home-rim-large2.png"}/
-        %li
-          %img{:src => "assets/img-home-rim-large3.png"}/
-        %li
-          %img{:src => "assets/img-home-rim-large4.png"}/
-        %li
-          %img{:src => "assets/img-home-rim-large5.png"}/
-        %li
-          %img{:src => "assets/img-home-rim-large6.png"}/
-        %li
-          %img{:src => "assets/img-home-rim-large7.png"}/
+        - @rims.each do |rim|
+          %li
+            %img{:src => "assets/img-home-rim-large#{rim.id}.png"}/
     .rim-buttons
       .arrow.left
         %a{:href => "#"}

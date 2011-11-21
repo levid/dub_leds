@@ -13,8 +13,8 @@ class RimSelect extends window._Dub
     this.counter()
     this.animateRim(@rimContainer,
       method:       'slideNext'
-      direction:    'right'
-      startLeft:    '-=1500px'
+      direction:    'left'
+      startLeft:    '+=1500px'
       endLeft:      '0px'
       startOpacity: 0
       endOpacity:   1
@@ -26,8 +26,8 @@ class RimSelect extends window._Dub
     console.log(@count)
     this.animateRim(@rimContainer,
       method:       'slidePrev'
-      direction:    'left'
-      startLeft:    '+=1500px'
+      direction:    'right'
+      startLeft:    '-=1500px'
       endLeft:      '0px'
       startOpacity: 0
       endOpacity:   1
@@ -38,8 +38,8 @@ class RimSelect extends window._Dub
   slideToRight: (@count) ->
     this.animateRim(@rimContainer,
       method:       'slideToRight'
-      direction:    'right'
-      startLeft:    '-=1500px'
+      direction:    'left'
+      startLeft:    '+=1500px'
       endLeft:      '0px'
       startOpacity: 0
       endOpacity:   1
@@ -50,8 +50,8 @@ class RimSelect extends window._Dub
   slideToLeft: (@count) ->
     this.animateRim(@rimContainer,
       method:       'slideToLeft'
-      direction:    'left'
-      startLeft:    '+=1500px'
+      direction:    'right'
+      startLeft:    '-=1500px'
       endLeft:      '0px'
       startOpacity: 0
       endOpacity:   1

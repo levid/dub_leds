@@ -14,9 +14,7 @@
 ActiveRecord::Schema.define(:version => 20111114023414) do
 
   create_table "rims", :force => true do |t|
-    t.datetime "creation_date", :null => false
-    t.datetime "modified_date", :null => false
-    t.string   "title",         :null => false
+    t.string   "title",       :null => false
     t.text     "description"
     t.string   "color"
     t.string   "size"
