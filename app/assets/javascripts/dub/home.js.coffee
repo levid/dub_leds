@@ -6,5 +6,8 @@ class Home extends window._Dub
     $(document).ready ->
       window._Dub.RimSelect.constructor()
 
+      buttonContainerWidth = $('.rim-relection .buttons ul li').length * $('.rim-reflection .buttons ul li a').width()
+      $('.rim-reflection .buttons ul').css('width', buttonContainerWidth)
+
 window._Dub.Application = jQuery.extend({}, window._Dub.Application, {Home})
 

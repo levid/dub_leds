@@ -15,20 +15,12 @@
       .reflection.left
       .buttons
         %ul
-          %li
-            %a.active{:href => "#"} Rim 1
-          %li
-            %a{:href => "#"} Rim 2
-          %li
-            %a{:href => "#"} Rim 3
-          %li
-            %a{:href => "#"} Rim 4
-          %li
-            %a{:href => "#"} Rim 5
-          %li
-            %a{:href => "#"} Rim 6
-          %li
-            %a{:href => "#"} Rim 7
+          - @rims.each do |rim|
+            %li
+              - if rim.id == 1
+                %a.active{:href => "#"} #{rim.title}
+              - else  
+                %a{:href => "#"} #{rim.title}
       .reflection.right
   %section.content-container.home
     .content
