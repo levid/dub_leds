@@ -5,13 +5,20 @@
   height: 367px;
 }
 /* line 12, ../../app/assets/stylesheets/order.scss */
-.content-order .title-container {
+.content-order .left-column {
+  width: 350px;
+  height: auto;
+  float: left;
+  margin: 0px 0px 0px 0px;
+}
+/* line 19, ../../app/assets/stylesheets/order.scss */
+.content-order .left-column .title-container {
   width: auto;
   height: auto;
   display: block;
 }
-/* line 18, ../../app/assets/stylesheets/order.scss */
-.content-order .title-container .title {
+/* line 25, ../../app/assets/stylesheets/order.scss */
+.content-order .left-column .title-container .title {
   margin: 20px 0px 0px -16px;
   height: 73px;
   width: 357px;
@@ -19,18 +26,135 @@
   text-indent: -9000px;
   background: url("title-order.png") no-repeat top left transparent;
 }
-/* line 29, ../../app/assets/stylesheets/order.scss */
-.content-order .text-container {
+/* line 36, ../../app/assets/stylesheets/order.scss */
+.content-order .left-column .text-container {
   clear: both;
   text-shadow: 0px 1px 2px #333;
   color: #ffffff;
 }
-/* line 35, ../../app/assets/stylesheets/order.scss */
-.content-order .text-container h4 {
+/* line 42, ../../app/assets/stylesheets/order.scss */
+.content-order .left-column .text-container h4 {
   font-size: 22px;
   padding: 0px 0px 10px 0px;
 }
-/* line 41, ../../app/assets/stylesheets/order.scss */
-.content-order .text-container p {
+/* line 48, ../../app/assets/stylesheets/order.scss */
+.content-order .left-column .text-container p {
   font-size: 15px;
+}
+/* line 54, ../../app/assets/stylesheets/order.scss */
+.content-order .left-column .rim {
+  margin: -65px 0px 0px -40px;
+  widht: 418px;
+  height: 469px;
+}
+/* line 62, ../../app/assets/stylesheets/order.scss */
+.content-order .right-column {
+  margin: 35px 0px 0px 0px;
+  width: 585px;
+  height: auto;
+  float: right;
+}
+/* line 69, ../../app/assets/stylesheets/order.scss */
+.content-order .right-column .tabs {
+  width: 500px;
+  height: auto;
+  float: left;
+}
+/* line 75, ../../app/assets/stylesheets/order.scss */
+.content-order .right-column .tabs ul {
+  width: auto;
+  height: auto;
+  margin: 0px;
+  padding: 0px;
+}
+/* line 82, ../../app/assets/stylesheets/order.scss */
+.content-order .right-column .tabs ul li + li {
+  padding-left: 8px;
+}
+/* line 87, ../../app/assets/stylesheets/order.scss */
+.content-order .right-column .tabs ul li {
+  width: auto;
+  height: auto;
+  list-style-type: none;
+  float: left;
+}
+/* line 94, ../../app/assets/stylesheets/order.scss */
+.content-order .right-column .tabs ul li a {
+  text-indent: -9000px;
+}
+/* line 98, ../../app/assets/stylesheets/order.scss */
+.content-order .right-column .tabs ul li a.sizing {
+  width: 111px;
+  height: 47px;
+  float: left;
+  background: url("img-tab-sizing.png") no-repeat top left transparent;
+}
+/* line 106, ../../app/assets/stylesheets/order.scss */
+.content-order .right-column .tabs ul li a.style {
+  width: 106px;
+  height: 47px;
+  float: left;
+  background: url("img-tab-style.png") no-repeat top left transparent;
+}
+/* line 118, ../../app/assets/stylesheets/order.scss */
+.content-order .right-column .selection {
+  padding: 10px 0px 0px 0px;
+  width: 631px;
+  height: auto;
+  display: block;
+  float: left;
+  background: url("bg-order-tabs.png") no-repeat top left transparent;
+}
+/* line 127, ../../app/assets/stylesheets/order.scss */
+.content-order .right-column .selection .row {
+  margin: 15px 0px 0px 0px;
+  width: 583px;
+  height: 57px;
+  background: url("bg-order-row.png") no-repeat top left transparent;
+}
+/* line 133, ../../app/assets/stylesheets/order.scss */
+.content-order .right-column .selection .row table {
+  margin: 0px;
+  padding: 0px;
+  width: 583px;
+  height: 57px;
+}
+/* line 142, ../../app/assets/stylesheets/order.scss */
+.content-order .right-column .selection .row table tr td {
+  padding: 18px;
+  font-size: 18px;
+  color: #868686;
+  text-align: left;
+}
+/* line 149, ../../app/assets/stylesheets/order.scss */
+.content-order .right-column .selection .row table tr td.title {
+  text-transform: uppercase;
+  font-style: oblique;
+  color: #c0c0c0;
+  width: 80px;
+}
+/* line 162, ../../app/assets/stylesheets/order.scss */
+.content-order .right-column .checkout {
+  margin: 50px 0px 0px 20px;
+  width: auto;
+  height: auto;
+  float: left;
+}
+/* line 169, ../../app/assets/stylesheets/order.scss */
+.content-order .right-column .checkout .left-column {
+  width: 400px;
+  height: auto;
+  float: left;
+}
+/* line 176, ../../app/assets/stylesheets/order.scss */
+.content-order .right-column .checkout .right-column {
+  width: auto;
+  height: auto;
+  float: right;
+}
+/* line 182, ../../app/assets/stylesheets/order.scss */
+.content-order .right-column .checkout .right-column .authorize-net {
+  width: 116px;
+  height: 116px;
+  float: left;
 }

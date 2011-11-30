@@ -8,38 +8,183 @@
     width: 980px;
     height: 367px;
 
-    .title-container
+    .left-column
     {
-        width: auto;
+        width: 350px;
         height: auto;
-        display: block;
+        float: left;
+        margin: 0px 0px 0px 0px;
 
-        .title
+        .title-container
         {
-            margin: 20px 0px 0px -16px;
-            height: 73px;
-            width: 357px;
-            float: left;
-            text-indent: -9000px;
-            background: url( 'title-order.png' ) no-repeat top left transparent;
-        }
-    }
+            width: auto;
+            height: auto;
+            display: block;
 
-    .text-container
+            .title
+            {
+                margin: 20px 0px 0px -16px;
+                height: 73px;
+                width: 357px;
+                float: left;
+                text-indent: -9000px;
+                background: url( 'title-order.png' ) no-repeat top left transparent;
+            }
+        }
+
+        .text-container
+        {
+            clear: both;
+            text-shadow: 0px 1px 2px #333;
+            color: #ffffff;
+
+            h4
+            {
+                font-size: 22px;
+                padding: 0px 0px 10px 0px;
+            }
+
+            p
+            {
+                font-size: 15px;
+            }
+        }
+
+        .rim
+        {
+            margin: -65px 0px 0px -40px;
+            widht: 418px;
+            height: 469px;
+        }
+     }
+
+    .right-column
     {
-        clear: both;
-        text-shadow: 0px 1px 2px #333;
-        color: #ffffff;
+        margin: 35px 0px 0px 0px;
+        width: 585px;
+        height: auto;
+        float: right;
 
-        h4
+        .tabs
         {
-            font-size: 22px;
-            padding: 0px 0px 10px 0px;
+            width: 500px;
+            height: auto;
+            float: left;
+
+            ul
+            {
+                width: auto;
+                height: auto;
+                margin: 0px;
+                padding: 0px;
+
+                li + li
+                {
+                    padding-left: 8px;
+                }
+
+                li
+                {
+                    width: auto;
+                    height: auto;
+                    list-style-type: none;
+                    float: left;
+
+                    a
+                    {
+                        text-indent: -9000px;
+
+                        &.sizing
+                        {
+                            width: 111px;
+                            height: 47px;
+                            float: left;
+                            background: url( 'img-tab-sizing.png' ) no-repeat top left transparent;
+                        }
+
+                        &.style
+                        {
+                            width: 106px;
+                            height: 47px;
+                            float: left;
+                            background: url( 'img-tab-style.png' ) no-repeat top left transparent;
+                        }
+                    }
+                }
+            }
         }
 
-        p
+        .selection
         {
-            font-size: 15px;
+            padding: 10px 0px 0px 0px;
+            width: 631px;
+            height: auto;
+            display: block;
+            float: left;
+            background: url( 'bg-order-tabs.png' ) no-repeat top left transparent;
+
+            .row
+            {
+                margin: 15px 0px 0px 0px;
+                width: 583px;
+                height: 57px;
+                background: url( 'bg-order-row.png' ) no-repeat top left transparent;
+
+                table {
+                    margin: 0px;
+                    padding: 0px;
+                    width: 583px;
+                    height: 57px;
+
+                    tr
+                    {
+                        td
+                        {
+                            padding: 18px;
+                            font-size: 18px;
+                            color: #868686;
+                            text-align: left;
+
+                            &.title
+                            {
+                                text-transform: uppercase;
+                                font-style: oblique;
+                                color: #c0c0c0;
+                                width: 80px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .checkout
+        {
+            margin: 50px 0px 0px 20px;
+            width: auto;
+            height: auto;
+            float: left;
+
+            .left-column
+            {
+                width: 400px;
+                height: auto;
+                float: left;
+            }
+
+            .right-column
+            {
+                width: auto;
+                height: auto;
+                float: right;
+
+                .authorize-net
+                {
+                    width: 116px;
+                    height: 116px;
+                    float: left;
+                }
+            }
         }
     }
 }
