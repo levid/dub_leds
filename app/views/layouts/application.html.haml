@@ -55,6 +55,21 @@
   %body{:class => "#{controller_name.capitalize} #{action_name.capitalize}"}
     %section#dub
       %section.wrapper
+
+        - if user_signed_in?
+          %li
+            = link_to('Logout', destroy_user_session_path, :method=>'delete')
+        - else
+          %li
+            = link_to('Login', new_user_session_path)
+
+        -if user_signed_in?
+          %li
+            = link_to('Edit account', edit_user_registration_path)
+        -else
+          %li
+            = link_to('Sign up', new_user_registration_path)
+
         - if controller_name == "home"
           %header
             %nav
@@ -79,6 +94,13 @@
                 %li= (link_to "Contact", contact_path, :id => "contact", :class => controller_name === "contact" ? "active" : "")
               .glow
             %section.logo
+
+        %p.notice= notice
+        %p.alert= alert
+
+        - flash.each do |name, msg|
+          = content_tag :div, msg, :id => "flash_\#{name}" if msg.is_a?(String)
+
         = yield
         %footer
           %section.footer-container

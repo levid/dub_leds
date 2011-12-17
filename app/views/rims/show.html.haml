@@ -1,0 +1,21 @@
+-# %p#notice= notice
+
+%p
+  %b Title:
+  = @rim.title
+%p
+  %b Description:
+  = @rim.description
+%p
+  %b Color:
+  = @rim.color
+%p
+  %b Size:
+  = @rim.size
+%p
+  %b Fitting:
+  = @rim.fitting
+
+= link_to 'Edit', rim_edit_path(@rim)
+\|
+= link_to 'Back', rim_path

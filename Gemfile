@@ -16,6 +16,12 @@ gem 'jquery-rails'
 gem 'rack', '1.3.3'
 gem 'haml'
 gem 'draper'
+gem "bson_ext", ">= 1.3.1"
+gem "mongoid", ">= 2.3.3"
+gem "devise", ">= 1.5.0" #https://github.com/plataformatec/devise
+gem "omniauth-facebook"
+gem "omniauth-twitter"
+gem 'yaml_db'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -30,13 +36,14 @@ gem 'draper'
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
 group :test do
-  gem 'spork-testunit'
+  gem 'spork-testunit', '0.0.6'
   gem 'guard'
   gem 'guard-test'
   gem 'mocha', :require => false
   gem 'vcr'
   gem 'fakeweb'
   gem 'simplecov', :require => false
+  gem "capybara", ">= 1.1.2"
 end
 
 # Gems used only for assets and not required

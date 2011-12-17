@@ -1,0 +1,24 @@
+%h1 Listing Rims
+
+%table
+  %tr
+    %th Title
+    %th Description
+    %th Color
+    %th Size
+    %th Fitting
+
+  - @rims.each do |rim|
+    %tr
+      %td= rim.title
+      %td= rim.description
+      %td= rim.color
+      %td= rim.size
+      %td= rim.fitting
+      %td= link_to 'Show', rim_show_path(rim)
+      %td= link_to 'Edit', rim_edit_path(rim)
+      %td= link_to 'Destroy', rim_destroy_path(rim), :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Rim', rim_new_path

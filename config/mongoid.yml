@@ -1,0 +1,20 @@
+development:
+  host: localhost
+  database: dub_leds_development
+
+test:
+  host: localhost
+  database: dub_leds_test
+
+# set these environment variables on your prod server
+production:
+  host: 'staff.mongohq.com'
+  port: '10022'
+  username: 'levid'
+  password: 'wooteni'
+  database: 'dub_leds'
+  # slaves:
+  #   - host: slave1.local
+  #     port: 27018
+  #   - host: slave2.local
+  #     port: 27019

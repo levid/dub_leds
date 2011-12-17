@@ -1,4 +1,7 @@
 %section.body
+  -@users.each do |user|
+    %p User:
+    =link_to user.name
   %section.rim-container
     .rims-large
       %ul
@@ -19,7 +22,7 @@
             %li
               - if rim.id == 1
                 %a.active{:href => "#"} #{rim.title}
-              - else  
+              - else
                 %a{:href => "#"} #{rim.title}
       .reflection.right
   %section.content-container.home

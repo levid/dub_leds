@@ -1,21 +1,26 @@
 DubLeds::Application.routes.draw do
 
+  devise_for :admins
+  devise_for :users
+
   root :to => 'home#index'
 
   get '/home'             => 'home#index',        :as => :home
-  get '/home/new'         => 'home#new',          :as => :home_new
-  get '/home/:id'         => 'home#show',         :as => :home_show
-  post '/home/create'     => 'home#create',       :as => :home_create
-  get '/home/:id/edit'    => 'home#edit',         :as => :home_edit
-  put '/home/:id'         => 'home#update',       :as => :home_update
-  delete '/home/:id'      => 'home#destroy',      :as => :home_destroy
+
+  get '/rims'             => 'rims#index',        :as => :rim
+  get '/rims/new'         => 'rims#new',          :as => :rim_new
+  get '/rims/:id'         => 'rims#show',         :as => :rim_show
+  post '/rims/create'     => 'rims#create',       :as => :rim_create
+  get '/rims/:id/edit'    => 'rims#edit',         :as => :rim_edit
+  put '/rims/:id'         => 'rims#update',       :as => :rim_update
+  delete '/rims/:id'      => 'rims#destroy',      :as => :rim_destroy
 
   get '/contact'          => 'contact#index',     :as => :contact
   get '/generator'        => 'generator#index',   :as => :generator
   get '/order'            => 'order#index',       :as => :order
   get '/media'            => 'media#index',       :as => :media
   get '/technology'       => 'technology#index',  :as => :technology
-  
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

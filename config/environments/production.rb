@@ -9,13 +9,13 @@ DubLeds::Application.configure do
   config.action_controller.perform_caching = true
 
   # Disable Rails's static asset server (Apache or nginx will already do this)
-  config.serve_static_assets = true
+  config.serve_static_assets = false
 
   # Compress JavaScripts and CSS
   config.assets.compress = true
 
   # Don't fallback to assets pipeline if a precompiled asset is missed
-  config.assets.compile = true
+  config.assets.compile = false
 
   # Generate digests for assets URLs
   config.assets.digest = true
@@ -59,4 +59,22 @@ DubLeds::Application.configure do
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
+
+  # Don't care if the mailer can't send
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.default :charset => "utf-8"
+  config.action_mailer.default_url_options = { :host => 'http://dub-leds.heroku.com/' }
+
+  # Set up email server
+  ActionMailer::Base.delivery_method = :smtp
+  ActionMailer::Base.smtp_settings = {
+      :address => "smtp.gmail.com",
+      :port => 587,
+      :user_name => "i.wooten@gmail.com",
+      :password => '$rdc#isaacw',
+      :authentication => :plain,
+      :enable_starttls_auto => true
+  }
+
 end
