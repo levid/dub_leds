@@ -1,7 +1,7 @@
 %section.body
   -@users.each do |user|
     %p User:
-    =link_to user.name
+    =link_to user.name, users_path(user)
   %section.rim-container
     .rims-large
       %ul
