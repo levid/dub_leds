@@ -1,0 +1,19 @@
+= form_for :contact, :url => contact_create_path,:html => { :class => 'contact-form'} do |f|
+  .left-column
+    .field
+      = f.label :name
+      = f.text_field :name
+    .field
+      = f.label :email
+      = f.text_field :email
+    .field-select
+      = f.label :subject
+      = f.select :subject, options_for_select(['General Inquiry', 'Business Inquiry', 'Comment'])
+    
+  .right-column
+    .field
+      = f.label :body
+      = f.text_area :body, :type => :textarea
+    .send-button
+      .send
+        = f.submit 'Send'

@@ -5,6 +5,7 @@ DubLeds::Application.routes.draw do
 
   resources :admins
   resource  :users
+  resources :contact
   
   match "/images/uploads/*path" => "gridfs#serve"
 
@@ -19,8 +20,15 @@ DubLeds::Application.routes.draw do
   get '/rims/:id/edit'    => 'rims#edit',         :as => :rim_edit
   put '/rims/:id'         => 'rims#update',       :as => :rim_update
   delete '/rims/:id'      => 'rims#destroy',      :as => :rim_destroy
-
-  get '/contact'          => 'contact#index',     :as => :contact
+  
+  get '/contact'             => 'contact#index',        :as => :contact
+  get '/contact/new'         => 'contact#new',          :as => :contact_new
+  get '/contact/:id'         => 'contact#show',         :as => :contact_show
+  post '/contact/create'     => 'contact#create',       :as => :contact_create
+  get '/contact/:id/edit'    => 'contact#edit',         :as => :contact_edit
+  put '/contact/:id'         => 'contact#update',       :as => :contact_update
+  delete '/contact:id'       => 'contact#destroy',      :as => :contact_destroy
+  
   get '/generator'        => 'generator#index',   :as => :generator
   get '/order'            => 'order#index',       :as => :order
   get '/media'            => 'media#index',       :as => :media

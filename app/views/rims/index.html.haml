@@ -21,6 +21,11 @@
         %td= rim.image.url(:thumb)
       -else
         %td= image_tag rim.image.url(:thumb)
+        
+      -if rim.small_image.url(:thumb).nil?
+        %td= rim.small_image.url(:thumb)
+      -else
+        %td= image_tag rim.small_image.url(:thumb)
 	    
       %td= link_to 'Show', rim_show_path(rim)
       %td= link_to 'Edit', rim_edit_path(rim)

@@ -87,7 +87,7 @@
   z-index: 1;
 }
 /* line 103, ../../app/assets/stylesheets/contact.scss */
-.content-contact .contact-form .right-column .send-button a {
+.content-contact .contact-form .right-column .send-button input {
   margin: 0px 0px 0px 18px;
   width: 81px;
   height: 37px;

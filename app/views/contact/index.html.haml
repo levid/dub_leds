@@ -6,24 +6,4 @@
       .text-container
         %h4 Have questions about DUB LEDS?
         %p Use the form below to contact us, and we'll get back to you as soon as possible.
-      .contact-form
-        .left-column
-          .field
-            %label Name
-            %input{:type => "text"}
-          .field
-            %label Email Address
-            %input{:type => "text"}
-          .field-select
-            %label Subject
-            %select
-              %option{:value => "general_inquiry"} General Inqury
-              %option{:value => "business_inquiry"} Business Inquiry
-              %option{:value => "comment"} Comment
-        .right-column
-          .field
-            %label Message
-            %textarea
-          .send-button
-            .send
-              %a{:href => "#"} Send
+      = render :partial => 'form'

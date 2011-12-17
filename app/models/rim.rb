@@ -1,7 +1,8 @@
 class Rim
   include Mongoid::Document
   
-  mount_uploader :image, ImageUploader
+  mount_uploader :image,       ImageUploader
+  mount_uploader :small_image, ImageUploader
 
   field :title,          :type => String
   field :description,    :type => String
