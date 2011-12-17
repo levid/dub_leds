@@ -1,13 +1,13 @@
 %section.body
-  -@users.each do |user|
-    %p User:
-    =link_to user.name, users_path(user)
+  / -@users.each do |user|
+  /     %p User:
+  /     =link_to user.name, users_path(user)
   %section.rim-container
     .rims-large
       %ul
         - @rims.each do |rim|
           %li
-            %img{:src => "assets/img-home-rim-large#{rim.id}.png"}/
+            = image_tag rim.image
     .rim-buttons
       .arrow.left
         %a{:href => "#"}
@@ -20,7 +20,7 @@
         %ul
           - @rims.each do |rim|
             %li
-              - if rim.id == 1
+              - if rim.id == @rims.first.id
                 %a.active{:href => "#"} #{rim.title}
               - else
                 %a{:href => "#"} #{rim.title}

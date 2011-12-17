@@ -1,2 +1,3 @@
-class Technology < ActiveRecord::Base
+class Technology
+  include Mongoid::Document
 end

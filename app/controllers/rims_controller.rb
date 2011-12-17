@@ -44,7 +44,7 @@ class RimsController < ApplicationController
     respond_to do |format|
       if @rim.save
         flash[:success] = 'Rim successfully created.'
-        format.html { redirect_to rim_show_path(@rim.id), notice: 'Rim successfully created.' }
+        format.html { redirect_to rim_show_path(@rim.id) }
         format.json { render json: @rim, status: :created, location: @rim }
       else
         flash[:error] = @rim.errors.full_messages.join('')
@@ -73,7 +73,7 @@ class RimsController < ApplicationController
     respond_to do |format|
       if @rim.update_attributes(params[:rim])
         flash[:success] = 'Rim was successfully updated.'
-        format.html { redirect_to rim_show_path(@rim.id), notice: 'Rim was successfully updated.' }
+        format.html { redirect_to rim_show_path(@rim.id) }
         format.json { head :ok }
       else
         flash[:error] = @rim.errors.full_messages.join('')
@@ -90,7 +90,7 @@ class RimsController < ApplicationController
     respond_to do |format|
       if @rim.destroy
         flash[:success] = 'Rim was removed'
-        format.html { redirect_to rim_path, notice: 'Rim was removed.' }
+        format.html { redirect_to rim_path  }
         format.json { head :ok }
       else
         flash[:error] = @rim.errors.full_messages.join('')

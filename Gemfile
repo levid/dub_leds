@@ -22,6 +22,8 @@ gem "devise", ">= 1.5.0" #https://github.com/plataformatec/devise
 gem "omniauth-facebook"
 gem "omniauth-twitter"
 gem 'yaml_db'
+gem 'carrierwave-mongoid'
+gem 'mini_magick'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

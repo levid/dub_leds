@@ -9,5 +9,10 @@ class AdminsController < ApplicationController
   # admin_signed_in?
   #   current_admin
   #   admin_session
+  
+  def show
+    @admin = Admin.find(params[:id])
+
+  end
 
 end

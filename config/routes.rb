@@ -5,6 +5,8 @@ DubLeds::Application.routes.draw do
 
   resources :admins
   resource  :users
+  
+  match "/images/uploads/*path" => "gridfs#serve"
 
   root :to => 'home#index'
 

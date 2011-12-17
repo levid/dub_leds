@@ -55,48 +55,31 @@
   %body{:class => "#{controller_name.capitalize} #{action_name.capitalize}"}
     %section#dub
       %section.wrapper
-
+      
         - if user_signed_in?
           %li
+            = link_to('Admin', admins_path)
+          %li
             = link_to('Logout', destroy_user_session_path, :method=>'delete')
+          %li
+            = link_to('Edit account', edit_user_registration_path)
         - else
           %li
             = link_to('Login', new_user_session_path)
-
-        -if user_signed_in?
-          %li
-            = link_to('Edit account', edit_user_registration_path)
-        -else
           %li
             = link_to('Sign up', new_user_registration_path)
 
-        - if controller_name == "home"
-          %header
-            %nav
-              %ul.topnav
-                %li= (link_to "Home", home_path, :id => "home", :class => controller_name === "home" ? "active" : "")
-                %li= (link_to "Technology", technology_path, :id => "technology", :class => controller_name === "technology" ? "active" : "")
-                %li= (link_to "Media", media_path, :id => "media", :class => controller_name === "media" ? "active" : "")
-                %li= (link_to "Generator", generator_path, :id => "generator", :class => controller_name === "generator" ? "active" : "")
-                %li= (link_to "Order", order_path, :id => "order", :class => controller_name === "order" ? "active" : "")
-                %li= (link_to "Contact", contact_path, :id => "contact", :class => controller_name === "contact" ? "active" : "")
-              .glow
-            %section.logo
-        - else
-          %header
-            %nav
-              %ul.topnav
-                %li= (link_to "Home", home_path, :id => "home", :class => controller_name === "home" ? "active" : "")
-                %li= (link_to "Technology", technology_path, :id => "technology", :class => controller_name === "technology" ? "active" : "")
-                %li= (link_to "Media", media_path, :id => "media", :class => controller_name === "media" ? "active" : "")
-                %li= (link_to "Generator", generator_path, :id => "generator", :class => controller_name === "generator" ? "active" : "")
-                %li= (link_to "Order", order_path, :id => "order", :class => controller_name === "order" ? "active" : "")
-                %li= (link_to "Contact", contact_path, :id => "contact", :class => controller_name === "contact" ? "active" : "")
-              .glow
-            %section.logo
-
-        %p.notice= notice
-        %p.alert= alert
+        %header
+          %nav
+            %ul.topnav  
+              %li= (link_to "Home", home_path, :id => "home", :class => controller_name === "home" ? "active" : "")
+              %li= (link_to "Technology", technology_path, :id => "technology", :class => controller_name === "technology" ? "active" : "")
+              %li= (link_to "Media", media_path, :id => "media", :class => controller_name === "media" ? "active" : "")
+              %li= (link_to "Generator", generator_path, :id => "generator", :class => controller_name === "generator" ? "active" : "")
+              %li= (link_to "Order", order_path, :id => "order", :class => controller_name === "order" ? "active" : "")
+              %li= (link_to "Contact", contact_path, :id => "contact", :class => controller_name === "contact" ? "active" : "")
+            .glow
+          %section.logo
 
         - flash.each do |name, msg|
           = content_tag :div, msg, :id => "flash_\#{name}" if msg.is_a?(String)
@@ -124,6 +107,6 @@
                   %a.linkedin{:href => "#"} Linkedin
           %section.spacer
             .copyright (c) 2011 LED Wheels, Inc.
-    = debug(params) if Rails.env.development?
+    / = debug(params) if Rails.env.development?
     = javascript_tag :defer => 'defer' do
       Cufon.now();

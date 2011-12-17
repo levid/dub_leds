@@ -1,2 +1,3 @@
-class Home < ActiveRecord::Base
+class Home
+  include Mongoid::Document
 end

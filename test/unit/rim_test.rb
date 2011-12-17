@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class RimTest < ActiveSupport::TestCase
+class RimTest
   # test "the truth" do
   #   assert true
   # end

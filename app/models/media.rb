@@ -1,2 +1,3 @@
-class Media < ActiveRecord::Base
+class Media
+  include Mongoid::Document
 end

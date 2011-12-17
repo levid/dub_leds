@@ -7,6 +7,7 @@
     %th Color
     %th Size
     %th Fitting
+    %th Image
 
   - @rims.each do |rim|
     %tr
@@ -15,6 +16,12 @@
       %td= rim.color
       %td= rim.size
       %td= rim.fitting
+      
+      -if rim.image.url(:thumb).nil?
+        %td= rim.image.url(:thumb)
+      -else
+        %td= image_tag rim.image.url(:thumb)
+	    
       %td= link_to 'Show', rim_show_path(rim)
       %td= link_to 'Edit', rim_edit_path(rim)
       %td= link_to 'Destroy', rim_destroy_path(rim), :confirm => 'Are you sure?', :method => :delete
