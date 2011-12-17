@@ -1,0 +1,53 @@
+
+---
+rims:
+  columns:
+  - id
+  - title
+  - description
+  - color
+  - size
+  - fitting
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - Rim 1
+    - this is rim 1
+    - silver
+    - 24 inches
+    - 22x10
+    - !!null 
+    - !!null 
+  - - 2
+    - Rim 2
+    - this is rim 2
+    - silver
+    - 24 inches
+    - 22x10
+    - !!null 
+    - !!null 
+  - - 3
+    - Rim 3
+    - this is rim 3
+    - silver
+    - ! "24 inches\t"
+    - 22x10
+    - 2011-12-17 02:23:05.000000000Z
+    - 2011-12-17 02:24:04.000000000Z
+  - - 6
+    - Rim 4
+    - ''
+    - ''
+    - ''
+    - ''
+    - 2011-12-17 02:41:53.000000000Z
+    - 2011-12-17 02:41:53.000000000Z
+  - - 7
+    - Rim 5
+    - ''
+    - ''
+    - ''
+    - ''
+    - 2011-12-17 02:42:00.000000000Z
+    - 2011-12-17 02:42:00.000000000Z

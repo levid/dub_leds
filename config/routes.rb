@@ -3,7 +3,8 @@ DubLeds::Application.routes.draw do
   devise_for :admins
   devise_for :users
 
-  resource :users
+  resources :admins
+  resource  :users
 
   root :to => 'home#index'
 
