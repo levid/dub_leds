@@ -12,10 +12,20 @@ class UI extends window._Dub
     topNav = new Nav
     newsletter = new Newsletter
 
+  fadeLink: (element) ->
+     original = $(element).css('color')
+     
+     $(element).hover (->
+       $(this).animate
+         color: "#59B7FF"
+       , 250
+     ), ->
+       $(this).animate
+         color: original
+       , 250
+
   initFadingLinks: () ->
-    $('a').dwFadingLinks ->
-      color: '#008000',
-      duration: 300
+    this.fadeLink('a')
 
   initGlowEffect: () ->
     setGlowEffect = () ->

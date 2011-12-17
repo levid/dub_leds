@@ -141,6 +141,9 @@ a, a:visited
     
     .wrapper
     {
-        
+        a
+        {
+            color: darken(#aaaaaa, 10%);
+        }
     }
 }

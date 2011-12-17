@@ -19,7 +19,7 @@ class Dub
     $(document).ready ->
       _Dub.UI.initGlobalUI()
       $S.initPage('Home', 'testing') if (".Body")?
-
+      
     this
 
   # Init Page Function
@@ -39,20 +39,3 @@ class Dub
       throw "#{name} not found in Application namespace"
 
 window._Dub = new Dub
-
-jQuery.fn.dwFadingLinks = (settings) ->
-  settings = jQuery.extend(
-    color: "#ff8c00"
-    duration: 500
-  , settings)
-  @each ->
-    original = $(this).css("color")
-    $(this).mouseover ->
-      $(this).animate
-        color: settings.color
-      , settings.duration
-
-    $(this).mouseout ->
-      $(this).animate
-        color: original
-      , settings.duration

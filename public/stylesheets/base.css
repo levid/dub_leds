@@ -231,3 +231,7 @@ a:hover, a:visited:hover {
   width: 100%;
   height: 100%;
 }
+/* line 145, ../../app/assets/stylesheets/base.scss */
+#dub .wrapper a {
+  color: #909090;
+}

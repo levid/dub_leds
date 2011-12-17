@@ -716,6 +716,10 @@ a:hover, a:visited:hover {
   width: 100%;
   height: 100%;
 }
+/* line 145, ../../app/assets/stylesheets/base.scss */
+#dub .wrapper a {
+  color: #909090;
+}
 
 /* Layout Styles */
 /* Include Mixins & CSS3 Stuff */
@@ -957,7 +961,27 @@ footer .spacer .copyright {
 }
 
 /**/
-/* line 5, ../../app/assets/stylesheets/layout/body.scss */
+/* line 8, ../../app/assets/stylesheets/layout/body.scss */
+a:link,
+a:hover,
+a:active,
+a:visited {
+  color: #59BAEF;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* line 14, ../../app/assets/stylesheets/layout/body.scss */
+a {
+  outline: none;
+}
+
+/* line 18, ../../app/assets/stylesheets/layout/body.scss */
+a.link {
+  background: transparent url("a-bg.png") no-repeat -81px bottom;
+}
+
+/* line 24, ../../app/assets/stylesheets/layout/body.scss */
 .body {
   margin: 0px auto;
   padding: 15px 0px 0px 0px;
@@ -966,13 +990,13 @@ footer .spacer .copyright {
   background: url("bg-content.png") repeat-x top center transparent;
   overflow: hidden;
 }
-/* line 14, ../../app/assets/stylesheets/layout/body.scss */
+/* line 33, ../../app/assets/stylesheets/layout/body.scss */
 .body .rim-container {
   margin: 0px auto;
   height: 604px;
   width: 100%;
 }
-/* line 20, ../../app/assets/stylesheets/layout/body.scss */
+/* line 39, ../../app/assets/stylesheets/layout/body.scss */
 .body .rim-container .rim-buttons {
   margin: -604px auto;
   width: 980px;
@@ -981,13 +1005,13 @@ footer .spacer .copyright {
   display: block;
   z-index: 20;
 }
-/* line 30, ../../app/assets/stylesheets/layout/body.scss */
+/* line 49, ../../app/assets/stylesheets/layout/body.scss */
 .body .rim-container .rim-buttons .arrow {
   width: 107px;
   height: 176px;
   background: url("button-rim-arrows.png") no-repeat top left transparent;
 }
-/* line 36, ../../app/assets/stylesheets/layout/body.scss */
+/* line 55, ../../app/assets/stylesheets/layout/body.scss */
 .body .rim-container .rim-buttons .arrow.left {
   width: 107px;
   height: 176px;
@@ -997,7 +1021,7 @@ footer .spacer .copyright {
   float: left;
   background-position: top left;
 }
-/* line 47, ../../app/assets/stylesheets/layout/body.scss */
+/* line 66, ../../app/assets/stylesheets/layout/body.scss */
 .body .rim-container .rim-buttons .arrow.right {
   width: 107px;
   height: 176px;
@@ -1007,13 +1031,13 @@ footer .spacer .copyright {
   float: right;
   background-position: top right;
 }
-/* line 58, ../../app/assets/stylesheets/layout/body.scss */
+/* line 77, ../../app/assets/stylesheets/layout/body.scss */
 .body .rim-container .rim-buttons .arrow a {
   width: 107px;
   height: 176px;
   float: left;
 }
-/* line 67, ../../app/assets/stylesheets/layout/body.scss */
+/* line 86, ../../app/assets/stylesheets/layout/body.scss */
 .body .rim-container .rims-large {
   margin: 0px auto;
   width: 980px;
@@ -1023,13 +1047,13 @@ footer .spacer .copyright {
   z-index: 10;
   display: block;
 }
-/* line 77, ../../app/assets/stylesheets/layout/body.scss */
+/* line 96, ../../app/assets/stylesheets/layout/body.scss */
 .body .rim-container .rims-large ul {
   width: 980px;
   height: 604px;
   float: left;
 }
-/* line 83, ../../app/assets/stylesheets/layout/body.scss */
+/* line 102, ../../app/assets/stylesheets/layout/body.scss */
 .body .rim-container .rims-large ul li {
   margin: 0px 0px 0px -25px;
   width: 980px;
@@ -1037,14 +1061,14 @@ footer .spacer .copyright {
   float: left;
   list-style-type: none;
 }
-/* line 95, ../../app/assets/stylesheets/layout/body.scss */
+/* line 114, ../../app/assets/stylesheets/layout/body.scss */
 .body .rim-select {
   margin: 0px auto;
   height: auto;
   width: 100%;
   background: url("bg-rim-select.png") repeat-x top left transparent;
 }
-/* line 102, ../../app/assets/stylesheets/layout/body.scss */
+/* line 121, ../../app/assets/stylesheets/layout/body.scss */
 .body .rim-select .rim-reflection {
   margin: 0px auto;
   width: 980px;
@@ -1052,13 +1076,13 @@ footer .spacer .copyright {
   background: url("bg-rim-reflection.png") no-repeat top left transparent;
   display: block;
 }
-/* line 110, ../../app/assets/stylesheets/layout/body.scss */
+/* line 129, ../../app/assets/stylesheets/layout/body.scss */
 .body .rim-select .rim-reflection .reflection {
   height: 44px;
   width: 98px;
   background: url("img-arrow-reflection.png") no-repeat top left transparent;
 }
-/* line 115, ../../app/assets/stylesheets/layout/body.scss */
+/* line 134, ../../app/assets/stylesheets/layout/body.scss */
 .body .rim-select .rim-reflection .reflection.left {
   margin: 0px 0px 0px 0px;
   background-position: top left;
@@ -1066,7 +1090,7 @@ footer .spacer .copyright {
   left: -98px;
   float: left;
 }
-/* line 123, ../../app/assets/stylesheets/layout/body.scss */
+/* line 142, ../../app/assets/stylesheets/layout/body.scss */
 .body .rim-select .rim-reflection .reflection.right {
   margin: 0px 0px 0px 0px;
   background-position: top right;
@@ -1074,27 +1098,27 @@ footer .spacer .copyright {
   right: -98px;
   float: right;
 }
-/* line 133, ../../app/assets/stylesheets/layout/body.scss */
+/* line 152, ../../app/assets/stylesheets/layout/body.scss */
 .body .rim-select .rim-reflection .buttons {
   margin: 0px auto;
   width: 780px;
   height: inherit;
   float: left;
 }
-/* line 140, ../../app/assets/stylesheets/layout/body.scss */
+/* line 159, ../../app/assets/stylesheets/layout/body.scss */
 .body .rim-select .rim-reflection .buttons ul {
   margin: 0px auto;
   width: auto;
   width: 315px;
   height: inherit;
 }
-/* line 147, ../../app/assets/stylesheets/layout/body.scss */
+/* line 166, ../../app/assets/stylesheets/layout/body.scss */
 .body .rim-select .rim-reflection .buttons ul li {
   height: auto;
   width: auto;
   list-style: none;
 }
-/* line 152, ../../app/assets/stylesheets/layout/body.scss */
+/* line 171, ../../app/assets/stylesheets/layout/body.scss */
 .body .rim-select .rim-reflection .buttons ul li a {
   height: 44px;
   width: 45px;
@@ -1102,46 +1126,46 @@ footer .spacer .copyright {
   float: left;
   text-indent: -9000px;
 }
-/* line 159, ../../app/assets/stylesheets/layout/body.scss */
+/* line 178, ../../app/assets/stylesheets/layout/body.scss */
 .body .rim-select .rim-reflection .buttons ul li a.active {
   height: 44px;
   width: 45px;
   background-position: top center;
 }
-/* line 165, ../../app/assets/stylesheets/layout/body.scss */
+/* line 184, ../../app/assets/stylesheets/layout/body.scss */
 .body .rim-select .rim-reflection .buttons ul li a:hover {
   height: 44px;
   width: 45px;
   background-position: top center;
 }
-/* line 171, ../../app/assets/stylesheets/layout/body.scss */
+/* line 190, ../../app/assets/stylesheets/layout/body.scss */
 .body .rim-select .rim-reflection .buttons ul li a:active {
   height: 44px;
   width: 45px;
   background-position: top center;
 }
-/* line 186, ../../app/assets/stylesheets/layout/body.scss */
+/* line 205, ../../app/assets/stylesheets/layout/body.scss */
 .body .content-container.home {
   background: url("bg-home-content.png") no-repeat top center transparent;
 }
-/* line 191, ../../app/assets/stylesheets/layout/body.scss */
+/* line 210, ../../app/assets/stylesheets/layout/body.scss */
 .body .content-container.interior {
   background: url("bg-interior-content.png") no-repeat top center transparent;
 }
-/* line 196, ../../app/assets/stylesheets/layout/body.scss */
+/* line 215, ../../app/assets/stylesheets/layout/body.scss */
 .body .content-container {
   margin: 0px auto;
   padding: 0px 0px 25px 0px;
   height: auto;
   width: 100%;
 }
-/* line 204, ../../app/assets/stylesheets/layout/body.scss */
+/* line 223, ../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content {
   margin: 0px auto;
   width: 980px;
   height: 367px;
 }
-/* line 210, ../../app/assets/stylesheets/layout/body.scss */
+/* line 229, ../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .left-column {
   margin: 0px 0px 0px -30px;
   width: 305px;
@@ -1149,14 +1173,14 @@ footer .spacer .copyright {
   position: relative;
   float: left;
 }
-/* line 218, ../../app/assets/stylesheets/layout/body.scss */
+/* line 237, ../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .left-column .rim-preview {
   margin: 0px;
   height: 303px;
   width: 313px;
   background: url("img-rim-preview.png") no-repeat top left transparent;
 }
-/* line 226, ../../app/assets/stylesheets/layout/body.scss */
+/* line 245, ../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .left-column .try-it {
   margin: -60px 0px 0px 75px;
   padding: 54px 0px 0px 0px;
@@ -1166,7 +1190,7 @@ footer .spacer .copyright {
   position: absolute;
   z-index: 1;
 }
-/* line 236, ../../app/assets/stylesheets/layout/body.scss */
+/* line 255, ../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .left-column .try-it a {
   margin: 0px 0px 0px 18px;
   width: 141px;
@@ -1174,20 +1198,20 @@ footer .spacer .copyright {
   display: block;
   text-indent: -9000px;
 }
-/* line 248, ../../app/assets/stylesheets/layout/body.scss */
+/* line 267, ../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .right-column {
   width: 705px;
   height: auto;
   position: relative;
   float: right;
 }
-/* line 255, ../../app/assets/stylesheets/layout/body.scss */
+/* line 274, ../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .right-column .title-container {
   width: auto;
   height: auto;
   display: block;
 }
-/* line 261, ../../app/assets/stylesheets/layout/body.scss */
+/* line 280, ../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .right-column .title-container .title {
   margin: 20px 0px 0px -16px;
   height: 90px;
@@ -1196,7 +1220,7 @@ footer .spacer .copyright {
   text-indent: -9000px;
   background: url("title-dubleds.png") no-repeat top left transparent;
 }
-/* line 271, ../../app/assets/stylesheets/layout/body.scss */
+/* line 290, ../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .right-column .title-container .usb-built-in {
   margin: 45px 0px 0px 0px;
   height: 38px;
@@ -1204,29 +1228,29 @@ footer .spacer .copyright {
   background: url("img-usb-builtin.png") no-repeat top left transparent;
   float: right;
 }
-/* line 281, ../../app/assets/stylesheets/layout/body.scss */
+/* line 300, ../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .right-column .text-container {
   clear: both;
   text-shadow: 0px 1px 2px #333;
   color: #ffffff;
 }
-/* line 287, ../../app/assets/stylesheets/layout/body.scss */
+/* line 306, ../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .right-column .text-container h4 {
   font-size: 22px;
   padding: 0px 0px 24px 0px;
 }
-/* line 293, ../../app/assets/stylesheets/layout/body.scss */
+/* line 312, ../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .right-column .text-container p {
   font-size: 15px;
 }
-/* line 298, ../../app/assets/stylesheets/layout/body.scss */
+/* line 317, ../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .right-column .text-container ul {
   margin: 20px 0px 0px -7px;
   width: auto;
   height: auto;
   float: left;
 }
-/* line 305, ../../app/assets/stylesheets/layout/body.scss */
+/* line 324, ../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .right-column .text-container ul li {
   width: auto;
   height: 25px;
@@ -1236,7 +1260,7 @@ footer .spacer .copyright {
   padding: 2px 0px 0px 27px;
   vertical-align: middle;
 }
-/* line 317, ../../app/assets/stylesheets/layout/body.scss */
+/* line 336, ../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .right-column .text-container ul + ul {
   padding: 0px 0px 0px 20px;
 }
