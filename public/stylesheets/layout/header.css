@@ -1,0 +1,173 @@
+/* Include Mixins & CSS3 Stuff */
+/* line 5, ../../../app/assets/stylesheets/layout/header.scss */
+header {
+  background-position: top center;
+  margin: 0px auto;
+  height: 400px;
+  width: 100%;
+  display: inline-block;
+}
+/* line 14, ../../../app/assets/stylesheets/layout/header.scss */
+header nav.user {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 55px;
+  background: url("bg-header-bar.png") repeat-x top center transparent;
+  display: block;
+  position: fixed;
+  z-index: 998;
+}
+/* line 25, ../../../app/assets/stylesheets/layout/header.scss */
+header nav.user ul {
+  margin: 0px auto;
+  width: auto;
+  height: inherit;
+  display: none;
+}
+/* line 32, ../../../app/assets/stylesheets/layout/header.scss */
+header nav.user ul span.line {
+  margin: 0px 5px 0px 0px;
+  padding: 0px 0px 0px 4px;
+  width: 1px;
+  height: auto;
+  border-right: 1px solid #313131;
+}
+/* line 41, ../../../app/assets/stylesheets/layout/header.scss */
+header nav.user ul li {
+  margin: 0px;
+  padding: 19px 0px 0px 0px;
+  list-style-type: none;
+  width: auto;
+  height: 55px;
+  float: left;
+  color: #7F7F7F;
+  font-family: Helvetica, sans-serif, Arial;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+/* line 55, ../../../app/assets/stylesheets/layout/header.scss */
+header nav.user ul li.divline {
+  padding: 0px 18px 0px 18px;
+  width: 2px;
+  height: 74px;
+  float: left;
+  background: url("bg-header-divline.png") no-repeat top center transparent;
+}
+/* line 64, ../../../app/assets/stylesheets/layout/header.scss */
+header nav.user ul li a {
+  text-transform: uppercase;
+  color: #7F7F7F;
+  font-family: Helvetica, sans-serif, Arial;
+  font-size: 12px;
+}
+/* line 71, ../../../app/assets/stylesheets/layout/header.scss */
+header nav.user ul li a.my_account {
+  margin: -3px 0px 0px 0px;
+  padding: 7px 0px 0px 13px;
+  width: 73px;
+  height: 17px;
+  color: #ababab;
+  font-size: 9px;
+  background: url("button-my-account.png") no-repeat top left transparent;
+  display: block;
+}
+/* line 85, ../../../app/assets/stylesheets/layout/header.scss */
+header nav.user ul li a.log_out, header nav.user ul li a.sign_in, header nav.user ul li a.sign_up {
+  margin: -3px 0px 0px 5px;
+  padding: 7px 0px 0px 12px;
+  width: 52px;
+  height: 17px;
+  color: #ababab;
+  font-size: 9px;
+  background: url("button-log-out.png") no-repeat top left transparent;
+  display: block;
+}
+/* line 98, ../../../app/assets/stylesheets/layout/header.scss */
+header nav.user ul li a:hover, header nav.user ul li a.active {
+  background-position: bottom left;
+  color: #75e3f0;
+}
+/* line 108, ../../../app/assets/stylesheets/layout/header.scss */
+header nav.main {
+  margin: 55px 0px 0px 0px;
+  padding: 0px;
+  width: 100%;
+  height: 65px;
+  background: url("bg-header-nav.png") repeat-x top center transparent;
+  display: block;
+  position: fixed;
+  z-index: 999;
+}
+/* line 119, ../../../app/assets/stylesheets/layout/header.scss */
+header nav.main ul.topnav {
+  margin: 0px auto;
+  width: 600px;
+  height: inherit;
+  display: none;
+}
+/* line 126, ../../../app/assets/stylesheets/layout/header.scss */
+header nav.main ul.topnav li {
+  margin: 10px 0px 0px 0px;
+  height: 30px;
+  width: auto;
+  list-style: none;
+  float: left;
+  overflow: hidden;
+}
+/* line 135, ../../../app/assets/stylesheets/layout/header.scss */
+header nav.main ul.topnav li a, header nav.main ul.topnav li span {
+  height: 40px;
+  width: auto;
+  font-family: "Helvetica";
+  font-size: 13.5pt;
+  font-weight: normal;
+  line-height: 20px;
+  color: #ffffff;
+  clear: both;
+  float: left;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+/* line 149, ../../../app/assets/stylesheets/layout/header.scss */
+header nav.main ul.topnav li a:hover, header nav.main ul.topnav li span:hover {
+  color: #59b7ff;
+  text-decoration: none;
+}
+/* line 155, ../../../app/assets/stylesheets/layout/header.scss */
+header nav.main ul.topnav li a.active, header nav.main ul.topnav li span.active {
+  color: #59b7ff;
+}
+/* line 160, ../../../app/assets/stylesheets/layout/header.scss */
+header nav.main ul.topnav li a {
+  color: #59b7ff;
+  background-position: left bottom;
+}
+/* line 164, ../../../app/assets/stylesheets/layout/header.scss */
+header nav.main ul.topnav li span {
+  background-position: left top;
+}
+/* line 169, ../../../app/assets/stylesheets/layout/header.scss */
+header nav.main ul.topnav li + li {
+  padding: 0px 0px 0px 32px;
+}
+/* line 173, ../../../app/assets/stylesheets/layout/header.scss */
+header nav.main ul.topnav li:last-child {
+  padding: 0 0 0 25px;
+}
+/* line 176, ../../../app/assets/stylesheets/layout/header.scss */
+header nav.main .glow {
+  margin: -41px 0px 0px 0px;
+  width: 158px;
+  height: 23px;
+  background: url("header-link-glow.png") no-repeat top left transparent;
+  position: relative;
+  display: none;
+}
+/* line 186, ../../../app/assets/stylesheets/layout/header.scss */
+header .logo {
+  margin: 90px auto;
+  width: 708px;
+  height: 339px;
+  background: url("dub-logo-home.png") no-repeat top left transparent;
+}
