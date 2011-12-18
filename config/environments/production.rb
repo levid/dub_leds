@@ -30,6 +30,8 @@ DubLeds::Application.configure do
   
   config.assets.js_compressor  = :uglifier
   config.assets.css_compressor = :yui
+  
+  CarrierWave.root = Rails.root.join('tmp')
 
   # Defaults to Rails.root.join("public/assets")
   # config.assets.manifest = YOUR_PATH

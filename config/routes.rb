@@ -12,10 +12,12 @@ DubLeds::Application.routes.draw do
   get '/users/auth/:provider' => 'users/omniauth_callbacks#passthru'
   match '/registrations' => 'registrations#email'
   
+  # get '/rims/image_cache', :controller => 'rims', :action => 'image_cache', :requirements => { :cache_id => /\d{8}-\d{4}-\d{5}-\d{4}/, :filename => /[a-zA-Z0-9_ ]+\.(jpg|jpeg|png|gif){1}/i }
+  
   resources :users, :only => :show
   resources :authentications
 
-  match "/tmp/*path" => "gridfs#serve"
+  match "/tmp/uploads/*path" => "gridfs#serve"
 
   # match '/signin' => 'sessions#new', :as => :signin
   # 
