@@ -8,16 +8,18 @@ DubLeds::Application.routes.draw do
   # resource  :users
   resources :contact
   
-  match '/users/auth/:provider/callback' => 'authentications#create'
+  match '/users/auth/:provider/callback', :to => 'authentications#create'
   get '/users/auth/:provider' => 'users/omniauth_callbacks#passthru'
-  match '/registrations' => 'registrations#email'
+  match '/registrations', :to => 'registrations#email'
   
-  match '/rims/image_cache',=> 'rims@image_cache' ,:requirements => { :cache_id => /\d{8}-\d{4}-\d{5}-\d{4}/, :filename => /[a-zA-Z0-9_ ]+\.(jpg|jpeg|png|gif){1}/i }
+  match '/rims/image_cache', :to => 'rims#image_cache', :constraints => { :cache_id => /\d{8}-\d{4}-\d{5}-\d{4}/, :filename => /[a-zA-Z0-9_ ]+\.(jpg|jpeg|png|gif){1}/i }
   
   resources :users, :only => :show
   resources :authentications
 
-  match "/tmp/uploads/*path" => "gridfs#serve"
+  match "/tmp/uploads/*path", :to => "gridfs#serve"
+  
+  match "/#_=_", :to => redirect("/home")
 
   # match '/signin' => 'sessions#new', :as => :signin
   # 
