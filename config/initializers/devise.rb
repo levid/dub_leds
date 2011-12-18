@@ -15,11 +15,15 @@ Devise.setup do |config|
   # available as additional gems.
   require 'devise/orm/mongoid'
   # require 'devise/orm/active_record'
-
+  
   require "omniauth-facebook"
   require "omniauth-twitter"
-
-  config.omniauth :facebook, "APP_ID", "APP_SECRET"
+  require 'openid/store/filesystem'
+  
+  config.omniauth :twitter, 'qW7eyIXhRoMK8N84Kc5g', 'TIoQRdth1ZYGZzny77LGmgOmiJSTwXqBEkIdAsyjEw'
+  config.omniauth :facebook, '42844466516', 'cf9fd40144a2f6d26d4a1fbd152bbca5', {:scope => 'email, offline_access', :client_options => {:ssl => {:ca_file => '/usr/lib/ssl/certs/ca-certificates.crt'}}}
+  config.omniauth :open_id, :store => OpenID::Store::Filesystem.new('/tmp'), :require => 'omniauth-openid'
+  config.omniauth :open_id, :store => OpenID::Store::Filesystem.new('/tmp'), :name => 'google', :identifier => 'https://www.google.com/accounts/o8/id', :require => 'omniauth-openid'
   
   config.scoped_views = true
 

@@ -20,6 +20,9 @@ class Dub
       _Dub.UI.initGlobalUI()
       $S.initPage('Home', 'testing') if (".Body")?
       
+      if (window.location.hash == "#_=_")
+        window.location.hash = ""
+      
     this
 
   # Init Page Function

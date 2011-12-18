@@ -1,40 +1,50 @@
-DubLeds::Application.routes.draw do
-
-  resources :newsletters
-
+DubLeds::Application.routes.draw do  
+  
   devise_for :admins
-  devise_for :users
-
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+  
+  resources :newsletters
   resources :admins
-  resource  :users
+  # resource  :users
   resources :contact
   
+  match '/users/auth/:provider/callback' => 'authentications#create'
+  get '/users/auth/:provider' => 'users/omniauth_callbacks#passthru'
+  match '/registrations' => 'registrations#email'
+  
+  resources :users, :only => :show
+  resources :authentications
+
   match "/images/uploads/*path" => "gridfs#serve"
 
-  root :to => 'home#index'
+  # match '/signin' => 'sessions#new', :as => :signin
+  # 
+  #   match '/signout' => 'sessions#destroy', :as => :signout
+  # 
+  #   match '/auth/failure' => 'sessions#failure'
 
-  get '/home'             => 'home#index',        :as => :home
+  get '/home'                => 'home#index',       :as => :home
 
-  get '/rims'             => 'rims#index',        :as => :rim
-  get '/rims/new'         => 'rims#new',          :as => :rim_new
-  get '/rims/:id'         => 'rims#show',         :as => :rim_show
-  post '/rims/create'     => 'rims#create',       :as => :rim_create
-  get '/rims/:id/edit'    => 'rims#edit',         :as => :rim_edit
-  put '/rims/:id'         => 'rims#update',       :as => :rim_update
-  delete '/rims/:id'      => 'rims#destroy',      :as => :rim_destroy
+  get '/rims'                => 'rims#index',       :as => :rim
+  get '/rims/new'            => 'rims#new',         :as => :rim_new
+  get '/rims/:id'            => 'rims#show',        :as => :rim_show
+  post '/rims/create'        => 'rims#create',      :as => :rim_create
+  get '/rims/:id/edit'       => 'rims#edit',        :as => :rim_edit
+  put '/rims/:id'            => 'rims#update',      :as => :rim_update
+  delete '/rims/:id'         => 'rims#destroy',     :as => :rim_destroy
   
-  get '/contact'             => 'contact#index',        :as => :contact
-  get '/contact/new'         => 'contact#new',          :as => :contact_new
-  get '/contact/:id'         => 'contact#show',         :as => :contact_show
-  post '/contact/create'     => 'contact#create',       :as => :contact_create
-  get '/contact/:id/edit'    => 'contact#edit',         :as => :contact_edit
-  put '/contact/:id'         => 'contact#update',       :as => :contact_update
-  delete '/contact:id'       => 'contact#destroy',      :as => :contact_destroy
+  get '/contact'             => 'contact#index',    :as => :contact
+  get '/contact/new'         => 'contact#new',      :as => :contact_new
+  get '/contact/:id'         => 'contact#show',     :as => :contact_show
+  post '/contact/create'     => 'contact#create',   :as => :contact_create
+  get '/contact/:id/edit'    => 'contact#edit',     :as => :contact_edit
+  put '/contact/:id'         => 'contact#update',   :as => :contact_update
+  delete '/contact:id'       => 'contact#destroy',  :as => :contact_destroy
   
-  get '/generator'        => 'generator#index',   :as => :generator
-  get '/order'            => 'order#index',       :as => :order
-  get '/media'            => 'media#index',       :as => :media
-  get '/technology'       => 'technology#index',  :as => :technology
+  get '/generator'           => 'generator#index',  :as => :generator
+  get '/order'               => 'order#index',      :as => :order
+  get '/media'               => 'media#index',      :as => :media
+  get '/technology'          => 'technology#index', :as => :technology
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -92,4 +102,7 @@ DubLeds::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
+  
+  root :to => 'home#index'
+  
 end

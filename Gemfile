@@ -19,8 +19,10 @@ gem 'draper'
 gem "bson_ext", ">= 1.3.1"
 gem "mongoid", ">= 2.3.3"
 gem "devise", ">= 1.5.0" #https://github.com/plataformatec/devise
-gem "omniauth-facebook"
+gem "omniauth", ">= 1.0.0"
 gem "omniauth-twitter"
+gem "omniauth-facebook"
+gem 'omniauth-openid'
 gem 'yaml_db'
 gem 'carrierwave-mongoid'
 gem 'mini_magick'

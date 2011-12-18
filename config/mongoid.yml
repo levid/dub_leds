@@ -1,20 +1,27 @@
-development:
+defaults: &defaults
   host: localhost
-  database: dub_leds_development
-
-test:
-  host: localhost
-  database: dub_leds_test
-
-# set these environment variables on your prod server
-production:
-  host: 'staff.mongohq.com'
-  port: '10022'
-  username: 'levid'
-  password: 'wooteni'
-  database: 'dub_leds'
   # slaves:
   #   - host: slave1.local
   #     port: 27018
   #   - host: slave2.local
   #     port: 27019
+
+development:
+  <<: *defaults
+  database: dub_leds_development
+
+test:
+  <<: *defaults
+  database: dub_leds_test
+
+# set these environment variables on your prod server
+# production:
+#   host: <%= ENV['MONGOID_HOST'] %>
+#   port: <%= ENV['MONGOID_PORT'] %>
+#   username: <%= ENV['MONGOID_USERNAME'] %>
+#   password: <%= ENV['MONGOID_PASSWORD'] %>
+#   database: <%= ENV['MONGOID_DATABASE'] %>
+
+# set these environment variables on your prod server
+production:
+  uri: 'mongodb://levid:wooteni@staff.mongohq.com:10022/dub_leds'

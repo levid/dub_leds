@@ -56,6 +56,9 @@ DubLeds::Application.configure do
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation can not be found)
   config.i18n.fallbacks = true
+  
+  # Specifies the header that your server uses for sending files
+  config.action_dispatch.x_sendfile_header = "X-Sendfile"
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
@@ -76,5 +79,11 @@ DubLeds::Application.configure do
       :authentication => :plain,
       :enable_starttls_auto => true
   }
+  
+  MONGOID_HOST = 'staff.mongohq.com'
+  MONGOID_PORT = '10022'
+  MONGOID_USERNAME = 'levid'
+  MONGOID_PASSWORD = 'wooteni'
+  MONGOID_DATABASE = 'dub_leds'
 
 end
