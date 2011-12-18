@@ -19,6 +19,9 @@ DubLeds::Application.configure do
 
   # Generate digests for assets URLs
   config.assets.digest = true
+  
+  config.assets.enabled = true
+  config.assets.css_compressor = :scss
 
   config.assets.js_compressor  = :uglifier
 

@@ -1,16 +1,16 @@
-/* line 6, ../../../app/assets/stylesheets/application/confirmations.css.scss */
+/* line 6, ../../app/assets/stylesheets/confirmations.css.scss */
 .content-confirmations {
   margin: 0px auto;
   width: 980px;
   height: auto;
 }
-/* line 12, ../../../app/assets/stylesheets/application/confirmations.css.scss */
+/* line 12, ../../app/assets/stylesheets/confirmations.css.scss */
 .content-confirmations .title-container {
   width: auto;
   height: auto;
   display: block;
 }
-/* line 18, ../../../app/assets/stylesheets/application/confirmations.css.scss */
+/* line 18, ../../app/assets/stylesheets/confirmations.css.scss */
 .content-confirmations .title-container .title {
   margin: 20px 0px 0px -16px;
   height: 73px;
@@ -19,18 +19,18 @@
   text-indent: -9000px;
   background: url("title-new-confirmation.png") no-repeat top left transparent;
 }
-/* line 29, ../../../app/assets/stylesheets/application/confirmations.css.scss */
+/* line 29, ../../app/assets/stylesheets/confirmations.css.scss */
 .content-confirmations .text-container {
   clear: both;
   text-shadow: 0px 1px 2px #333;
   color: #ffffff;
 }
-/* line 35, ../../../app/assets/stylesheets/application/confirmations.css.scss */
+/* line 35, ../../app/assets/stylesheets/confirmations.css.scss */
 .content-confirmations .text-container h4 {
   font-size: 22px;
   padding: 0px 0px 10px 0px;
 }
-/* line 41, ../../../app/assets/stylesheets/application/confirmations.css.scss */
+/* line 41, ../../app/assets/stylesheets/confirmations.css.scss */
 .content-confirmations .text-container p {
   font-size: 15px;
 }
