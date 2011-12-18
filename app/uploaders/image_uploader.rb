@@ -18,7 +18,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   storage :grid_fs
   
   def cache_dir
-    "#{RAILS_ROOT}/tmp/uploads"
+    "#{Rails.root}/tmp"
   end
   
   # storage :fog
