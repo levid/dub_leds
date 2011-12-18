@@ -8,7 +8,7 @@ DubLeds::Application.configure do
   ENV['MONGOID_DATABASE'] = 'dub_leds'
   # ENV['MONGOHQ_URL'] = 'mongodb://levid:wooteni@staff.mongohq.com:10022/dub_leds'
   
-  ENV['MONGOHQ_URL'] = 'mongodb://heroku:wooteni@staff.mongohq.com:10064/app2090795'
+  ENV['MONGOHQ_URL'] = 'mongodb://levid:wooteni@staff.mongohq.com:10064/app2090795'
   
   
   # Code is not reloaded between requests
