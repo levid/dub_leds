@@ -1,5 +1,13 @@
 DubLeds::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
+  
+  ENV['MONGOID_HOST'] = 'staff.mongohq.com'
+  ENV['MONGOID_PORT'] = '10022'
+  ENV['MONGOID_USERNAME'] = 'levid'
+  ENV['MONGOID_PASSWORD'] = 'wooteni'
+  ENV['MONGOID_DATABASE'] = 'dub_leds'
+  ENV['MONGOHQ_URL'] = 'mongodb://levid:wooteni@staff.mongohq.com:10022/dub_leds'
+  
 
   # Code is not reloaded between requests
   config.cache_classes = true
@@ -20,8 +28,7 @@ DubLeds::Application.configure do
   # Generate digests for assets URLs
   config.assets.digest = true
   
-  config.assets.enabled = true
-  config.assets.css_compressor = :scss
+  config.assets.enabled = false
 
   config.assets.js_compressor  = :uglifier
 
@@ -82,11 +89,5 @@ DubLeds::Application.configure do
       :authentication => :plain,
       :enable_starttls_auto => true
   }
-  
-  MONGOID_HOST = 'staff.mongohq.com'
-  MONGOID_PORT = '10022'
-  MONGOID_USERNAME = 'levid'
-  MONGOID_PASSWORD = 'wooteni'
-  MONGOID_DATABASE = 'dub_leds'
 
 end

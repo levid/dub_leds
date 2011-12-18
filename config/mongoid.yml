@@ -24,4 +24,4 @@ test:
 
 # set these environment variables on your prod server
 production:
-  uri: 'mongodb://levid:wooteni@staff.mongohq.com:10022/dub_leds'
+  uri: <%= ENV['MONGOHQ_URL'] %>
