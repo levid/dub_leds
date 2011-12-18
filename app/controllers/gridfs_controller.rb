@@ -2,7 +2,7 @@ require 'mongo'
 
 class GridfsController < ActionController::Metal
   def serve
-    gridfs_path = env["PATH_INFO"].gsub("#{Rails.root}/tmp", "")
+    gridfs_path = env["PATH_INFO"].gsub("./tmp", "")
     begin
       gridfs_file = Mongo::GridFileSystem.new(Mongoid.database).open(gridfs_path, 'r') do |file|
         [200, { 'Content-Type' => file.content_type }, [file.read]]
