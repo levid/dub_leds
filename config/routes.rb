@@ -15,7 +15,7 @@ DubLeds::Application.routes.draw do
   resources :users, :only => :show
   resources :authentications
 
-  match "/images/uploads/*path" => "gridfs#serve"
+  match "/tmp/*path" => "gridfs#serve"
 
   # match '/signin' => 'sessions#new', :as => :signin
   # 
