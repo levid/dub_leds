@@ -20,6 +20,8 @@ Devise.setup do |config|
   require "omniauth-twitter"
 
   config.omniauth :facebook, "APP_ID", "APP_SECRET"
+  
+  config.scoped_views = true
 
   # Using devise on Heroku with Ruby on Rails 3.1 requires setting:
   # Read more about the potential issues at guides.rubyonrails.org/asset_pipeline.html

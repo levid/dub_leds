@@ -46,6 +46,22 @@
     }
 }
 
+.Registrations, .Sessions, .Passwords, .Confirmations
+{
+    .content-container
+    {
+        padding: 0px 0px 10px 0px;
+
+        &.interior
+        {
+          padding: 0px 0px 50px 0px;
+            //background: url( 'content-contact.png' ) no-repeat top center transparent;
+            background: none;
+            height: auto;
+        }
+    }
+}
+
 .Order
 {
     .content-container

@@ -75,14 +75,14 @@
               %li.divline
               - if user_signed_in?
                 %li 
-                  = link_to('My Account', edit_user_registration_path, :class => "my_account #{'active' if controller_name === 'registrations'}")
+                  = link_to('My Account', edit_user_registration_path, :class => "my_account #{'active' if controller_name === 'registrations' }")
                 %li 
                   = link_to('Logout', destroy_user_session_path, :class => 'log_out', :method=>'delete')
               - else
                 %li
-                  = link_to('Sign In', new_user_session_path, :class => 'sign_in')
+                  = link_to('Sign In', new_user_session_path, :class => "sign_in #{'active' if controller_name === 'sessions' }")
                 %li
-                  = link_to('Sign up', new_user_registration_path, :class => 'sign_up')
+                  = link_to('Sign up', new_user_registration_path, :class => "sign_up #{'active' if controller_name === 'registrations' }")
               
           %nav.main
             %ul.topnav  

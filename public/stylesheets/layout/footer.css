@@ -136,7 +136,8 @@ footer .spacer {
 }
 /* line 160, ../../../app/assets/stylesheets/layout/footer.scss */
 footer .spacer .copyright {
-  margin: 10px auto;
+  margin: 0px auto;
+  padding: 10px 0px 0px 0px;
   height: 67px;
   width: 980px;
   font-size: 15px;
