@@ -21,6 +21,10 @@ class ImageUploader < CarrierWave::Uploader::Base
     "#{Rails.root}/tmp"
   end
   
+  def store_dir
+    "#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
+  end
+  
   # storage :fog
 
   # Override the directory where uploaded files will be stored.
