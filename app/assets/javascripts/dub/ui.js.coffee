@@ -7,7 +7,7 @@ class UI extends window._Dub
 
   initGlobalUI: (options) ->
     this.initFadingLinks()
-    this.initGlowEffect()
+    this.displayMainNav()
 
     topNav = new Nav
     newsletter = new Newsletter
@@ -17,7 +17,7 @@ class UI extends window._Dub
      
      $(element).hover (->
        $(this).animate
-         color: "#59B7FF"
+         color: "#cccccc"
        , 250
      ), ->
        $(this).animate
@@ -25,7 +25,18 @@ class UI extends window._Dub
        , 250
 
   initFadingLinks: () ->
-    this.fadeLink('a')
+    this.fadeLink('a.fade')
+    
+  displayMainNav: () ->
+    self = this
+    setTimeout ( ->
+      if $('nav.main a').hasClass('active')
+        $('nav ul').fadeIn ( ->
+           self.initGlowEffect() 
+        )
+      else
+        $('nav ul').fadeIn()
+    ), 300
 
   initGlowEffect: () ->
     setGlowEffect = () ->
@@ -43,7 +54,7 @@ class UI extends window._Dub
 
           glowPosition = glowLink.offset()
         )
-      ), 300
+      ), 100
 
     setResize = () ->
       $(window).resize ->
@@ -58,10 +69,17 @@ module 'Nav'
 
 Nav = class extends UI
   constructor: (@options) ->
-    this.initNav()
-    this
+    this.initUserNav()
+    this.initMainNav()
 
-  initNav: () ->
+    this
+    
+  initUserNav: () ->
+    userNav = $('nav.user ul')
+    navWidth = userNav.outerWidth()
+    userNav.css('width', navWidth)
+
+  initMainNav: () ->
     $('.topnav li').prepend('<span></span>')
 
     $('.topnav li').each ->

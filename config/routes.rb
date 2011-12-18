@@ -1,5 +1,7 @@
 DubLeds::Application.routes.draw do
 
+  resources :newsletters
+
   devise_for :admins
   devise_for :users
 

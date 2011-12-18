@@ -55,22 +55,36 @@
   %body{:class => "#{controller_name.capitalize} #{action_name.capitalize}"}
     %section#dub
       %section.wrapper
-      
-        - if user_signed_in?
-          %li
-            = link_to('Admin', admins_path)
-          %li
-            = link_to('Logout', destroy_user_session_path, :method=>'delete')
-          %li
-            = link_to('Edit account', edit_user_registration_path)
-        - else
-          %li
-            = link_to('Login', new_user_session_path)
-          %li
-            = link_to('Sign up', new_user_registration_path)
 
         %header
-          %nav
+          %nav.user
+            %ul
+              - if user_signed_in?
+                %li
+                  = "Welcome, " + current_user.name
+              - else
+                %li
+                  = "Welcome, Guest"
+              %li.divline
+                %span
+              %li 
+                - if user_signed_in?
+                  = link_to('Admin', admins_path, :class => "fade #{'active' if controller_name === 'admins'}")
+                  %span.line &nbsp;
+                %a{:href => 'blah', :class => 'fade'} CART (0)
+              %li.divline
+              - if user_signed_in?
+                %li 
+                  = link_to('My Account', edit_user_registration_path, :class => "my_account #{'active' if controller_name === 'registrations'}")
+                %li 
+                  = link_to('Logout', destroy_user_session_path, :class => 'log_out', :method=>'delete')
+              - else
+                %li
+                  = link_to('Sign In', new_user_session_path, :class => 'sign_in')
+                %li
+                  = link_to('Sign up', new_user_registration_path, :class => 'sign_up')
+              
+          %nav.main
             %ul.topnav  
               %li= (link_to "Home", home_path, :id => "home", :class => controller_name === "home" ? "active" : "")
               %li= (link_to "Technology", technology_path, :id => "technology", :class => controller_name === "technology" ? "active" : "")
@@ -95,7 +109,7 @@
                   %input{:type => "submit"}/
             .right-column
               .order
-                %a{:href => "#"} Order
+                = link_to('Order', order_path)
               %ul
                 %li
                   %a.facebook.active{:href => "#"} Facebook

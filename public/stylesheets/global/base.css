@@ -216,7 +216,7 @@ body {
 */
 /* line 128, ../../../app/assets/stylesheets/global/base.scss */
 a, a:visited {
-  color: #00a9ed;
+  color: #59b7ff;
   text-decoration: none;
   outline: none;
   font-weight: normal;
@@ -230,8 +230,4 @@ a:hover, a:visited:hover {
 #dub {
   width: 100%;
   height: 100%;
-}
-/* line 145, ../../../app/assets/stylesheets/global/base.scss */
-#dub .wrapper a {
-  color: #909090;
 }

@@ -6,13 +6,113 @@ header
     background-position: top center;
 
     margin: 0px auto;
-    height: 326px;
+    height: 400px;
     width: 100%;
     display: inline-block;
 
-    nav
+    nav.user
     {
-        margin: 0px;
+      margin: 0px;
+      padding: 0px;
+      width: 100%;
+      height: 55px;
+      background: url( 'bg-header-bar.png' ) repeat-x top center transparent;
+      display: block;
+      position: fixed;
+      z-index: 998;
+      
+      ul
+      {
+        margin: 0px auto;
+        width: auto;
+        height: inherit;
+        display: none;
+        
+        span.line
+        {
+          margin: 0px 5px 0px 0px;
+          padding: 0px 0px 0px 4px;
+          width: 1px;
+          height: auto;
+          border-right: 1px solid #313131;
+        }
+
+        li
+        {
+          margin: 0px;
+          padding: 19px 0px 0px 0px;
+          list-style-type: none;
+          width: auto;
+          height: 55px;
+          float: left;
+
+          color: #7F7F7F;
+          font-family: Helvetica, sans-serif, Arial;
+          font-size: 12px;
+          text-transform: uppercase;
+          
+          &.divline
+          {
+            padding: 0px 18px 0px 18px;
+            width: 2px;
+            height: 74px;
+            float: left;
+            background: url( 'bg-header-divline.png' ) no-repeat top center transparent;
+          }
+          
+          a
+          {
+            text-transform: uppercase;
+            color: #7F7F7F;
+            font-family: Helvetica, sans-serif, Arial;
+            font-size: 12px;
+            
+            &.my_account
+            {
+              margin: -3px 0px 0px 0px;
+              padding: 7px 0px 0px 13px;
+              width: 73px;
+              height: 17px;
+              color: #ababab;
+              font-size: 9px;
+              background: url( 'button-my-account.png' ) no-repeat top left transparent;
+              display: block;
+              
+              &:hover,
+              &.active
+              {
+                background-position: bottom left;
+                color: #75e3f0;
+              }
+            }
+            
+            &.log_out,
+            &.sign_in,
+            &.sign_up
+            {
+              margin: -3px 0px 0px 5px;
+              padding: 7px 0px 0px 12px;
+              width: 52px;
+              height: 17px;
+              color: #ababab;
+              font-size: 9px;
+              background: url( 'button-log-out.png' ) no-repeat top left transparent;
+              display: block;
+              
+              &:hover
+              {
+                background-position: bottom left;
+                color: #75e3f0;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    nav.main
+    {
+        margin: 55px 0px 0px 0px;
         padding: 0px;
         width: 100%;
         height: 65px;
@@ -21,7 +121,7 @@ header
         position: fixed;
         z-index: 999;
 
-        ul
+        ul.topnav
         {
             margin: 0px auto;
             width: 600px;
@@ -90,7 +190,7 @@ header
     }
 
     .logo {
-        margin: 25px auto;
+        margin: 90px auto;
         width: 708px;
         height: 339px;
         background: url( 'dub-logo-home.png' ) no-repeat top left transparent;

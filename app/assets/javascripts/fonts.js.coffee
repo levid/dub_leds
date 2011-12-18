@@ -1,4 +1,4 @@
-Cufon.replace('nav ul li a', ->
+Cufon.replace('nav.main ul li a', ->
     fontFamily: 'Eurostile',
     fontWeight: 400,
     fontStyle: 'normal',
@@ -7,7 +7,7 @@ Cufon.replace('nav ul li a', ->
         a: true
 )
 
-Cufon.replace('nav ul li span', ->
+Cufon.replace('nav.main ul li span', ->
     fontFamily: 'Eurostile',
     fontWeight: 400,
     fontStyle: 'normal',
