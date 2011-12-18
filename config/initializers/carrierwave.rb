@@ -3,5 +3,5 @@ CarrierWave.configure do |config|
     # Same as your MongoHQ database conenction parameters
   config.grid_fs_connection = Mongoid.database
   # Storage access url
-  config.grid_fs_access_url = "/tmp"
+  config.grid_fs_access_url = "#{Rails.root}/tmp"
 end

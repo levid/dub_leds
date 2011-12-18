@@ -17,7 +17,7 @@ DubLeds::Application.routes.draw do
   resources :users, :only => :show
   resources :authentications
 
-  match "/tmp/*path", :to => "gridfs#serve"
+  match "#{Rails.root}/tmp*path", :to => "gridfs#serve"
   
   # match "/#_=_", :to => redirect("/home")
 
