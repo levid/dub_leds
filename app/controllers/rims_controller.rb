@@ -1,6 +1,5 @@
 class RimsController < ApplicationController
   respond_to :html, :json
-  layout 'default'
 
   # GET /rims
   def index

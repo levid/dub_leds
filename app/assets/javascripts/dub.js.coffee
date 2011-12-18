@@ -18,7 +18,8 @@ class Dub
 
     $(document).ready ->
       _Dub.UI.initGlobalUI()
-      $S.initPage('Home', 'testing') if (".Body")?
+      
+      $S.initPage('Home', 'testing')
       
       if (window.location.hash == "#_=_")
         window.location.hash = ""

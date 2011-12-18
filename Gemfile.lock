@@ -249,7 +249,6 @@ DEPENDENCIES
   sass-rails (~> 3.1.4)
   simplecov
   spork-testunit (= 0.0.6)
-  sprockets (>= 2.0.0)
   therubyracer
   uglifier (>= 1.0.3)
   vcr

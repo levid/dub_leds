@@ -23,7 +23,6 @@ class RimSelect extends window._Dub
     )
 
   slidePrev: () ->
-    console.log(@count)
     this.animateRim(@rimContainer,
       method:       'slidePrev'
       direction:    'right'

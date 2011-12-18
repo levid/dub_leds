@@ -1,6 +1,5 @@
 class AdminsController < ApplicationController
   before_filter :authenticate_admin!
-  layout 'default'
 
   # Inside your protected controller
   # before_filter :authenticate_admin!

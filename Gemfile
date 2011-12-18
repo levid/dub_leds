@@ -26,7 +26,6 @@ gem 'omniauth-openid'
 gem 'yaml_db'
 gem 'carrierwave-mongoid'
 gem 'mini_magick'
-gem 'sprockets', '>= 2.0.0'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
