@@ -38,7 +38,7 @@ class RimsController < ApplicationController
   
   def image_cache
     headers['Cache-Control'] = 'public; max-age=600' # cache image for 10 minutes
-    send_data "./tmp/#{params['cache_id']}/#{params['filename']}", :disposition => 'inline', :type => "image/png"
+    send_data "#{Rails.root}/tmp/uploads/#{params['cache_id']}/#{params['filename']}", :disposition => 'inline', :type => "image/png"
   end
 
   # POST /rims/:id

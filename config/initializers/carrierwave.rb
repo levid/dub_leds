@@ -1,7 +1,11 @@
 CarrierWave.configure do |config|
-  config.storage = :grid_fs
-    # Same as your MongoHQ database conenction parameters
   config.grid_fs_connection = Mongoid.database
+  config.storage = :grid_fs
   # Storage access url
-  config.grid_fs_access_url = "./tmp"
+  # config.grid_fs_access_url = "/tmp"
+  # config.cache_dir = "#{Rails.root}/tmp/uploads"
+
+  config.grid_fs_access_url = '/tmp'
+  config.cache_dir = "uploads"
+  config.root = Rails.root.join('tmp')
 end
