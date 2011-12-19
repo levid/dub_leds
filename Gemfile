@@ -16,17 +16,17 @@ gem 'jquery-rails'
 gem 'rack', '1.3.3'
 gem 'haml'
 gem 'draper'
-gem "bson_ext", ">= 1.3.1"
-gem "mongoid", ">= 2.3.3"
-gem "devise", ">= 1.5.0" #https://github.com/plataformatec/devise
-gem "omniauth", ">= 1.0.0"
-gem "omniauth-twitter"
-gem "omniauth-facebook"
+gem 'bson_ext', '>= 1.3.1'
+gem 'mongoid', '>= 2.3.3'
+gem 'devise', '>= 1.5.0' #https://github.com/plataformatec/devise
+gem 'omniauth', '>= 1.0.0'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
 gem 'omniauth-openid'
 gem 'yaml_db'
 gem 'carrierwave-mongoid'
 gem 'mini_magick'
-gem 'sprockets'
+gem 'cancan'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -60,4 +60,5 @@ group :assets do
   gem 'yui-compressor'
   gem "therubyracer", :require => 'v8'
   gem "compass" 
+  gem 'sprockets'
 end

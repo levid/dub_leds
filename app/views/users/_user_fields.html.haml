@@ -1,0 +1,8 @@
+%p= f.label :name
+%p= f.text_field :name
+%p= f.label :email
+%p= f.text_field :email
+- if can? :read, Role
+  %p= f.label :role
+  %ul.no-pad.no-bullets
+  = f.collection_select :id, User::ROLES, :to_s, :humanize

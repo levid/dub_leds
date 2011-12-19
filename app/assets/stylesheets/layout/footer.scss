@@ -72,7 +72,6 @@ footer
                 margin: 10px 0px 0px 0px;
                 width: 106px;
                 height: 43px;
-                background: url( 'button-order.png' ) no-repeat top left transparent;
                 float: left;
 
                 a
@@ -81,6 +80,12 @@ footer
                     height: 43px;
                     float: left;
                     text-indent: -9000px;
+                    background: url( 'button-order.png' ) no-repeat top left transparent;
+                    
+                    &:hover
+                    {
+                      background-position: none;
+                    }
                 }
             }
 

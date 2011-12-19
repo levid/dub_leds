@@ -65,76 +65,80 @@ footer .footer-container .right-column .order {
   margin: 10px 0px 0px 0px;
   width: 106px;
   height: 43px;
-  background: url("button-order.png") no-repeat top left transparent;
   float: left;
 }
-/* line 79, ../../../app/assets/stylesheets/layout/footer.scss */
+/* line 78, ../../../app/assets/stylesheets/layout/footer.scss */
 footer .footer-container .right-column .order a {
   width: 106px;
   height: 43px;
   float: left;
   text-indent: -9000px;
+  background: url("button-order.png") no-repeat top left transparent;
 }
-/* line 88, ../../../app/assets/stylesheets/layout/footer.scss */
+/* line 86, ../../../app/assets/stylesheets/layout/footer.scss */
+footer .footer-container .right-column .order a:hover {
+  background-position: none;
+}
+/* line 93, ../../../app/assets/stylesheets/layout/footer.scss */
 footer .footer-container .right-column ul {
   margin: 16px 0px 0px 10px;
   width: auto;
   height: auto;
   float: right;
 }
-/* line 95, ../../../app/assets/stylesheets/layout/footer.scss */
+/* line 100, ../../../app/assets/stylesheets/layout/footer.scss */
 footer .footer-container .right-column ul li {
   width: 31px;
   height: 31px;
   float: left;
   list-style-type: none;
 }
-/* line 102, ../../../app/assets/stylesheets/layout/footer.scss */
+/* line 107, ../../../app/assets/stylesheets/layout/footer.scss */
 footer .footer-container .right-column ul li a {
   width: 31px;
   height: 31px;
   text-indent: -9000px;
   float: left;
 }
-/* line 109, ../../../app/assets/stylesheets/layout/footer.scss */
+/* line 114, ../../../app/assets/stylesheets/layout/footer.scss */
 footer .footer-container .right-column ul li a.facebook {
   background: url("img-sharing-facebook.png") no-repeat top left transparent;
 }
-/* line 114, ../../../app/assets/stylesheets/layout/footer.scss */
+/* line 119, ../../../app/assets/stylesheets/layout/footer.scss */
 footer .footer-container .right-column ul li a.twitter {
   background: url("img-sharing-twitter.png") no-repeat top left transparent;
 }
-/* line 119, ../../../app/assets/stylesheets/layout/footer.scss */
+/* line 124, ../../../app/assets/stylesheets/layout/footer.scss */
 footer .footer-container .right-column ul li a.flickr {
   background: url("img-sharing-flickr.png") no-repeat top left transparent;
 }
-/* line 124, ../../../app/assets/stylesheets/layout/footer.scss */
+/* line 129, ../../../app/assets/stylesheets/layout/footer.scss */
 footer .footer-container .right-column ul li a.linkedin {
   background: url("img-sharing-linkedin.png") no-repeat top left transparent;
 }
-/* line 129, ../../../app/assets/stylesheets/layout/footer.scss */
+/* line 134, ../../../app/assets/stylesheets/layout/footer.scss */
 footer .footer-container .right-column ul li a:active {
   background-position: bottom center;
 }
-/* line 134, ../../../app/assets/stylesheets/layout/footer.scss */
+/* line 139, ../../../app/assets/stylesheets/layout/footer.scss */
 footer .footer-container .right-column ul li a:hover {
   background-position: bottom center;
 }
-/* line 139, ../../../app/assets/stylesheets/layout/footer.scss */
+/* line 144, ../../../app/assets/stylesheets/layout/footer.scss */
 footer .footer-container .right-column ul li a.active {
   background-position: bottom center;
 }
-/* line 146, ../../../app/assets/stylesheets/layout/footer.scss */
+/* line 151, ../../../app/assets/stylesheets/layout/footer.scss */
 footer .footer-container .right-column ul li + li {
   padding: 0px 0px 0px 10px;
 }
-/* line 154, ../../../app/assets/stylesheets/layout/footer.scss */
+/* line 159, ../../../app/assets/stylesheets/layout/footer.scss */
 footer .spacer {
   height: 100px;
   width: 100%;
   background: url("bg-footer.png") repeat top left transparent;
 }
-/* line 160, ../../../app/assets/stylesheets/layout/footer.scss */
+/* line 165, ../../../app/assets/stylesheets/layout/footer.scss */
 footer .spacer .copyright {
   margin: 0px auto;
   padding: 10px 0px 0px 0px;

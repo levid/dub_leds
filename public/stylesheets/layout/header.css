@@ -72,7 +72,12 @@ header nav.user ul li a.my_account {
   background: url("button-my-account.png") no-repeat top left transparent;
   display: block;
 }
-/* line 85, ../../../app/assets/stylesheets/layout/header.scss */
+/* line 83, ../../../app/assets/stylesheets/layout/header.scss */
+header nav.user ul li a.my_account:hover, header nav.user ul li a.my_account.active {
+  background-position: bottom left;
+  color: #75e3f0;
+}
+/* line 92, ../../../app/assets/stylesheets/layout/header.scss */
 header nav.user ul li a.log_out, header nav.user ul li a.sign_in, header nav.user ul li a.sign_up {
   margin: -3px 0px 0px 5px;
   padding: 7px 0px 0px 12px;
@@ -83,12 +88,12 @@ header nav.user ul li a.log_out, header nav.user ul li a.sign_in, header nav.use
   background: url("button-log-out.png") no-repeat top left transparent;
   display: block;
 }
-/* line 98, ../../../app/assets/stylesheets/layout/header.scss */
-header nav.user ul li a:hover, header nav.user ul li a.active {
+/* line 104, ../../../app/assets/stylesheets/layout/header.scss */
+header nav.user ul li a.log_out:hover, header nav.user ul li a.log_out.active, header nav.user ul li a.sign_in:hover, header nav.user ul li a.sign_in.active, header nav.user ul li a.sign_up:hover, header nav.user ul li a.sign_up.active {
   background-position: bottom left;
   color: #75e3f0;
 }
-/* line 108, ../../../app/assets/stylesheets/layout/header.scss */
+/* line 115, ../../../app/assets/stylesheets/layout/header.scss */
 header nav.main {
   margin: 55px 0px 0px 0px;
   padding: 0px;
@@ -99,14 +104,14 @@ header nav.main {
   position: fixed;
   z-index: 999;
 }
-/* line 119, ../../../app/assets/stylesheets/layout/header.scss */
+/* line 126, ../../../app/assets/stylesheets/layout/header.scss */
 header nav.main ul.topnav {
   margin: 0px auto;
   width: 600px;
   height: inherit;
   display: none;
 }
-/* line 126, ../../../app/assets/stylesheets/layout/header.scss */
+/* line 133, ../../../app/assets/stylesheets/layout/header.scss */
 header nav.main ul.topnav li {
   margin: 10px 0px 0px 0px;
   height: 30px;
@@ -115,7 +120,7 @@ header nav.main ul.topnav li {
   float: left;
   overflow: hidden;
 }
-/* line 135, ../../../app/assets/stylesheets/layout/header.scss */
+/* line 142, ../../../app/assets/stylesheets/layout/header.scss */
 header nav.main ul.topnav li a, header nav.main ul.topnav li span {
   height: 40px;
   width: auto;
@@ -129,33 +134,33 @@ header nav.main ul.topnav li a, header nav.main ul.topnav li span {
   text-transform: uppercase;
   cursor: pointer;
 }
-/* line 149, ../../../app/assets/stylesheets/layout/header.scss */
+/* line 156, ../../../app/assets/stylesheets/layout/header.scss */
 header nav.main ul.topnav li a:hover, header nav.main ul.topnav li span:hover {
   color: #59b7ff;
   text-decoration: none;
 }
-/* line 155, ../../../app/assets/stylesheets/layout/header.scss */
+/* line 162, ../../../app/assets/stylesheets/layout/header.scss */
 header nav.main ul.topnav li a.active, header nav.main ul.topnav li span.active {
   color: #59b7ff;
 }
-/* line 160, ../../../app/assets/stylesheets/layout/header.scss */
+/* line 167, ../../../app/assets/stylesheets/layout/header.scss */
 header nav.main ul.topnav li a {
   color: #59b7ff;
   background-position: left bottom;
 }
-/* line 164, ../../../app/assets/stylesheets/layout/header.scss */
+/* line 171, ../../../app/assets/stylesheets/layout/header.scss */
 header nav.main ul.topnav li span {
   background-position: left top;
 }
-/* line 169, ../../../app/assets/stylesheets/layout/header.scss */
+/* line 176, ../../../app/assets/stylesheets/layout/header.scss */
 header nav.main ul.topnav li + li {
   padding: 0px 0px 0px 32px;
 }
-/* line 173, ../../../app/assets/stylesheets/layout/header.scss */
+/* line 180, ../../../app/assets/stylesheets/layout/header.scss */
 header nav.main ul.topnav li:last-child {
   padding: 0 0 0 25px;
 }
-/* line 176, ../../../app/assets/stylesheets/layout/header.scss */
+/* line 183, ../../../app/assets/stylesheets/layout/header.scss */
 header nav.main .glow {
   margin: -41px 0px 0px 0px;
   width: 158px;
@@ -164,7 +169,7 @@ header nav.main .glow {
   position: relative;
   display: none;
 }
-/* line 186, ../../../app/assets/stylesheets/layout/header.scss */
+/* line 193, ../../../app/assets/stylesheets/layout/header.scss */
 header .logo {
   margin: 90px auto;
   width: 708px;

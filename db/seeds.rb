@@ -6,8 +6,16 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-puts 'EMPTY THE MONGODB DATABASE'
+puts ' *** Empty the MongoDB database ***'
 Mongoid.master.collections.reject { |c| c.name =~ /^system/}.each(&:drop)
-puts 'SETTING UP DEFAULT USER LOGIN'
-user = User.create! :name => 'Isaac Wooten', :email => 'i.wooten@gmail.com', :password => 'wooteni', :password_confirmation => 'wooteni'
-puts 'New user created: ' << user.name
+
+puts ' *** Setting up default user login and roles ***'
+
+r = Role.create! title: 'admin'
+Role.create! title: 'moderator'
+
+u = User.new name:'Isaac Wooten', email:'i.wooten@gmail.com', password:'wooteni', password_confirmation:'wooteni'
+u.roles << r
+u.save!
+
+puts 'New user created: ' << u.name

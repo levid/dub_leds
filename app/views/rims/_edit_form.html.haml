@@ -22,10 +22,22 @@
     = f.label :fitting
     = f.text_area :fitting
   .field
+    = image_tag(@rim.image.url) if @rim.image.url.present?
     = f.label :image
     = f.file_field :image
+  - if @rim.image.url.present?
+    .field
+      = f.label :remove_image
+      = f.check_box :remove_image
+      = f.hidden_field :image_cache
   .field
+    = image_tag(@rim.small_image.url) if @rim.small_image.url.present?
     = f.label :small_image
     = f.file_field :small_image
+  - if @rim.small_image.url.present?
+    .field
+      = f.label :remove_small_image
+      = f.check_box :remove_small_image
+      = f.hidden_field :small_image_cache
   .actions
     = f.submit 'Save'

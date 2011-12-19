@@ -17,10 +17,11 @@ class RimsController < ApplicationController
   def show
     # @rims = Rim.all.collect { |r| r.id }
     @rim = Rim.find(params[:id])
-
+    authorize! :show, @rim
+    
     respond_to do |format|
       format.html
-      format.json { render json: @rims }
+      format.any(:xml, :json) { render request.format.to_sym => @rims }
     end
   end
 

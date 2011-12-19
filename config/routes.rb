@@ -1,31 +1,27 @@
 DubLeds::Application.routes.draw do  
   
+  # Routes for Devise
   devise_for :admins
-  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks'} do
+    get '/users/auth/:provider' => 'users/omniauth_callbacks#passthru'
+    # match '/users/auth/:provider/callback' => 'authentications#create'
+    # get 'sign_in', :to => 'users/sessions#new', :as => :new_user_session
+    # get 'sign_out', :to => 'users/sessions#destroy', :as => :destroy_user_session
+  end
   
+  # Resources
   resources :newsletters
   resources :admins
-  # resource  :users
   resources :contact
+  resources :users
+  resources :authentications
   
-  match '/users/auth/:provider/callback' => 'authentications#create'
-  get '/users/auth/:provider' => 'users/omniauth_callbacks#passthru'
-  match '/registrations' => 'registrations#email'
+  # match '/users/auth/:provider/callback' => 'authentications#create'
+  #   get '/users/auth/:provider' => 'users/omniauth_callbacks#passthru'
+  # match '/registrations' => 'registrations#email'
   
   match '/rims/image_cache'  => 'rims#image_cache', :constraints => { :cache_id => /\d{8}-\d{4}-\d{5}-\d{4}/, :filename => /[a-zA-Z0-9_ ]+\.(jpg|jpeg|png|gif){1}/i }
-  
-  resources :users, :only => :show
-  resources :authentications
-
   match "/tmp/uploads/*path" => "gridfs#serve"
-  
-  match "/#_=_", :to => redirect("/home")
-
-  # match '/signin' => 'sessions#new', :as => :signin
-  # 
-  #   match '/signout' => 'sessions#destroy', :as => :signout
-  # 
-  #   match '/auth/failure' => 'sessions#failure'
 
   get '/home'                => 'home#index',       :as => :home
 

@@ -13,16 +13,16 @@ class UI extends window._Dub
     newsletter = new Newsletter
 
   fadeLink: (element) ->
-     original = $(element).css('color')
-     
-     $(element).hover (->
-       $(this).animate
-         color: "#cccccc"
-       , 250
+    original = $(element).css('color')
+   
+    $(element).hover (->
+      $(this).animate
+        color: "#cccccc"
+        , 250
      ), ->
        $(this).animate
-         color: original
-       , 250
+        color: original
+        , 250
 
   initFadingLinks: () ->
     this.fadeLink('a.fade')

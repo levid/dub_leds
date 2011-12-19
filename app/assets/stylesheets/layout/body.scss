@@ -1,20 +1,6 @@
 /**/
 @import "../variables";
 
-a:link, 
-a:hover, 
-a:active,
-a:visited
-{ 
-    color:#59BAEF; 
-    text-decoration:none; 
-    white-space:nowrap; 
-} 
-a
-{ 
-    outline:none; 
-} 
-
 .body
 {
     margin: 0px auto;
@@ -254,7 +240,6 @@ a
                         height: 37px;
                         display: block;
                         text-indent: -9000px;
-
                     }
                 }
             }

@@ -77,6 +77,13 @@ header
               font-size: 9px;
               background: url( 'button-my-account.png' ) no-repeat top left transparent;
               display: block;
+              
+              &:hover,
+              &.active
+              {
+                background-position: bottom left;
+                color: #75e3f0;
+              }
             }
             
             &.log_out,
@@ -91,13 +98,13 @@ header
               font-size: 9px;
               background: url( 'button-log-out.png' ) no-repeat top left transparent;
               display: block;
-            }
-            
-            &:hover,
-            &.active
-            {
-              background-position: bottom left;
-              color: #75e3f0;
+              
+              &:hover,
+              &.active
+              {
+                background-position: bottom left;
+                color: #75e3f0;
+              }
             }
           }
         }

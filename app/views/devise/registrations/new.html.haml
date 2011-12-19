@@ -23,5 +23,11 @@
             = f.label :password_confirmation
             %br/
             = f.password_field :password_confirmation
+          - if can? :read, Role
+            %p= f.label :role
+            %ul.no-pad.no-bullets
+            = f.collection_select :id, User::ROLES, :to_s, :humanize
           %div= f.submit "Sign up"
         = render :partial => "devise/shared/links"
+        
+        

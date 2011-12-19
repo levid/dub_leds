@@ -3,6 +3,11 @@ class ApplicationController < ActionController::Base
 
   before_filter :set_names
   before_filter :set_year
+  
+  rescue_from CanCan::AccessDenied do |exception|
+    flash[:error] = exception.message
+    redirect_to root_url
+  end
 
   def set_names
     @current_controller = controller_name

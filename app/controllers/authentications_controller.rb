@@ -8,36 +8,30 @@ class AuthenticationsController < ApplicationController
   # Create an authentication when this is called from
   # the authentication provider callback
   def create
-    omniauth = request.env["omniauth.auth"]  
-    
-    # authentication = Authentication.where(:provider => omniauth['provider'], :uid => omniauth['uid']).first
-    authentication = Authentication.find_by_provider_and_uid(omniauth['provider'], omniauth['uid'])
-    if authentication  
-      # Just sign in an existing user with omniauth
-      # The user have already used this external account
-      flash[:notice] = t(:signed_in)
-      sign_in_and_redirect(:user, authentication.user)
+    @authentication = Authentication.find(:first, conditions: {provider: omniauth['provider'], uid: omniauth['uid']})
+
+    if @authentication #.persisted? #???
+      flash[:notice] = I18n.t "devise.omniauth_callbacks.success", kind: @authentication.provider_name
+      # sign_in_and_redirect @user, :event => :authentication
+      sign_in_and_redirect(:user, @authentication.user)
+
     elsif current_user
-      # Add authentication to signed in user
-      # User is logged in
-      current_user.authentications.create!(:provider => omniauth['provider'], :uid => omniauth['uid'])
-      flash[:notice] = t(:success)
-      redirect_to authentications_url
-    elsif omniauth['provider'] != 'twitter' && omniauth['provider'] != 'linked_in' && user = create_new_omniauth_user(omniauth)
-      user.authentications.create!(:provider => omniauth['provider'], :uid => omniauth['uid'])
-      # Create a new User through omniauth
-      # Register the new user + create new authentication
-      flash[:notice] = t(:welcome)
-      sign_in_and_redirect(:user, user)
-    elsif (omniauth['provider'] == 'twitter' || omniauth['provider'] == 'linked_in') && 
-      omniauth['uid'] && (omniauth['user_info']['name'] || omniauth['user_info']['nickname'] || 
-      (omniauth['user_info']['first_name'] && omniauth['user_info']['last_name']))
-      session[:omniauth] = omniauth.except('extra');
-      redirect_to(:controller => 'registrations', :action => 'email')
+      current_user.authentications.create!(provider: omniauth['provider'], uid: omniauth['uid'])
+      flash[:notice] = "Authentication successful. #{provider} added to your account."
+      redirect_to current_user
+
     else
-      # New user data not valid, try again
-      flash[:alert] = t(:fail)
-      redirect_to new_user_registration_url
+      user = User.new
+      user.apply_omniauth(omniauth)
+      if user.save
+        user.authentications.map &:save!
+        # send pass by mail? or just tell that a random pass was set, click link to reset (change behaviour of the reset)
+        flash[:notice] = "Signed in successfully."
+        sign_in_and_redirect(:user, user)
+      else
+        session["devise.omniauth_data"] = omniauth.except('extra')
+        redirect_to new_user_registration_url
+      end
     end
   end
   

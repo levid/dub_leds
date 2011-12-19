@@ -12,23 +12,31 @@ class User
   #   validates_uniqueness_of :name, :email, :case_sensitive => false   
   #   attr_accessible :name, :email, :password, :password_confirmation, :remember_me
   
+  ROLES = %w[admin moderator author banned]
+  
   devise :database_authenticatable, :registerable, :recoverable, :confirmable, :rememberable, :trackable, :validatable, :omniauthable, :token_authenticatable
   
-  field :name
+  field :name, type: String
+  
+  has_many :authentications
+  has_and_belongs_to_many :roles
   
   validates_presence_of :name
   validates_uniqueness_of :name, :email, :case_sensitive => false    
-  attr_accessible :name, :email, :password, :password_confirmation, :remember_me
-  references_many :authentications, :dependent => :delete
+  attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :roles, :authentications
 
+  def role?(role)
+    return !self.roles.where(role: role.to_s).empty?
+  end
+
+  def password_required?
+    (authentications.empty? || !password.blank?) && super
+  end  
+  
   def apply_omniauth(omniauth, confirmation)
     self.email = omniauth['user_info']['email'] if email.blank?
     # Check if email is already into the database => user exists
     authentications.build(:provider => omniauth['provider'], :uid => omniauth['uid'])
-  end
-  
-  def password_required?
-    (authentications.empty? || !password.blank?) && super
   end
   
   def self.find_for_facebook_oauth(access_token, signed_in_resource=nil)

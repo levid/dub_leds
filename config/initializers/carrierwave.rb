@@ -6,6 +6,6 @@ CarrierWave.configure do |config|
   # config.cache_dir = "#{Rails.root}/tmp/uploads"
 
   config.grid_fs_access_url = '/tmp'
-  config.cache_dir = "uploads"
+  config.cache_dir = "#{Rails.root}/tmp/uploads"
   config.root = Rails.root.join('tmp')
 end
