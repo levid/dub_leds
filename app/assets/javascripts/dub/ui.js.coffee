@@ -8,6 +8,7 @@ class UI extends window._Dub
   initGlobalUI: (options) ->
     this.initFadingLinks()
     this.displayMainNav()
+    this.hideNotifications() if $('.notification')
 
     topNav = new Nav
     newsletter = new Newsletter
@@ -26,6 +27,11 @@ class UI extends window._Dub
 
   initFadingLinks: () ->
     this.fadeLink('a.fade')
+  
+  hideNotifications: () ->
+    setTimeout ( ->
+      $('.notification').fadeOut(3000)
+    ), 300
     
   displayMainNav: () ->
     self = this

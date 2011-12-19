@@ -11,6 +11,7 @@ end
 group :development, :test do
   gem 'mysql2'
   gem 'mongrel', '1.2.0.pre2'
+  gem 'pry'
 end
 
 gem 'jquery-rails'

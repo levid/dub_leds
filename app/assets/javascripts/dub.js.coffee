@@ -23,6 +23,10 @@ class Dub
       
       if (window.location.hash == "#_=_")
         window.location.hash = ""
+        
+      setTimeout ( ->
+        $('.notification').fadeOut(3000)
+      ), 300
       
     this
 

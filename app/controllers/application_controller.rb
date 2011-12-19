@@ -23,6 +23,10 @@ class ApplicationController < ActionController::Base
     @year = t.strftime("%Y")
   end
   
+  def after_sign_in_path_for(resource)
+    return request.env['omniauth.origin'] || stored_location_for(resource) || root_path
+  end
+  
   def set_layout
     if(controller_name != 'home') 
        "subpages"
