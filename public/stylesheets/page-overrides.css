@@ -31,11 +31,11 @@
 }
 
 /* line 52, ../../app/assets/stylesheets/page-overrides.scss */
-.Registrations .content-container, .Sessions .content-container, .Passwords .content-container, .Confirmations .content-container {
+.Registrations .content-container, .Sessions .content-container, .Passwords .content-container, .Confirmations .content-container, .Users .content-container {
   padding: 0px 0px 10px 0px;
 }
 /* line 56, ../../app/assets/stylesheets/page-overrides.scss */
-.Registrations .content-container.interior, .Sessions .content-container.interior, .Passwords .content-container.interior, .Confirmations .content-container.interior {
+.Registrations .content-container.interior, .Sessions .content-container.interior, .Passwords .content-container.interior, .Confirmations .content-container.interior, .Users .content-container.interior {
   padding: 0px 0px 50px 0px;
   background: none;
   height: auto;

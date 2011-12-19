@@ -1,21 +1,22 @@
-%h3= @user == @current_user ? "Your Account Settings" : "Edit User"
-= form_for(@user, :html => { :method => :put }) do |f|
-  -if @user.errors.any?
-    error_explanation
-    %h2= "#{pluralize(@user.errors.count, "error")} prohibited this rim from being saved:"
-    %ul
-    - @user.errors.full_messages.each do |msg|
-      %li= msg
-  = render :partial => 'user_fields', :locals => { :f => f }
-  %p
-    = f.label :password
-    %i (leave blank if you don't want to change it)
-  %p= f.password_field :password
-  %p= f.label :password_confirmation
-  %p= f.password_field :password_confirmation
-  %p
-    = f.label :current_password
-    %i (we need your current password to confirm your changes)
-  %p= f.password_field :current_password
-  %p= f.submit "Update"
-= link_to "Back", :back
+.text-container
+  %h3= @user == @current_user ? "Your Account Settings" : "Edit User"
+  = form_for(@user, :html => { :method => :put }) do |f|
+    -if @user.errors.any?
+      error_explanation
+      %h2= "#{pluralize(@user.errors.count, "error")} prohibited this rim from being saved:"
+      %ul
+      - @user.errors.full_messages.each do |msg|
+        %li= msg
+    = render :partial => 'user_fields', :locals => { :f => f }
+    %p
+      = f.label :password
+      %i (leave blank if you don't want to change it)
+    %p= f.password_field :password
+    %p= f.label :password_confirmation
+    %p= f.password_field :password_confirmation
+    %p
+      = f.label :current_password
+      %i (we need your current password to confirm your changes)
+    %p= f.password_field :current_password
+    %p= f.submit "Update"
+  = link_to "Back", :back

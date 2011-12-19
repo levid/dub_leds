@@ -1,4 +1,5 @@
 class GeneratorController < ApplicationController
+  
   def index
     @rims = Rim.all
     @path = :generator_path

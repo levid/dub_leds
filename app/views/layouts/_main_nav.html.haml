@@ -1,0 +1,9 @@
+%nav.main
+  %ul.topnav  
+    %li= (link_to "Home", home_path, :id => "home", :class => controller_name === "home" ? "active" : "")
+    %li= (link_to "Technology", technology_path, :id => "technology", :class => controller_name === "technology" ? "active" : "")
+    %li= (link_to "Media", media_path, :id => "media", :class => controller_name === "media" ? "active" : "")
+    %li= (link_to "Generator", generator_path, :id => "generator", :class => controller_name === "generator" ? "active" : "")
+    %li= (link_to "Order", order_path, :id => "order", :class => controller_name === "order" ? "active" : "")
+    %li= (link_to "Contact", contact_path, :id => "contact", :class => controller_name === "contact" ? "active" : "")
+  .glow

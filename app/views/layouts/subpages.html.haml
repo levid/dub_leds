@@ -9,8 +9,15 @@
 
       - flash.each do |name, msg|
         = content_tag :div, msg, :id => "flash_\#{name}" if msg.is_a?(String)
+        
+      %section.body
+        %section.content-container.interior
+          %div{:class => "content-#{controller_name.downcase} #{action_name.downcase}"}
+            .title-container
+              .title{:class => "#{controller_name.capitalize}"}
 
-      = yield
+              = yield
+                
       = render 'layouts/footer'
   / = debug(params) if Rails.env.development?
   = javascript_tag :defer => 'defer' do

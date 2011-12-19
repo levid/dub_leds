@@ -10,23 +10,39 @@ group :production do
 end
 group :development, :test do
   gem 'mysql2'
+  gem 'mongrel', '1.2.0.pre2'
 end
 
 gem 'jquery-rails'
 gem 'rack', '1.3.3'
 gem 'haml'
+
+# Decorators
 gem 'draper'
+
+# Mongoid
 gem 'bson_ext', '>= 1.3.1'
 gem 'mongoid', '>= 2.3.3'
+
+# User based authentication
 gem 'devise', '>= 1.5.0' #https://github.com/plataformatec/devise
 gem 'omniauth', '>= 1.0.0'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
 gem 'omniauth-openid'
+
+# Export / Import database dump
 gem 'yaml_db'
+
+# Uploading images to Mongoid
 gem 'carrierwave-mongoid'
 gem 'mini_magick'
+
+# Role based administration
 gem 'cancan'
+
+# Shopping cart
+gem 'acts_as_shopping_cart', :git => "git@github.com:crowdint/acts_as_shopping_cart.git"
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

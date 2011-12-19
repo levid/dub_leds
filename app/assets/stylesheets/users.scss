@@ -2,13 +2,33 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.content-registrations
+.content-users
 {
     margin: 0px auto;
     width: 980px;
     height: auto;
     
-    &.edit, &.update
+    &.index, &.update
+    {
+      .title-container
+      {
+          width: auto;
+          height: auto;
+          display: block;
+
+          .title
+          {
+              margin: 20px 0px 0px -16px;
+              height: 73px;
+              width: 284px;
+              float: left;
+              text-indent: -9000px;
+              background: url( 'title-edit-user.png' ) no-repeat top left transparent;
+          }
+      }
+    }
+
+    &.edit, &.show
     {
       .title-container
       {
@@ -47,7 +67,6 @@
           }
       }
     }
-
     
 
     .text-container

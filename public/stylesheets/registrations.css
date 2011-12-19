@@ -5,13 +5,13 @@
   height: auto;
 }
 /* line 14, ../../app/assets/stylesheets/registrations.scss */
-.content-registrations.edit .title-container {
+.content-registrations.edit .title-container, .content-registrations.update .title-container {
   width: auto;
   height: auto;
   display: block;
 }
 /* line 20, ../../app/assets/stylesheets/registrations.scss */
-.content-registrations.edit .title-container .title {
+.content-registrations.edit .title-container .title, .content-registrations.update .title-container .title {
   margin: 20px 0px 0px -16px;
   height: 73px;
   width: 284px;
@@ -20,13 +20,13 @@
   background: url("title-edit-user.png") no-repeat top left transparent;
 }
 /* line 34, ../../app/assets/stylesheets/registrations.scss */
-.content-registrations.sign-up .title-container {
+.content-registrations.new .title-container {
   width: auto;
   height: auto;
   display: block;
 }
 /* line 40, ../../app/assets/stylesheets/registrations.scss */
-.content-registrations.sign-up .title-container .title {
+.content-registrations.new .title-container .title {
   margin: 20px 0px 0px -16px;
   height: 73px;
   width: 234px;

@@ -1,5 +1,6 @@
 class RimsController < ApplicationController
-  respond_to :html, :json
+  before_filter :authenticate_user!
+  respond_to :html, :json, :xml
 
   # GET /rims
   def index
@@ -66,8 +67,9 @@ class RimsController < ApplicationController
     # respond_with @page
 
     respond_to do |format|
-      format.html { render :layout => false }
-      format.json { render json: @rim }
+      # format.html { render :layout => false }
+      format.html
+      format.any(:xml, :json) { render request.format.to_sym => @rim }
     end
   end
 

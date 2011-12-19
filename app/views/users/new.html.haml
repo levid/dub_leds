@@ -1,14 +1,16 @@
-%h2 Register User
-= form_for(@user) do |f|
-  -if @user.errors.any?
-    error_explanation
-    %h2= "#{pluralize(@user.errors.count, "error")} prohibited this rim from being saved:"
-    %ul
-    - @user.errors.full_messages.each do |msg|
-      %li= msg
-  = render :partial => 'user_fields', :locals => { :f => f }
-  %p= f.label :password
-  %p= f.password_field :password
-  %p= f.label :password_confirmation
-  %p= f.password_field :password_confirmation
-  %p= f.submit "Register"
+.text-container
+  %h2 Register User
+  = form_for(@user) do |f|
+    -if @user.errors.any?
+      error_explanation
+      %h2= "#{pluralize(@user.errors.count, "error")} prohibited this rim from being saved:"
+      %ul
+      - @user.errors.full_messages.each do |msg|
+        %li= msg
+    = render :partial => 'user_fields', :locals => { :f => f }
+    %p= f.label :password
+    %p= f.password_field :password
+    %p= f.label :password_confirmation
+    %p= f.password_field :password_confirmation
+    %p= f.submit "Register"
+  = link_to "Back", :back

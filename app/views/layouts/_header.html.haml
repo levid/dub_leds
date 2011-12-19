@@ -1,0 +1,33 @@
+!!!
+%html
+  %head
+    /
+      _  _  _  _     _            _  _  _  _  _              _              _  _  _  _  _  _  _  _  _       _  _  _  _
+      (_)(_)(_)(_)   (_)          (_)(_)(_)(_)(_) _          (_)            (_)(_)(_)(_)(_)(_)(_)(_)(_)    _(_)(_)(_)(_)_
+      (_)      (_)_ (_)          (_) (_)        (_)         (_)            (_)             (_)      (_)_ (_)          (_)
+      (_)        (_)(_)          (_) (_) _  _  _(_)         (_)            (_) _  _        (_)        (_)(_)_  _  _  _
+      (_)        (_)(_)          (_) (_)(_)(_)(_)_          (_)            (_)(_)(_)       (_)        (_)  (_)(_)(_)(_)_
+      (_)       _(_)(_)          (_) (_)        (_)         (_)            (_)             (_)       _(_) _           (_)
+      (_)_  _  (_)  (_)_  _  _  _(_) (_)_  _  _ (_)         (_) _  _  _  _ (_) _  _  _  _  (_)_  _  (_)  (_)_  _  _  _(_)
+      (_)(_)(_)(_)     (_)(_)(_)(_)  (_)(_)(_)(_)            (_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)     (_)(_)(_)(_)
+
+    %title DUB LEDS
+
+    %meta{:content => "text/html; charset=iso-8859-1", "http-equiv" => "Content-Type"}
+      /[if lt IE 7 ] <html lang="en" class="no-js ie6">
+      /[if IE 7 ] <html lang="en" class="no-js ie7">
+      /[if IE 8 ] <html lang="en" class="no-js ie8">
+      /[if IE 9 ] <html lang="en" class="no-js ie9">
+      / [if (gt IE 9)|!(IE)]><!
+      %html.no-js{:lang => "en"}
+        / <![endif]
+        %meta{:content => "width=980; maximum-scale=1.0;", :name => "viewport"}/
+        %meta{:content => "index,follow", :name => "robots"}/
+        %meta{:content => "noodp,noydir", :name => "robots"}/
+        %meta{:content => "DUB LED'S &copy; #{@year} All Rights Reserved", :name => "copyright"}/
+        / <link rel="canonical" href="<?php echo $_SERVER['SERVER_NAME'] ?>" />
+        / <link rel="shortcut icon" href="<?php echo $this->getThemePath() ?>/favicon.ico" />
+        / <link rel="apple-touch-icon" href="<?php echo $this->getThemePath() ?>/apple-touch-icon.png" />
+        = stylesheet_link_tag "application"
+        = javascript_include_tag "application"
+        = csrf_meta_tags

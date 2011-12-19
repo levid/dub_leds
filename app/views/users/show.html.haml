@@ -1,22 +1,23 @@
-%h3= @user.name
-= link_to_if(can?(:update,@user), "Edit", edit_user_path(@user))
-|
-\#{link_to_if(can?(:delete, @user), "Delete", user_path(@user), :confirm => "Are you sure?", :method => :delete) {}}
-%table.one-column-emphasis
-  %tbody
-    %tr
-      %td.oce-first Email:
-      %td= @user.email
-    %tr
-      %td.oce-first Role:
-      %td= @user.roles.first.name
-    - if can?(:see_timestamps,User)
+.text-container
+  %h3= @user.name
+  = link_to_if(can?(:update,@user), "Edit", edit_user_path(@user))
+  %br
+  = link_to_if(can?(:delete, @user), "Delete", user_path(@user), :confirm => "Are you sure?", :method => :delete) {}
+  %table.one-column-emphasis
+    %tbody
       %tr
-        %td.oce-first Created at:
-        %td= @user.created_at
+        %td.oce-first Email:
+        %td= @user.email
       %tr
-        %td.oce-first Last Sign In:
-        %td= @user.last_sign_in_at
-      %tr
-        %td.oce-first Sign In Count:
-        %td= @user.sign_in_count
+        %td.oce-first Role:
+        %td= @user.roles.first.name
+      - if can?(:see_timestamps,User)
+        %tr
+          %td.oce-first Created at:
+          %td= @user.created_at
+        %tr
+          %td.oce-first Last Sign In:
+          %td= @user.last_sign_in_at
+        %tr
+          %td.oce-first Sign In Count:
+          %td= @user.sign_in_count

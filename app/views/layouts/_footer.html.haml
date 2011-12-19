@@ -1,0 +1,22 @@
+%footer
+  %section.footer-container
+    .left-column
+      .logo
+      .email-updates
+        %form
+          %input#email-address{:name => "email-address", :type => "text", :value => "enter email for updates"}/
+          %input{:type => "submit"}/
+    .right-column
+      .order
+        = link_to('Order', order_path)
+      %ul
+        %li
+          %a.facebook.active{:href => "#"} Facebook
+        %li
+          %a.twitter{:href => "#"} Twitter
+        %li
+          %a.flickr{:href => "#"} Flickr
+        %li
+          %a.linkedin{:href => "#"} Linkedin
+  %section.spacer
+    .copyright (c) 2011 LED Wheels, Inc.

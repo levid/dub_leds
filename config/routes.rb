@@ -23,6 +23,12 @@ DubLeds::Application.routes.draw do
   match '/rims/image_cache'  => 'rims#image_cache', :constraints => { :cache_id => /\d{8}-\d{4}-\d{5}-\d{4}/, :filename => /[a-zA-Z0-9_ ]+\.(jpg|jpeg|png|gif){1}/i }
   match "/tmp/uploads/*path" => "gridfs#serve"
 
+  # match '/signin' => 'sessions#new', :as => :signin
+  # 
+  match '/users/sign_out' => 'sessions#destroy', :as => :signout
+  # 
+  #   match '/auth/failure' => 'sessions#failure'
+
   get '/home'                => 'home#index',       :as => :home
 
   get '/rims'                => 'rims#index',       :as => :rim

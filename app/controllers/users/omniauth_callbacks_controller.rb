@@ -1,11 +1,5 @@
 class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
-  def failure
-    #handle you logic here..
-    #and delegate to super.
-    super
-  end
-  
   def twitter
     # raise env["omniauth.auth"].inspect
     # render :text => request.env["omniauth.auth"].to_yaml  
