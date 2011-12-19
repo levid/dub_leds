@@ -10,13 +10,14 @@ require "rails/test_unit/railtie"
 require "mongoid/railtie"
 require "carrierwave/mongoid"
 
+Bundler.require *Rails.groups(:assets) if defined?(Bundler)
 
-if defined?(Bundler)
-  # If you precompile assets before deploying to production, use this line
-  Bundler.require(*Rails.groups(:assets => %w(development test)))
-  # If you want your assets lazily compiled in production, use this line
-  # Bundler.require(:default, :assets, Rails.env)
-end
+# if defined?(Bundler)
+#   # If you precompile assets before deploying to production, use this line
+#   Bundler.require(*Rails.groups(:assets => %w(development test)))
+#   # If you want your assets lazily compiled in production, use this line
+#   # Bundler.require(:default, :assets, Rails.env)
+# end
 
 module DubLeds
   class Application < Rails::Application
@@ -55,7 +56,7 @@ module DubLeds
     config.assets.enabled = true
 
     # Version of your assets, change this if you want to expire all your assets
-    config.assets.version = '1.0'
+    config.assets.version = '1.1'
 
     config.assets.initialize_on_precompile = false
 

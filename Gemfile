@@ -26,6 +26,7 @@ gem 'omniauth-openid'
 gem 'yaml_db'
 gem 'carrierwave-mongoid'
 gem 'mini_magick'
+gem 'sprockets'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -53,10 +54,10 @@ end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.1.4'
-  gem 'coffee-rails', '~> 3.1.1'
-  gem 'uglifier',     '>= 1.0.3'
+  gem 'sass-rails' 
+  gem 'coffee-rails' 
+  gem 'uglifier' 
   gem 'yui-compressor'
   gem "therubyracer", :require => 'v8'
-  gem "compass",      '>= 0.10'
+  gem "compass" 
 end
