@@ -19,3 +19,18 @@ u.roles << r
 u.save!
 
 puts 'New user created: ' << u.name
+puts ' *** Setting up Rims ***'
+
+for i in 1..7
+   ImageUploader.enable_processing = true
+   @image = ImageUploader.new(u, :image)
+   @image.store!(File.open("#{Rails.root}/app/assets/images/img-home-rim-large#{i}.png"))
+
+   @small_image = ImageUploader.new(u, :small_image)
+   @small_image.store!(File.open("#{Rails.root}/app/assets/images/img-rim-small#{i}.png"))
+
+   r = Rim.new title: "Rim #{i}", color: "Silver", description: "This is the description for Rim #{i}", size: '24 Inches', fitting: '22x10', image: @image, small_image: @small_image
+   r.save!
+
+   puts 'New Rim created: ' << r.title
+end
