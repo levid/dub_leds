@@ -23,44 +23,46 @@
 .content-media .text-container {
   clear: both;
   text-shadow: 0px 1px 2px #333;
-  color: #ffffff;
+  color: #fafafa;
 }
 /* line 35, ../../app/assets/stylesheets/media.scss */
 .content-media .text-container h4 {
   font-size: 22px;
   padding: 0px 0px 10px 0px;
+  font-family: EurostileMed, Helvetica, Arial, sans-serif;
+  font-weight: 700;
 }
-/* line 42, ../../app/assets/stylesheets/media.scss */
+/* line 44, ../../app/assets/stylesheets/media.scss */
 .content-media .media-content {
   clear: both;
   padding: 17px 0px 0px 0px;
 }
-/* line 47, ../../app/assets/stylesheets/media.scss */
+/* line 49, ../../app/assets/stylesheets/media.scss */
 .content-media .media-content .left-column {
   width: 745px;
   height: auto;
   float: left;
 }
-/* line 53, ../../app/assets/stylesheets/media.scss */
+/* line 55, ../../app/assets/stylesheets/media.scss */
 .content-media .media-content .left-column iframe {
   position: relative;
   float: left;
   border: 1px solid #2d2d2d;
 }
-/* line 61, ../../app/assets/stylesheets/media.scss */
+/* line 63, ../../app/assets/stylesheets/media.scss */
 .content-media .media-content .right-column {
   width: 221px;
   height: auto;
   float: right;
 }
-/* line 67, ../../app/assets/stylesheets/media.scss */
+/* line 69, ../../app/assets/stylesheets/media.scss */
 .content-media .media-content .right-column ul {
   margin: 0px;
   padding: 0px;
   width: auto;
   height: auto;
 }
-/* line 74, ../../app/assets/stylesheets/media.scss */
+/* line 76, ../../app/assets/stylesheets/media.scss */
 .content-media .media-content .right-column ul li {
   padding: 0px 0px 12px 0px;
   list-style-type: none;

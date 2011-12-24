@@ -39,9 +39,11 @@ footer
 
                 input[type=text]
                 {
-                    padding: 0px 0px 0px 8px;
+                    padding: 2px 0px 0px 8px;
                     height: 32px;
                     width: 250px;
+                    font-family: EurostileMed, Helvetica, Arial, sans-serif;
+                    font-weight: 400;
                     font-size: 15px;
                     line-height: 12px;
                     background: url( 'input-email.png' ) no-repeat 1px 3px transparent;
@@ -167,7 +169,8 @@ footer
             padding: 10px 0px 0px 0px;
             height: 67px;
             width: 980px;
-
+            font-family: EurostileMed, Helvetica, Arial, sans-serif;
+            font-weight: 400;
             font-size: 15px;
             color: #777777;
         }

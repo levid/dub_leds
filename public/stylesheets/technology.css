@@ -23,23 +23,25 @@
 .content-technology .text-container {
   clear: both;
   text-shadow: 0px 1px 2px #333;
-  color: #ffffff;
+  color: #fafafa;
 }
 /* line 35, ../../app/assets/stylesheets/technology.scss */
 .content-technology .text-container h4 {
   font-size: 22px;
   padding: 0px 0px 10px 0px;
+  font-family: EurostileMed, Helvetica, Arial, sans-serif;
+  font-weight: 700;
 }
-/* line 41, ../../app/assets/stylesheets/technology.scss */
+/* line 43, ../../app/assets/stylesheets/technology.scss */
 .content-technology .text-container p {
   font-size: 15px;
 }
-/* line 47, ../../app/assets/stylesheets/technology.scss */
+/* line 49, ../../app/assets/stylesheets/technology.scss */
 .content-technology .technology-content {
   clear: both;
   padding: 17px 0px 0px 0px;
 }
-/* line 52, ../../app/assets/stylesheets/technology.scss */
+/* line 54, ../../app/assets/stylesheets/technology.scss */
 .content-technology .technology-content .overlay {
   margin: -70px 0px 0px -15px;
   width: 1001px;
@@ -48,7 +50,7 @@
   z-index: 10;
   position: relative;
 }
-/* line 62, ../../app/assets/stylesheets/technology.scss */
+/* line 64, ../../app/assets/stylesheets/technology.scss */
 .content-technology .technology-content .choices {
   margin: 300px 0px 0px 315px;
   width: 452px;
@@ -58,63 +60,63 @@
   float: left;
   position: relative;
 }
-/* line 72, ../../app/assets/stylesheets/technology.scss */
+/* line 74, ../../app/assets/stylesheets/technology.scss */
 .content-technology .technology-content .choices ul {
   width: auto;
   height: auto;
   margin: 15px 0px 0px 35px;
 }
-/* line 78, ../../app/assets/stylesheets/technology.scss */
+/* line 80, ../../app/assets/stylesheets/technology.scss */
 .content-technology .technology-content .choices ul li + li {
   margin-left: 3px;
 }
-/* line 83, ../../app/assets/stylesheets/technology.scss */
+/* line 85, ../../app/assets/stylesheets/technology.scss */
 .content-technology .technology-content .choices ul li {
   width: 48px;
   height: 61px;
   list-style-type: none;
   float: left;
 }
-/* line 90, ../../app/assets/stylesheets/technology.scss */
+/* line 92, ../../app/assets/stylesheets/technology.scss */
 .content-technology .technology-content .choices ul li a {
   width: 48px;
   height: 61px;
   display: block;
   opacity: 0.4;
 }
-/* line 97, ../../app/assets/stylesheets/technology.scss */
+/* line 99, ../../app/assets/stylesheets/technology.scss */
 .content-technology .technology-content .choices ul li a.rim1 {
   background: url("img-rim-small1.png") no-repeat top left transparent;
 }
-/* line 102, ../../app/assets/stylesheets/technology.scss */
+/* line 104, ../../app/assets/stylesheets/technology.scss */
 .content-technology .technology-content .choices ul li a.rim2 {
   background: url("img-rim-small2.png") no-repeat top left transparent;
 }
-/* line 107, ../../app/assets/stylesheets/technology.scss */
+/* line 109, ../../app/assets/stylesheets/technology.scss */
 .content-technology .technology-content .choices ul li a.rim3 {
   background: url("img-rim-small3.png") no-repeat top left transparent;
 }
-/* line 112, ../../app/assets/stylesheets/technology.scss */
+/* line 114, ../../app/assets/stylesheets/technology.scss */
 .content-technology .technology-content .choices ul li a.rim4 {
   background: url("img-rim-small4.png") no-repeat top left transparent;
 }
-/* line 117, ../../app/assets/stylesheets/technology.scss */
+/* line 119, ../../app/assets/stylesheets/technology.scss */
 .content-technology .technology-content .choices ul li a.rim5 {
   background: url("img-rim-small5.png") no-repeat top left transparent;
 }
-/* line 122, ../../app/assets/stylesheets/technology.scss */
+/* line 124, ../../app/assets/stylesheets/technology.scss */
 .content-technology .technology-content .choices ul li a.rim6 {
   background: url("img-rim-small6.png") no-repeat top left transparent;
 }
-/* line 127, ../../app/assets/stylesheets/technology.scss */
+/* line 129, ../../app/assets/stylesheets/technology.scss */
 .content-technology .technology-content .choices ul li a.rim7 {
   background: url("img-rim-small7.png") no-repeat top left transparent;
 }
-/* line 133, ../../app/assets/stylesheets/technology.scss */
+/* line 135, ../../app/assets/stylesheets/technology.scss */
 .content-technology .technology-content .choices ul li a.active {
   opacity: 1.0;
 }
-/* line 141, ../../app/assets/stylesheets/technology.scss */
+/* line 143, ../../app/assets/stylesheets/technology.scss */
 .content-technology .technology-content .rim {
   margin: -580px 0px 0px 277px;
   width: 514px;

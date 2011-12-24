@@ -36,17 +36,19 @@ header nav.user ul span.line {
 /* line 41, ../../../app/assets/stylesheets/layout/header.scss */
 header nav.user ul li {
   margin: 0px;
-  padding: 19px 0px 0px 0px;
+  padding: 21px 0px 0px 0px;
   list-style-type: none;
   width: auto;
   height: 55px;
   float: left;
   color: #7F7F7F;
-  font-family: Helvetica, sans-serif, Arial;
+  font-family: EurostileMed, Helvetica, Arial, sans-serif;
+  letter-spacing: 1.0;
+  font-weight: 400;
   font-size: 12px;
   text-transform: uppercase;
 }
-/* line 55, ../../../app/assets/stylesheets/layout/header.scss */
+/* line 57, ../../../app/assets/stylesheets/layout/header.scss */
 header nav.user ul li.divline {
   padding: 0px 18px 0px 18px;
   width: 2px;
@@ -54,16 +56,18 @@ header nav.user ul li.divline {
   float: left;
   background: url("bg-header-divline.png") no-repeat top center transparent;
 }
-/* line 64, ../../../app/assets/stylesheets/layout/header.scss */
+/* line 66, ../../../app/assets/stylesheets/layout/header.scss */
 header nav.user ul li a {
   text-transform: uppercase;
   color: #7F7F7F;
-  font-family: Helvetica, sans-serif, Arial;
+  font-family: EurostileMed, Helvetica, Arial, sans-serif;
+  letter-spacing: 1.0;
+  font-weight: 400;
   font-size: 12px;
 }
-/* line 71, ../../../app/assets/stylesheets/layout/header.scss */
+/* line 75, ../../../app/assets/stylesheets/layout/header.scss */
 header nav.user ul li a.my_account {
-  margin: -3px 0px 0px 0px;
+  margin: -5px 0px 0px 0px;
   padding: 7px 0px 0px 13px;
   width: 73px;
   height: 17px;
@@ -72,28 +76,28 @@ header nav.user ul li a.my_account {
   background: url("button-my-account.png") no-repeat top left transparent;
   display: block;
 }
-/* line 83, ../../../app/assets/stylesheets/layout/header.scss */
+/* line 87, ../../../app/assets/stylesheets/layout/header.scss */
 header nav.user ul li a.my_account:hover, header nav.user ul li a.my_account.active {
   background-position: bottom left;
   color: #75e3f0;
 }
-/* line 92, ../../../app/assets/stylesheets/layout/header.scss */
+/* line 96, ../../../app/assets/stylesheets/layout/header.scss */
 header nav.user ul li a.log_out, header nav.user ul li a.sign_in, header nav.user ul li a.sign_up {
-  margin: -3px 0px 0px 5px;
-  padding: 7px 0px 0px 12px;
-  width: 52px;
+  margin: -5px 0px 0px 5px;
+  padding: 7px 0px 0px 14px;
+  width: 50px;
   height: 17px;
   color: #ababab;
   font-size: 9px;
   background: url("button-log-out.png") no-repeat top left transparent;
   display: block;
 }
-/* line 104, ../../../app/assets/stylesheets/layout/header.scss */
+/* line 108, ../../../app/assets/stylesheets/layout/header.scss */
 header nav.user ul li a.log_out:hover, header nav.user ul li a.log_out.active, header nav.user ul li a.sign_in:hover, header nav.user ul li a.sign_in.active, header nav.user ul li a.sign_up:hover, header nav.user ul li a.sign_up.active {
   background-position: bottom left;
   color: #75e3f0;
 }
-/* line 115, ../../../app/assets/stylesheets/layout/header.scss */
+/* line 119, ../../../app/assets/stylesheets/layout/header.scss */
 header nav.main {
   margin: 55px 0px 0px 0px;
   padding: 0px;
@@ -104,63 +108,64 @@ header nav.main {
   position: fixed;
   z-index: 999;
 }
-/* line 126, ../../../app/assets/stylesheets/layout/header.scss */
+/* line 130, ../../../app/assets/stylesheets/layout/header.scss */
 header nav.main ul.topnav {
   margin: 0px auto;
   width: 600px;
   height: inherit;
   display: none;
 }
-/* line 133, ../../../app/assets/stylesheets/layout/header.scss */
+/* line 137, ../../../app/assets/stylesheets/layout/header.scss */
 header nav.main ul.topnav li {
-  margin: 10px 0px 0px 0px;
+  margin: 13px 0px 0px 0px;
   height: 30px;
   width: auto;
   list-style: none;
   float: left;
   overflow: hidden;
 }
-/* line 142, ../../../app/assets/stylesheets/layout/header.scss */
+/* line 146, ../../../app/assets/stylesheets/layout/header.scss */
 header nav.main ul.topnav li a, header nav.main ul.topnav li span {
   height: 40px;
   width: auto;
-  font-family: "Helvetica";
-  font-size: 13.5pt;
-  font-weight: normal;
+  font-family: EurostileMed, Helvetica, Arial, sans-serif;
+  letter-spacing: 1.0;
+  font-size: 15px;
+  font-weight: 200;
   line-height: 20px;
-  color: #ffffff;
+  color: #fafafa;
   clear: both;
   float: left;
   text-transform: uppercase;
   cursor: pointer;
 }
-/* line 156, ../../../app/assets/stylesheets/layout/header.scss */
+/* line 161, ../../../app/assets/stylesheets/layout/header.scss */
 header nav.main ul.topnav li a:hover, header nav.main ul.topnav li span:hover {
   color: #59b7ff;
   text-decoration: none;
 }
-/* line 162, ../../../app/assets/stylesheets/layout/header.scss */
+/* line 167, ../../../app/assets/stylesheets/layout/header.scss */
 header nav.main ul.topnav li a.active, header nav.main ul.topnav li span.active {
   color: #59b7ff;
 }
-/* line 167, ../../../app/assets/stylesheets/layout/header.scss */
+/* line 172, ../../../app/assets/stylesheets/layout/header.scss */
 header nav.main ul.topnav li a {
   color: #59b7ff;
   background-position: left bottom;
 }
-/* line 171, ../../../app/assets/stylesheets/layout/header.scss */
+/* line 176, ../../../app/assets/stylesheets/layout/header.scss */
 header nav.main ul.topnav li span {
   background-position: left top;
 }
-/* line 176, ../../../app/assets/stylesheets/layout/header.scss */
+/* line 181, ../../../app/assets/stylesheets/layout/header.scss */
 header nav.main ul.topnav li + li {
   padding: 0px 0px 0px 32px;
 }
-/* line 180, ../../../app/assets/stylesheets/layout/header.scss */
+/* line 185, ../../../app/assets/stylesheets/layout/header.scss */
 header nav.main ul.topnav li:last-child {
   padding: 0 0 0 25px;
 }
-/* line 183, ../../../app/assets/stylesheets/layout/header.scss */
+/* line 188, ../../../app/assets/stylesheets/layout/header.scss */
 header nav.main .glow {
   margin: -41px 0px 0px 0px;
   width: 158px;
@@ -169,7 +174,7 @@ header nav.main .glow {
   position: relative;
   display: none;
 }
-/* line 193, ../../../app/assets/stylesheets/layout/header.scss */
+/* line 198, ../../../app/assets/stylesheets/layout/header.scss */
 header .logo {
   margin: 90px auto;
   width: 708px;

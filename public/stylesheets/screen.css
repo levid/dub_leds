@@ -487,43 +487,44 @@ a:hover {
 /*@import "compass/css3";*/
 /* line 7, ../../app/assets/stylesheets/base.scss */
 body, select, input, textarea {
-  background: #FFF;
+  background: #000000;
   color: #33333a;
-  font-family: 'Helvetica';
+  font-family: EurostileMed, Helvetica, Arial, sans-serif;
+  font-weight: 400;
   font-size: 10pt;
 }
 
 /* always force a scrollbar in non-IE */
-/* line 15, ../../app/assets/stylesheets/base.scss */
+/* line 16, ../../app/assets/stylesheets/base.scss */
 html {
   overflow-y: scroll;
 }
 
 /* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
-/* line 20, ../../app/assets/stylesheets/base.scss */
+/* line 21, ../../app/assets/stylesheets/base.scss */
 strong, th {
-  font-family: 'Heveltica';
+  font-family: "Heveltica";
   font-weight: normal;
 }
 
-/* line 25, ../../app/assets/stylesheets/base.scss */
+/* line 26, ../../app/assets/stylesheets/base.scss */
 td, td img {
   vertical-align: top;
 }
 
-/* line 27, ../../app/assets/stylesheets/base.scss */
+/* line 28, ../../app/assets/stylesheets/base.scss */
 sub {
   vertical-align: sub;
   font-size: smaller;
 }
 
-/* line 28, ../../app/assets/stylesheets/base.scss */
+/* line 29, ../../app/assets/stylesheets/base.scss */
 sup {
   vertical-align: super;
   font-size: smaller;
 }
 
-/* line 31, ../../app/assets/stylesheets/base.scss */
+/* line 32, ../../app/assets/stylesheets/base.scss */
 pre {
   padding: 15px;
   /* www.pathf.com/blogs/2008/05/formatting-quoted-code-in-blog-posts-css21-white-space-pre-wrap/ */
@@ -537,20 +538,19 @@ pre {
   /* IE */
 }
 
-/* line 41, ../../app/assets/stylesheets/base.scss */
+/* line 42, ../../app/assets/stylesheets/base.scss */
 textarea {
   overflow: auto;
 }
 
 /* thnx ivannikolic! www.sitepoint.com/blogs/2010/08/20/ie-remove-textarea-scrollbars/ */
-/* line 43, ../../app/assets/stylesheets/base.scss */
+/* line 44, ../../app/assets/stylesheets/base.scss */
 .ie6 legend, .ie7 legend {
   margin-left: -7px;
 }
 
 /* thnx ivannikolic! */
-/* align checkboxes, radios, text inputs with their label
-   by: Thierry Koblentz tjkdesign.com/ez-css/css/base.css  */
+/* align checkboxes, radios, text inputs with their label by: Thierry Koblentz tjkdesign.com/ez-css/css/base.css  */
 /* line 47, ../../app/assets/stylesheets/base.scss */
 input[type="radio"] {
   vertical-align: text-bottom;
@@ -614,23 +614,21 @@ input:invalid, textarea:invalid {
 }
 
 /*  j.mp/webkit-tap-highlight-color */
-/* make buttons play nice in IE:
-   www.viget.com/inspire/styling-the-button-element-in-internet-explorer/ */
-/* line 86, ../../app/assets/stylesheets/base.scss */
+/* make buttons play nice in IE: www.viget.com/inspire/styling-the-button-element-in-internet-explorer/ */
+/* line 85, ../../app/assets/stylesheets/base.scss */
 button {
   width: auto;
   overflow: visible;
 }
 
-/* bicubic resizing for non-native sized IMG:
-   code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
-/* line 90, ../../app/assets/stylesheets/base.scss */
+/* bicubic resizing for non-native sized IMG: code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
+/* line 88, ../../app/assets/stylesheets/base.scss */
 .ie7 img {
   -ms-interpolation-mode: bicubic;
 }
 
 /* >> The Magnificent CLEARFIX << */
-/* line 93, ../../app/assets/stylesheets/base.scss */
+/* line 91, ../../app/assets/stylesheets/base.scss */
 .clearfix:after {
   content: ".";
   display: block;
@@ -639,18 +637,18 @@ button {
   visibility: hidden;
 }
 
-/* line 94, ../../app/assets/stylesheets/base.scss */
+/* line 92, ../../app/assets/stylesheets/base.scss */
 .clearfix {
   display: inline-block;
 }
 
-/* line 95, ../../app/assets/stylesheets/base.scss */
+/* line 93, ../../app/assets/stylesheets/base.scss */
 * html .clearfix {
   height: 1%;
 }
 
 /* Hides from IE-mac \*/
-/* line 96, ../../app/assets/stylesheets/base.scss */
+/* line 94, ../../app/assets/stylesheets/base.scss */
 .clearfix {
   display: block;
 }
@@ -658,12 +656,12 @@ button {
 /* 	Footer Stick
 	http://www.cssstickyfooter.com/
 */
-/* line 101, ../../app/assets/stylesheets/base.scss */
+/* line 99, ../../app/assets/stylesheets/base.scss */
 html, body {
   height: 100%;
 }
 
-/* line 105, ../../app/assets/stylesheets/base.scss */
+/* line 103, ../../app/assets/stylesheets/base.scss */
 body {
   background: url("bg-galactic.jpg") center -51px no-repeat #040405;
   postion: absolute;
@@ -679,7 +677,7 @@ body {
     body { -moz-background-size: 1500px 970px; background-size: 1500px 970px; }
 }
 */
-/* line 127, ../../app/assets/stylesheets/base.scss */
+/* line 125, ../../app/assets/stylesheets/base.scss */
 a:link,
 a:hover,
 a:active,
@@ -689,13 +687,13 @@ a:visited {
   background: none;
 }
 
-/* line 133, ../../app/assets/stylesheets/base.scss */
+/* line 131, ../../app/assets/stylesheets/base.scss */
 a {
   outline: none;
   background: none;
 }
 
-/* line 139, ../../app/assets/stylesheets/base.scss */
+/* line 137, ../../app/assets/stylesheets/base.scss */
 #dub {
   width: 100%;
   height: 100%;
@@ -740,17 +738,19 @@ header nav.user ul span.line {
 /* line 41, ../../app/assets/stylesheets/layout/header.scss */
 header nav.user ul li {
   margin: 0px;
-  padding: 19px 0px 0px 0px;
+  padding: 21px 0px 0px 0px;
   list-style-type: none;
   width: auto;
   height: 55px;
   float: left;
   color: #7F7F7F;
-  font-family: Helvetica, sans-serif, Arial;
+  font-family: EurostileMed, Helvetica, Arial, sans-serif;
+  letter-spacing: 1.0;
+  font-weight: 400;
   font-size: 12px;
   text-transform: uppercase;
 }
-/* line 55, ../../app/assets/stylesheets/layout/header.scss */
+/* line 57, ../../app/assets/stylesheets/layout/header.scss */
 header nav.user ul li.divline {
   padding: 0px 18px 0px 18px;
   width: 2px;
@@ -758,16 +758,18 @@ header nav.user ul li.divline {
   float: left;
   background: url("bg-header-divline.png") no-repeat top center transparent;
 }
-/* line 64, ../../app/assets/stylesheets/layout/header.scss */
+/* line 66, ../../app/assets/stylesheets/layout/header.scss */
 header nav.user ul li a {
   text-transform: uppercase;
   color: #7F7F7F;
-  font-family: Helvetica, sans-serif, Arial;
+  font-family: EurostileMed, Helvetica, Arial, sans-serif;
+  letter-spacing: 1.0;
+  font-weight: 400;
   font-size: 12px;
 }
-/* line 71, ../../app/assets/stylesheets/layout/header.scss */
+/* line 75, ../../app/assets/stylesheets/layout/header.scss */
 header nav.user ul li a.my_account {
-  margin: -3px 0px 0px 0px;
+  margin: -5px 0px 0px 0px;
   padding: 7px 0px 0px 13px;
   width: 73px;
   height: 17px;
@@ -776,28 +778,28 @@ header nav.user ul li a.my_account {
   background: url("button-my-account.png") no-repeat top left transparent;
   display: block;
 }
-/* line 83, ../../app/assets/stylesheets/layout/header.scss */
+/* line 87, ../../app/assets/stylesheets/layout/header.scss */
 header nav.user ul li a.my_account:hover, header nav.user ul li a.my_account.active {
   background-position: bottom left;
   color: #75e3f0;
 }
-/* line 92, ../../app/assets/stylesheets/layout/header.scss */
+/* line 96, ../../app/assets/stylesheets/layout/header.scss */
 header nav.user ul li a.log_out, header nav.user ul li a.sign_in, header nav.user ul li a.sign_up {
-  margin: -3px 0px 0px 5px;
-  padding: 7px 0px 0px 12px;
-  width: 52px;
+  margin: -5px 0px 0px 5px;
+  padding: 7px 0px 0px 14px;
+  width: 50px;
   height: 17px;
   color: #ababab;
   font-size: 9px;
   background: url("button-log-out.png") no-repeat top left transparent;
   display: block;
 }
-/* line 104, ../../app/assets/stylesheets/layout/header.scss */
+/* line 108, ../../app/assets/stylesheets/layout/header.scss */
 header nav.user ul li a.log_out:hover, header nav.user ul li a.log_out.active, header nav.user ul li a.sign_in:hover, header nav.user ul li a.sign_in.active, header nav.user ul li a.sign_up:hover, header nav.user ul li a.sign_up.active {
   background-position: bottom left;
   color: #75e3f0;
 }
-/* line 115, ../../app/assets/stylesheets/layout/header.scss */
+/* line 119, ../../app/assets/stylesheets/layout/header.scss */
 header nav.main {
   margin: 55px 0px 0px 0px;
   padding: 0px;
@@ -808,63 +810,64 @@ header nav.main {
   position: fixed;
   z-index: 999;
 }
-/* line 126, ../../app/assets/stylesheets/layout/header.scss */
+/* line 130, ../../app/assets/stylesheets/layout/header.scss */
 header nav.main ul.topnav {
   margin: 0px auto;
   width: 600px;
   height: inherit;
   display: none;
 }
-/* line 133, ../../app/assets/stylesheets/layout/header.scss */
+/* line 137, ../../app/assets/stylesheets/layout/header.scss */
 header nav.main ul.topnav li {
-  margin: 10px 0px 0px 0px;
+  margin: 13px 0px 0px 0px;
   height: 30px;
   width: auto;
   list-style: none;
   float: left;
   overflow: hidden;
 }
-/* line 142, ../../app/assets/stylesheets/layout/header.scss */
+/* line 146, ../../app/assets/stylesheets/layout/header.scss */
 header nav.main ul.topnav li a, header nav.main ul.topnav li span {
   height: 40px;
   width: auto;
-  font-family: "Helvetica";
-  font-size: 13.5pt;
-  font-weight: normal;
+  font-family: EurostileMed, Helvetica, Arial, sans-serif;
+  letter-spacing: 1.0;
+  font-size: 15px;
+  font-weight: 200;
   line-height: 20px;
-  color: #ffffff;
+  color: #fafafa;
   clear: both;
   float: left;
   text-transform: uppercase;
   cursor: pointer;
 }
-/* line 156, ../../app/assets/stylesheets/layout/header.scss */
+/* line 161, ../../app/assets/stylesheets/layout/header.scss */
 header nav.main ul.topnav li a:hover, header nav.main ul.topnav li span:hover {
   color: #59b7ff;
   text-decoration: none;
 }
-/* line 162, ../../app/assets/stylesheets/layout/header.scss */
+/* line 167, ../../app/assets/stylesheets/layout/header.scss */
 header nav.main ul.topnav li a.active, header nav.main ul.topnav li span.active {
   color: #59b7ff;
 }
-/* line 167, ../../app/assets/stylesheets/layout/header.scss */
+/* line 172, ../../app/assets/stylesheets/layout/header.scss */
 header nav.main ul.topnav li a {
   color: #59b7ff;
   background-position: left bottom;
 }
-/* line 171, ../../app/assets/stylesheets/layout/header.scss */
+/* line 176, ../../app/assets/stylesheets/layout/header.scss */
 header nav.main ul.topnav li span {
   background-position: left top;
 }
-/* line 176, ../../app/assets/stylesheets/layout/header.scss */
+/* line 181, ../../app/assets/stylesheets/layout/header.scss */
 header nav.main ul.topnav li + li {
   padding: 0px 0px 0px 32px;
 }
-/* line 180, ../../app/assets/stylesheets/layout/header.scss */
+/* line 185, ../../app/assets/stylesheets/layout/header.scss */
 header nav.main ul.topnav li:last-child {
   padding: 0 0 0 25px;
 }
-/* line 183, ../../app/assets/stylesheets/layout/header.scss */
+/* line 188, ../../app/assets/stylesheets/layout/header.scss */
 header nav.main .glow {
   margin: -41px 0px 0px 0px;
   width: 158px;
@@ -873,7 +876,7 @@ header nav.main .glow {
   position: relative;
   display: none;
 }
-/* line 193, ../../app/assets/stylesheets/layout/header.scss */
+/* line 198, ../../app/assets/stylesheets/layout/header.scss */
 header .logo {
   margin: 90px auto;
   width: 708px;
@@ -919,16 +922,18 @@ footer .footer-container .left-column .email-updates {
 }
 /* line 41, ../../app/assets/stylesheets/layout/footer.scss */
 footer .footer-container .left-column .email-updates input[type=text] {
-  padding: 0px 0px 0px 8px;
+  padding: 2px 0px 0px 8px;
   height: 32px;
   width: 250px;
+  font-family: EurostileMed, Helvetica, Arial, sans-serif;
+  font-weight: 400;
   font-size: 15px;
   line-height: 12px;
   background: url("input-email.png") no-repeat 1px 3px transparent;
   border: none;
   color: #7f7f7f;
 }
-/* line 53, ../../app/assets/stylesheets/layout/footer.scss */
+/* line 55, ../../app/assets/stylesheets/layout/footer.scss */
 footer .footer-container .left-column .email-updates input[type=submit] {
   margin: 3px 0px 0px -7px;
   height: 31px;
@@ -937,20 +942,20 @@ footer .footer-container .left-column .email-updates input[type=submit] {
   background: url("button-submit.png") no-repeat top left transparent;
   border: none;
 }
-/* line 65, ../../app/assets/stylesheets/layout/footer.scss */
+/* line 67, ../../app/assets/stylesheets/layout/footer.scss */
 footer .footer-container .right-column {
   width: auto;
   height: auto;
   float: right;
 }
-/* line 71, ../../app/assets/stylesheets/layout/footer.scss */
+/* line 73, ../../app/assets/stylesheets/layout/footer.scss */
 footer .footer-container .right-column .order {
   margin: 10px 0px 0px 0px;
   width: 106px;
   height: 43px;
   float: left;
 }
-/* line 78, ../../app/assets/stylesheets/layout/footer.scss */
+/* line 80, ../../app/assets/stylesheets/layout/footer.scss */
 footer .footer-container .right-column .order a {
   width: 106px;
   height: 43px;
@@ -958,75 +963,77 @@ footer .footer-container .right-column .order a {
   text-indent: -9000px;
   background: url("button-order.png") no-repeat top left transparent;
 }
-/* line 86, ../../app/assets/stylesheets/layout/footer.scss */
+/* line 88, ../../app/assets/stylesheets/layout/footer.scss */
 footer .footer-container .right-column .order a:hover {
   background-position: none;
 }
-/* line 93, ../../app/assets/stylesheets/layout/footer.scss */
+/* line 95, ../../app/assets/stylesheets/layout/footer.scss */
 footer .footer-container .right-column ul {
   margin: 16px 0px 0px 10px;
   width: auto;
   height: auto;
   float: right;
 }
-/* line 100, ../../app/assets/stylesheets/layout/footer.scss */
+/* line 102, ../../app/assets/stylesheets/layout/footer.scss */
 footer .footer-container .right-column ul li {
   width: 31px;
   height: 31px;
   float: left;
   list-style-type: none;
 }
-/* line 107, ../../app/assets/stylesheets/layout/footer.scss */
+/* line 109, ../../app/assets/stylesheets/layout/footer.scss */
 footer .footer-container .right-column ul li a {
   width: 31px;
   height: 31px;
   text-indent: -9000px;
   float: left;
 }
-/* line 114, ../../app/assets/stylesheets/layout/footer.scss */
+/* line 116, ../../app/assets/stylesheets/layout/footer.scss */
 footer .footer-container .right-column ul li a.facebook {
   background: url("img-sharing-facebook.png") no-repeat top left transparent;
 }
-/* line 119, ../../app/assets/stylesheets/layout/footer.scss */
+/* line 121, ../../app/assets/stylesheets/layout/footer.scss */
 footer .footer-container .right-column ul li a.twitter {
   background: url("img-sharing-twitter.png") no-repeat top left transparent;
 }
-/* line 124, ../../app/assets/stylesheets/layout/footer.scss */
+/* line 126, ../../app/assets/stylesheets/layout/footer.scss */
 footer .footer-container .right-column ul li a.flickr {
   background: url("img-sharing-flickr.png") no-repeat top left transparent;
 }
-/* line 129, ../../app/assets/stylesheets/layout/footer.scss */
+/* line 131, ../../app/assets/stylesheets/layout/footer.scss */
 footer .footer-container .right-column ul li a.linkedin {
   background: url("img-sharing-linkedin.png") no-repeat top left transparent;
 }
-/* line 134, ../../app/assets/stylesheets/layout/footer.scss */
+/* line 136, ../../app/assets/stylesheets/layout/footer.scss */
 footer .footer-container .right-column ul li a:active {
   background-position: bottom center;
 }
-/* line 139, ../../app/assets/stylesheets/layout/footer.scss */
+/* line 141, ../../app/assets/stylesheets/layout/footer.scss */
 footer .footer-container .right-column ul li a:hover {
   background-position: bottom center;
 }
-/* line 144, ../../app/assets/stylesheets/layout/footer.scss */
+/* line 146, ../../app/assets/stylesheets/layout/footer.scss */
 footer .footer-container .right-column ul li a.active {
   background-position: bottom center;
 }
-/* line 151, ../../app/assets/stylesheets/layout/footer.scss */
+/* line 153, ../../app/assets/stylesheets/layout/footer.scss */
 footer .footer-container .right-column ul li + li {
   padding: 0px 0px 0px 10px;
 }
-/* line 159, ../../app/assets/stylesheets/layout/footer.scss */
+/* line 161, ../../app/assets/stylesheets/layout/footer.scss */
 footer .spacer {
   height: 100px;
   width: 100%;
   background: url("bg-footer.png") repeat top left transparent;
 }
-/* line 165, ../../app/assets/stylesheets/layout/footer.scss */
+/* line 167, ../../app/assets/stylesheets/layout/footer.scss */
 footer .spacer .copyright {
   margin: 0px auto;
   padding: 10px 0px 0px 0px;
   height: 67px;
   width: 980px;
+  font-family: EurostileMed, Helvetica, Arial, sans-serif;
+  font-weight: 400;
   font-size: 15px;
   color: #777777;
 }
@@ -1205,18 +1212,18 @@ footer .spacer .copyright {
 }
 /* line 197, ../../app/assets/stylesheets/layout/body.scss */
 .body .content-container {
-  margin: 0px auto;
-  padding: 0px 0px 25px 0px;
+  margin: 0px auto 50px auto;
+  padding: 0px 0px 0px 0px;
   height: auto;
   width: 100%;
 }
-/* line 205, ../../app/assets/stylesheets/layout/body.scss */
+/* line 204, ../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content {
   margin: 0px auto;
   width: 980px;
   height: 367px;
 }
-/* line 211, ../../app/assets/stylesheets/layout/body.scss */
+/* line 210, ../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .left-column {
   margin: 0px 0px 0px -30px;
   width: 305px;
@@ -1224,14 +1231,14 @@ footer .spacer .copyright {
   position: relative;
   float: left;
 }
-/* line 219, ../../app/assets/stylesheets/layout/body.scss */
+/* line 218, ../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .left-column .rim-preview {
   margin: 0px;
   height: 303px;
   width: 313px;
   background: url("img-rim-preview.png") no-repeat top left transparent;
 }
-/* line 227, ../../app/assets/stylesheets/layout/body.scss */
+/* line 226, ../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .left-column .try-it {
   margin: -60px 0px 0px 75px;
   padding: 54px 0px 0px 0px;
@@ -1241,7 +1248,7 @@ footer .spacer .copyright {
   position: absolute;
   z-index: 1;
 }
-/* line 237, ../../app/assets/stylesheets/layout/body.scss */
+/* line 236, ../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .left-column .try-it a {
   margin: 0px 0px 0px 18px;
   width: 141px;
@@ -1249,20 +1256,20 @@ footer .spacer .copyright {
   display: block;
   text-indent: -9000px;
 }
-/* line 248, ../../app/assets/stylesheets/layout/body.scss */
+/* line 247, ../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .right-column {
   width: 705px;
   height: auto;
   position: relative;
   float: right;
 }
-/* line 255, ../../app/assets/stylesheets/layout/body.scss */
+/* line 254, ../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .right-column .title-container {
   width: auto;
   height: auto;
   display: block;
 }
-/* line 261, ../../app/assets/stylesheets/layout/body.scss */
+/* line 260, ../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .right-column .title-container .title {
   margin: 20px 0px 0px -16px;
   height: 90px;
@@ -1271,7 +1278,7 @@ footer .spacer .copyright {
   text-indent: -9000px;
   background: url("title-dubleds.png") no-repeat top left transparent;
 }
-/* line 271, ../../app/assets/stylesheets/layout/body.scss */
+/* line 270, ../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .right-column .title-container .usb-built-in {
   margin: 45px 0px 0px 0px;
   height: 38px;
@@ -1279,29 +1286,36 @@ footer .spacer .copyright {
   background: url("img-usb-builtin.png") no-repeat top left transparent;
   float: right;
 }
-/* line 281, ../../app/assets/stylesheets/layout/body.scss */
+/* line 280, ../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .right-column .text-container {
   clear: both;
   text-shadow: 0px 1px 2px #333;
-  color: #ffffff;
+  font-size: 12px;
+  line-height: 25px;
+  color: #fafafa;
+  letter-spacing: 1.0;
+  font-family: EurostileMed, Helvetica, Arial, sans-serif;
+  font-weight: 400;
 }
-/* line 287, ../../app/assets/stylesheets/layout/body.scss */
+/* line 292, ../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .right-column .text-container h4 {
+  font-family: EurostileBld, Helvetica, Arial, sans-serif;
   font-size: 22px;
-  padding: 0px 0px 24px 0px;
+  padding: 10px 0px 20px 0px;
+  font-weight: 400;
 }
-/* line 293, ../../app/assets/stylesheets/layout/body.scss */
+/* line 300, ../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .right-column .text-container p {
   font-size: 15px;
 }
-/* line 298, ../../app/assets/stylesheets/layout/body.scss */
+/* line 305, ../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .right-column .text-container ul {
   margin: 20px 0px 0px -7px;
   width: auto;
   height: auto;
   float: left;
 }
-/* line 305, ../../app/assets/stylesheets/layout/body.scss */
+/* line 312, ../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .right-column .text-container ul li {
   width: auto;
   height: 25px;
@@ -1311,7 +1325,7 @@ footer .spacer .copyright {
   padding: 2px 0px 0px 27px;
   vertical-align: middle;
 }
-/* line 317, ../../app/assets/stylesheets/layout/body.scss */
+/* line 324, ../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .right-column .text-container ul + ul {
   padding: 0px 0px 0px 20px;
 }
@@ -1326,7 +1340,7 @@ footer .spacer .copyright {
   border: 2px solid #00A9ED;
   -moz-border-radius: 15px;
   border-radius: 15px;
-  position: absolute;
+  position: relative;
   z-index: 9999;
 }
 /* line 33, ../../app/assets/stylesheets/layout/notification.scss */
@@ -1336,7 +1350,7 @@ footer .spacer .copyright {
   padding: 20px;
   text-align: center;
   display: block;
-  color: #ffffff;
+  color: #fafafa;
   font-size: 15px;
   text-transform: uppercase;
 }

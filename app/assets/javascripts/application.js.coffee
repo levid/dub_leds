@@ -7,7 +7,5 @@
 #= require jquery
 #= require jquery_ujs
 #= require_tree ./vendor
-#= require fonts
-#= require_tree ./fonts
 #= require dub
 #= require_tree ./dub

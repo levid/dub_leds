@@ -82,7 +82,7 @@ Nav = class extends UI
     
   initUserNav: () ->
     userNav = $('nav.user ul')
-    navWidth = userNav.outerWidth()
+    navWidth = userNav.outerWidth() + 10
     userNav.css('width', navWidth)
 
   initMainNav: () ->

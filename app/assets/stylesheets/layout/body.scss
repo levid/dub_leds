@@ -195,11 +195,10 @@
     }
     .content-container
     {
-        margin: 0px auto;
-        padding: 0px 0px 25px 0px;
+        margin: 0px auto 50px auto;
+        padding: 0px 0px 0px 0px;
         height: auto;
         width: 100%;
-
 
         .content
         {
@@ -281,12 +280,20 @@
                 {
                     clear: both;
                     text-shadow: 0px 1px 2px #333;
-                    color: #ffffff;
+                    font-size: 12px;
+                    line-height: 25px;
+                    color: #fafafa;
+                    letter-spacing: 1.0;
+                    
+                    font-family: EurostileMed, Helvetica, Arial, sans-serif;
+                    font-weight: 400;
 
                     h4
                     {
+                        font-family: EurostileBld, Helvetica, Arial, sans-serif;
                         font-size: 22px;
-                        padding: 0px 0px 24px 0px;
+                        padding: 10px 0px 20px 0px;
+                        font-weight: 400;
                     }
 
                     p

@@ -2,43 +2,44 @@
 /*@import "compass/css3";*/
 /* line 7, ../../app/assets/stylesheets/base.scss */
 body, select, input, textarea {
-  background: #FFF;
+  background: #000000;
   color: #33333a;
-  font-family: 'Helvetica';
+  font-family: EurostileMed, Helvetica, Arial, sans-serif;
+  font-weight: 400;
   font-size: 10pt;
 }
 
 /* always force a scrollbar in non-IE */
-/* line 15, ../../app/assets/stylesheets/base.scss */
+/* line 16, ../../app/assets/stylesheets/base.scss */
 html {
   overflow-y: scroll;
 }
 
 /* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
-/* line 20, ../../app/assets/stylesheets/base.scss */
+/* line 21, ../../app/assets/stylesheets/base.scss */
 strong, th {
-  font-family: 'Heveltica';
+  font-family: "Heveltica";
   font-weight: normal;
 }
 
-/* line 25, ../../app/assets/stylesheets/base.scss */
+/* line 26, ../../app/assets/stylesheets/base.scss */
 td, td img {
   vertical-align: top;
 }
 
-/* line 27, ../../app/assets/stylesheets/base.scss */
+/* line 28, ../../app/assets/stylesheets/base.scss */
 sub {
   vertical-align: sub;
   font-size: smaller;
 }
 
-/* line 28, ../../app/assets/stylesheets/base.scss */
+/* line 29, ../../app/assets/stylesheets/base.scss */
 sup {
   vertical-align: super;
   font-size: smaller;
 }
 
-/* line 31, ../../app/assets/stylesheets/base.scss */
+/* line 32, ../../app/assets/stylesheets/base.scss */
 pre {
   padding: 15px;
   /* www.pathf.com/blogs/2008/05/formatting-quoted-code-in-blog-posts-css21-white-space-pre-wrap/ */
@@ -52,20 +53,19 @@ pre {
   /* IE */
 }
 
-/* line 41, ../../app/assets/stylesheets/base.scss */
+/* line 42, ../../app/assets/stylesheets/base.scss */
 textarea {
   overflow: auto;
 }
 
 /* thnx ivannikolic! www.sitepoint.com/blogs/2010/08/20/ie-remove-textarea-scrollbars/ */
-/* line 43, ../../app/assets/stylesheets/base.scss */
+/* line 44, ../../app/assets/stylesheets/base.scss */
 .ie6 legend, .ie7 legend {
   margin-left: -7px;
 }
 
 /* thnx ivannikolic! */
-/* align checkboxes, radios, text inputs with their label
-   by: Thierry Koblentz tjkdesign.com/ez-css/css/base.css  */
+/* align checkboxes, radios, text inputs with their label by: Thierry Koblentz tjkdesign.com/ez-css/css/base.css  */
 /* line 47, ../../app/assets/stylesheets/base.scss */
 input[type="radio"] {
   vertical-align: text-bottom;
@@ -129,23 +129,21 @@ input:invalid, textarea:invalid {
 }
 
 /*  j.mp/webkit-tap-highlight-color */
-/* make buttons play nice in IE:
-   www.viget.com/inspire/styling-the-button-element-in-internet-explorer/ */
-/* line 86, ../../app/assets/stylesheets/base.scss */
+/* make buttons play nice in IE: www.viget.com/inspire/styling-the-button-element-in-internet-explorer/ */
+/* line 85, ../../app/assets/stylesheets/base.scss */
 button {
   width: auto;
   overflow: visible;
 }
 
-/* bicubic resizing for non-native sized IMG:
-   code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
-/* line 90, ../../app/assets/stylesheets/base.scss */
+/* bicubic resizing for non-native sized IMG: code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
+/* line 88, ../../app/assets/stylesheets/base.scss */
 .ie7 img {
   -ms-interpolation-mode: bicubic;
 }
 
 /* >> The Magnificent CLEARFIX << */
-/* line 93, ../../app/assets/stylesheets/base.scss */
+/* line 91, ../../app/assets/stylesheets/base.scss */
 .clearfix:after {
   content: ".";
   display: block;
@@ -154,18 +152,18 @@ button {
   visibility: hidden;
 }
 
-/* line 94, ../../app/assets/stylesheets/base.scss */
+/* line 92, ../../app/assets/stylesheets/base.scss */
 .clearfix {
   display: inline-block;
 }
 
-/* line 95, ../../app/assets/stylesheets/base.scss */
+/* line 93, ../../app/assets/stylesheets/base.scss */
 * html .clearfix {
   height: 1%;
 }
 
 /* Hides from IE-mac \*/
-/* line 96, ../../app/assets/stylesheets/base.scss */
+/* line 94, ../../app/assets/stylesheets/base.scss */
 .clearfix {
   display: block;
 }
@@ -173,12 +171,12 @@ button {
 /* 	Footer Stick
 	http://www.cssstickyfooter.com/
 */
-/* line 101, ../../app/assets/stylesheets/base.scss */
+/* line 99, ../../app/assets/stylesheets/base.scss */
 html, body {
   height: 100%;
 }
 
-/* line 105, ../../app/assets/stylesheets/base.scss */
+/* line 103, ../../app/assets/stylesheets/base.scss */
 body {
   background: url("bg-galactic.jpg") center -51px no-repeat #040405;
   postion: absolute;
@@ -194,7 +192,7 @@ body {
     body { -moz-background-size: 1500px 970px; background-size: 1500px 970px; }
 }
 */
-/* line 127, ../../app/assets/stylesheets/base.scss */
+/* line 125, ../../app/assets/stylesheets/base.scss */
 a:link,
 a:hover,
 a:active,
@@ -204,13 +202,13 @@ a:visited {
   background: none;
 }
 
-/* line 133, ../../app/assets/stylesheets/base.scss */
+/* line 131, ../../app/assets/stylesheets/base.scss */
 a {
   outline: none;
   background: none;
 }
 
-/* line 139, ../../app/assets/stylesheets/base.scss */
+/* line 137, ../../app/assets/stylesheets/base.scss */
 #dub {
   width: 100%;
   height: 100%;

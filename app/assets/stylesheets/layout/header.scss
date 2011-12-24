@@ -40,14 +40,16 @@ header
         li
         {
           margin: 0px;
-          padding: 19px 0px 0px 0px;
+          padding: 21px 0px 0px 0px;
           list-style-type: none;
           width: auto;
           height: 55px;
           float: left;
 
           color: #7F7F7F;
-          font-family: Helvetica, sans-serif, Arial;
+          font-family: EurostileMed, Helvetica, Arial, sans-serif;
+          letter-spacing: 1.0;
+          font-weight: 400;
           font-size: 12px;
           text-transform: uppercase;
           
@@ -64,12 +66,14 @@ header
           {
             text-transform: uppercase;
             color: #7F7F7F;
-            font-family: Helvetica, sans-serif, Arial;
+            font-family: EurostileMed, Helvetica, Arial, sans-serif;
+            letter-spacing: 1.0;
+            font-weight: 400;
             font-size: 12px;
             
             &.my_account
             {
-              margin: -3px 0px 0px 0px;
+              margin: -5px 0px 0px 0px;
               padding: 7px 0px 0px 13px;
               width: 73px;
               height: 17px;
@@ -90,9 +94,9 @@ header
             &.sign_in,
             &.sign_up
             {
-              margin: -3px 0px 0px 5px;
-              padding: 7px 0px 0px 12px;
-              width: 52px;
+              margin: -5px 0px 0px 5px;
+              padding: 7px 0px 0px 14px;
+              width: 50px;
               height: 17px;
               color: #ababab;
               font-size: 9px;
@@ -131,7 +135,7 @@ header
 
             li
             {
-                margin: 10px 0px 0px 0px;
+                margin: 13px 0px 0px 0px;
                 height: 30px;
                 width: auto;
                 list-style: none;
@@ -142,11 +146,12 @@ header
                 {
                     height: 40px;
                     width: auto;
-                    font-family: "Helvetica";
-                    font-size: 13.5pt;
-                    font-weight: normal;
+                    font-family: EurostileMed, Helvetica, Arial, sans-serif;
+                    letter-spacing: 1.0;
+                    font-size: 15px;
+                    font-weight: 200;
                     line-height: 20px;
-                    color: #ffffff;
+                    color: #fafafa;
                     clear: both;
                     float: left;
                     text-transform: uppercase;

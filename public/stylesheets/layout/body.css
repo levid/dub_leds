@@ -172,18 +172,18 @@
 }
 /* line 197, ../../../app/assets/stylesheets/layout/body.scss */
 .body .content-container {
-  margin: 0px auto;
-  padding: 0px 0px 25px 0px;
+  margin: 0px auto 50px auto;
+  padding: 0px 0px 0px 0px;
   height: auto;
   width: 100%;
 }
-/* line 205, ../../../app/assets/stylesheets/layout/body.scss */
+/* line 204, ../../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content {
   margin: 0px auto;
   width: 980px;
   height: 367px;
 }
-/* line 211, ../../../app/assets/stylesheets/layout/body.scss */
+/* line 210, ../../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .left-column {
   margin: 0px 0px 0px -30px;
   width: 305px;
@@ -191,14 +191,14 @@
   position: relative;
   float: left;
 }
-/* line 219, ../../../app/assets/stylesheets/layout/body.scss */
+/* line 218, ../../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .left-column .rim-preview {
   margin: 0px;
   height: 303px;
   width: 313px;
   background: url("img-rim-preview.png") no-repeat top left transparent;
 }
-/* line 227, ../../../app/assets/stylesheets/layout/body.scss */
+/* line 226, ../../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .left-column .try-it {
   margin: -60px 0px 0px 75px;
   padding: 54px 0px 0px 0px;
@@ -208,7 +208,7 @@
   position: absolute;
   z-index: 1;
 }
-/* line 237, ../../../app/assets/stylesheets/layout/body.scss */
+/* line 236, ../../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .left-column .try-it a {
   margin: 0px 0px 0px 18px;
   width: 141px;
@@ -216,20 +216,20 @@
   display: block;
   text-indent: -9000px;
 }
-/* line 248, ../../../app/assets/stylesheets/layout/body.scss */
+/* line 247, ../../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .right-column {
   width: 705px;
   height: auto;
   position: relative;
   float: right;
 }
-/* line 255, ../../../app/assets/stylesheets/layout/body.scss */
+/* line 254, ../../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .right-column .title-container {
   width: auto;
   height: auto;
   display: block;
 }
-/* line 261, ../../../app/assets/stylesheets/layout/body.scss */
+/* line 260, ../../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .right-column .title-container .title {
   margin: 20px 0px 0px -16px;
   height: 90px;
@@ -238,7 +238,7 @@
   text-indent: -9000px;
   background: url("title-dubleds.png") no-repeat top left transparent;
 }
-/* line 271, ../../../app/assets/stylesheets/layout/body.scss */
+/* line 270, ../../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .right-column .title-container .usb-built-in {
   margin: 45px 0px 0px 0px;
   height: 38px;
@@ -246,29 +246,36 @@
   background: url("img-usb-builtin.png") no-repeat top left transparent;
   float: right;
 }
-/* line 281, ../../../app/assets/stylesheets/layout/body.scss */
+/* line 280, ../../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .right-column .text-container {
   clear: both;
   text-shadow: 0px 1px 2px #333;
-  color: #ffffff;
+  font-size: 12px;
+  line-height: 25px;
+  color: #fafafa;
+  letter-spacing: 1.0;
+  font-family: EurostileMed, Helvetica, Arial, sans-serif;
+  font-weight: 400;
 }
-/* line 287, ../../../app/assets/stylesheets/layout/body.scss */
+/* line 292, ../../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .right-column .text-container h4 {
+  font-family: EurostileBld, Helvetica, Arial, sans-serif;
   font-size: 22px;
-  padding: 0px 0px 24px 0px;
+  padding: 10px 0px 20px 0px;
+  font-weight: 400;
 }
-/* line 293, ../../../app/assets/stylesheets/layout/body.scss */
+/* line 300, ../../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .right-column .text-container p {
   font-size: 15px;
 }
-/* line 298, ../../../app/assets/stylesheets/layout/body.scss */
+/* line 305, ../../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .right-column .text-container ul {
   margin: 20px 0px 0px -7px;
   width: auto;
   height: auto;
   float: left;
 }
-/* line 305, ../../../app/assets/stylesheets/layout/body.scss */
+/* line 312, ../../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .right-column .text-container ul li {
   width: auto;
   height: 25px;
@@ -278,7 +285,7 @@
   padding: 2px 0px 0px 27px;
   vertical-align: middle;
 }
-/* line 317, ../../../app/assets/stylesheets/layout/body.scss */
+/* line 324, ../../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .right-column .text-container ul + ul {
   padding: 0px 0px 0px 20px;
 }
