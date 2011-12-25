@@ -4,11 +4,12 @@ class HomeController < ApplicationController
   def index
     @rims = Rim.all.sort!(&:id)
     
-    @controller_js_args = 'test'
+    @controller_js_args = @active_rim
     
     # puts YAML::dump(@rims)
 
     @path = :home_path
     @users = User.all
   end
+  
 end

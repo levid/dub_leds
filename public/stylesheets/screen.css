@@ -1212,8 +1212,8 @@ footer .spacer .copyright {
 }
 /* line 197, ../../app/assets/stylesheets/layout/body.scss */
 .body .content-container {
-  margin: 0px auto 50px auto;
-  padding: 0px 0px 0px 0px;
+  margin: 0px auto;
+  padding: 0px 0px 30px 0px;
   height: auto;
   width: 100%;
 }
@@ -1221,7 +1221,7 @@ footer .spacer .copyright {
 .body .content-container .content {
   margin: 0px auto;
   width: 980px;
-  height: 367px;
+  height: 420px;
 }
 /* line 210, ../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .left-column {

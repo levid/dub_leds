@@ -17,11 +17,14 @@
     %ul
       - @rims.each do |rim|
         %li
-          - if rim.id == @rims.first.id
-            %a.rim-small.active{:href => "#", :rel => rim.id}
+          - if rim.id.to_s == @active_rim.to_s
+            %a.rim-small.active{:href => "#", :rel => "#{rim.id}"}
+              = image_tag rim.small_image unless !rim.small_image.present?
+          -elsif rim.id == @rims.first.id && @active_rim.nil?
+            %a.rim-small.active{:href => "#", :rel => "#{rim.id}"}
               = image_tag rim.small_image unless !rim.small_image.present?
           -else
-            %a.rim-small{:href => "#", :rel => rim.id}
+            %a.rim-small{:href => "#", :rel => "#{rim.id}"}
               = image_tag rim.small_image unless !rim.small_image.present?
   .overlay
     .titles
@@ -34,7 +37,10 @@
       %a.title7{:href => "#", :title => 'Pendulum Arm'}
   .rim
     - @rims.each do |rim|
-      - if rim.id == @rims.first.id
+      - if rim.id.to_s == @active_rim.to_s
+        %div{:id => "#{rim.id}", :class => 'show'}
+          = image_tag rim.medium_image unless !rim.medium_image.present?
+      -elsif rim.id == @rims.first.id && @active_rim.nil?
         %div{:id => "#{rim.id}", :class => 'show'}
           = image_tag rim.medium_image unless !rim.medium_image.present?
       -else

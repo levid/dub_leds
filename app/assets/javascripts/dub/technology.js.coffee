@@ -40,12 +40,20 @@ class Technology extends window._Dub
       this.initTechOverlay()
       
   initSmallRimButtons: () ->
-    $('.technology-content .choices a.rim-small').bind "click", (e) ->
+    self = this
+    smallRimButton = $('.technology-content .choices a.rim-small')
+    smallRimButton.bind "click", (e) ->
       e.preventDefault()
       rimId = $(this).attr('rel')
-      $('.technology-content .choices a.rim-small').each ->
+      
+      window._Dub.updateStoredCookie
+        cookie_name: "active_rim"
+        cookie_value: rimId
+      
+      smallRimButton.each ->
         $(this).css('opacity', '0.4')
       $(this).css('opacity', '1.0')
+      
       $('.technology-content .rim .show').each ->
         $(this).removeClass('show').addClass('hide')
         

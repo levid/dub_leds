@@ -2,7 +2,7 @@
 .content-technology {
   margin: 0px auto;
   width: 980px;
-  height: 367px;
+  height: auto;
 }
 /* line 12, ../../app/assets/stylesheets/technology.scss */
 .content-technology #tech-overlay {

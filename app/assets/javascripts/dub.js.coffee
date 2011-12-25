@@ -27,6 +27,14 @@ class Dub
       ), 300
       
     this
+    
+  updateStoredCookie: (data) ->
+    $.ajax
+      type: "POST"
+      url: "/cookie"
+      data: data,
+      success: (msg) -> 
+        alert(msg)
 
   # Init Page Function
   #

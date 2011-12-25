@@ -1,10 +1,10 @@
 class Home extends window._Dub
   constructor: (@options) ->
-    this.initRimSelect()
+    this.initRimSelect(@options)
 
-  initRimSelect: () ->
-    $(document).ready ->
-      window._Dub.RimSelect.constructor()
+  initRimSelect: (options) ->
+    $(document).ready =>
+      window._Dub.RimSelect.constructor(options)
 
       buttonContainerWidth = $('.rim-reflection .buttons ul li').length * $('.rim-reflection .buttons ul li a').width()
       $('.rim-reflection .buttons ul').css('width', buttonContainerWidth)

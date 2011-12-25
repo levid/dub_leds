@@ -26,6 +26,8 @@ DubLeds::Application.routes.draw do
   # match '/signin' => 'sessions#new', :as => :signin
   # 
   match '/users/sign_out' => 'sessions#destroy', :as => :signout
+  
+  post '/cookie' => 'cookies#create'
   # 
   #   match '/auth/failure' => 'sessions#failure'
 

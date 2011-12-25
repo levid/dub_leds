@@ -23,4 +23,4 @@
       = render 'layouts/footer'
   / = debug(params) if Rails.env.development?
   = javascript_tag :defer => 'defer' do
-    $S.initPage('#{controller_name.capitalize}', '#{@controller_js_args}')
+    $S.initPage("#{controller_name.capitalize}", "#{@controller_js_args}")

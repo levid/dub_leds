@@ -1,13 +1,22 @@
 class RimSelect extends window._Dub
   constructor: (@options) ->
+    @rimId = @options
     this.initRimSelect()
     this.initButtons()
 
   initRimSelect: () ->
-    @count          = 0
+    if @rimId?
+      @count         = $('.rim-reflection .buttons a.active').parent().index()
+      @rimContainer   = $(".rim-container .rims-large li").each ->
+        $(this).css('display', 'none')
+    else
+      @count        = 0
+
     @rimContainer   = $(".rim-container .rims-large")
     @rimCount       = $(".rim-container .rims-large li").size()
     @circleButtons  = $('.rim-reflection .buttons a')
+    
+    this.setCurrentRim(@count)
 
   slideNext: () ->
     this.counter()
@@ -57,6 +66,30 @@ class RimSelect extends window._Dub
       duration:     700
       easing:       'easeInOutExpo'
     )
+    
+  jumpTo: (@count) ->
+    this.animateRim(@rimContainer,
+      method:       'slideToLeft'
+      direction:    'right'
+      startLeft:    '0px'
+      endLeft:      '0px'
+      startOpacity: 0
+      endOpacity:   1
+      duration:     1
+      easing:       'easeInOutExpo'
+    )
+    
+  setCurrentRim: (@count) ->
+    currentButton = @circleButtons.find(':eq(' + @count + ')')
+
+    this.jumpTo(@count)
+
+    $('.rim-reflection .buttons a').each ->
+      $(this).removeClass('active')
+      $(this).css('opacity', '0.6')
+
+    currentButton.addClass('active')
+    currentButton.css('opacity', '1.0')
 
   counter: (direction) ->
     @count = @rimCount if @count is 0
@@ -101,7 +134,15 @@ class RimSelect extends window._Dub
         @el.find("li").each ->
           $(this).hide()
 
-        @el.find("li:eq(" + @count + ")").show()
+        currentEl = @el.find("li:eq(" + @count + ")")
+        rimId = currentEl.attr('class')
+        currentEl.show()
+        
+        if !@rimId || @rimId != rimId
+          window._Dub.updateStoredCookie
+            cookie_name: "active_rim"
+            cookie_value: rimId
+          
         @el.animate
           left: @endLeft
           opacity: 1
@@ -155,7 +196,7 @@ class RimSelect extends window._Dub
       event.preventDefault()
       @index = @circleButtons.index(event.target)
       @count = @index
-
+      
       if(@count < @rimCount/2)
         this.slideToLeft(@count)
 

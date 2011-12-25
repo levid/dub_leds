@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   
   before_filter :set_names
   before_filter :set_year
+  before_filter :find_rim
   
   layout :set_layout
   
@@ -33,6 +34,20 @@ class ApplicationController < ActionController::Base
     else
        "application"
     end
+  end
+  
+  def find_rim
+    @active_rim = get_cookie('active_rim')
+  end
+  
+  def set_cookie(params)
+    cookie_name = params[:cookie_name]
+    cookie_value = params[:cookie_value]
+    cookies[":#{cookie_name}"] = cookie_value
+  end
+
+  def get_cookie(cookie_name)
+    return cookies[":#{cookie_name}"]
   end
 
 end

@@ -25,10 +25,4 @@ class GeneratorController < ApplicationController
 
   end
 
-  protected
-
-  def find_rim
-    @rims = DubLeds::Rim.find params[:id]
-  end
-
 end
