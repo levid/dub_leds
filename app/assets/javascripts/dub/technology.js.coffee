@@ -3,12 +3,17 @@ class Technology extends window._Dub
     this.initOverlayButtons()
     this.initSmallRimButtons()
 
-  initTechOverlay: () ->
+  initTechOverlay: (data) ->
     $(document).ready =>
       
       overlayDiv          = $("#tech-overlay")
       overlayContainerDiv = $('#tech-overlay .overlay-container')
       closeButton         = $('.close-button a')
+      
+      overlayContent = data[0]
+      overlayContainerDiv.find('.middle p').text(overlayContent.description)
+      overlayContainerDiv.find('.title').text(overlayContent.title)
+      overlayContainerDiv.find('.sub-title h4').text(overlayContent.sub_title)
       
       this.openOverlay overlayDiv
         
@@ -37,8 +42,16 @@ class Technology extends window._Dub
   initOverlayButtons: () ->
     $('.technology-content .overlay .titles a').bind "click", (e) =>
       e.preventDefault()
-      this.initTechOverlay()
+    
+      title = $(e.target).attr('title')
       
+      $.ajax
+        type: "GET"
+        url: "/technology/" + title
+        title: title,
+        success: (resp) => 
+          this.initTechOverlay(resp)
+
   initSmallRimButtons: () ->
     self = this
     smallRimButton = $('.technology-content .choices a.rim-small')

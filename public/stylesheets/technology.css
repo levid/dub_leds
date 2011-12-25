@@ -62,53 +62,60 @@
 }
 /* line 73, ../../app/assets/stylesheets/technology.scss */
 .content-technology #tech-overlay .overlay-container .top .title {
-  margin: -25px 0px 0px 75px;
-  width: 605px;
-  height: 57px;
-  background: url("img-tech-title1-large.png") no-repeat top left transparent;
+  margin: -15px 0px 0px 90px;
+  padding: 10px 0px 0px 0px;
+  width: 550px;
+  line-height: 40px;
+  height: auto;
+  font-family: EurostileMed, Helvetica, Arial, sans-serif;
+  font-size: 35px;
+  color: #18c6fe;
+  background: none;
   float: left;
+  text-indent: 0px;
+  text-transform: uppercase;
 }
-/* line 82, ../../app/assets/stylesheets/technology.scss */
+/* line 89, ../../app/assets/stylesheets/technology.scss */
 .content-technology #tech-overlay .overlay-container .top .sub-title {
   margin: 0px 0px 0px 90px;
   width: 605px;
   height: auto;
   float: left;
 }
-/* line 89, ../../app/assets/stylesheets/technology.scss */
+/* line 96, ../../app/assets/stylesheets/technology.scss */
 .content-technology #tech-overlay .overlay-container .top .sub-title h4 {
   font-family: EurostileBld, Helvetica, Arial, sans-serif;
   font-size: 18px;
-  padding: 10px 0px 20px 0px;
+  padding: 10px 0px 15px 0px;
   font-weight: 400;
 }
-/* line 100, ../../app/assets/stylesheets/technology.scss */
+/* line 107, ../../app/assets/stylesheets/technology.scss */
 .content-technology #tech-overlay .overlay-container .middle {
   width: 724px;
   height: auto;
   background: url("bg-tech-overlay-middle.png") repeat-y top left transparent;
   display: block;
 }
-/* line 107, ../../app/assets/stylesheets/technology.scss */
+/* line 114, ../../app/assets/stylesheets/technology.scss */
 .content-technology #tech-overlay .overlay-container .middle p {
   margin: 0px 0px 0px 90px;
   width: 560px;
   height: auto;
   font-size: 15px;
 }
-/* line 116, ../../app/assets/stylesheets/technology.scss */
+/* line 123, ../../app/assets/stylesheets/technology.scss */
 .content-technology #tech-overlay .overlay-container .bottom {
   width: 735px;
   height: 70px;
   background: url("bg-tech-overlay-bottom.png") no-repeat top left transparent;
 }
-/* line 125, ../../app/assets/stylesheets/technology.scss */
+/* line 132, ../../app/assets/stylesheets/technology.scss */
 .content-technology .title-container {
   width: auto;
   height: auto;
   display: block;
 }
-/* line 131, ../../app/assets/stylesheets/technology.scss */
+/* line 138, ../../app/assets/stylesheets/technology.scss */
 .content-technology .title-container .title {
   margin: 20px 0px 0px -16px;
   height: 73px;
@@ -117,29 +124,29 @@
   text-indent: -9000px;
   background: url("title-technology.png") no-repeat top left transparent;
 }
-/* line 142, ../../app/assets/stylesheets/technology.scss */
+/* line 149, ../../app/assets/stylesheets/technology.scss */
 .content-technology .text-container {
   clear: both;
   text-shadow: 0px 1px 2px #333;
   color: #fafafa;
 }
-/* line 148, ../../app/assets/stylesheets/technology.scss */
+/* line 155, ../../app/assets/stylesheets/technology.scss */
 .content-technology .text-container h4 {
   font-size: 22px;
   padding: 0px 0px 10px 0px;
   font-family: EurostileMed, Helvetica, Arial, sans-serif;
   font-weight: 700;
 }
-/* line 156, ../../app/assets/stylesheets/technology.scss */
+/* line 163, ../../app/assets/stylesheets/technology.scss */
 .content-technology .text-container p {
   font-size: 15px;
 }
-/* line 162, ../../app/assets/stylesheets/technology.scss */
+/* line 169, ../../app/assets/stylesheets/technology.scss */
 .content-technology .technology-content {
   clear: both;
   padding: 17px 0px 0px 0px;
 }
-/* line 167, ../../app/assets/stylesheets/technology.scss */
+/* line 174, ../../app/assets/stylesheets/technology.scss */
 .content-technology .technology-content .overlay {
   margin: -70px 0px 0px -15px;
   width: 1001px;
@@ -148,17 +155,17 @@
   z-index: 10;
   position: relative;
 }
-/* line 176, ../../app/assets/stylesheets/technology.scss */
+/* line 183, ../../app/assets/stylesheets/technology.scss */
 .content-technology .technology-content .overlay .titles {
   width: 1001px;
   height: 457px;
 }
-/* line 181, ../../app/assets/stylesheets/technology.scss */
+/* line 188, ../../app/assets/stylesheets/technology.scss */
 .content-technology .technology-content .overlay .titles a {
   width: auto;
   height: auto;
 }
-/* line 186, ../../app/assets/stylesheets/technology.scss */
+/* line 193, ../../app/assets/stylesheets/technology.scss */
 .content-technology .technology-content .overlay .titles a.title1 {
   width: 237px;
   height: 51px;
@@ -167,16 +174,16 @@
   top: 62px;
   left: 83px;
 }
-/* line 197, ../../app/assets/stylesheets/technology.scss */
+/* line 204, ../../app/assets/stylesheets/technology.scss */
 .content-technology .technology-content .overlay .titles a.title2 {
-  width: 306px;
+  width: 294px;
   height: 51px;
   background: url("img-tech-title2.png") no-repeat top left transparent;
   position: absolute;
   top: 135px;
   left: 0px;
 }
-/* line 208, ../../app/assets/stylesheets/technology.scss */
+/* line 215, ../../app/assets/stylesheets/technology.scss */
 .content-technology .technology-content .overlay .titles a.title3 {
   width: 244px;
   height: 51px;
@@ -185,7 +192,7 @@
   top: 205px;
   left: 78px;
 }
-/* line 219, ../../app/assets/stylesheets/technology.scss */
+/* line 226, ../../app/assets/stylesheets/technology.scss */
 .content-technology .technology-content .overlay .titles a.title4 {
   width: 215px;
   height: 51px;
@@ -194,7 +201,7 @@
   top: 0px;
   right: 40px;
 }
-/* line 230, ../../app/assets/stylesheets/technology.scss */
+/* line 237, ../../app/assets/stylesheets/technology.scss */
 .content-technology .technology-content .overlay .titles a.title5 {
   width: 215px;
   height: 51px;
@@ -203,7 +210,7 @@
   top: 90px;
   right: 0px;
 }
-/* line 241, ../../app/assets/stylesheets/technology.scss */
+/* line 248, ../../app/assets/stylesheets/technology.scss */
 .content-technology .technology-content .overlay .titles a.title6 {
   width: 214px;
   height: 78px;
@@ -212,7 +219,7 @@
   top: 170px;
   right: 21px;
 }
-/* line 252, ../../app/assets/stylesheets/technology.scss */
+/* line 259, ../../app/assets/stylesheets/technology.scss */
 .content-technology .technology-content .overlay .titles a.title7 {
   width: 189px;
   height: 51px;
@@ -221,11 +228,11 @@
   top: 265px;
   right: 70px;
 }
-/* line 263, ../../app/assets/stylesheets/technology.scss */
+/* line 270, ../../app/assets/stylesheets/technology.scss */
 .content-technology .technology-content .overlay .titles a:hover {
   background-position: bottom left;
 }
-/* line 271, ../../app/assets/stylesheets/technology.scss */
+/* line 278, ../../app/assets/stylesheets/technology.scss */
 .content-technology .technology-content .choices {
   margin: 300px 0px 0px 315px;
   width: 452px;
@@ -235,41 +242,41 @@
   float: left;
   position: relative;
 }
-/* line 281, ../../app/assets/stylesheets/technology.scss */
+/* line 288, ../../app/assets/stylesheets/technology.scss */
 .content-technology .technology-content .choices ul {
   width: auto;
   height: auto;
   margin: 15px 0px 0px 35px;
 }
-/* line 287, ../../app/assets/stylesheets/technology.scss */
+/* line 294, ../../app/assets/stylesheets/technology.scss */
 .content-technology .technology-content .choices ul li + li {
   margin-left: 3px;
 }
-/* line 292, ../../app/assets/stylesheets/technology.scss */
+/* line 299, ../../app/assets/stylesheets/technology.scss */
 .content-technology .technology-content .choices ul li {
   width: 48px;
   height: 61px;
   list-style-type: none;
   float: left;
 }
-/* line 299, ../../app/assets/stylesheets/technology.scss */
+/* line 306, ../../app/assets/stylesheets/technology.scss */
 .content-technology .technology-content .choices ul li a {
   width: 48px;
   height: 61px;
   display: block;
   opacity: 0.4;
 }
-/* line 306, ../../app/assets/stylesheets/technology.scss */
+/* line 313, ../../app/assets/stylesheets/technology.scss */
 .content-technology .technology-content .choices ul li a.rim-small {
   width: 48px;
   height: 61px;
   display: block;
 }
-/* line 314, ../../app/assets/stylesheets/technology.scss */
+/* line 321, ../../app/assets/stylesheets/technology.scss */
 .content-technology .technology-content .choices ul li a.active {
   opacity: 1.0;
 }
-/* line 322, ../../app/assets/stylesheets/technology.scss */
+/* line 329, ../../app/assets/stylesheets/technology.scss */
 .content-technology .technology-content .rim {
   margin: -580px 0px 0px 277px;
   width: 514px;
@@ -277,15 +284,15 @@
   z-index: 1;
   position: relative;
 }
-/* line 330, ../../app/assets/stylesheets/technology.scss */
+/* line 337, ../../app/assets/stylesheets/technology.scss */
 .content-technology .technology-content .rim img {
   position: absolute;
 }
-/* line 335, ../../app/assets/stylesheets/technology.scss */
+/* line 342, ../../app/assets/stylesheets/technology.scss */
 .content-technology .technology-content .rim .show {
   display: block;
 }
-/* line 340, ../../app/assets/stylesheets/technology.scss */
+/* line 347, ../../app/assets/stylesheets/technology.scss */
 .content-technology .technology-content .rim .hide {
   display: none;
 }

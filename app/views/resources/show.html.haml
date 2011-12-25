@@ -1,0 +1,17 @@
+.text-container
+  %p#notice= notice
+  %p
+    %b Type:
+    = @resource.type
+  %p
+    %b Title:
+    = @resource.title
+  %p
+    %b Sub title:
+    = @resource.sub_title
+  %p
+    %b Description:
+    = @resource.description
+  = link_to 'Edit', edit_resource_path(@resource)
+  |
+  \#{link_to 'Back', resources_path}

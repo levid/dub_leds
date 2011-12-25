@@ -94,8 +94,6 @@ Nav = class extends UI
       $(this).find('span').html(linkText).show()
       $(this).find('span').addClass(className)
 
-    Cufon.refresh()
-
     $('.topnav li').hover ->
       $(this).find('span').stop().animate(
         { marginTop: '-40' },

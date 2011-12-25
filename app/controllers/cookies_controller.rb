@@ -6,8 +6,7 @@ class CookiesController < ApplicationController
     @cookie = get_cookie(:data)
     
     respond_to do |format|
-      format.html
-      format.any(:xml, :json) { render request.format.to_sym => @cookie }
+      format.json { render json: @cookie }
     end
   end
 

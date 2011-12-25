@@ -79,7 +79,7 @@ footer .footer-container .right-column .order a {
 }
 /* line 88, ../../../app/assets/stylesheets/layout/footer.scss */
 footer .footer-container .right-column .order a:hover {
-  background-position: none;
+  background-position: bottom left;
 }
 /* line 95, ../../../app/assets/stylesheets/layout/footer.scss */
 footer .footer-container .right-column ul {

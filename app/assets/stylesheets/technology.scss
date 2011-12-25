@@ -71,11 +71,18 @@
           
           .title
           {
-            margin: -25px 0px 0px 75px;
-            width: 605px;
-            height: 57px;
-            background: url( 'img-tech-title1-large.png' ) no-repeat top left transparent;
+            margin: -15px 0px 0px 90px;
+            padding: 10px 0px 0px 0px;
+            width: 550px;
+            line-height: 40px;
+            height: auto;
+            font-family: EurostileMed, Helvetica, Arial, sans-serif;
+            font-size: 35px;
+            color: #18c6fe;
+            background: none;
             float: left;
+            text-indent: 0px;
+            text-transform: uppercase;
           }
 
           .sub-title
@@ -89,7 +96,7 @@
             {
                 font-family: EurostileBld, Helvetica, Arial, sans-serif;
                 font-size: 18px;
-                padding: 10px 0px 20px 0px;
+                padding: 10px 0px 15px 0px;
                 font-weight: 400;
             }
             
@@ -195,7 +202,7 @@
                 
                 &.title2
                 {
-                  width: 306px;
+                  width: 294px;
                   height: 51px;
                   background: url( 'img-tech-title2.png' ) no-repeat top left transparent;
                   

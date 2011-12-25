@@ -33,8 +33,8 @@ class Dub
       type: "POST"
       url: "/cookie"
       data: data,
-      success: (msg) -> 
-        alert(msg)
+      success: (data) -> 
+        alert(data)
 
   # Init Page Function
   #

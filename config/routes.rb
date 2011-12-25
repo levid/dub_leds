@@ -1,5 +1,7 @@
 DubLeds::Application.routes.draw do  
   
+  resources :resources
+
   # Routes for Devise
   devise_for :admins
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks'} do
@@ -53,6 +55,8 @@ DubLeds::Application.routes.draw do
   get '/order'               => 'order#index',      :as => :order
   get '/media'               => 'media#index',      :as => :media
   get '/technology'          => 'technology#index', :as => :technology
+  
+  get '/technology/:title'   => 'technology#show',   :as => :technology_show
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
