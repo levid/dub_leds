@@ -15,7 +15,7 @@ class Technology extends window._Dub
       overlayContainerDiv.find('.title').text(overlayContent.title)
       overlayContainerDiv.find('.sub-title h4').text(overlayContent.sub_title)
       
-      this.openOverlay overlayDiv
+      this.openOverlay(overlayDiv)
         
       closeButton.click =>
         this.closeOverlay overlayDiv
@@ -51,10 +51,24 @@ class Technology extends window._Dub
         title: title,
         success: (resp) => 
           this.initTechOverlay(resp)
+          
+  setOpacityValues: () ->
+    smallRimButton = $('.technology-content .choices a.rim-small')
+    smallRimButton.hover ->
+      $(this).animate({'opacity': '0.9'}, 250);
+    , ->
+      if $(this).hasClass('active')
+        @originalOpacity = $(this).css('opacity')
+        $(this).animate({'opacity': @originalOpacity}, 250)
+      else
+        $(this).animate({'opacity': '0.4'}, 250);
+        
 
   initSmallRimButtons: () ->
     self = this
     smallRimButton = $('.technology-content .choices a.rim-small')
+    this.setOpacityValues()
+      
     smallRimButton.bind "click", (e) ->
       e.preventDefault()
       rimId = $(this).attr('rel')
@@ -62,10 +76,15 @@ class Technology extends window._Dub
       window._Dub.updateStoredCookie
         cookie_name: "active_rim"
         cookie_value: rimId
+        
+      @currentIndex = smallRimButton.index(this)
       
       smallRimButton.each ->
+        $(this).removeClass('active')
         $(this).css('opacity', '0.4')
+        
       $(this).css('opacity', '1.0')
+      $(this).addClass('active')
       
       $('.technology-content .rim .show').each ->
         $(this).removeClass('show').addClass('hide')
