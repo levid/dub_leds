@@ -43,8 +43,8 @@ class ContactController < ApplicationController
         format.html { redirect_to root_path, notice: 'Thank you for your message, we will be in touch with you shortly!' }
         format.json { render json: @contact, status: :created, location: @contact }
       else
-        format.html { render action: "new" }
-        format.json { render json: @contact.errors, status: :unprocessable_entity }
+        format.html { render action: "index" }
+        format.json { render json: @contact.errors.full_messages.join(''), status: :unprocessable_entity }
       end
     end
   end
@@ -59,7 +59,7 @@ class ContactController < ApplicationController
         format.json { head :ok }
       else
         format.html { render action: "edit" }
-        format.json { render json: @contact.errors, status: :unprocessable_entity }
+        format.json { render json: @contact.errors.full_messages.join(''), status: :unprocessable_entity }
       end
     end
   end

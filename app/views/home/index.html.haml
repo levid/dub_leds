@@ -7,7 +7,7 @@
       %ul
         - @rims.each do |rim|
           %li
-            = image_tag rim.image
+            = image_tag rim.image unless !rim.image.present?
             / = image_tag(rim_image_cache_path(:cache_id => rim.image_cache[/^[\d-]+/], :filename => rim.image_cache[/[a-zA-Z0-9 _\.]+$/])) if rim.image_cache
     .rim-buttons
       .arrow.left
@@ -38,11 +38,11 @@
           .usb-built-in
         .text-container
           %h4 The world's most technologically advanced rims.
-          %p It has been long thought desirable to decorate one's automobile by the addition of decorative wheels. It has further been thought desirable to communicate with others by means of addressible electronic displays. The concept of combining decorative automobile wheels with an addressible electronic display is a relatively new one which produces novel and visually interesting results.
+          %p It has been long thought desirable to decorate one's automobile by the addition of decorative wheels. It has further been thought desirable to communicate with others by means of addressable electronic displays. The concept of combining decorative automobile wheels with an addressable electronic display is a relatively new one which produces novel and visually interesting results.
           %ul
             %li Digital images displayed on Rims
             %li No-hassle easy install, no wires to plug into the car battery
-            %li Self-Generating pwer
+            %li Self-Generating power
             %li USB Port built-in
           %ul
             %li Wireless remote control

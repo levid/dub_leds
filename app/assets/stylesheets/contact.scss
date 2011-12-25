@@ -125,20 +125,20 @@
         input
         {
             width: 400px;
-            height: 44px;
+            height: 42px;
             border: none;
             outline: none;
             color: #7f7f7f;
             font-size: 15px;
             font-weight: 400;
             background: url( 'bg-contact-field-single.png' ) no-repeat top left transparent;
-            padding: 0px 10px 0px 10px;
+            padding: 2px 10px 0px 10px;
         }
 
         select
         {
             width: 420px;
-            height: 44px;
+            height: 42px;
             border: none;
             outline: none;
             color: #7f7f7f;
@@ -147,7 +147,7 @@
             background: url( 'bg-contact-field-select.png' ) no-repeat top left transparent;
             -webkit-appearance: none;
             overflow: hidden;
-            padding: 0px 10px 0px 10px;
+            padding: 2px 10px 0px 10px;
         }
 
 

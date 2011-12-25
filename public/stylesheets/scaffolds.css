@@ -48,7 +48,7 @@ div.field, div.actions {
 /* line 33, ../../app/assets/stylesheets/scaffolds.scss */
 .field_with_errors {
   padding: 2px;
-  background-color: red;
+  background-color: none;
   display: table;
 }
 

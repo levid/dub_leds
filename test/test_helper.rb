@@ -51,7 +51,10 @@ VCR.config do |c|
   c.default_cassette_options = { :record => :new_episodes }
 end
 
+# require 'carrierwave/test/matchers'
+
 class ActionController::TestCase
   include Devise::TestHelpers
+  # include CarrierWave::Test::Matchers
 end
 

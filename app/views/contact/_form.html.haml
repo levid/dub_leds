@@ -1,4 +1,10 @@
 = form_for :contact, :url => contact_create_path,:html => { :class => 'contact-form'} do |f|
+  -if @contact.errors.any?
+    Error Summary:
+    %h2= "#{pluralize(@contact.errors.count, "error")} prohibited your message from being sent:"
+    %ul
+    - @contact.errors.full_messages.each do |msg|
+      %li= msg
   .left-column
     .field
       = f.label :name

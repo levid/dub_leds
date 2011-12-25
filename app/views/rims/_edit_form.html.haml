@@ -31,6 +31,15 @@
       = f.check_box :remove_image
       = f.hidden_field :image_cache
   .field
+    = image_tag(@rim.medium_image.url) if @rim.medium_image.url.present?
+    = f.label :medium_image
+    = f.file_field :medium_image
+  - if @rim.medium_image.url.present?
+    .field
+      = f.label :remove_medium_image
+      = f.check_box :remove_medium_image
+      = f.hidden_field :medium_image_cache
+  .field
     = image_tag(@rim.small_image.url) if @rim.small_image.url.present?
     = f.label :small_image
     = f.file_field :small_image

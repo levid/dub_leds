@@ -13,3 +13,10 @@ $(document).ready(function()
         a.animate({'backgroundPosition': "-81px "+ (a.outerHeight()-2) +"px"},600); 
     }); 
 })
+
+jQuery.fn.center = function () {
+    this.css("position","fixed");
+    this.css("top", (($(window).height() - this.outerHeight()) / 2) + "px");
+    this.css("left", (($(window).width() - this.outerWidth()) / 2) + "px");
+    return this;
+}

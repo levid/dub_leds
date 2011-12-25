@@ -6,7 +6,7 @@ class GeneratorControllerTest < ActionController::TestCase
       get :index, :use_route => :generator
 
       assert_response :success
-      assert_kind_of Array, assigns(:rims)
+      assert_kind_of Mongoid::Criteria, assigns(:rims)
       assert_equal :generator_path, assigns(:path)
       assert_template 'generator'
     end

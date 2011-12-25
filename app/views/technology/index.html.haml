@@ -1,21 +1,44 @@
+#tech-overlay
+  .overlay-container
+    .top
+      .close-button
+        %a{:href => "#"}
+      .title
+        Pure Titanium Alloy
+      .sub-title
+        %h4 The world’s most technologically advanced rims.
+    .middle
+      %p It has been long thought desirable to decorate one’s automobile by the addition of decorative wheels. It has further been thought desirable to communicate with others by means of addressable electronic displays. The concept of combining decorative automobile wheels with an addressable electronic display is a relatively new one which produces novel and visually interesting results.
+    .bottom
 .text-container
   %h4 Brains and Beauty.
 .technology-content
   .choices
     %ul
-      %li
-        %a.rim1.active{:href => "#"}
-      %li
-        %a.rim2{:href => "#"}
-      %li
-        %a.rim3{:href => "#"}
-      %li
-        %a.rim4{:href => "#"}
-      %li
-        %a.rim5{:href => "#"}
-      %li
-        %a.rim6{:href => "#"}
-      %li
-        %a.rim7{:href => "#"}
+      - @rims.each do |rim|
+        %li
+          - if rim.id == @rims.first.id
+            %a.rim-small.active{:href => "#", :rel => rim.id}
+              = image_tag rim.small_image unless !rim.small_image.present?
+          -else
+            %a.rim-small{:href => "#", :rel => rim.id}
+              = image_tag rim.small_image unless !rim.small_image.present?
   .overlay
+    .titles
+      %a.title1{:href => "#", :title => 'Pure Titanium Alloy'}
+      %a.title2{:href => "#", :title => 'Integrated Computer Chip'}
+      %a.title3{:href => "#", :title => 'Color Customization'}
+      %a.title4{:href => "#", :title => 'LED Lights System'}
+      %a.title5{:href => "#", :title => 'Power Generator'}
+      %a.title6{:href => "#", :title => 'All-Weather Proof USB Port'}
+      %a.title7{:href => "#", :title => 'Pendulum Arm'}
   .rim
+    - @rims.each do |rim|
+      - if rim.id == @rims.first.id
+        %div{:id => "#{rim.id}", :class => 'show'}
+          = image_tag rim.medium_image unless !rim.medium_image.present?
+      -else
+        %div{:id => "#{rim.id}", :class => 'hide'}
+          = image_tag rim.medium_image unless !rim.medium_image.present?
+      
+        
