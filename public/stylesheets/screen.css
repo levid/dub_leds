@@ -922,8 +922,8 @@ footer .footer-container .left-column .email-updates {
 }
 /* line 41, ../../app/assets/stylesheets/layout/footer.scss */
 footer .footer-container .left-column .email-updates input[type=text] {
-  padding: 2px 0px 0px 8px;
-  height: 32px;
+  padding: 3px 0px 0px 8px;
+  height: 31px;
   width: 250px;
   font-family: EurostileMed, Helvetica, Arial, sans-serif;
   font-weight: 400;
