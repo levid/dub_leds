@@ -42,6 +42,9 @@ gem 'mini_magick'
 # Role based administration
 gem 'cancan'
 
+# thin server
+gem 'thin'
+
 # Shopping cart
 # gem 'acts_as_shopping_cart', :git => "git@github.com:crowdint/acts_as_shopping_cart.git"
 
@@ -71,11 +74,11 @@ end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails' 
-  gem 'coffee-rails' 
-  gem 'uglifier' 
+  gem 'sass-rails'
+  gem 'coffee-rails'
+  gem 'uglifier'
   gem 'yui-compressor'
-  gem "therubyracer", :require => 'v8'
-  gem "compass" 
+  # gem "therubyracer", :require => 'v8'
+  gem "compass"
   gem 'sprockets'
 end
