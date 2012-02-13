@@ -70,3 +70,25 @@
   background: none;
   height: 533px;
 }
+
+/* line 112, ../../app/assets/stylesheets/page-overrides.scss */
+.Privacies .content-container {
+  padding: 0px 0px 10px 0px;
+}
+/* line 116, ../../app/assets/stylesheets/page-overrides.scss */
+.Privacies .content-container.interior {
+  color: #ffffff;
+  background: none;
+  height: auto;
+}
+
+/* line 128, ../../app/assets/stylesheets/page-overrides.scss */
+.Refunds .content-container {
+  padding: 0px 0px 10px 0px;
+}
+/* line 132, ../../app/assets/stylesheets/page-overrides.scss */
+.Refunds .content-container.interior {
+  color: #ffffff;
+  background: none;
+  height: auto;
+}

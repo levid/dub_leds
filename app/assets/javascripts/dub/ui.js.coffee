@@ -26,7 +26,9 @@ class UI extends window._Dub
         , 250
 
   initFadingLinks: () ->
-    this.fadeLink('a.fade')
+    self = this
+    $('a.fade').each ->
+      self.fadeLink(this)
   
   hideNotifications: () ->
     setTimeout ( ->

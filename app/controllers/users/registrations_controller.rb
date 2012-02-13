@@ -1,4 +1,4 @@
-class Users::RegistrationsController < ApplicationController
+class Users::RegistrationsController < Devise::RegistrationsController
   #before_filter :check_permissions, :only => [:new, :create, :cancel]
   #skip_before_filter :require_no_authentication
 
@@ -19,6 +19,10 @@ class Users::RegistrationsController < ApplicationController
       @user.apply_omniauth(session['devise.omniauth_data'])
       @user.valid?
     end
+  end
+  
+  def after_update_path_for(resource)
+    user_path(resource.id)
   end
   
 end

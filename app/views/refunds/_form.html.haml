@@ -1,0 +1,11 @@
+= form_for(@refund) do |f|
+  - if @refund.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@refund.errors.count, "error")
+        prohibited this refund from being saved:
+      %ul
+        - @refund.errors.full_messages.each do |msg|
+          %li= msg
+  .actions
+    = f.submit

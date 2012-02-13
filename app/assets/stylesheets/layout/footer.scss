@@ -173,6 +173,21 @@ footer
             font-weight: 400;
             font-size: 15px;
             color: #777777;
+            
+            .links
+            {
+              margin: 0px 0px 0px 10px;
+              width: auto;
+              display: inline-block;
+              
+              a + a{
+                margin-left: 10px;
+              }
+              
+              a{
+                font-size: 12px;
+              }
+            }
         }
     }
 }

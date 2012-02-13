@@ -1,15 +1,19 @@
 DubLeds::Application.routes.draw do  
   
+  resources :refunds
+  resources :privacies
   resources :resources
 
   # Routes for Devise
   devise_for :admins
-  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks'} do
+  devise_for :users, controllers: { :omniauth_callbacks => "users/omniauth_callbacks"} do
     get '/users/auth/:provider' => 'users/omniauth_callbacks#passthru'
     # match '/users/auth/:provider/callback' => 'authentications#create'
     # get 'sign_in', :to => 'users/sessions#new', :as => :new_user_session
     # get 'sign_out', :to => 'users/sessions#destroy', :as => :destroy_user_session
   end
+
+	get '/users/:id(:format)'  => 'users#show', :as => :user
   
   # Resources
   resources :newsletters
@@ -50,6 +54,9 @@ DubLeds::Application.routes.draw do
   get '/contact/:id/edit'    => 'contact#edit',     :as => :contact_edit
   put '/contact/:id'         => 'contact#update',   :as => :contact_update
   delete '/contact:id'       => 'contact#destroy',  :as => :contact_destroy
+  
+  get '/privacy_policy'      => 'privacies#index',  :as => :privacy
+  get '/refund_policy'       => 'refunds#index',    :as => :refund
   
   get '/generator'           => 'generator#index',  :as => :generator
   get '/order'               => 'order#index',      :as => :order

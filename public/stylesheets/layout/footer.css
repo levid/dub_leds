@@ -151,3 +151,17 @@ footer .spacer .copyright {
   font-size: 15px;
   color: #777777;
 }
+/* line 178, ../../../app/assets/stylesheets/layout/footer.scss */
+footer .spacer .copyright .links {
+  margin: 0px 0px 0px 10px;
+  width: auto;
+  display: inline-block;
+}
+/* line 183, ../../../app/assets/stylesheets/layout/footer.scss */
+footer .spacer .copyright .links a + a {
+  margin-left: 10px;
+}
+/* line 187, ../../../app/assets/stylesheets/layout/footer.scss */
+footer .spacer .copyright .links a {
+  font-size: 12px;
+}

@@ -3,7 +3,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def twitter
     # raise env["omniauth.auth"].inspect
     # render :text => request.env["omniauth.auth"].to_yaml  
-    @user = User.find_for_twitter_oauth(env["omniauth.auth"], current_user)
+    @user = User.find_for_twitter_oauth(request.env["omniauth.auth"], current_user)
 
     if @user.persisted?
       flash[:notice] = I18n.t "devise.omniauth_callbacks.success", :kind => "Twitter"
@@ -16,7 +16,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   def facebook
     # You need to implement the method below in your model
-    @user = User.find_for_facebook_oauth(env["omniauth.auth"], current_user)
+    @user = User.find_for_facebook_oauth(request.env["omniauth.auth"], current_user)
 
     if @user.persisted?
       flash[:notice] = I18n.t "devise.omniauth_callbacks.success", :kind => "Facebook"

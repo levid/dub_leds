@@ -19,4 +19,8 @@
         %li
           %a.linkedin{:href => "#"} Linkedin
   %section.spacer
-    .copyright (c) 2011 LED Wheels, Inc.
+    .copyright
+      %span (c) 2011 LED Wheels, Inc.
+      .links 
+        = link_to 'Privacy Policy', privacy_path, :class => "fade"
+        = link_to 'Refund Policy', refund_path, :class => "fade"

@@ -1,0 +1,11 @@
+= form_for(@privacy) do |f|
+  - if @privacy.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@privacy.errors.count, "error")
+        prohibited this privacy from being saved:
+      %ul
+        - @privacy.errors.full_messages.each do |msg|
+          %li= msg
+  .actions
+    = f.submit

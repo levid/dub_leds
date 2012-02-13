@@ -1037,6 +1037,20 @@ footer .spacer .copyright {
   font-size: 15px;
   color: #777777;
 }
+/* line 178, ../../app/assets/stylesheets/layout/footer.scss */
+footer .spacer .copyright .links {
+  margin: 0px 0px 0px 10px;
+  width: auto;
+  display: inline-block;
+}
+/* line 183, ../../app/assets/stylesheets/layout/footer.scss */
+footer .spacer .copyright .links a + a {
+  margin-left: 10px;
+}
+/* line 187, ../../app/assets/stylesheets/layout/footer.scss */
+footer .spacer .copyright .links a {
+  font-size: 12px;
+}
 
 /**/
 /* line 5, ../../app/assets/stylesheets/layout/body.scss */
@@ -1426,4 +1440,26 @@ footer .spacer .copyright {
 .Technology .content-container.interior {
   background: none;
   height: 533px;
+}
+
+/* line 112, ../../app/assets/stylesheets/page-overrides.scss */
+.Privacies .content-container {
+  padding: 0px 0px 10px 0px;
+}
+/* line 116, ../../app/assets/stylesheets/page-overrides.scss */
+.Privacies .content-container.interior {
+  color: #ffffff;
+  background: none;
+  height: auto;
+}
+
+/* line 128, ../../app/assets/stylesheets/page-overrides.scss */
+.Refunds .content-container {
+  padding: 0px 0px 10px 0px;
+}
+/* line 132, ../../app/assets/stylesheets/page-overrides.scss */
+.Refunds .content-container.interior {
+  color: #ffffff;
+  background: none;
+  height: auto;
 }

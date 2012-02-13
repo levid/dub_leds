@@ -105,3 +105,35 @@
         }
     }
 }
+
+.Privacies
+{
+    .content-container
+    {
+        padding: 0px 0px 10px 0px;
+
+        &.interior
+        {
+            color: #ffffff;
+            //background: url( 'content-technology.png' ) no-repeat top center transparent;
+            background: none;
+            height: auto;
+        }
+    }
+}
+
+.Refunds
+{
+    .content-container
+    {
+        padding: 0px 0px 10px 0px;
+
+        &.interior
+        {
+            color: #ffffff;
+            //background: url( 'content-technology.png' ) no-repeat top center transparent;
+            background: none;
+            height: auto;
+        }
+    }
+}
