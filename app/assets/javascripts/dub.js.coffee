@@ -14,27 +14,19 @@ class Dub
 
   # Class Constructor
   constructor: (@options) ->
-    window.$S = this
+    window.$DUB = this
 
     $(document).ready ->
-      _Dub.UI.initGlobalUI()
-      
+      $DUB.UI.initGlobalUI()
+
       if (window.location.hash == "#_=_")
         window.location.hash = ""
-        
+
       setTimeout ( ->
         $('.notification').fadeOut(3000)
       ), 300
-      
+
     this
-    
-  updateStoredCookie: (data) ->
-    $.ajax
-      type: "POST"
-      url: "/cookie"
-      data: data,
-      success: (data) -> 
-        alert(data)
 
   # Init Page Function
   #

@@ -1,13 +1,13 @@
-class Home extends window._Dub
+class Home extends $DUB
   constructor: (@options) ->
-    this.initRimSelect(@options)
+    @initRimSelect()
 
-  initRimSelect: (options) ->
+  initRimSelect: () =>
     $(document).ready =>
-      window._Dub.RimSelect.constructor(options)
+      new $DUB.UI.RimSelect(@options)
 
       buttonContainerWidth = $('.rim-reflection .buttons ul li').length * $('.rim-reflection .buttons ul li a').width()
       $('.rim-reflection .buttons ul').css('width', buttonContainerWidth)
 
-window._Dub.Application = jQuery.extend({}, window._Dub.Application, {Home})
+$DUB.Application = jQuery.extend({}, $DUB.Application, {Home})
 

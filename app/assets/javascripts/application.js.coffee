@@ -8,4 +8,8 @@
 #= require jquery_ujs
 #= require_tree ./vendor
 #= require dub
+#= require ui
+#= require utilities
+#= require_tree ./ui
+#= require_tree ./utils
 #= require_tree ./dub
