@@ -1,13 +1,14 @@
 /* Include Mixins & CSS3 Stuff */
-@import "../variables";
+@import "../global/variables";
+@import "../global/mixins";
 
 footer
 {
     height: 67px;
     width: 100%;
-    background: url( 'bg-footer-bar.png' ) repeat-x top left transparent;
+    @include background($path + '/bg-footer-bar.png', repeat-x, top left, transparent);
 
-	.footer-container
+    .footer-container
     {
         margin: 0px auto;
         height: 67px;
@@ -27,7 +28,7 @@ footer
                 height: 15px;
                 width: 102px;
                 float: left;
-                background: url( 'img-footer-logo.png' ) no-repeat top left transparent;
+                @include background($path + '/img-footer-logo.png', no-repeat, top left, transparent);
             }
 
             .email-updates
@@ -46,7 +47,7 @@ footer
                     font-weight: 400;
                     font-size: 15px;
                     line-height: 12px;
-                    background: url( 'input-email.png' ) no-repeat 1px 3px transparent;
+                    @include background($path + '/input-email.png', no-repeat, 1px 3px, transparent);
                     border: none;
                     color: #7f7f7f;
                 }
@@ -57,7 +58,7 @@ footer
                     height: 31px;
                     width: 32px;
                     text-indent: -9000px;
-                    background: url( 'button-submit.png' ) no-repeat top left transparent;
+                    @include background($path + '/button-submit.png', no-repeat, top left, transparent);
                     border: none;
                 }
             }
@@ -82,8 +83,8 @@ footer
                     height: 43px;
                     float: left;
                     text-indent: -9000px;
-                    background: url( 'button-order.png' ) no-repeat top left transparent;
-                    
+                    @include background($path + '/button-order.png', no-repeat, top left, transparent);
+
                     &:hover
                     {
                       background-position: bottom left;
@@ -97,14 +98,14 @@ footer
                 width: auto;
                 height: auto;
                 float: right;
-                
+
                 li
                 {
                     width: 31px;
                     height: 31px;
                     float: left;
                     list-style-type: none;
-                    
+
                     a
                     {
                         width: 31px;
@@ -114,22 +115,22 @@ footer
 
                         &.facebook
                         {
-                            background: url( 'img-sharing-facebook.png' ) no-repeat top left transparent;
+                          @include background($path + '/img-sharing-facebook.png', no-repeat, top left, transparent);
                         }
 
                         &.twitter
                         {
-                            background: url( 'img-sharing-twitter.png' ) no-repeat top left transparent;
+                          @include background($path + '/img-sharing-twitter.png', no-repeat, top left, transparent);
                         }
 
                         &.flickr
                         {
-                            background: url( 'img-sharing-flickr.png' ) no-repeat top left transparent;
+                          @include background($path + '/img-sharing-flickr.png', no-repeat, top left, transparent);
                         }
 
                         &.linkedin
                         {
-                            background: url( 'img-sharing-linkedin.png' ) no-repeat top left transparent;
+                          @include background($path + '/img-sharing-linkedin.png', no-repeat, top left, transparent);
                         }
 
                         &:active
@@ -161,7 +162,7 @@ footer
     {
         height: 100px;
         width: 100%;
-        background: url( 'bg-footer.png' ) repeat top left transparent;
+        @include background($path + '/bg-footer.png', no-repeat, top left, transparent);
 
         .copyright
         {
@@ -173,17 +174,17 @@ footer
             font-weight: 400;
             font-size: 15px;
             color: #777777;
-            
+
             .links
             {
               margin: 0px 0px 0px 10px;
               width: auto;
               display: inline-block;
-              
+
               a + a{
                 margin-left: 10px;
               }
-              
+
               a{
                 font-size: 12px;
               }

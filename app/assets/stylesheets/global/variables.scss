@@ -1,0 +1,19 @@
+$blue           : #59B7FF;
+$text           : #33333A;
+$grey           : #666;
+$white          : #FFF;
+$black          : #000;
+$lightgrey      : #999;
+$lightergrey    : #DCDCDC;
+
+$base_path      : "";
+$path           : $base_path + "/assets";
+
+@mixin background($imgpath, $repeat: no-repeat, $position: left top, $color: transparent) {
+    background: {
+        color: $color;
+        image: url($imgpath);
+        position: $position;
+        repeat: $repeat;
+    }
+}

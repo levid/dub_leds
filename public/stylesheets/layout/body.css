@@ -1,20 +1,23 @@
 /**/
-/* line 5, ../../../app/assets/stylesheets/layout/body.scss */
+/* line 6, ../../../app/assets/stylesheets/layout/body.scss */
 .body {
   margin: 0px auto;
   padding: 15px 0px 0px 0px;
   height: auto;
   width: 100%;
-  background: url("bg-content.png") repeat-x top center transparent;
+  background-color: transparent;
+  background-image: url("/assets/bg-content.png");
+  background-position: top center;
+  background-repeat: repeat-x;
   overflow: hidden;
 }
-/* line 14, ../../../app/assets/stylesheets/layout/body.scss */
+/* line 15, ../../../app/assets/stylesheets/layout/body.scss */
 .body .rim-container {
   margin: 0px auto;
   height: 604px;
   width: 100%;
 }
-/* line 20, ../../../app/assets/stylesheets/layout/body.scss */
+/* line 21, ../../../app/assets/stylesheets/layout/body.scss */
 .body .rim-container .rim-buttons {
   margin: -604px auto;
   width: 980px;
@@ -23,13 +26,16 @@
   display: block;
   z-index: 20;
 }
-/* line 30, ../../../app/assets/stylesheets/layout/body.scss */
+/* line 31, ../../../app/assets/stylesheets/layout/body.scss */
 .body .rim-container .rim-buttons .arrow {
   width: 107px;
   height: 176px;
-  background: url("button-rim-arrows.png") no-repeat top left transparent;
+  background-color: transparent;
+  background-image: url("/assets/button-rim-arrows.png");
+  background-position: top left;
+  background-repeat: no-repeat;
 }
-/* line 36, ../../../app/assets/stylesheets/layout/body.scss */
+/* line 37, ../../../app/assets/stylesheets/layout/body.scss */
 .body .rim-container .rim-buttons .arrow.left {
   width: 107px;
   height: 176px;
@@ -39,7 +45,7 @@
   float: left;
   background-position: top left;
 }
-/* line 47, ../../../app/assets/stylesheets/layout/body.scss */
+/* line 48, ../../../app/assets/stylesheets/layout/body.scss */
 .body .rim-container .rim-buttons .arrow.right {
   width: 107px;
   height: 176px;
@@ -49,13 +55,13 @@
   float: right;
   background-position: top right;
 }
-/* line 58, ../../../app/assets/stylesheets/layout/body.scss */
+/* line 59, ../../../app/assets/stylesheets/layout/body.scss */
 .body .rim-container .rim-buttons .arrow a {
   width: 107px;
   height: 176px;
   float: left;
 }
-/* line 68, ../../../app/assets/stylesheets/layout/body.scss */
+/* line 69, ../../../app/assets/stylesheets/layout/body.scss */
 .body .rim-container .rims-large {
   margin: 0px auto;
   width: 980px;
@@ -65,13 +71,13 @@
   z-index: 10;
   display: block;
 }
-/* line 78, ../../../app/assets/stylesheets/layout/body.scss */
+/* line 79, ../../../app/assets/stylesheets/layout/body.scss */
 .body .rim-container .rims-large ul {
   width: 980px;
   height: 604px;
   float: left;
 }
-/* line 84, ../../../app/assets/stylesheets/layout/body.scss */
+/* line 85, ../../../app/assets/stylesheets/layout/body.scss */
 .body .rim-container .rims-large ul li {
   margin: 0px 0px 0px -25px;
   width: 980px;
@@ -79,28 +85,37 @@
   float: left;
   list-style-type: none;
 }
-/* line 96, ../../../app/assets/stylesheets/layout/body.scss */
+/* line 97, ../../../app/assets/stylesheets/layout/body.scss */
 .body .rim-select {
   margin: 0px auto;
   height: auto;
   width: 100%;
-  background: url("bg-rim-select.png") repeat-x top left transparent;
+  background-color: transparent;
+  background-image: url("/assets/bg-rim-select.png");
+  background-position: top left;
+  background-repeat: repeat-x;
 }
-/* line 103, ../../../app/assets/stylesheets/layout/body.scss */
+/* line 104, ../../../app/assets/stylesheets/layout/body.scss */
 .body .rim-select .rim-reflection {
   margin: 0px auto;
   width: 980px;
   height: 44px;
-  background: url("bg-rim-reflection.png") no-repeat top left transparent;
+  background-color: transparent;
+  background-image: url("/assets/bg-rim-reflection.png");
+  background-position: top left;
+  background-repeat: no-repeat;
   display: block;
 }
-/* line 111, ../../../app/assets/stylesheets/layout/body.scss */
+/* line 112, ../../../app/assets/stylesheets/layout/body.scss */
 .body .rim-select .rim-reflection .reflection {
   height: 44px;
   width: 98px;
-  background: url("img-arrow-reflection.png") no-repeat top left transparent;
+  background-color: transparent;
+  background-image: url("/assets/img-arrow-reflection.png");
+  background-position: top left;
+  background-repeat: no-repeat;
 }
-/* line 116, ../../../app/assets/stylesheets/layout/body.scss */
+/* line 117, ../../../app/assets/stylesheets/layout/body.scss */
 .body .rim-select .rim-reflection .reflection.left {
   margin: 0px 0px 0px 0px;
   background-position: top left;
@@ -108,7 +123,7 @@
   left: -98px;
   float: left;
 }
-/* line 124, ../../../app/assets/stylesheets/layout/body.scss */
+/* line 125, ../../../app/assets/stylesheets/layout/body.scss */
 .body .rim-select .rim-reflection .reflection.right {
   margin: 0px 0px 0px 0px;
   background-position: top right;
@@ -116,74 +131,83 @@
   right: -98px;
   float: right;
 }
-/* line 134, ../../../app/assets/stylesheets/layout/body.scss */
+/* line 135, ../../../app/assets/stylesheets/layout/body.scss */
 .body .rim-select .rim-reflection .buttons {
   margin: 0px auto;
   width: 780px;
   height: inherit;
   float: left;
 }
-/* line 141, ../../../app/assets/stylesheets/layout/body.scss */
+/* line 142, ../../../app/assets/stylesheets/layout/body.scss */
 .body .rim-select .rim-reflection .buttons ul {
   margin: 0px auto;
   width: auto;
   width: 315px;
   height: inherit;
 }
-/* line 148, ../../../app/assets/stylesheets/layout/body.scss */
+/* line 149, ../../../app/assets/stylesheets/layout/body.scss */
 .body .rim-select .rim-reflection .buttons ul li {
   height: auto;
   width: auto;
   list-style: none;
 }
-/* line 153, ../../../app/assets/stylesheets/layout/body.scss */
+/* line 154, ../../../app/assets/stylesheets/layout/body.scss */
 .body .rim-select .rim-reflection .buttons ul li a {
   height: 44px;
   width: 45px;
-  background: url("button-rim-select.png") no-repeat bottom center transparent;
+  background-color: transparent;
+  background-image: url("/assets/button-rim-select.png");
+  background-position: bottom center;
+  background-repeat: no-repeat;
   float: left;
   text-indent: -9000px;
 }
-/* line 160, ../../../app/assets/stylesheets/layout/body.scss */
+/* line 161, ../../../app/assets/stylesheets/layout/body.scss */
 .body .rim-select .rim-reflection .buttons ul li a.active {
   height: 44px;
   width: 45px;
   background-position: top center;
 }
-/* line 166, ../../../app/assets/stylesheets/layout/body.scss */
+/* line 167, ../../../app/assets/stylesheets/layout/body.scss */
 .body .rim-select .rim-reflection .buttons ul li a:hover {
   height: 44px;
   width: 45px;
   background-position: top center;
 }
-/* line 172, ../../../app/assets/stylesheets/layout/body.scss */
+/* line 173, ../../../app/assets/stylesheets/layout/body.scss */
 .body .rim-select .rim-reflection .buttons ul li a:active {
   height: 44px;
   width: 45px;
   background-position: top center;
 }
-/* line 187, ../../../app/assets/stylesheets/layout/body.scss */
+/* line 188, ../../../app/assets/stylesheets/layout/body.scss */
 .body .content-container.home {
-  background: url("bg-home-content.png") no-repeat top center transparent;
+  background-color: transparent;
+  background-image: url("/assets/bg-home-content.png");
+  background-position: top center;
+  background-repeat: no-repeat;
 }
-/* line 192, ../../../app/assets/stylesheets/layout/body.scss */
+/* line 193, ../../../app/assets/stylesheets/layout/body.scss */
 .body .content-container.interior {
-  background: url("bg-interior-content.png") no-repeat top center transparent;
+  background-color: transparent;
+  background-image: url("/assets/bg-interior-content.png");
+  background-position: top center;
+  background-repeat: no-repeat;
 }
-/* line 197, ../../../app/assets/stylesheets/layout/body.scss */
+/* line 198, ../../../app/assets/stylesheets/layout/body.scss */
 .body .content-container {
   margin: 0px auto;
   padding: 0px 0px 30px 0px;
   height: auto;
   width: 100%;
 }
-/* line 204, ../../../app/assets/stylesheets/layout/body.scss */
+/* line 205, ../../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content {
   margin: 0px auto;
   width: 980px;
   height: 420px;
 }
-/* line 210, ../../../app/assets/stylesheets/layout/body.scss */
+/* line 211, ../../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .left-column {
   margin: 0px 0px 0px -30px;
   width: 305px;
@@ -191,24 +215,30 @@
   position: relative;
   float: left;
 }
-/* line 218, ../../../app/assets/stylesheets/layout/body.scss */
+/* line 219, ../../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .left-column .rim-preview {
   margin: 0px;
   height: 303px;
   width: 313px;
-  background: url("img-rim-preview.png") no-repeat top left transparent;
+  background-color: transparent;
+  background-image: url("/assets/img-rim-preview.png");
+  background-position: top left;
+  background-repeat: no-repeat;
 }
-/* line 226, ../../../app/assets/stylesheets/layout/body.scss */
+/* line 227, ../../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .left-column .try-it {
   margin: -60px 0px 0px 75px;
   padding: 54px 0px 0px 0px;
   width: 212px;
   height: 205px;
-  background: url("button-tryitout.png") no-repeat -120px -130px transparent;
+  background-color: transparent;
+  background-image: url("/assets/button-tryitout.png");
+  background-position: -120px -130px;
+  background-repeat: no-repeat;
   position: absolute;
   z-index: 1;
 }
-/* line 236, ../../../app/assets/stylesheets/layout/body.scss */
+/* line 237, ../../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .left-column .try-it a {
   margin: 0px 0px 0px 18px;
   width: 141px;
@@ -216,37 +246,43 @@
   display: block;
   text-indent: -9000px;
 }
-/* line 247, ../../../app/assets/stylesheets/layout/body.scss */
+/* line 248, ../../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .right-column {
   width: 705px;
   height: auto;
   position: relative;
   float: right;
 }
-/* line 254, ../../../app/assets/stylesheets/layout/body.scss */
+/* line 255, ../../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .right-column .title-container {
   width: auto;
   height: auto;
   display: block;
 }
-/* line 260, ../../../app/assets/stylesheets/layout/body.scss */
+/* line 261, ../../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .right-column .title-container .title {
   margin: 20px 0px 0px -16px;
   height: 90px;
   width: 387px;
   float: left;
   text-indent: -9000px;
-  background: url("title-dubleds.png") no-repeat top left transparent;
+  background-color: transparent;
+  background-image: url("/assets/title-dubleds.png");
+  background-position: top left;
+  background-repeat: no-repeat;
 }
-/* line 270, ../../../app/assets/stylesheets/layout/body.scss */
+/* line 271, ../../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .right-column .title-container .usb-built-in {
   margin: 45px 0px 0px 0px;
   height: 38px;
   width: 133px;
-  background: url("img-usb-builtin.png") no-repeat top left transparent;
+  background-color: transparent;
+  background-image: url("/assets/img-usb-builtin.png");
+  background-position: top left;
+  background-repeat: no-repeat;
   float: right;
 }
-/* line 280, ../../../app/assets/stylesheets/layout/body.scss */
+/* line 281, ../../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .right-column .text-container {
   clear: both;
   text-shadow: 0px 1px 2px #333;
@@ -257,35 +293,38 @@
   font-family: EurostileMed, Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
-/* line 292, ../../../app/assets/stylesheets/layout/body.scss */
+/* line 293, ../../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .right-column .text-container h4 {
   font-family: EurostileBld, Helvetica, Arial, sans-serif;
   font-size: 22px;
   padding: 10px 0px 20px 0px;
   font-weight: 400;
 }
-/* line 300, ../../../app/assets/stylesheets/layout/body.scss */
+/* line 301, ../../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .right-column .text-container p {
   font-size: 15px;
 }
-/* line 305, ../../../app/assets/stylesheets/layout/body.scss */
+/* line 306, ../../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .right-column .text-container ul {
   margin: 20px 0px 0px -7px;
   width: auto;
   height: auto;
   float: left;
 }
-/* line 312, ../../../app/assets/stylesheets/layout/body.scss */
+/* line 313, ../../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .right-column .text-container ul li {
   width: auto;
   height: 25px;
-  background: url("img-bullet-point.png") no-repeat 0px 0px transparent;
+  background-color: transparent;
+  background-image: url("/assets/img-bullet-point.png");
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
   list-style-type: none;
   margin: 0;
   padding: 2px 0px 0px 27px;
   vertical-align: middle;
 }
-/* line 324, ../../../app/assets/stylesheets/layout/body.scss */
+/* line 325, ../../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .right-column .text-container ul + ul {
   padding: 0px 0px 0px 20px;
 }

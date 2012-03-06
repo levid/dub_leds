@@ -1,15 +1,16 @@
 @charset "utf-8";
 
 /* Global CSS Reset */
-@import "reset";
+@import "global/reset";
 
 /* Minimal Base Styles */
-@import "base";
+@import "global/base";
 
 /* Layout Styles */
 @import "layout/header";
+@import "layout/nav";
 @import "layout/footer";
 @import "layout/body";
 @import "layout/notification";
 
-@import "page-overrides";
+@import "global/page-overrides";

@@ -1,0 +1,94 @@
+/* line 4, ../../../app/assets/stylesheets/global/page-overrides.scss */
+.Home .body {
+  background: none;
+}
+/* line 10, ../../../app/assets/stylesheets/global/page-overrides.scss */
+.Home header .logo {
+  margin: 120px auto;
+  width: 708px;
+  height: 339px;
+  background: url("dub-logo-home.png") no-repeat top left transparent;
+}
+
+/* line 22, ../../../app/assets/stylesheets/global/page-overrides.scss */
+.Generator .content-container {
+  padding: 0px 0px 10px 0px;
+}
+/* line 26, ../../../app/assets/stylesheets/global/page-overrides.scss */
+.Generator .content-container.interior {
+  background: none;
+  height: 534px;
+}
+
+/* line 37, ../../../app/assets/stylesheets/global/page-overrides.scss */
+.Contact .content-container {
+  padding: 0px 0px 10px 0px;
+}
+/* line 41, ../../../app/assets/stylesheets/global/page-overrides.scss */
+.Contact .content-container.interior {
+  background: none;
+  height: 532px;
+}
+
+/* line 52, ../../../app/assets/stylesheets/global/page-overrides.scss */
+.Registrations .content-container, .Sessions .content-container, .Passwords .content-container, .Confirmations .content-container, .Users .content-container, .Resources .content-container {
+  padding: 0px 0px 10px 0px;
+}
+/* line 56, ../../../app/assets/stylesheets/global/page-overrides.scss */
+.Registrations .content-container.interior, .Sessions .content-container.interior, .Passwords .content-container.interior, .Confirmations .content-container.interior, .Users .content-container.interior, .Resources .content-container.interior {
+  padding: 0px 0px 50px 0px;
+  background: none;
+  height: auto;
+}
+
+/* line 68, ../../../app/assets/stylesheets/global/page-overrides.scss */
+.Order .content-container {
+  padding: 0px 0px 10px 0px;
+}
+/* line 72, ../../../app/assets/stylesheets/global/page-overrides.scss */
+.Order .content-container.interior {
+  background: url("content-order.png") no-repeat top center transparent;
+  height: 533px;
+}
+
+/* line 82, ../../../app/assets/stylesheets/global/page-overrides.scss */
+.Media .content-container {
+  padding: 0px 0px 10px 0px;
+}
+/* line 86, ../../../app/assets/stylesheets/global/page-overrides.scss */
+.Media .content-container.interior {
+  background: none;
+  height: 532px;
+}
+
+/* line 97, ../../../app/assets/stylesheets/global/page-overrides.scss */
+.Technology .content-container {
+  padding: 0px 0px 10px 0px;
+}
+/* line 101, ../../../app/assets/stylesheets/global/page-overrides.scss */
+.Technology .content-container.interior {
+  background: none;
+  height: 533px;
+}
+
+/* line 112, ../../../app/assets/stylesheets/global/page-overrides.scss */
+.Privacies .content-container {
+  padding: 0px 0px 10px 0px;
+}
+/* line 116, ../../../app/assets/stylesheets/global/page-overrides.scss */
+.Privacies .content-container.interior {
+  color: #ffffff;
+  background: none;
+  height: auto;
+}
+
+/* line 128, ../../../app/assets/stylesheets/global/page-overrides.scss */
+.Refunds .content-container {
+  padding: 0px 0px 10px 0px;
+}
+/* line 132, ../../../app/assets/stylesheets/global/page-overrides.scss */
+.Refunds .content-container.interior {
+  color: #ffffff;
+  background: none;
+  height: auto;
+}

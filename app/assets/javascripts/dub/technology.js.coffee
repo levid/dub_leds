@@ -10,7 +10,7 @@ class Technology extends $DUB
       @title = $(e.target).attr('title')
 
       initTechOverlay = (data) ->
-        console.log data
+        self = this
         @overlayDiv          = $("#tech-overlay")
         @overlayContainerDiv = $('#tech-overlay .overlay-container')
         @closeButton         = $('.close-button a')
@@ -22,7 +22,7 @@ class Technology extends $DUB
 
         openOverlay = (el) =>
           @overlayContainerDiv = el.find('.overlay-container')
-          el.fadeIn 200, ->
+          el.fadeIn 200, =>
             @overlayContainerDiv.center()
             @overlayContainerDiv.fadeIn 300
 

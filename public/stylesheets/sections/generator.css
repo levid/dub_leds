@@ -1,0 +1,245 @@
+/* line 9, ../../../app/assets/stylesheets/sections/generator.scss */
+.content-generator {
+  margin: 0px auto;
+  width: 980px;
+  height: auto;
+}
+/* line 15, ../../../app/assets/stylesheets/sections/generator.scss */
+.content-generator .title-container {
+  width: auto;
+  height: auto;
+  display: block;
+}
+/* line 21, ../../../app/assets/stylesheets/sections/generator.scss */
+.content-generator .title-container .title {
+  margin: 20px 0px 0px -16px;
+  height: 73px;
+  width: 328px;
+  float: left;
+  text-indent: -9000px;
+  background-color: transparent;
+  background-image: url("/assets/title-generator.png");
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+/* line 32, ../../../app/assets/stylesheets/sections/generator.scss */
+.content-generator .text-container {
+  clear: both;
+  text-shadow: 0px 1px 2px #333;
+  color: #fafafa;
+}
+/* line 38, ../../../app/assets/stylesheets/sections/generator.scss */
+.content-generator .text-container h4 {
+  font-size: 22px;
+  padding: 0px 0px 10px 0px;
+  font-family: EurostileMed, Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+/* line 46, ../../../app/assets/stylesheets/sections/generator.scss */
+.content-generator .text-container p {
+  font-size: 15px;
+}
+/* line 52, ../../../app/assets/stylesheets/sections/generator.scss */
+.content-generator .media-content {
+  clear: both;
+  padding: 17px 0px 0px 0px;
+}
+/* line 57, ../../../app/assets/stylesheets/sections/generator.scss */
+.content-generator .media-content .left-column {
+  width: 413px;
+  height: 332px;
+  float: left;
+  margin: 20px 0px 0px -10px;
+}
+/* line 64, ../../../app/assets/stylesheets/sections/generator.scss */
+.content-generator .media-content .left-column .overlay {
+  width: inherit;
+  height: inherit;
+  margin: 0px 0px 0px 10px;
+  padding: 0px;
+  background-color: transparent;
+  background-image: url("/assets/img-preview-overlay.png");
+  background-position: 0px 6px;
+  background-repeat: no-repeat;
+  z-index: 20;
+  float: left;
+  position: relative;
+}
+/* line 76, ../../../app/assets/stylesheets/sections/generator.scss */
+.content-generator .media-content .left-column .image {
+  width: inherit;
+  height: inherit;
+  margin: -326px 0px 0px 10px;
+  background-color: transparent;
+  background-image: url("/assets/img-uploaded.png");
+  background-position: top left;
+  background-repeat: no-repeat;
+  float: left;
+  position: relative;
+}
+/* line 86, ../../../app/assets/stylesheets/sections/generator.scss */
+.content-generator .media-content .left-column .frame {
+  width: inherit;
+  height: inherit;
+  margin: -336px 0px 0px 0px;
+  background-color: transparent;
+  background-image: url("/assets/bg-frame-generator.png");
+  background-position: top left;
+  background-repeat: no-repeat;
+  z-index: 25;
+  float: left;
+  position: relative;
+}
+/* line 97, ../../../app/assets/stylesheets/sections/generator.scss */
+.content-generator .media-content .left-column .upload-button {
+  margin: 205px 0px 0px 55px;
+  padding: 54px 0px 0px 0px;
+  width: 323px;
+  height: 212px;
+  background-color: transparent;
+  background-image: url("/assets/button-upload-image.png");
+  background-position: 0px -70px;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: 30;
+}
+/* line 107, ../../../app/assets/stylesheets/sections/generator.scss */
+.content-generator .media-content .left-column .upload-button a {
+  margin: 10px 0px 0px 70px;
+  width: 170px;
+  height: 41px;
+  display: block;
+  text-indent: -9000px;
+}
+/* line 119, ../../../app/assets/stylesheets/sections/generator.scss */
+.content-generator .media-content .middle-column {
+  width: 114px;
+  height: 191px;
+  float: left;
+}
+/* line 125, ../../../app/assets/stylesheets/sections/generator.scss */
+.content-generator .media-content .middle-column .arrow {
+  margin: 50px 0px 0px 35px;
+  width: inherit;
+  height: inherit;
+  background-color: transparent;
+  background-image: url("/assets/img-arrow-generator.png");
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+/* line 134, ../../../app/assets/stylesheets/sections/generator.scss */
+.content-generator .media-content .right-column {
+  margin: -330px 0px 0px 0px;
+  width: 500px;
+  height: auto;
+  float: right;
+}
+/* line 141, ../../../app/assets/stylesheets/sections/generator.scss */
+.content-generator .media-content .right-column .preview-title {
+  margin: 0px 0px 0px 225px;
+  width: 165px;
+  height: 57px;
+  background-color: transparent;
+  background-image: url("/assets/title-preview.png");
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+/* line 149, ../../../app/assets/stylesheets/sections/generator.scss */
+.content-generator .media-content .right-column .choices {
+  margin: 350px 0px 0px 100px;
+  width: 452px;
+  height: 88px;
+  background-color: transparent;
+  background-image: url("/assets/bg-preview-choices.png");
+  background-position: top left;
+  background-repeat: no-repeat;
+  z-index: 15;
+  float: left;
+  position: relative;
+}
+/* line 159, ../../../app/assets/stylesheets/sections/generator.scss */
+.content-generator .media-content .right-column .choices ul {
+  width: auto;
+  height: auto;
+  margin: 15px 0px 0px 35px;
+}
+/* line 165, ../../../app/assets/stylesheets/sections/generator.scss */
+.content-generator .media-content .right-column .choices ul li + li {
+  margin-left: 3px;
+}
+/* line 170, ../../../app/assets/stylesheets/sections/generator.scss */
+.content-generator .media-content .right-column .choices ul li {
+  width: 48px;
+  height: 61px;
+  list-style-type: none;
+  float: left;
+}
+/* line 177, ../../../app/assets/stylesheets/sections/generator.scss */
+.content-generator .media-content .right-column .choices ul li a {
+  width: 48px;
+  height: 61px;
+  display: block;
+  opacity: 0.4;
+}
+/* line 184, ../../../app/assets/stylesheets/sections/generator.scss */
+.content-generator .media-content .right-column .choices ul li a.rim1 {
+  background-color: transparent;
+  background-image: url("/assets/img-rim-small1.png");
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+/* line 189, ../../../app/assets/stylesheets/sections/generator.scss */
+.content-generator .media-content .right-column .choices ul li a.rim2 {
+  background-color: transparent;
+  background-image: url("/assets/img-rim-small2.png");
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+/* line 194, ../../../app/assets/stylesheets/sections/generator.scss */
+.content-generator .media-content .right-column .choices ul li a.rim3 {
+  background-color: transparent;
+  background-image: url("/assets/img-rim-small3.png");
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+/* line 199, ../../../app/assets/stylesheets/sections/generator.scss */
+.content-generator .media-content .right-column .choices ul li a.rim4 {
+  background-color: transparent;
+  background-image: url("/assets/img-rim-small4.png");
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+/* line 204, ../../../app/assets/stylesheets/sections/generator.scss */
+.content-generator .media-content .right-column .choices ul li a.rim5 {
+  background-color: transparent;
+  background-image: url("/assets/img-rim-small5.png");
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+/* line 209, ../../../app/assets/stylesheets/sections/generator.scss */
+.content-generator .media-content .right-column .choices ul li a.rim6 {
+  background-color: transparent;
+  background-image: url("/assets/img-rim-small6.png");
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+/* line 214, ../../../app/assets/stylesheets/sections/generator.scss */
+.content-generator .media-content .right-column .choices ul li a.rim7 {
+  background-color: transparent;
+  background-image: url("/assets/img-rim-small7.png");
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+/* line 220, ../../../app/assets/stylesheets/sections/generator.scss */
+.content-generator .media-content .right-column .choices ul li a.active {
+  opacity: 1.0;
+}
+/* line 228, ../../../app/assets/stylesheets/sections/generator.scss */
+.content-generator .media-content .right-column .rim-preview {
+  width: 544px;
+  height: 400px;
+  background-color: transparent;
+  background-image: url("/assets/img-generator-preview.png");
+  background-position: 40px -80px;
+  background-repeat: no-repeat;
+}

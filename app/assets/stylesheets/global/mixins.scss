@@ -1,0 +1,29 @@
+@mixin ir {
+    display: block;
+    text-indent: -999em;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    text-align: left;
+    direction: ltr;
+}
+
+@mixin count_color($name, $color)
+{
+    &.#{$name} {
+        background: $color;
+        &.loading {
+            background:
+                image-url("img_loading_count_#{$name}.gif") no-repeat center center $color;
+            text-indent: -9000px;
+        }
+    }
+}
+
+@mixin container_header_icon($name)
+{
+    &.#{$name} {
+        background:
+            image-url("img_icon_#{$name}.png") no-repeat 8px center transparent;
+        padding: 5px 5px 5px 33px;
+    }
+}

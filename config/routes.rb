@@ -1,11 +1,10 @@
-DubLeds::Application.routes.draw do  
-  
+DubLeds::Application.routes.draw do
+
   resources :refunds
   resources :privacies
   resources :resources
 
   # Routes for Devise
-  devise_for :admins
   devise_for :users, controllers: { :omniauth_callbacks => "users/omniauth_callbacks"} do
     get '/users/auth/:provider' => 'users/omniauth_callbacks#passthru'
     # match '/users/auth/:provider/callback' => 'authentications#create'
@@ -14,55 +13,55 @@ DubLeds::Application.routes.draw do
   end
 
 	get '/users/:id(:format)'  => 'users#show', :as => :user
-  
+
   # Resources
   resources :newsletters
-  resources :admins
   resources :contact
   resources :users
   resources :authentications
-  
+
   # match '/users/auth/:provider/callback' => 'authentications#create'
   #   get '/users/auth/:provider' => 'users/omniauth_callbacks#passthru'
   # match '/registrations' => 'registrations#email'
-  
+
   match '/rims/image_cache'  => 'rims#image_cache', :constraints => { :cache_id => /\d{8}-\d{4}-\d{5}-\d{4}/, :filename => /[a-zA-Z0-9_ ]+\.(jpg|jpeg|png|gif){1}/i }
   match "/tmp/uploads/*path" => "gridfs#serve"
 
   # match '/signin' => 'sessions#new', :as => :signin
-  # 
-  match '/users/sign_out' => 'sessions#destroy', :as => :signout
-  
+  #
+  match '/users/sign_out'    => 'sessions#destroy', :as => :signout
+
   post '/cookie' => 'cookies#create'
-  # 
+  #
   #   match '/auth/failure' => 'sessions#failure'
 
   get '/home'                => 'home#index',       :as => :home
+  get '/admin'               => 'admin#index',      :as => :admin
 
   get '/rims'                => 'rims#index',       :as => :rim
   get '/rims/new'            => 'rims#new',         :as => :rim_new
   get '/rims/:id'            => 'rims#show',        :as => :rim_show
-  post '/rims/create'        => 'rims#create',      :as => :rim_create
   get '/rims/:id/edit'       => 'rims#edit',        :as => :rim_edit
   put '/rims/:id'            => 'rims#update',      :as => :rim_update
+  post '/rims/create'        => 'rims#create',      :as => :rim_create
   delete '/rims/:id'         => 'rims#destroy',     :as => :rim_destroy
-  
+
   get '/contact'             => 'contact#index',    :as => :contact
   get '/contact/new'         => 'contact#new',      :as => :contact_new
   get '/contact/:id'         => 'contact#show',     :as => :contact_show
-  post '/contact/create'     => 'contact#create',   :as => :contact_create
   get '/contact/:id/edit'    => 'contact#edit',     :as => :contact_edit
   put '/contact/:id'         => 'contact#update',   :as => :contact_update
+  post '/contact/create'     => 'contact#create',   :as => :contact_create
   delete '/contact:id'       => 'contact#destroy',  :as => :contact_destroy
-  
+
   get '/privacy_policy'      => 'privacies#index',  :as => :privacy
   get '/refund_policy'       => 'refunds#index',    :as => :refund
-  
+
   get '/generator'           => 'generator#index',  :as => :generator
   get '/order'               => 'order#index',      :as => :order
   get '/media'               => 'media#index',      :as => :media
   get '/technology'          => 'technology#index', :as => :technology
-  
+
   get '/technology/:title'   => 'technology#show',   :as => :technology_show
 
   # The priority is based upon order of creation:
@@ -121,7 +120,7 @@ DubLeds::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
-  
+
   root :to => 'home#index'
-  
+
 end

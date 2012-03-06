@@ -8,16 +8,16 @@
         = "Welcome, Guest"
     %li.divline
       %span
-    %li 
+    %li
       - if user_signed_in?
-        = link_to('Admin', admins_path, :class => "fade#{' active' if controller_name === 'admins'}")
+        = link_to('Admin', admin_path, :class => "fade#{' active' if controller_name == 'admin'}")
         %span.line &nbsp;
       %a{:href => 'blah', :class => 'fade'} CART (0)
     %li.divline
     - if user_signed_in?
-      %li 
+      %li
         = link_to('My Account', edit_user_registration_path, :class => "my_account #{'active' if controller_name === 'registrations' }")
-      %li 
+      %li
         = link_to('Logout', destroy_user_session_path, :class => 'log_out', :method=>'delete')
     - else
       %li

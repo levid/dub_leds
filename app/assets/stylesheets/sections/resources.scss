@@ -1,0 +1,75 @@
+// Place all the styles related to the Contact controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "../global/variables";
+@import "../global/mixins";
+
+.content-resources
+{
+    margin: 0px auto;
+    width: 980px;
+    height: auto;
+
+    &.edit, &.update
+    {
+      .title-container
+      {
+          width: auto;
+          height: auto;
+          display: block;
+
+          .title
+          {
+              margin: 20px 0px 0px -16px;
+              height: 73px;
+              width: 284px;
+              float: left;
+              text-indent: -9000px;
+              @include background($path + '/title-edit-user.png', no-repeat, top left, transparent);
+          }
+      }
+    }
+
+    &.new
+    {
+      .title-container
+      {
+          width: auto;
+          height: auto;
+          display: block;
+
+          .title
+          {
+              margin: 20px 0px 0px -16px;
+              height: 73px;
+              width: 234px;
+              float: left;
+              text-indent: -9000px;
+              @include background($path + '/title-sign-up.png', no-repeat, top left, transparent);
+          }
+      }
+    }
+
+
+
+    .text-container
+    {
+        clear: both;
+        text-shadow: 0px 1px 2px #333;
+        color: #fafafa;
+
+        h4
+        {
+            font-size: 22px;
+            padding: 0px 0px 10px 0px;
+            font-family: EurostileMed, Helvetica, Arial, sans-serif;
+            font-weight: 700;
+        }
+
+        p
+        {
+            font-size: 15px;
+        }
+    }
+}

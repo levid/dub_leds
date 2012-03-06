@@ -1,5 +1,6 @@
 /* Include Mixins & CSS3 Stuff */
-@import "../variables";
+@import "../global/variables";
+@import "../global/mixins";
 
 header
 {
@@ -10,195 +11,18 @@ header
     width: 100%;
     display: inline-block;
 
-    nav.user
+    .fade
     {
-      margin: 0px;
-      padding: 0px;
-      width: 100%;
-      height: 55px;
-      background: url( 'bg-header-bar.png' ) repeat-x top center transparent;
-      display: block;
-      position: fixed;
-      z-index: 998;
-      
-      ul
+      &.active
       {
-        margin: 0px auto;
-        width: auto;
-        height: inherit;
-        display: none;
-        
-        span.line
-        {
-          margin: 0px 5px 0px 0px;
-          padding: 0px 0px 0px 4px;
-          width: 1px;
-          height: auto;
-          border-right: 1px solid #313131;
-        }
-
-        li
-        {
-          margin: 0px;
-          padding: 21px 0px 0px 0px;
-          list-style-type: none;
-          width: auto;
-          height: 55px;
-          float: left;
-
-          color: #7F7F7F;
-          font-family: EurostileMed, Helvetica, Arial, sans-serif;
-          letter-spacing: 1.0;
-          font-weight: 400;
-          font-size: 12px;
-          text-transform: uppercase;
-          
-          &.divline
-          {
-            padding: 0px 18px 0px 18px;
-            width: 2px;
-            height: 74px;
-            float: left;
-            background: url( 'bg-header-divline.png' ) no-repeat top center transparent;
-          }
-          
-          a
-          {
-            text-transform: uppercase;
-            color: #7F7F7F;
-            font-family: EurostileMed, Helvetica, Arial, sans-serif;
-            letter-spacing: 1.0;
-            font-weight: 400;
-            font-size: 12px;
-            
-            &.my_account
-            {
-              margin: -5px 0px 0px 0px;
-              padding: 7px 0px 0px 13px;
-              width: 73px;
-              height: 17px;
-              color: #ababab;
-              font-size: 9px;
-              background: url( 'button-my-account.png' ) no-repeat top left transparent;
-              display: block;
-              
-              &:hover,
-              &.active
-              {
-                background-position: bottom left;
-                color: #75e3f0;
-              }
-            }
-            
-            &.log_out,
-            &.sign_in,
-            &.sign_up
-            {
-              margin: -5px 0px 0px 5px;
-              padding: 7px 0px 0px 14px;
-              width: 50px;
-              height: 17px;
-              color: #ababab;
-              font-size: 9px;
-              background: url( 'button-log-out.png' ) no-repeat top left transparent;
-              display: block;
-              
-              &:hover,
-              &.active
-              {
-                background-position: bottom left;
-                color: #75e3f0;
-              }
-            }
-          }
-        }
+        color: #59B7FF;
       }
-    }
-
-    nav.main
-    {
-        margin: 55px 0px 0px 0px;
-        padding: 0px;
-        width: 100%;
-        height: 65px;
-        background: url( 'bg-header-nav.png' ) repeat-x top center transparent;
-        display: block;
-        position: fixed;
-        z-index: 999;
-
-        ul.topnav
-        {
-            margin: 0px auto;
-            width: 600px;
-            height: inherit;
-            display: none;
-
-            li
-            {
-                margin: 13px 0px 0px 0px;
-                height: 30px;
-                width: auto;
-                list-style: none;
-                float: left;
-                overflow: hidden;
-
-                a, span
-                {
-                    height: 40px;
-                    width: auto;
-                    font-family: EurostileMed, Helvetica, Arial, sans-serif;
-                    letter-spacing: 1.0;
-                    font-size: 15px;
-                    font-weight: 200;
-                    line-height: 20px;
-                    color: #fafafa;
-                    clear: both;
-                    float: left;
-                    text-transform: uppercase;
-                    cursor: pointer;
-
-                    &:hover
-                    {
-                        color: #59b7ff;
-                        text-decoration: none;
-                    }
-
-                    &.active
-                    {
-                        color: #59b7ff;
-                    }
-                }
-
-                a {
-                    color: #59b7ff;
-                    background-position: left bottom;
-                }
-                span {
-                    background-position: left top;
-                }
-            }
-
-            li + li {
-                padding: 0px 0px 0px 32px;
-            }
-
-            li:last-child { padding: 0 0 0 25px; }
-        }
-
-        .glow {
-            margin: -41px 0px 0px 0px;
-            width: 158px;
-            height: 23px;
-            background: url( 'header-link-glow.png' ) no-repeat top left transparent;
-            position: relative;
-            display: none;
-        }
     }
 
     .logo {
         margin: 90px auto;
         width: 708px;
         height: 339px;
-        background: url( 'dub-logo-home.png' ) no-repeat top left transparent;
+        @include background($path + '/dub-logo-home.png', no-repeat, top left, transparent);
     }
 }

@@ -16,7 +16,7 @@
  * v1.6.1 2010-09-17 | Authors: Eric Meyer & Richard Clark
  * html5doctor.com/html-5-reset-stylesheet/
  */
-/* line 28, ../../app/assets/stylesheets/reset.scss */
+/* line 28, ../../app/assets/stylesheets/global/reset.scss */
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
@@ -34,32 +34,32 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 38, ../../app/assets/stylesheets/reset.scss */
+/* line 38, ../../app/assets/stylesheets/global/reset.scss */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-/* line 42, ../../app/assets/stylesheets/reset.scss */
+/* line 42, ../../app/assets/stylesheets/global/reset.scss */
 blockquote, q {
   quotes: none;
 }
 
-/* line 45, ../../app/assets/stylesheets/reset.scss */
+/* line 45, ../../app/assets/stylesheets/global/reset.scss */
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
   content: none;
 }
 
-/* line 47, ../../app/assets/stylesheets/reset.scss */
+/* line 47, ../../app/assets/stylesheets/global/reset.scss */
 ins {
   background-color: #ff9;
   color: #000;
   text-decoration: none;
 }
 
-/* line 49, ../../app/assets/stylesheets/reset.scss */
+/* line 49, ../../app/assets/stylesheets/global/reset.scss */
 mark {
   background-color: #ff9;
   color: #000;
@@ -67,24 +67,24 @@ mark {
   font-weight: bold;
 }
 
-/* line 51, ../../app/assets/stylesheets/reset.scss */
+/* line 51, ../../app/assets/stylesheets/global/reset.scss */
 del {
   text-decoration: line-through;
 }
 
-/* line 53, ../../app/assets/stylesheets/reset.scss */
+/* line 53, ../../app/assets/stylesheets/global/reset.scss */
 abbr[title], dfn[title] {
   border-bottom: 1px dotted;
   cursor: help;
 }
 
-/* line 55, ../../app/assets/stylesheets/reset.scss */
+/* line 55, ../../app/assets/stylesheets/global/reset.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 57, ../../app/assets/stylesheets/reset.scss */
+/* line 57, ../../app/assets/stylesheets/global/reset.scss */
 hr {
   display: block;
   height: 1px;
@@ -94,7 +94,7 @@ hr {
   padding: 0;
 }
 
-/* line 59, ../../app/assets/stylesheets/reset.scss */
+/* line 59, ../../app/assets/stylesheets/global/reset.scss */
 input, select {
   vertical-align: middle;
 }
@@ -102,21 +102,21 @@ input, select {
 /**
  * Font normalization inspired by YUI Library's fonts.css: developer.yahoo.com/yui/
  */
-/* line 66, ../../app/assets/stylesheets/reset.scss */
+/* line 66, ../../app/assets/stylesheets/global/reset.scss */
 body {
   font: 13px/1.231 sans-serif;
   *font-size: small;
 }
 
 /* Hack retained to preserve specificity */
-/* line 67, ../../app/assets/stylesheets/reset.scss */
+/* line 67, ../../app/assets/stylesheets/global/reset.scss */
 select, input, textarea, button {
   font: 99% sans-serif;
 }
 
 /* Normalize monospace sizing:
    en.wikipedia.org/wiki/MediaWiki_talk:Common.css/Archive_11#Teletype_style_fix_for_Chrome */
-/* line 71, ../../app/assets/stylesheets/reset.scss */
+/* line 71, ../../app/assets/stylesheets/global/reset.scss */
 pre, code, kbd, samp {
   font-family: monospace, sans-serif;
 }
@@ -125,69 +125,69 @@ pre, code, kbd, samp {
  * Minimal base styles.
  */
 /* Always force a scrollbar in non-IE */
-/* line 79, ../../app/assets/stylesheets/reset.scss */
+/* line 79, ../../app/assets/stylesheets/global/reset.scss */
 html {
   overflow-y: scroll;
 }
 
 /* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
-/* line 82, ../../app/assets/stylesheets/reset.scss */
+/* line 82, ../../app/assets/stylesheets/global/reset.scss */
 a:hover, a:active {
   outline: none;
 }
 
-/* line 84, ../../app/assets/stylesheets/reset.scss */
+/* line 84, ../../app/assets/stylesheets/global/reset.scss */
 ul, ol {
   margin-left: 2em;
 }
 
-/* line 85, ../../app/assets/stylesheets/reset.scss */
+/* line 85, ../../app/assets/stylesheets/global/reset.scss */
 ol {
   list-style-type: decimal;
 }
 
 /* Remove margins for navigation lists */
-/* line 88, ../../app/assets/stylesheets/reset.scss */
+/* line 88, ../../app/assets/stylesheets/global/reset.scss */
 nav ul, nav li {
   margin: 0;
   list-style: none;
   list-style-image: none;
 }
 
-/* line 90, ../../app/assets/stylesheets/reset.scss */
+/* line 90, ../../app/assets/stylesheets/global/reset.scss */
 small {
   font-size: 85%;
 }
 
-/* line 91, ../../app/assets/stylesheets/reset.scss */
+/* line 91, ../../app/assets/stylesheets/global/reset.scss */
 strong, th {
   font-weight: bold;
 }
 
-/* line 93, ../../app/assets/stylesheets/reset.scss */
+/* line 93, ../../app/assets/stylesheets/global/reset.scss */
 td {
   vertical-align: top;
 }
 
 /* Set sub, sup without affecting line-height: gist.github.com/413930 */
-/* line 96, ../../app/assets/stylesheets/reset.scss */
+/* line 96, ../../app/assets/stylesheets/global/reset.scss */
 sub, sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
 }
 
-/* line 97, ../../app/assets/stylesheets/reset.scss */
+/* line 97, ../../app/assets/stylesheets/global/reset.scss */
 sup {
   top: -0.5em;
 }
 
-/* line 98, ../../app/assets/stylesheets/reset.scss */
+/* line 98, ../../app/assets/stylesheets/global/reset.scss */
 sub {
   bottom: -0.25em;
 }
 
-/* line 100, ../../app/assets/stylesheets/reset.scss */
+/* line 100, ../../app/assets/stylesheets/global/reset.scss */
 pre {
   /* www.pathf.com/blogs/2008/05/formatting-quoted-code-in-blog-posts-css21-white-space-pre-wrap/ */
   white-space: pre;
@@ -196,52 +196,52 @@ pre {
   padding: 15px;
 }
 
-/* line 106, ../../app/assets/stylesheets/reset.scss */
+/* line 106, ../../app/assets/stylesheets/global/reset.scss */
 textarea {
   overflow: auto;
 }
 
 /* www.sitepoint.com/blogs/2010/08/20/ie-remove-textarea-scrollbars/ */
-/* line 108, ../../app/assets/stylesheets/reset.scss */
+/* line 108, ../../app/assets/stylesheets/global/reset.scss */
 .ie6 legend, .ie7 legend {
   margin-left: -7px;
 }
 
 /* Align checkboxes, radios, text inputs with their label by: Thierry Koblentz tjkdesign.com/ez-css/css/base.css  */
-/* line 111, ../../app/assets/stylesheets/reset.scss */
+/* line 111, ../../app/assets/stylesheets/global/reset.scss */
 input[type="radio"] {
   vertical-align: text-bottom;
 }
 
-/* line 112, ../../app/assets/stylesheets/reset.scss */
+/* line 112, ../../app/assets/stylesheets/global/reset.scss */
 input[type="checkbox"] {
   vertical-align: bottom;
 }
 
-/* line 113, ../../app/assets/stylesheets/reset.scss */
+/* line 113, ../../app/assets/stylesheets/global/reset.scss */
 .ie7 input[type="checkbox"] {
   vertical-align: baseline;
 }
 
-/* line 114, ../../app/assets/stylesheets/reset.scss */
+/* line 114, ../../app/assets/stylesheets/global/reset.scss */
 .ie6 input {
   vertical-align: text-bottom;
 }
 
 /* Hand cursor on clickable input elements */
-/* line 117, ../../app/assets/stylesheets/reset.scss */
+/* line 117, ../../app/assets/stylesheets/global/reset.scss */
 label, input[type="button"], input[type="submit"], input[type="image"], button {
   cursor: pointer;
 }
 
 /* Webkit browsers add a 2px margin outside the chrome of form elements */
-/* line 120, ../../app/assets/stylesheets/reset.scss */
+/* line 120, ../../app/assets/stylesheets/global/reset.scss */
 button, input, select, textarea {
   margin: 0;
 }
 
 /* Colors for form validity */
-/* line 124, ../../app/assets/stylesheets/reset.scss */
+/* line 124, ../../app/assets/stylesheets/global/reset.scss */
 input:invalid, textarea:invalid {
   border-radius: 1px;
   -moz-box-shadow: 0px 0px 5px red;
@@ -249,7 +249,7 @@ input:invalid, textarea:invalid {
   box-shadow: 0px 0px 5px red;
 }
 
-/* line 127, ../../app/assets/stylesheets/reset.scss */
+/* line 127, ../../app/assets/stylesheets/global/reset.scss */
 .no-boxshadow input:invalid, .no-boxshadow textarea:invalid {
   background-color: #f0dddd;
 }
@@ -257,14 +257,14 @@ input:invalid, textarea:invalid {
 /* These selection declarations have to be separate
    No text-shadow: twitter.com/miketaylr/status/12228805301
    Also: hot pink! */
-/* line 133, ../../app/assets/stylesheets/reset.scss */
+/* line 133, ../../app/assets/stylesheets/global/reset.scss */
 ::-moz-selection {
   background: #FF5E99;
   color: #fff;
   text-shadow: none;
 }
 
-/* line 134, ../../app/assets/stylesheets/reset.scss */
+/* line 134, ../../app/assets/stylesheets/global/reset.scss */
 ::selection {
   background: #FF5E99;
   color: #fff;
@@ -272,14 +272,14 @@ input:invalid, textarea:invalid {
 }
 
 /* j.mp/webkit-tap-highlight-color */
-/* line 137, ../../app/assets/stylesheets/reset.scss */
+/* line 137, ../../app/assets/stylesheets/global/reset.scss */
 a:link {
   -webkit-tap-highlight-color: #FF5E99;
 }
 
 /* Make buttons play nice in IE:
    www.viget.com/inspire/styling-the-button-element-in-internet-explorer/ */
-/* line 141, ../../app/assets/stylesheets/reset.scss */
+/* line 141, ../../app/assets/stylesheets/global/reset.scss */
 button {
   width: auto;
   overflow: visible;
@@ -287,7 +287,7 @@ button {
 
 /* Bicubic resizing for non-native sized IMG:
    code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
-/* line 145, ../../app/assets/stylesheets/reset.scss */
+/* line 145, ../../app/assets/stylesheets/global/reset.scss */
 .ie7 img {
   -ms-interpolation-mode: bicubic;
 }
@@ -295,7 +295,7 @@ button {
 /**
  * You might tweak these..
  */
-/* line 151, ../../app/assets/stylesheets/reset.scss */
+/* line 151, ../../app/assets/stylesheets/global/reset.scss */
 body, select, input, textarea {
   /* #444 looks better than black: twitter.com/H_FJ/statuses/11800719859 */
   color: #444;
@@ -304,17 +304,17 @@ body, select, input, textarea {
 }
 
 /* Headers (h1, h2, etc) have no default font-size or margin; define those yourself */
-/* line 159, ../../app/assets/stylesheets/reset.scss */
+/* line 159, ../../app/assets/stylesheets/global/reset.scss */
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
 }
 
-/* line 161, ../../app/assets/stylesheets/reset.scss */
+/* line 161, ../../app/assets/stylesheets/global/reset.scss */
 a, a:active, a:visited {
   color: #00A9ED;
 }
 
-/* line 162, ../../app/assets/stylesheets/reset.scss */
+/* line 162, ../../app/assets/stylesheets/global/reset.scss */
 a:hover {
   color: #00A9ED;
   text-decoration: underline;
@@ -324,7 +324,7 @@ a:hover {
  * Non-semantic helper classes: please define your styles before this section.
  */
 /* For image replacement */
-/* line 172, ../../app/assets/stylesheets/reset.scss */
+/* line 172, ../../app/assets/stylesheets/global/reset.scss */
 .ir {
   display: block;
   text-indent: -999em;
@@ -336,7 +336,7 @@ a:hover {
 
 /* Hide for both screenreaders and browsers:
    css-discuss.incutio.com/wiki/Screenreader_Visibility */
-/* line 176, ../../app/assets/stylesheets/reset.scss */
+/* line 176, ../../app/assets/stylesheets/global/reset.scss */
 .hidden {
   display: none;
   visibility: hidden;
@@ -344,7 +344,7 @@ a:hover {
 
 /* Hide only visually, but have it available for screenreaders: by Jon Neal.
   www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden */
-/* line 180, ../../app/assets/stylesheets/reset.scss */
+/* line 180, ../../app/assets/stylesheets/global/reset.scss */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -357,7 +357,7 @@ a:hover {
 }
 
 /* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: drupal.org/node/897638 */
-/* line 183, ../../app/assets/stylesheets/reset.scss */
+/* line 183, ../../app/assets/stylesheets/global/reset.scss */
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
   clip: auto;
@@ -369,14 +369,14 @@ a:hover {
 }
 
 /* Hide visually and from screenreaders, but maintain layout */
-/* line 186, ../../app/assets/stylesheets/reset.scss */
+/* line 186, ../../app/assets/stylesheets/global/reset.scss */
 .invisible {
   visibility: hidden;
 }
 
 /* The Magnificent Clearfix: Updated to prevent margin-collapsing on child elements.
    j.mp/bestclearfix */
-/* line 190, ../../app/assets/stylesheets/reset.scss */
+/* line 190, ../../app/assets/stylesheets/global/reset.scss */
 .clearfix:before, .clearfix:after {
   content: "\0020";
   display: block;
@@ -384,13 +384,13 @@ a:hover {
   overflow: hidden;
 }
 
-/* line 191, ../../app/assets/stylesheets/reset.scss */
+/* line 191, ../../app/assets/stylesheets/global/reset.scss */
 .clearfix:after {
   clear: both;
 }
 
 /* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
-/* line 193, ../../app/assets/stylesheets/reset.scss */
+/* line 193, ../../app/assets/stylesheets/global/reset.scss */
 .clearfix {
   zoom: 1;
 }
@@ -418,7 +418,7 @@ a:hover {
  * Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
  */
 @media print {
-  /* line 229, ../../app/assets/stylesheets/reset.scss */
+  /* line 229, ../../app/assets/stylesheets/global/reset.scss */
   * {
     background: transparent !important;
     color: black !important;
@@ -428,41 +428,41 @@ a:hover {
   }
 
   /* Black prints faster: sanbeiji.com/archives/953 */
-  /* line 231, ../../app/assets/stylesheets/reset.scss */
+  /* line 231, ../../app/assets/stylesheets/global/reset.scss */
   a, a:visited {
     color: #444 !important;
     text-decoration: underline;
   }
 
-  /* line 232, ../../app/assets/stylesheets/reset.scss */
+  /* line 232, ../../app/assets/stylesheets/global/reset.scss */
   a[href]:after {
     content: " (" attr(href) ")";
   }
 
-  /* line 233, ../../app/assets/stylesheets/reset.scss */
+  /* line 233, ../../app/assets/stylesheets/global/reset.scss */
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
 
-  /* line 234, ../../app/assets/stylesheets/reset.scss */
+  /* line 234, ../../app/assets/stylesheets/global/reset.scss */
   .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
     content: "";
   }
 
   /* Don't show links for images, or javascript/internal links */
-  /* line 235, ../../app/assets/stylesheets/reset.scss */
+  /* line 235, ../../app/assets/stylesheets/global/reset.scss */
   pre, blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
 
-  /* line 236, ../../app/assets/stylesheets/reset.scss */
+  /* line 236, ../../app/assets/stylesheets/global/reset.scss */
   thead {
     display: table-header-group;
   }
 
   /* css-discuss.incutio.com/wiki/Printing_Tables */
-  /* line 237, ../../app/assets/stylesheets/reset.scss */
+  /* line 237, ../../app/assets/stylesheets/global/reset.scss */
   tr, img {
     page-break-inside: avoid;
   }
@@ -471,13 +471,13 @@ a:hover {
     margin: 0.5cm;
 }
 
-  /* line 239, ../../app/assets/stylesheets/reset.scss */
+  /* line 239, ../../app/assets/stylesheets/global/reset.scss */
   p, h2, h3 {
     orphans: 3;
     widows: 3;
   }
 
-  /* line 240, ../../app/assets/stylesheets/reset.scss */
+  /* line 240, ../../app/assets/stylesheets/global/reset.scss */
   h2, h3 {
     page-break-after: avoid;
   }
@@ -485,7 +485,7 @@ a:hover {
 /* Minimal Base Styles */
 /* Include Mixins & CSS3 Stuff */
 /*@import "compass/css3";*/
-/* line 7, ../../app/assets/stylesheets/base.scss */
+/* line 7, ../../app/assets/stylesheets/global/base.scss */
 body, select, input, textarea {
   background: #ffffff;
   color: #33333a;
@@ -495,36 +495,36 @@ body, select, input, textarea {
 }
 
 /* always force a scrollbar in non-IE */
-/* line 16, ../../app/assets/stylesheets/base.scss */
+/* line 16, ../../app/assets/stylesheets/global/base.scss */
 html {
   overflow-y: scroll;
 }
 
 /* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
-/* line 21, ../../app/assets/stylesheets/base.scss */
+/* line 21, ../../app/assets/stylesheets/global/base.scss */
 strong, th {
   font-family: "Heveltica";
   font-weight: normal;
 }
 
-/* line 26, ../../app/assets/stylesheets/base.scss */
+/* line 26, ../../app/assets/stylesheets/global/base.scss */
 td, td img {
   vertical-align: top;
 }
 
-/* line 28, ../../app/assets/stylesheets/base.scss */
+/* line 28, ../../app/assets/stylesheets/global/base.scss */
 sub {
   vertical-align: sub;
   font-size: smaller;
 }
 
-/* line 29, ../../app/assets/stylesheets/base.scss */
+/* line 29, ../../app/assets/stylesheets/global/base.scss */
 sup {
   vertical-align: super;
   font-size: smaller;
 }
 
-/* line 32, ../../app/assets/stylesheets/base.scss */
+/* line 32, ../../app/assets/stylesheets/global/base.scss */
 pre {
   padding: 15px;
   /* www.pathf.com/blogs/2008/05/formatting-quoted-code-in-blog-posts-css21-white-space-pre-wrap/ */
@@ -538,54 +538,54 @@ pre {
   /* IE */
 }
 
-/* line 42, ../../app/assets/stylesheets/base.scss */
+/* line 42, ../../app/assets/stylesheets/global/base.scss */
 textarea {
   overflow: auto;
 }
 
 /* thnx ivannikolic! www.sitepoint.com/blogs/2010/08/20/ie-remove-textarea-scrollbars/ */
-/* line 44, ../../app/assets/stylesheets/base.scss */
+/* line 44, ../../app/assets/stylesheets/global/base.scss */
 .ie6 legend, .ie7 legend {
   margin-left: -7px;
 }
 
 /* thnx ivannikolic! */
 /* align checkboxes, radios, text inputs with their label by: Thierry Koblentz tjkdesign.com/ez-css/css/base.css  */
-/* line 47, ../../app/assets/stylesheets/base.scss */
+/* line 47, ../../app/assets/stylesheets/global/base.scss */
 input[type="radio"] {
   vertical-align: text-bottom;
 }
 
-/* line 48, ../../app/assets/stylesheets/base.scss */
+/* line 48, ../../app/assets/stylesheets/global/base.scss */
 input[type="checkbox"] {
   vertical-align: bottom;
 }
 
-/* line 49, ../../app/assets/stylesheets/base.scss */
+/* line 49, ../../app/assets/stylesheets/global/base.scss */
 .ie7 input[type="checkbox"] {
   vertical-align: baseline;
 }
 
-/* line 50, ../../app/assets/stylesheets/base.scss */
+/* line 50, ../../app/assets/stylesheets/global/base.scss */
 .ie6 input {
   vertical-align: text-bottom;
 }
 
 /* hand cursor on clickable input elements */
-/* line 53, ../../app/assets/stylesheets/base.scss */
+/* line 53, ../../app/assets/stylesheets/global/base.scss */
 label, input[type=button], input[type=submit], button {
   cursor: pointer;
 }
 
 /* webkit browsers add a 2px margin outside the chrome of form elements */
-/* line 56, ../../app/assets/stylesheets/base.scss */
+/* line 56, ../../app/assets/stylesheets/global/base.scss */
 button, input, select, textarea {
   margin: 0;
   outline: none;
 }
 
 /* colors for form validity */
-/* line 60, ../../app/assets/stylesheets/base.scss */
+/* line 60, ../../app/assets/stylesheets/global/base.scss */
 input:invalid, textarea:invalid {
   border-radius: 1px;
   -moz-box-shadow: 0px 0px 5px red;
@@ -593,20 +593,20 @@ input:invalid, textarea:invalid {
   box-shadow: 0px 0px 5px red;
 }
 
-/* line 67, ../../app/assets/stylesheets/base.scss */
+/* line 67, ../../app/assets/stylesheets/global/base.scss */
 .no-boxshadow input:invalid,
 .no-boxshadow textarea:invalid {
   background-color: #f0dddd;
 }
 
-/* line 70, ../../app/assets/stylesheets/base.scss */
+/* line 70, ../../app/assets/stylesheets/global/base.scss */
 ::-moz-selection {
   background: #1D3A67;
   color: #fff;
   /*@include single-text-shadow(rgba(0,0,0, 0.5), 1px, 1px, 1px);*/
 }
 
-/* line 75, ../../app/assets/stylesheets/base.scss */
+/* line 75, ../../app/assets/stylesheets/global/base.scss */
 ::selection {
   background: #1D3A67;
   color: #fff;
@@ -615,20 +615,20 @@ input:invalid, textarea:invalid {
 
 /*  j.mp/webkit-tap-highlight-color */
 /* make buttons play nice in IE: www.viget.com/inspire/styling-the-button-element-in-internet-explorer/ */
-/* line 85, ../../app/assets/stylesheets/base.scss */
+/* line 85, ../../app/assets/stylesheets/global/base.scss */
 button {
   width: auto;
   overflow: visible;
 }
 
 /* bicubic resizing for non-native sized IMG: code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
-/* line 88, ../../app/assets/stylesheets/base.scss */
+/* line 88, ../../app/assets/stylesheets/global/base.scss */
 .ie7 img {
   -ms-interpolation-mode: bicubic;
 }
 
 /* >> The Magnificent CLEARFIX << */
-/* line 91, ../../app/assets/stylesheets/base.scss */
+/* line 91, ../../app/assets/stylesheets/global/base.scss */
 .clearfix:after {
   content: ".";
   display: block;
@@ -637,18 +637,18 @@ button {
   visibility: hidden;
 }
 
-/* line 92, ../../app/assets/stylesheets/base.scss */
+/* line 92, ../../app/assets/stylesheets/global/base.scss */
 .clearfix {
   display: inline-block;
 }
 
-/* line 93, ../../app/assets/stylesheets/base.scss */
+/* line 93, ../../app/assets/stylesheets/global/base.scss */
 * html .clearfix {
   height: 1%;
 }
 
 /* Hides from IE-mac \*/
-/* line 94, ../../app/assets/stylesheets/base.scss */
+/* line 94, ../../app/assets/stylesheets/global/base.scss */
 .clearfix {
   display: block;
 }
@@ -656,12 +656,12 @@ button {
 /* 	Footer Stick
 	http://www.cssstickyfooter.com/
 */
-/* line 99, ../../app/assets/stylesheets/base.scss */
+/* line 99, ../../app/assets/stylesheets/global/base.scss */
 html, body {
   height: 100%;
 }
 
-/* line 103, ../../app/assets/stylesheets/base.scss */
+/* line 103, ../../app/assets/stylesheets/global/base.scss */
 body {
   background: url("bg-galactic.jpg") center -51px no-repeat #040405;
   postion: absolute;
@@ -677,7 +677,7 @@ body {
     body { -moz-background-size: 1500px 970px; background-size: 1500px 970px; }
 }
 */
-/* line 125, ../../app/assets/stylesheets/base.scss */
+/* line 125, ../../app/assets/stylesheets/global/base.scss */
 a:link,
 a:hover,
 a:active,
@@ -687,13 +687,13 @@ a:visited {
   background: none;
 }
 
-/* line 131, ../../app/assets/stylesheets/base.scss */
+/* line 131, ../../app/assets/stylesheets/global/base.scss */
 a {
   outline: none;
   background: none;
 }
 
-/* line 137, ../../app/assets/stylesheets/base.scss */
+/* line 137, ../../app/assets/stylesheets/global/base.scss */
 #dub {
   width: 100%;
   height: 100%;
@@ -701,7 +701,7 @@ a {
 
 /* Layout Styles */
 /* Include Mixins & CSS3 Stuff */
-/* line 5, ../../app/assets/stylesheets/layout/header.scss */
+/* line 6, ../../app/assets/stylesheets/layout/header.scss */
 header {
   background-position: top center;
   margin: 0px auto;
@@ -709,34 +709,53 @@ header {
   width: 100%;
   display: inline-block;
 }
-/* line 14, ../../app/assets/stylesheets/layout/header.scss */
-header nav.user {
+/* line 17, ../../app/assets/stylesheets/layout/header.scss */
+header .fade.active {
+  color: #59B7FF;
+}
+/* line 22, ../../app/assets/stylesheets/layout/header.scss */
+header .logo {
+  margin: 90px auto;
+  width: 708px;
+  height: 339px;
+  background-color: transparent;
+  background-image: url("/assets/dub-logo-home.png");
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+
+/* Include Mixins & CSS3 Stuff */
+/* line 6, ../../app/assets/stylesheets/layout/nav.scss */
+nav.user {
   margin: 0px;
   padding: 0px;
   width: 100%;
   height: 55px;
-  background: url("bg-header-bar.png") repeat-x top center transparent;
+  background-color: transparent;
+  background-image: url("/assets/bg-header-bar.png");
+  background-position: top center;
+  background-repeat: repeat-x;
   display: block;
   position: fixed;
   z-index: 998;
 }
-/* line 25, ../../app/assets/stylesheets/layout/header.scss */
-header nav.user ul {
+/* line 17, ../../app/assets/stylesheets/layout/nav.scss */
+nav.user ul {
   margin: 0px auto;
   width: auto;
   height: inherit;
   display: none;
 }
-/* line 32, ../../app/assets/stylesheets/layout/header.scss */
-header nav.user ul span.line {
+/* line 24, ../../app/assets/stylesheets/layout/nav.scss */
+nav.user ul span.line {
   margin: 0px 5px 0px 0px;
   padding: 0px 0px 0px 4px;
   width: 1px;
   height: auto;
   border-right: 1px solid #313131;
 }
-/* line 41, ../../app/assets/stylesheets/layout/header.scss */
-header nav.user ul li {
+/* line 33, ../../app/assets/stylesheets/layout/nav.scss */
+nav.user ul li {
   margin: 0px;
   padding: 21px 0px 0px 0px;
   list-style-type: none;
@@ -750,16 +769,19 @@ header nav.user ul li {
   font-size: 12px;
   text-transform: uppercase;
 }
-/* line 57, ../../app/assets/stylesheets/layout/header.scss */
-header nav.user ul li.divline {
+/* line 49, ../../app/assets/stylesheets/layout/nav.scss */
+nav.user ul li.divline {
   padding: 0px 18px 0px 18px;
   width: 2px;
   height: 74px;
   float: left;
-  background: url("bg-header-divline.png") no-repeat top center transparent;
+  background-color: transparent;
+  background-image: url("/assets/bg-header-divline.png");
+  background-position: top center;
+  background-repeat: no-repeat;
 }
-/* line 66, ../../app/assets/stylesheets/layout/header.scss */
-header nav.user ul li a {
+/* line 58, ../../app/assets/stylesheets/layout/nav.scss */
+nav.user ul li a {
   text-transform: uppercase;
   color: #7F7F7F;
   font-family: EurostileMed, Helvetica, Arial, sans-serif;
@@ -767,58 +789,68 @@ header nav.user ul li a {
   font-weight: 400;
   font-size: 12px;
 }
-/* line 75, ../../app/assets/stylesheets/layout/header.scss */
-header nav.user ul li a.my_account {
+/* line 67, ../../app/assets/stylesheets/layout/nav.scss */
+nav.user ul li a.my_account {
   margin: -5px 0px 0px 0px;
   padding: 7px 0px 0px 13px;
   width: 73px;
   height: 17px;
   color: #ababab;
   font-size: 9px;
-  background: url("button-my-account.png") no-repeat top left transparent;
+  background-color: transparent;
+  background-image: url("/assets/button-my-account.png");
+  background-position: top center;
+  background-repeat: no-repeat;
   display: block;
 }
-/* line 87, ../../app/assets/stylesheets/layout/header.scss */
-header nav.user ul li a.my_account:hover, header nav.user ul li a.my_account.active {
-  background-position: bottom left;
+/* line 79, ../../app/assets/stylesheets/layout/nav.scss */
+nav.user ul li a.my_account:hover, nav.user ul li a.my_account.active {
+  background-position: center bottom;
   color: #75e3f0;
 }
-/* line 96, ../../app/assets/stylesheets/layout/header.scss */
-header nav.user ul li a.log_out, header nav.user ul li a.sign_in, header nav.user ul li a.sign_up {
+/* line 88, ../../app/assets/stylesheets/layout/nav.scss */
+nav.user ul li a.log_out, nav.user ul li a.sign_in, nav.user ul li a.sign_up {
   margin: -5px 0px 0px 5px;
   padding: 7px 0px 0px 14px;
   width: 50px;
   height: 17px;
   color: #ababab;
   font-size: 9px;
-  background: url("button-log-out.png") no-repeat top left transparent;
+  background-color: transparent;
+  background-image: url("/assets/button-log-out.png");
+  background-position: top center;
+  background-repeat: no-repeat;
   display: block;
 }
-/* line 108, ../../app/assets/stylesheets/layout/header.scss */
-header nav.user ul li a.log_out:hover, header nav.user ul li a.log_out.active, header nav.user ul li a.sign_in:hover, header nav.user ul li a.sign_in.active, header nav.user ul li a.sign_up:hover, header nav.user ul li a.sign_up.active {
-  background-position: bottom left;
+/* line 100, ../../app/assets/stylesheets/layout/nav.scss */
+nav.user ul li a.log_out:hover, nav.user ul li a.log_out.active, nav.user ul li a.sign_in:hover, nav.user ul li a.sign_in.active, nav.user ul li a.sign_up:hover, nav.user ul li a.sign_up.active {
+  background-position: center bottom;
   color: #75e3f0;
 }
-/* line 119, ../../app/assets/stylesheets/layout/header.scss */
-header nav.main {
+
+/* line 111, ../../app/assets/stylesheets/layout/nav.scss */
+nav.main {
   margin: 55px 0px 0px 0px;
   padding: 0px;
   width: 100%;
   height: 65px;
-  background: url("bg-header-nav.png") repeat-x top center transparent;
+  background-color: transparent;
+  background-image: url("/assets/bg-header-nav.png");
+  background-position: top center;
+  background-repeat: repeat-x;
   display: block;
   position: fixed;
   z-index: 999;
 }
-/* line 130, ../../app/assets/stylesheets/layout/header.scss */
-header nav.main ul.topnav {
+/* line 122, ../../app/assets/stylesheets/layout/nav.scss */
+nav.main ul.topnav {
   margin: 0px auto;
   width: 600px;
   height: inherit;
   display: none;
 }
-/* line 137, ../../app/assets/stylesheets/layout/header.scss */
-header nav.main ul.topnav li {
+/* line 129, ../../app/assets/stylesheets/layout/nav.scss */
+nav.main ul.topnav li {
   margin: 13px 0px 0px 0px;
   height: 30px;
   width: auto;
@@ -826,8 +858,8 @@ header nav.main ul.topnav li {
   float: left;
   overflow: hidden;
 }
-/* line 146, ../../app/assets/stylesheets/layout/header.scss */
-header nav.main ul.topnav li a, header nav.main ul.topnav li span {
+/* line 138, ../../app/assets/stylesheets/layout/nav.scss */
+nav.main ul.topnav li a, nav.main ul.topnav li span {
   height: 40px;
   width: auto;
   font-family: EurostileMed, Helvetica, Arial, sans-serif;
@@ -841,57 +873,56 @@ header nav.main ul.topnav li a, header nav.main ul.topnav li span {
   text-transform: uppercase;
   cursor: pointer;
 }
-/* line 161, ../../app/assets/stylesheets/layout/header.scss */
-header nav.main ul.topnav li a:hover, header nav.main ul.topnav li span:hover {
+/* line 153, ../../app/assets/stylesheets/layout/nav.scss */
+nav.main ul.topnav li a:hover, nav.main ul.topnav li span:hover {
   color: #59b7ff;
   text-decoration: none;
 }
-/* line 167, ../../app/assets/stylesheets/layout/header.scss */
-header nav.main ul.topnav li a.active, header nav.main ul.topnav li span.active {
+/* line 159, ../../app/assets/stylesheets/layout/nav.scss */
+nav.main ul.topnav li a.active, nav.main ul.topnav li span.active {
   color: #59b7ff;
 }
-/* line 172, ../../app/assets/stylesheets/layout/header.scss */
-header nav.main ul.topnav li a {
+/* line 164, ../../app/assets/stylesheets/layout/nav.scss */
+nav.main ul.topnav li a {
   color: #59b7ff;
   background-position: left bottom;
 }
-/* line 176, ../../app/assets/stylesheets/layout/header.scss */
-header nav.main ul.topnav li span {
+/* line 168, ../../app/assets/stylesheets/layout/nav.scss */
+nav.main ul.topnav li span {
   background-position: left top;
 }
-/* line 181, ../../app/assets/stylesheets/layout/header.scss */
-header nav.main ul.topnav li + li {
+/* line 173, ../../app/assets/stylesheets/layout/nav.scss */
+nav.main ul.topnav li + li {
   padding: 0px 0px 0px 32px;
 }
-/* line 185, ../../app/assets/stylesheets/layout/header.scss */
-header nav.main ul.topnav li:last-child {
+/* line 177, ../../app/assets/stylesheets/layout/nav.scss */
+nav.main ul.topnav li:last-child {
   padding: 0 0 0 25px;
 }
-/* line 188, ../../app/assets/stylesheets/layout/header.scss */
-header nav.main .glow {
+/* line 180, ../../app/assets/stylesheets/layout/nav.scss */
+nav.main .glow {
   margin: -41px 0px 0px 0px;
   width: 158px;
   height: 23px;
-  background: url("header-link-glow.png") no-repeat top left transparent;
+  background-color: transparent;
+  background-image: url("/assets/header-link-glow.png");
+  background-position: top left;
+  background-repeat: no-repeat;
   position: relative;
   display: none;
 }
-/* line 198, ../../app/assets/stylesheets/layout/header.scss */
-header .logo {
-  margin: 90px auto;
-  width: 708px;
-  height: 339px;
-  background: url("dub-logo-home.png") no-repeat top left transparent;
-}
 
 /* Include Mixins & CSS3 Stuff */
-/* line 5, ../../app/assets/stylesheets/layout/footer.scss */
+/* line 6, ../../app/assets/stylesheets/layout/footer.scss */
 footer {
   height: 67px;
   width: 100%;
-  background: url("bg-footer-bar.png") repeat-x top left transparent;
+  background-color: transparent;
+  background-image: url("/assets/bg-footer-bar.png");
+  background-position: top left;
+  background-repeat: repeat-x;
 }
-/* line 11, ../../app/assets/stylesheets/layout/footer.scss */
+/* line 12, ../../app/assets/stylesheets/layout/footer.scss */
 footer .footer-container {
   margin: 0px auto;
   height: 67px;
@@ -899,28 +930,31 @@ footer .footer-container {
   position: relative;
   z-index: 20;
 }
-/* line 19, ../../app/assets/stylesheets/layout/footer.scss */
+/* line 20, ../../app/assets/stylesheets/layout/footer.scss */
 footer .footer-container .left-column {
   width: auto;
   height: auto;
   float: left;
 }
-/* line 25, ../../app/assets/stylesheets/layout/footer.scss */
+/* line 26, ../../app/assets/stylesheets/layout/footer.scss */
 footer .footer-container .left-column .logo {
   margin: 23px 0px 0px 0px;
   height: 15px;
   width: 102px;
   float: left;
-  background: url("img-footer-logo.png") no-repeat top left transparent;
+  background-color: transparent;
+  background-image: url("/assets/img-footer-logo.png");
+  background-position: top left;
+  background-repeat: no-repeat;
 }
-/* line 34, ../../app/assets/stylesheets/layout/footer.scss */
+/* line 35, ../../app/assets/stylesheets/layout/footer.scss */
 footer .footer-container .left-column .email-updates {
   margin: 13px 0px 0px 20px;
   width: auto;
   height: auto;
   float: left;
 }
-/* line 41, ../../app/assets/stylesheets/layout/footer.scss */
+/* line 42, ../../app/assets/stylesheets/layout/footer.scss */
 footer .footer-container .left-column .email-updates input[type=text] {
   padding: 3px 0px 0px 8px;
   height: 31px;
@@ -929,104 +963,128 @@ footer .footer-container .left-column .email-updates input[type=text] {
   font-weight: 400;
   font-size: 15px;
   line-height: 12px;
-  background: url("input-email.png") no-repeat 1px 3px transparent;
+  background-color: transparent;
+  background-image: url("/assets/input-email.png");
+  background-position: 1px 3px;
+  background-repeat: no-repeat;
   border: none;
   color: #7f7f7f;
 }
-/* line 55, ../../app/assets/stylesheets/layout/footer.scss */
+/* line 56, ../../app/assets/stylesheets/layout/footer.scss */
 footer .footer-container .left-column .email-updates input[type=submit] {
   margin: 3px 0px 0px -7px;
   height: 31px;
   width: 32px;
   text-indent: -9000px;
-  background: url("button-submit.png") no-repeat top left transparent;
+  background-color: transparent;
+  background-image: url("/assets/button-submit.png");
+  background-position: top left;
+  background-repeat: no-repeat;
   border: none;
 }
-/* line 67, ../../app/assets/stylesheets/layout/footer.scss */
+/* line 68, ../../app/assets/stylesheets/layout/footer.scss */
 footer .footer-container .right-column {
   width: auto;
   height: auto;
   float: right;
 }
-/* line 73, ../../app/assets/stylesheets/layout/footer.scss */
+/* line 74, ../../app/assets/stylesheets/layout/footer.scss */
 footer .footer-container .right-column .order {
   margin: 10px 0px 0px 0px;
   width: 106px;
   height: 43px;
   float: left;
 }
-/* line 80, ../../app/assets/stylesheets/layout/footer.scss */
+/* line 81, ../../app/assets/stylesheets/layout/footer.scss */
 footer .footer-container .right-column .order a {
   width: 106px;
   height: 43px;
   float: left;
   text-indent: -9000px;
-  background: url("button-order.png") no-repeat top left transparent;
+  background-color: transparent;
+  background-image: url("/assets/button-order.png");
+  background-position: top left;
+  background-repeat: no-repeat;
 }
-/* line 88, ../../app/assets/stylesheets/layout/footer.scss */
+/* line 89, ../../app/assets/stylesheets/layout/footer.scss */
 footer .footer-container .right-column .order a:hover {
   background-position: bottom left;
 }
-/* line 95, ../../app/assets/stylesheets/layout/footer.scss */
+/* line 96, ../../app/assets/stylesheets/layout/footer.scss */
 footer .footer-container .right-column ul {
   margin: 16px 0px 0px 10px;
   width: auto;
   height: auto;
   float: right;
 }
-/* line 102, ../../app/assets/stylesheets/layout/footer.scss */
+/* line 103, ../../app/assets/stylesheets/layout/footer.scss */
 footer .footer-container .right-column ul li {
   width: 31px;
   height: 31px;
   float: left;
   list-style-type: none;
 }
-/* line 109, ../../app/assets/stylesheets/layout/footer.scss */
+/* line 110, ../../app/assets/stylesheets/layout/footer.scss */
 footer .footer-container .right-column ul li a {
   width: 31px;
   height: 31px;
   text-indent: -9000px;
   float: left;
 }
-/* line 116, ../../app/assets/stylesheets/layout/footer.scss */
+/* line 117, ../../app/assets/stylesheets/layout/footer.scss */
 footer .footer-container .right-column ul li a.facebook {
-  background: url("img-sharing-facebook.png") no-repeat top left transparent;
+  background-color: transparent;
+  background-image: url("/assets/img-sharing-facebook.png");
+  background-position: top left;
+  background-repeat: no-repeat;
 }
-/* line 121, ../../app/assets/stylesheets/layout/footer.scss */
+/* line 122, ../../app/assets/stylesheets/layout/footer.scss */
 footer .footer-container .right-column ul li a.twitter {
-  background: url("img-sharing-twitter.png") no-repeat top left transparent;
+  background-color: transparent;
+  background-image: url("/assets/img-sharing-twitter.png");
+  background-position: top left;
+  background-repeat: no-repeat;
 }
-/* line 126, ../../app/assets/stylesheets/layout/footer.scss */
+/* line 127, ../../app/assets/stylesheets/layout/footer.scss */
 footer .footer-container .right-column ul li a.flickr {
-  background: url("img-sharing-flickr.png") no-repeat top left transparent;
+  background-color: transparent;
+  background-image: url("/assets/img-sharing-flickr.png");
+  background-position: top left;
+  background-repeat: no-repeat;
 }
-/* line 131, ../../app/assets/stylesheets/layout/footer.scss */
+/* line 132, ../../app/assets/stylesheets/layout/footer.scss */
 footer .footer-container .right-column ul li a.linkedin {
-  background: url("img-sharing-linkedin.png") no-repeat top left transparent;
+  background-color: transparent;
+  background-image: url("/assets/img-sharing-linkedin.png");
+  background-position: top left;
+  background-repeat: no-repeat;
 }
-/* line 136, ../../app/assets/stylesheets/layout/footer.scss */
+/* line 137, ../../app/assets/stylesheets/layout/footer.scss */
 footer .footer-container .right-column ul li a:active {
   background-position: bottom center;
 }
-/* line 141, ../../app/assets/stylesheets/layout/footer.scss */
+/* line 142, ../../app/assets/stylesheets/layout/footer.scss */
 footer .footer-container .right-column ul li a:hover {
   background-position: bottom center;
 }
-/* line 146, ../../app/assets/stylesheets/layout/footer.scss */
+/* line 147, ../../app/assets/stylesheets/layout/footer.scss */
 footer .footer-container .right-column ul li a.active {
   background-position: bottom center;
 }
-/* line 153, ../../app/assets/stylesheets/layout/footer.scss */
+/* line 154, ../../app/assets/stylesheets/layout/footer.scss */
 footer .footer-container .right-column ul li + li {
   padding: 0px 0px 0px 10px;
 }
-/* line 161, ../../app/assets/stylesheets/layout/footer.scss */
+/* line 162, ../../app/assets/stylesheets/layout/footer.scss */
 footer .spacer {
   height: 100px;
   width: 100%;
-  background: url("bg-footer.png") repeat top left transparent;
+  background-color: transparent;
+  background-image: url("/assets/bg-footer.png");
+  background-position: top left;
+  background-repeat: no-repeat;
 }
-/* line 167, ../../app/assets/stylesheets/layout/footer.scss */
+/* line 168, ../../app/assets/stylesheets/layout/footer.scss */
 footer .spacer .copyright {
   margin: 0px auto;
   padding: 10px 0px 0px 0px;
@@ -1037,38 +1095,41 @@ footer .spacer .copyright {
   font-size: 15px;
   color: #777777;
 }
-/* line 178, ../../app/assets/stylesheets/layout/footer.scss */
+/* line 179, ../../app/assets/stylesheets/layout/footer.scss */
 footer .spacer .copyright .links {
   margin: 0px 0px 0px 10px;
   width: auto;
   display: inline-block;
 }
-/* line 183, ../../app/assets/stylesheets/layout/footer.scss */
+/* line 184, ../../app/assets/stylesheets/layout/footer.scss */
 footer .spacer .copyright .links a + a {
   margin-left: 10px;
 }
-/* line 187, ../../app/assets/stylesheets/layout/footer.scss */
+/* line 188, ../../app/assets/stylesheets/layout/footer.scss */
 footer .spacer .copyright .links a {
   font-size: 12px;
 }
 
 /**/
-/* line 5, ../../app/assets/stylesheets/layout/body.scss */
+/* line 6, ../../app/assets/stylesheets/layout/body.scss */
 .body {
   margin: 0px auto;
   padding: 15px 0px 0px 0px;
   height: auto;
   width: 100%;
-  background: url("bg-content.png") repeat-x top center transparent;
+  background-color: transparent;
+  background-image: url("/assets/bg-content.png");
+  background-position: top center;
+  background-repeat: repeat-x;
   overflow: hidden;
 }
-/* line 14, ../../app/assets/stylesheets/layout/body.scss */
+/* line 15, ../../app/assets/stylesheets/layout/body.scss */
 .body .rim-container {
   margin: 0px auto;
   height: 604px;
   width: 100%;
 }
-/* line 20, ../../app/assets/stylesheets/layout/body.scss */
+/* line 21, ../../app/assets/stylesheets/layout/body.scss */
 .body .rim-container .rim-buttons {
   margin: -604px auto;
   width: 980px;
@@ -1077,13 +1138,16 @@ footer .spacer .copyright .links a {
   display: block;
   z-index: 20;
 }
-/* line 30, ../../app/assets/stylesheets/layout/body.scss */
+/* line 31, ../../app/assets/stylesheets/layout/body.scss */
 .body .rim-container .rim-buttons .arrow {
   width: 107px;
   height: 176px;
-  background: url("button-rim-arrows.png") no-repeat top left transparent;
+  background-color: transparent;
+  background-image: url("/assets/button-rim-arrows.png");
+  background-position: top left;
+  background-repeat: no-repeat;
 }
-/* line 36, ../../app/assets/stylesheets/layout/body.scss */
+/* line 37, ../../app/assets/stylesheets/layout/body.scss */
 .body .rim-container .rim-buttons .arrow.left {
   width: 107px;
   height: 176px;
@@ -1093,7 +1157,7 @@ footer .spacer .copyright .links a {
   float: left;
   background-position: top left;
 }
-/* line 47, ../../app/assets/stylesheets/layout/body.scss */
+/* line 48, ../../app/assets/stylesheets/layout/body.scss */
 .body .rim-container .rim-buttons .arrow.right {
   width: 107px;
   height: 176px;
@@ -1103,13 +1167,13 @@ footer .spacer .copyright .links a {
   float: right;
   background-position: top right;
 }
-/* line 58, ../../app/assets/stylesheets/layout/body.scss */
+/* line 59, ../../app/assets/stylesheets/layout/body.scss */
 .body .rim-container .rim-buttons .arrow a {
   width: 107px;
   height: 176px;
   float: left;
 }
-/* line 68, ../../app/assets/stylesheets/layout/body.scss */
+/* line 69, ../../app/assets/stylesheets/layout/body.scss */
 .body .rim-container .rims-large {
   margin: 0px auto;
   width: 980px;
@@ -1119,13 +1183,13 @@ footer .spacer .copyright .links a {
   z-index: 10;
   display: block;
 }
-/* line 78, ../../app/assets/stylesheets/layout/body.scss */
+/* line 79, ../../app/assets/stylesheets/layout/body.scss */
 .body .rim-container .rims-large ul {
   width: 980px;
   height: 604px;
   float: left;
 }
-/* line 84, ../../app/assets/stylesheets/layout/body.scss */
+/* line 85, ../../app/assets/stylesheets/layout/body.scss */
 .body .rim-container .rims-large ul li {
   margin: 0px 0px 0px -25px;
   width: 980px;
@@ -1133,28 +1197,37 @@ footer .spacer .copyright .links a {
   float: left;
   list-style-type: none;
 }
-/* line 96, ../../app/assets/stylesheets/layout/body.scss */
+/* line 97, ../../app/assets/stylesheets/layout/body.scss */
 .body .rim-select {
   margin: 0px auto;
   height: auto;
   width: 100%;
-  background: url("bg-rim-select.png") repeat-x top left transparent;
+  background-color: transparent;
+  background-image: url("/assets/bg-rim-select.png");
+  background-position: top left;
+  background-repeat: repeat-x;
 }
-/* line 103, ../../app/assets/stylesheets/layout/body.scss */
+/* line 104, ../../app/assets/stylesheets/layout/body.scss */
 .body .rim-select .rim-reflection {
   margin: 0px auto;
   width: 980px;
   height: 44px;
-  background: url("bg-rim-reflection.png") no-repeat top left transparent;
+  background-color: transparent;
+  background-image: url("/assets/bg-rim-reflection.png");
+  background-position: top left;
+  background-repeat: no-repeat;
   display: block;
 }
-/* line 111, ../../app/assets/stylesheets/layout/body.scss */
+/* line 112, ../../app/assets/stylesheets/layout/body.scss */
 .body .rim-select .rim-reflection .reflection {
   height: 44px;
   width: 98px;
-  background: url("img-arrow-reflection.png") no-repeat top left transparent;
+  background-color: transparent;
+  background-image: url("/assets/img-arrow-reflection.png");
+  background-position: top left;
+  background-repeat: no-repeat;
 }
-/* line 116, ../../app/assets/stylesheets/layout/body.scss */
+/* line 117, ../../app/assets/stylesheets/layout/body.scss */
 .body .rim-select .rim-reflection .reflection.left {
   margin: 0px 0px 0px 0px;
   background-position: top left;
@@ -1162,7 +1235,7 @@ footer .spacer .copyright .links a {
   left: -98px;
   float: left;
 }
-/* line 124, ../../app/assets/stylesheets/layout/body.scss */
+/* line 125, ../../app/assets/stylesheets/layout/body.scss */
 .body .rim-select .rim-reflection .reflection.right {
   margin: 0px 0px 0px 0px;
   background-position: top right;
@@ -1170,74 +1243,83 @@ footer .spacer .copyright .links a {
   right: -98px;
   float: right;
 }
-/* line 134, ../../app/assets/stylesheets/layout/body.scss */
+/* line 135, ../../app/assets/stylesheets/layout/body.scss */
 .body .rim-select .rim-reflection .buttons {
   margin: 0px auto;
   width: 780px;
   height: inherit;
   float: left;
 }
-/* line 141, ../../app/assets/stylesheets/layout/body.scss */
+/* line 142, ../../app/assets/stylesheets/layout/body.scss */
 .body .rim-select .rim-reflection .buttons ul {
   margin: 0px auto;
   width: auto;
   width: 315px;
   height: inherit;
 }
-/* line 148, ../../app/assets/stylesheets/layout/body.scss */
+/* line 149, ../../app/assets/stylesheets/layout/body.scss */
 .body .rim-select .rim-reflection .buttons ul li {
   height: auto;
   width: auto;
   list-style: none;
 }
-/* line 153, ../../app/assets/stylesheets/layout/body.scss */
+/* line 154, ../../app/assets/stylesheets/layout/body.scss */
 .body .rim-select .rim-reflection .buttons ul li a {
   height: 44px;
   width: 45px;
-  background: url("button-rim-select.png") no-repeat bottom center transparent;
+  background-color: transparent;
+  background-image: url("/assets/button-rim-select.png");
+  background-position: bottom center;
+  background-repeat: no-repeat;
   float: left;
   text-indent: -9000px;
 }
-/* line 160, ../../app/assets/stylesheets/layout/body.scss */
+/* line 161, ../../app/assets/stylesheets/layout/body.scss */
 .body .rim-select .rim-reflection .buttons ul li a.active {
   height: 44px;
   width: 45px;
   background-position: top center;
 }
-/* line 166, ../../app/assets/stylesheets/layout/body.scss */
+/* line 167, ../../app/assets/stylesheets/layout/body.scss */
 .body .rim-select .rim-reflection .buttons ul li a:hover {
   height: 44px;
   width: 45px;
   background-position: top center;
 }
-/* line 172, ../../app/assets/stylesheets/layout/body.scss */
+/* line 173, ../../app/assets/stylesheets/layout/body.scss */
 .body .rim-select .rim-reflection .buttons ul li a:active {
   height: 44px;
   width: 45px;
   background-position: top center;
 }
-/* line 187, ../../app/assets/stylesheets/layout/body.scss */
+/* line 188, ../../app/assets/stylesheets/layout/body.scss */
 .body .content-container.home {
-  background: url("bg-home-content.png") no-repeat top center transparent;
+  background-color: transparent;
+  background-image: url("/assets/bg-home-content.png");
+  background-position: top center;
+  background-repeat: no-repeat;
 }
-/* line 192, ../../app/assets/stylesheets/layout/body.scss */
+/* line 193, ../../app/assets/stylesheets/layout/body.scss */
 .body .content-container.interior {
-  background: url("bg-interior-content.png") no-repeat top center transparent;
+  background-color: transparent;
+  background-image: url("/assets/bg-interior-content.png");
+  background-position: top center;
+  background-repeat: no-repeat;
 }
-/* line 197, ../../app/assets/stylesheets/layout/body.scss */
+/* line 198, ../../app/assets/stylesheets/layout/body.scss */
 .body .content-container {
   margin: 0px auto;
   padding: 0px 0px 30px 0px;
   height: auto;
   width: 100%;
 }
-/* line 204, ../../app/assets/stylesheets/layout/body.scss */
+/* line 205, ../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content {
   margin: 0px auto;
   width: 980px;
   height: 420px;
 }
-/* line 210, ../../app/assets/stylesheets/layout/body.scss */
+/* line 211, ../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .left-column {
   margin: 0px 0px 0px -30px;
   width: 305px;
@@ -1245,24 +1327,30 @@ footer .spacer .copyright .links a {
   position: relative;
   float: left;
 }
-/* line 218, ../../app/assets/stylesheets/layout/body.scss */
+/* line 219, ../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .left-column .rim-preview {
   margin: 0px;
   height: 303px;
   width: 313px;
-  background: url("img-rim-preview.png") no-repeat top left transparent;
+  background-color: transparent;
+  background-image: url("/assets/img-rim-preview.png");
+  background-position: top left;
+  background-repeat: no-repeat;
 }
-/* line 226, ../../app/assets/stylesheets/layout/body.scss */
+/* line 227, ../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .left-column .try-it {
   margin: -60px 0px 0px 75px;
   padding: 54px 0px 0px 0px;
   width: 212px;
   height: 205px;
-  background: url("button-tryitout.png") no-repeat -120px -130px transparent;
+  background-color: transparent;
+  background-image: url("/assets/button-tryitout.png");
+  background-position: -120px -130px;
+  background-repeat: no-repeat;
   position: absolute;
   z-index: 1;
 }
-/* line 236, ../../app/assets/stylesheets/layout/body.scss */
+/* line 237, ../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .left-column .try-it a {
   margin: 0px 0px 0px 18px;
   width: 141px;
@@ -1270,37 +1358,43 @@ footer .spacer .copyright .links a {
   display: block;
   text-indent: -9000px;
 }
-/* line 247, ../../app/assets/stylesheets/layout/body.scss */
+/* line 248, ../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .right-column {
   width: 705px;
   height: auto;
   position: relative;
   float: right;
 }
-/* line 254, ../../app/assets/stylesheets/layout/body.scss */
+/* line 255, ../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .right-column .title-container {
   width: auto;
   height: auto;
   display: block;
 }
-/* line 260, ../../app/assets/stylesheets/layout/body.scss */
+/* line 261, ../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .right-column .title-container .title {
   margin: 20px 0px 0px -16px;
   height: 90px;
   width: 387px;
   float: left;
   text-indent: -9000px;
-  background: url("title-dubleds.png") no-repeat top left transparent;
+  background-color: transparent;
+  background-image: url("/assets/title-dubleds.png");
+  background-position: top left;
+  background-repeat: no-repeat;
 }
-/* line 270, ../../app/assets/stylesheets/layout/body.scss */
+/* line 271, ../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .right-column .title-container .usb-built-in {
   margin: 45px 0px 0px 0px;
   height: 38px;
   width: 133px;
-  background: url("img-usb-builtin.png") no-repeat top left transparent;
+  background-color: transparent;
+  background-image: url("/assets/img-usb-builtin.png");
+  background-position: top left;
+  background-repeat: no-repeat;
   float: right;
 }
-/* line 280, ../../app/assets/stylesheets/layout/body.scss */
+/* line 281, ../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .right-column .text-container {
   clear: both;
   text-shadow: 0px 1px 2px #333;
@@ -1311,35 +1405,38 @@ footer .spacer .copyright .links a {
   font-family: EurostileMed, Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
-/* line 292, ../../app/assets/stylesheets/layout/body.scss */
+/* line 293, ../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .right-column .text-container h4 {
   font-family: EurostileBld, Helvetica, Arial, sans-serif;
   font-size: 22px;
   padding: 10px 0px 20px 0px;
   font-weight: 400;
 }
-/* line 300, ../../app/assets/stylesheets/layout/body.scss */
+/* line 301, ../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .right-column .text-container p {
   font-size: 15px;
 }
-/* line 305, ../../app/assets/stylesheets/layout/body.scss */
+/* line 306, ../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .right-column .text-container ul {
   margin: 20px 0px 0px -7px;
   width: auto;
   height: auto;
   float: left;
 }
-/* line 312, ../../app/assets/stylesheets/layout/body.scss */
+/* line 313, ../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .right-column .text-container ul li {
   width: auto;
   height: 25px;
-  background: url("img-bullet-point.png") no-repeat 0px 0px transparent;
+  background-color: transparent;
+  background-image: url("/assets/img-bullet-point.png");
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
   list-style-type: none;
   margin: 0;
   padding: 2px 0px 0px 27px;
   vertical-align: middle;
 }
-/* line 324, ../../app/assets/stylesheets/layout/body.scss */
+/* line 325, ../../app/assets/stylesheets/layout/body.scss */
 .body .content-container .content .right-column .text-container ul + ul {
   padding: 0px 0px 0px 20px;
 }
@@ -1369,11 +1466,11 @@ footer .spacer .copyright .links a {
   text-transform: uppercase;
 }
 
-/* line 4, ../../app/assets/stylesheets/page-overrides.scss */
+/* line 4, ../../app/assets/stylesheets/global/page-overrides.scss */
 .Home .body {
   background: none;
 }
-/* line 10, ../../app/assets/stylesheets/page-overrides.scss */
+/* line 10, ../../app/assets/stylesheets/global/page-overrides.scss */
 .Home header .logo {
   margin: 120px auto;
   width: 708px;
@@ -1381,83 +1478,83 @@ footer .spacer .copyright .links a {
   background: url("dub-logo-home.png") no-repeat top left transparent;
 }
 
-/* line 22, ../../app/assets/stylesheets/page-overrides.scss */
+/* line 22, ../../app/assets/stylesheets/global/page-overrides.scss */
 .Generator .content-container {
   padding: 0px 0px 10px 0px;
 }
-/* line 26, ../../app/assets/stylesheets/page-overrides.scss */
+/* line 26, ../../app/assets/stylesheets/global/page-overrides.scss */
 .Generator .content-container.interior {
   background: none;
   height: 534px;
 }
 
-/* line 37, ../../app/assets/stylesheets/page-overrides.scss */
+/* line 37, ../../app/assets/stylesheets/global/page-overrides.scss */
 .Contact .content-container {
   padding: 0px 0px 10px 0px;
 }
-/* line 41, ../../app/assets/stylesheets/page-overrides.scss */
+/* line 41, ../../app/assets/stylesheets/global/page-overrides.scss */
 .Contact .content-container.interior {
   background: none;
   height: 532px;
 }
 
-/* line 52, ../../app/assets/stylesheets/page-overrides.scss */
+/* line 52, ../../app/assets/stylesheets/global/page-overrides.scss */
 .Registrations .content-container, .Sessions .content-container, .Passwords .content-container, .Confirmations .content-container, .Users .content-container, .Resources .content-container {
   padding: 0px 0px 10px 0px;
 }
-/* line 56, ../../app/assets/stylesheets/page-overrides.scss */
+/* line 56, ../../app/assets/stylesheets/global/page-overrides.scss */
 .Registrations .content-container.interior, .Sessions .content-container.interior, .Passwords .content-container.interior, .Confirmations .content-container.interior, .Users .content-container.interior, .Resources .content-container.interior {
   padding: 0px 0px 50px 0px;
   background: none;
   height: auto;
 }
 
-/* line 68, ../../app/assets/stylesheets/page-overrides.scss */
+/* line 68, ../../app/assets/stylesheets/global/page-overrides.scss */
 .Order .content-container {
   padding: 0px 0px 10px 0px;
 }
-/* line 72, ../../app/assets/stylesheets/page-overrides.scss */
+/* line 72, ../../app/assets/stylesheets/global/page-overrides.scss */
 .Order .content-container.interior {
   background: url("content-order.png") no-repeat top center transparent;
   height: 533px;
 }
 
-/* line 82, ../../app/assets/stylesheets/page-overrides.scss */
+/* line 82, ../../app/assets/stylesheets/global/page-overrides.scss */
 .Media .content-container {
   padding: 0px 0px 10px 0px;
 }
-/* line 86, ../../app/assets/stylesheets/page-overrides.scss */
+/* line 86, ../../app/assets/stylesheets/global/page-overrides.scss */
 .Media .content-container.interior {
   background: none;
   height: 532px;
 }
 
-/* line 97, ../../app/assets/stylesheets/page-overrides.scss */
+/* line 97, ../../app/assets/stylesheets/global/page-overrides.scss */
 .Technology .content-container {
   padding: 0px 0px 10px 0px;
 }
-/* line 101, ../../app/assets/stylesheets/page-overrides.scss */
+/* line 101, ../../app/assets/stylesheets/global/page-overrides.scss */
 .Technology .content-container.interior {
   background: none;
   height: 533px;
 }
 
-/* line 112, ../../app/assets/stylesheets/page-overrides.scss */
+/* line 112, ../../app/assets/stylesheets/global/page-overrides.scss */
 .Privacies .content-container {
   padding: 0px 0px 10px 0px;
 }
-/* line 116, ../../app/assets/stylesheets/page-overrides.scss */
+/* line 116, ../../app/assets/stylesheets/global/page-overrides.scss */
 .Privacies .content-container.interior {
   color: #ffffff;
   background: none;
   height: auto;
 }
 
-/* line 128, ../../app/assets/stylesheets/page-overrides.scss */
+/* line 128, ../../app/assets/stylesheets/global/page-overrides.scss */
 .Refunds .content-container {
   padding: 0px 0px 10px 0px;
 }
-/* line 132, ../../app/assets/stylesheets/page-overrides.scss */
+/* line 132, ../../app/assets/stylesheets/global/page-overrides.scss */
 .Refunds .content-container.interior {
   color: #ffffff;
   background: none;

@@ -1,13 +1,14 @@
 /**/
-@import "../variables";
+@import "../global/variables";
+@import "../global/mixins";
 
 .body
 {
     margin: 0px auto;
     padding: 15px 0px 0px 0px;
-	  height: auto;
-  	width: 100%;
-    background: url( 'bg-content.png' ) repeat-x top center transparent;
+    height: auto;
+    width: 100%;
+    @include background($path + '/bg-content.png', repeat-x, top center, transparent);
     overflow: hidden;
 
     .rim-container
@@ -30,7 +31,7 @@
             {
                 width: 107px;
                 height: 176px;
-                background: url( 'button-rim-arrows.png' ) no-repeat top left transparent;
+                @include background($path + '/button-rim-arrows.png', no-repeat, top left, transparent);
 
                 &.left
                 {
@@ -59,7 +60,7 @@
                     width: 107px;
                     height: 176px;
                     float: left;
-                  
+
                 }
             }
         }
@@ -97,22 +98,22 @@
         margin: 0px auto;
         height: auto;
         width: 100%;
-        background: url( 'bg-rim-select.png' ) repeat-x top left transparent;
+        @include background($path + '/bg-rim-select.png', repeat-x, top left, transparent);
 
         .rim-reflection
         {
             margin: 0px auto;
             width: 980px;
             height: 44px;
-            background: url( 'bg-rim-reflection.png' ) no-repeat top left transparent;
+            @include background($path + '/bg-rim-reflection.png', no-repeat, top left, transparent);
             display: block;
 
             .reflection
             {
                 height: 44px;
                 width: 98px;
-                background: url( 'img-arrow-reflection.png' ) no-repeat top left transparent;
-    
+                @include background($path + '/img-arrow-reflection.png', no-repeat, top left, transparent);
+
                 &.left {
                     margin: 0px 0px 0px 0px;
                     background-position: top left;
@@ -153,7 +154,7 @@
                         a {
                             height: 44px;
                             width: 45px;
-                            background: url( 'button-rim-select.png' ) no-repeat bottom center transparent;
+                            @include background($path + '/button-rim-select.png', no-repeat, bottom center, transparent);
                             float: left;
                             text-indent: -9000px;
 
@@ -185,12 +186,12 @@
     {
         &.home
         {
-            background: url( 'bg-home-content.png' ) no-repeat top center  transparent;
+          @include background($path + '/bg-home-content.png', no-repeat, top center, transparent);
         }
 
         &.interior
         {
-            background: url( 'bg-interior-content.png' ) no-repeat top center  transparent;
+          @include background($path + '/bg-interior-content.png', no-repeat, top center, transparent);
         }
     }
     .content-container
@@ -213,13 +214,13 @@
                 height: auto;
                 position: relative;
                 float: left;
-                
+
                 .rim-preview
                 {
                     margin: 0px;
                     height: 303px;
                     width: 313px;
-                    background: url( 'img-rim-preview.png' ) no-repeat top left transparent;
+                    @include background($path + '/img-rim-preview.png', no-repeat, top left, transparent);
                 }
 
                 .try-it
@@ -228,7 +229,7 @@
                     padding: 54px 0px 0px 0px;
                     width: 212px;
                     height: 205px;
-                    background: url( 'button-tryitout.png' ) no-repeat -120px -130px transparent;
+                    @include background($path + '/button-tryitout.png', no-repeat, -120px -130px, transparent);
                     position: absolute;
                     z-index: 1;
 
@@ -255,7 +256,7 @@
                     width: auto;
                     height: auto;
                     display: block;
-                    
+
                     .title
                     {
                         margin: 20px 0px 0px -16px;
@@ -263,7 +264,7 @@
                         width: 387px;
                         float: left;
                         text-indent: -9000px;
-                        background: url( 'title-dubleds.png' ) no-repeat top left transparent;
+                        @include background($path + '/title-dubleds.png', no-repeat, top left, transparent);
                     }
 
                     .usb-built-in
@@ -271,7 +272,7 @@
                         margin: 45px 0px 0px 0px;
                         height: 38px;
                         width: 133px;
-                        background: url( 'img-usb-builtin.png' ) no-repeat top left transparent;
+                        @include background($path + '/img-usb-builtin.png', no-repeat, top left, transparent);
                         float: right;
                     }
                 }
@@ -284,7 +285,7 @@
                     line-height: 25px;
                     color: #fafafa;
                     letter-spacing: 1.0;
-                    
+
                     font-family: EurostileMed, Helvetica, Arial, sans-serif;
                     font-weight: 400;
 
@@ -307,12 +308,12 @@
                         width: auto;
                         height: auto;
                         float: left;
-                        
+
                         li
                         {
                             width: auto;
                             height: 25px;
-                            background: url('img-bullet-point.png') no-repeat 0px 0px transparent;
+                            @include background($path + '/img-bullet-point.png', no-repeat, 0px 0px, transparent);
                             list-style-type: none;
                             margin: 0;
                             padding: 2px 0px 0px 27px;

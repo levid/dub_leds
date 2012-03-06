@@ -1,0 +1,187 @@
+/* Include Mixins & CSS3 Stuff */
+/* line 6, ../../../app/assets/stylesheets/layout/nav.scss */
+nav.user {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 55px;
+  background-color: transparent;
+  background-image: url("/assets/bg-header-bar.png");
+  background-position: top center;
+  background-repeat: repeat-x;
+  display: block;
+  position: fixed;
+  z-index: 998;
+}
+/* line 17, ../../../app/assets/stylesheets/layout/nav.scss */
+nav.user ul {
+  margin: 0px auto;
+  width: auto;
+  height: inherit;
+  display: none;
+}
+/* line 24, ../../../app/assets/stylesheets/layout/nav.scss */
+nav.user ul span.line {
+  margin: 0px 5px 0px 0px;
+  padding: 0px 0px 0px 4px;
+  width: 1px;
+  height: auto;
+  border-right: 1px solid #313131;
+}
+/* line 33, ../../../app/assets/stylesheets/layout/nav.scss */
+nav.user ul li {
+  margin: 0px;
+  padding: 21px 0px 0px 0px;
+  list-style-type: none;
+  width: auto;
+  height: 55px;
+  float: left;
+  color: #7F7F7F;
+  font-family: EurostileMed, Helvetica, Arial, sans-serif;
+  letter-spacing: 1.0;
+  font-weight: 400;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+/* line 49, ../../../app/assets/stylesheets/layout/nav.scss */
+nav.user ul li.divline {
+  padding: 0px 18px 0px 18px;
+  width: 2px;
+  height: 74px;
+  float: left;
+  background-color: transparent;
+  background-image: url("/assets/bg-header-divline.png");
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+/* line 58, ../../../app/assets/stylesheets/layout/nav.scss */
+nav.user ul li a {
+  text-transform: uppercase;
+  color: #7F7F7F;
+  font-family: EurostileMed, Helvetica, Arial, sans-serif;
+  letter-spacing: 1.0;
+  font-weight: 400;
+  font-size: 12px;
+}
+/* line 67, ../../../app/assets/stylesheets/layout/nav.scss */
+nav.user ul li a.my_account {
+  margin: -5px 0px 0px 0px;
+  padding: 7px 0px 0px 13px;
+  width: 73px;
+  height: 17px;
+  color: #ababab;
+  font-size: 9px;
+  background-color: transparent;
+  background-image: url("/assets/button-my-account.png");
+  background-position: top center;
+  background-repeat: no-repeat;
+  display: block;
+}
+/* line 79, ../../../app/assets/stylesheets/layout/nav.scss */
+nav.user ul li a.my_account:hover, nav.user ul li a.my_account.active {
+  background-position: center bottom;
+  color: #75e3f0;
+}
+/* line 88, ../../../app/assets/stylesheets/layout/nav.scss */
+nav.user ul li a.log_out, nav.user ul li a.sign_in, nav.user ul li a.sign_up {
+  margin: -5px 0px 0px 5px;
+  padding: 7px 0px 0px 14px;
+  width: 50px;
+  height: 17px;
+  color: #ababab;
+  font-size: 9px;
+  background-color: transparent;
+  background-image: url("/assets/button-log-out.png");
+  background-position: top center;
+  background-repeat: no-repeat;
+  display: block;
+}
+/* line 100, ../../../app/assets/stylesheets/layout/nav.scss */
+nav.user ul li a.log_out:hover, nav.user ul li a.log_out.active, nav.user ul li a.sign_in:hover, nav.user ul li a.sign_in.active, nav.user ul li a.sign_up:hover, nav.user ul li a.sign_up.active {
+  background-position: center bottom;
+  color: #75e3f0;
+}
+
+/* line 111, ../../../app/assets/stylesheets/layout/nav.scss */
+nav.main {
+  margin: 55px 0px 0px 0px;
+  padding: 0px;
+  width: 100%;
+  height: 65px;
+  background-color: transparent;
+  background-image: url("/assets/bg-header-nav.png");
+  background-position: top center;
+  background-repeat: repeat-x;
+  display: block;
+  position: fixed;
+  z-index: 999;
+}
+/* line 122, ../../../app/assets/stylesheets/layout/nav.scss */
+nav.main ul.topnav {
+  margin: 0px auto;
+  width: 600px;
+  height: inherit;
+  display: none;
+}
+/* line 129, ../../../app/assets/stylesheets/layout/nav.scss */
+nav.main ul.topnav li {
+  margin: 13px 0px 0px 0px;
+  height: 30px;
+  width: auto;
+  list-style: none;
+  float: left;
+  overflow: hidden;
+}
+/* line 138, ../../../app/assets/stylesheets/layout/nav.scss */
+nav.main ul.topnav li a, nav.main ul.topnav li span {
+  height: 40px;
+  width: auto;
+  font-family: EurostileMed, Helvetica, Arial, sans-serif;
+  letter-spacing: 1.0;
+  font-size: 15px;
+  font-weight: 200;
+  line-height: 20px;
+  color: #fafafa;
+  clear: both;
+  float: left;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+/* line 153, ../../../app/assets/stylesheets/layout/nav.scss */
+nav.main ul.topnav li a:hover, nav.main ul.topnav li span:hover {
+  color: #59b7ff;
+  text-decoration: none;
+}
+/* line 159, ../../../app/assets/stylesheets/layout/nav.scss */
+nav.main ul.topnav li a.active, nav.main ul.topnav li span.active {
+  color: #59b7ff;
+}
+/* line 164, ../../../app/assets/stylesheets/layout/nav.scss */
+nav.main ul.topnav li a {
+  color: #59b7ff;
+  background-position: left bottom;
+}
+/* line 168, ../../../app/assets/stylesheets/layout/nav.scss */
+nav.main ul.topnav li span {
+  background-position: left top;
+}
+/* line 173, ../../../app/assets/stylesheets/layout/nav.scss */
+nav.main ul.topnav li + li {
+  padding: 0px 0px 0px 32px;
+}
+/* line 177, ../../../app/assets/stylesheets/layout/nav.scss */
+nav.main ul.topnav li:last-child {
+  padding: 0 0 0 25px;
+}
+/* line 180, ../../../app/assets/stylesheets/layout/nav.scss */
+nav.main .glow {
+  margin: -41px 0px 0px 0px;
+  width: 158px;
+  height: 23px;
+  background-color: transparent;
+  background-image: url("/assets/header-link-glow.png");
+  background-position: top left;
+  background-repeat: no-repeat;
+  position: relative;
+  display: none;
+}
