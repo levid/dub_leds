@@ -97,15 +97,13 @@ Nav = class extends UI
       $(this).find('span').addClass(className)
 
     $('.topnav li').hover ->
-      $(this).find('span').stop().animate(
-        { marginTop: '-40' },
-        { duration: 250, easing: 'easeOutQuad' }
-      )
+      $(this).find('span').stop().animate
+        marginTop: '-40'
+        duration: 450, easing: 'easeOutQuad'
     , ->
-      $(this).find('span').stop().animate(
-        { marginTop: "0" },
-        { duration: 250, easing: 'easeOutQuad' }
-      )
+      $(this).find('span').stop().animate
+        marginTop: "0"
+        duration: 450, easing: 'easeOutQuad'
 
 module 'Newsletter'
 
