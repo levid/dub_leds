@@ -6,6 +6,7 @@ class RimSelect extends $DUB.UI
     @rimId = @options
     this.initRimSelect()
     this.startListeners()
+    this
 
   initRimSelect: () ->
     if @rimId?
