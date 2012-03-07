@@ -18,7 +18,7 @@
     %br/
     = link_to 'New Privacy Policy', new_privacy_path
 
-- if @privacies.first.nil?
+- if !@privacies.first.nil?
   .text-container
     %h4= "Privacy Policy - #{@privacies.first.title}"
     = @privacies.first.content.html_safe
