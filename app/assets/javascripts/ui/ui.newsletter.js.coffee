@@ -4,8 +4,8 @@ class Newsletter extends $DUB.UI
     this
 
   initNewsletter: () ->
-    emailAddress = $('email-address')
-    emailValue = emailAddress.value
+    emailAddress  = $('email-address')
+    emailValue    = emailAddress.value
 
     $('input[type="text"]').focus ->
       if (this.value == this.defaultValue)

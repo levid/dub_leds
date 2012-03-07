@@ -10,12 +10,12 @@ class Technology extends $DUB
       @title = $(e.target).attr('title')
 
       initTechOverlay = (data) ->
-        self = this
+        self                 = this
         @overlayDiv          = $("#tech-overlay")
         @overlayContainerDiv = $('#tech-overlay .overlay-container')
         @closeButton         = $('.close-button a')
-
-        @overlayContent = data[0]
+        @overlayContent      = data[0]
+        
         @overlayContainerDiv.find('.middle p').text(@overlayContent.description)
         @overlayContainerDiv.find('.title').text(@overlayContent.title)
         @overlayContainerDiv.find('.sub-title h4').text(@overlayContent.sub_title)

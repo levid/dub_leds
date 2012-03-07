@@ -19,7 +19,7 @@
   background-color: transparent;
   background-image: url("/assets/bg-overlay.png");
   background-position: top left;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
 }
 /* line 29, ../../../app/assets/stylesheets/sections/technology.scss */
 .content-technology #tech-overlay .overlay-container {
@@ -105,7 +105,7 @@
   background-color: transparent;
   background-image: url("/assets/bg-tech-overlay-middle.png");
   background-position: top left;
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   display: block;
 }
 /* line 117, ../../../app/assets/stylesheets/sections/technology.scss */

@@ -11,7 +11,6 @@ class Nav extends $DUB.UI
 
   initMainNav: () ->
     $('.topnav li').prepend('<span></span>')
-
     $('.topnav li').each ->
       linkText = $(this).find('a').html()
       className = $(this).find('a').attr('class')

@@ -23,7 +23,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      @include background($path + '/bg-overlay.png', no-repeat, top left, transparent);
+      @include background($path + '/bg-overlay.png', repeat, top left, transparent);
 
       .overlay-container
       {
@@ -110,7 +110,7 @@
         {
           width: 724px;
           height: auto;
-          @include background($path + '/bg-tech-overlay-middle.png', no-repeat, top left, transparent);
+          @include background($path + '/bg-tech-overlay-middle.png', repeat-y, top left, transparent);
           display: block;
 
           p

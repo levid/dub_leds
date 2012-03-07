@@ -1,6 +1,3 @@
-module = (name) ->
-  window[name] = window[name] or {}
-
 class UI extends $DUB
   constructor: (@options) ->
     this
