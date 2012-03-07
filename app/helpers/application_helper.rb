@@ -19,4 +19,8 @@ module ApplicationHelper
     args.collect { |arg| arg.to_json.tr '"', '\'' }.join(', ')
   end
 
+  def summarize(body, length)
+    return simple_format = body[0..length]+'...'
+  end
+
 end

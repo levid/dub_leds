@@ -1,91 +1,25 @@
-.text-container
-  %h4 Refund Policy  
-  .cnt
-    %p{:style => "margin-top:0px;"}
-      %b.boldTxt Important information for corporate / business sellers regarding returns
-    %p{:style => ""} Corporate / business sellers may be obliged to accept returns in certain circumstances under Australian law, as described below.  
-    %p{:style => "margin-bottom: 0px;"} Under the Trade Practices Act 1974 and state fair trading legislation, your return policy must allow a refund to a buyer if the consumer goods you sold:
-    %ul{:style => "margin-top: 6px;"}
-      %li.unorderedList
-        %div{:style => "padding-left:4px;"}
-          %p{:style => ""} are or become defective through no fault of the buyer;
-      %li.unorderedList
-        %div{:style => "padding-left:4px;"}
-          %p{:style => ""} are not for the purpose you stated or the purpose the buyer made known to you;
-      %li.unorderedList
-        %div{:style => "padding-left:4px;"}
-          %p{:style => ""} don’t match your description or sample; or
-      %li.unorderedList
-        %div{:style => "padding-left:4px;"}
-          %p{:style => ""} have defects that were not obvious or that you did not bring to the buyer's attention.
-    %p{:style => ""} When a product does not meet the above requirements, the buyer can ask for a refund within a reasonable period of time. There is no set time limit for a buyer to obtain a refund. You can ask a buyer for proof of purchase. You can also ask them to demonstrate that any problem with the goods was not their fault.
-    %p{:style => ""}
-      %b.boldTxt Note:
-      Even though eBay provides the ability for sellers to state a time limit in their return policy, business sellers should
-      %b.boldTxt not
-      do so as applicable legislation overrides any conditions you may state in your listing. Furthermore, you could be seen as misleading buyers about their rights. For example, if your policy states ' No refunds after 7 days’ this may mislead consumers about their rights under applicable legislation.
-    %p{:style => ""} If the buyer prefers, you may arrange for goods to be exchanged or repaired, or offer credit (at your discretion).
-    %p{:style => ""} You are not required to offer a refund if the buyer simply changes their mind. You should therefore encourage buyers to choose carefully.
-    %p{:style => ""} For more information about warranties and refunds contact the ACCC Infocentre on 1300 302 502 or visit the ACCC website at www.accc.gov.au. 
-    %p{:style => ""} The above information is general in nature and is not intended to constitute legal advice.  For advice specific to your circumstances, eBay recommends that you consult with a legal advisor.
-    %p{:style => ""}
-      %b.boldTxt Important information for buyers: legal rights to obtain refunds
-    %p{:style => ""} As described above, when consumer goods are purchased  from sellers carrying on a business, the buyer has a legal right to return the goods to the seller and obtain a refund if the goods are either faulty, not fit for their purpose (don't do what they are supposed to do), or do not match the seller's description or sample. To obtain a refund the buyer should return the goods within a reasonable time and not dispose of, lose, destroy or damage the goods. 
-    %p{:style => ""}
-      The
-      %a{:href => "www.accc.gov.au", :target => "_blank"} Australian Competition and Consumer Commission website
-      = succeed "contains" do
-        %a{:href => "http://www.accc.gov.au"}
-      more information on rights to refunds, under the section headed “Publications”.
-    %p{:style => ""}
-      %b.boldTxt A clear return policy can reassure buyers
-    %p{:style => ""} Even if you are not required by law to provide returns to your buyers, there are other good reasons for doing so. If you have a clear return policy, chances are you're more successful than other sellers on eBay. eBay’s research shows that difficulty in returning items is the most common shopping barrier for buyers. So if you clearly spell out return policies in your listings you'll have an edge on the competition.
-    %p{:style => ""} eBay’s research also shows that only a very small percentage of sold items are actually returned.
-    %p{:style => "margin-bottom: 0px;"}
-      %b.boldTxt Return policy options to consider:
-    %ul{:style => "margin-top: 6px;"}
-      %li.unorderedList
-        %div{:style => "padding-left:4px;"}
-          %p{:style => ""}
-            %b.boldTxt> Refund
-            (for example, returns accepted for full money back or store credit if goods are faulty).
-      %li.unorderedList
-        %div{:style => "padding-left:4px;"}
-          %p{:style => ""}
-            %b.boldTxt> 100% satisfaction guaranteed
-            (for example, returns accepted, no questions asked. Make sure you are prepared to do this).
-      %li.unorderedList
-        %div{:style => "padding-left:4px;"}
-          %p{:style => ""}
-            %b.boldTxt> Time limit
-            (for example, returns accepted within a reasonable time after the item is delivered).
-    %p{:style => ""}
-      %b.boldTxt Mention the details up front
-    %p{:style => "margin-bottom: 0px;"} Consider including details like the following to make your return policy clear and complete:
-    %ul{:style => "margin-top: 6px;"}
-      %li.unorderedList
-        %div{:style => "padding-left:4px;"}
-          %p{:style => ""}
-            %b.boldTxt> Postage and handling charges:
-            Clearly state who would pay for return postage and handling, you or the buyer and if you will refund the original postage charges.
-      %li.unorderedList
-        %div{:style => "padding-left:4px;"}
-          %p{:style => ""}
-            %b.boldTxt> Item condition:
-            Clearly state the condition of the returned item that would be acceptable to you, for example, "unopened box" or "opened box with all original materials."
-    %p{:style => ""}
-      %b.boldTxt How to specify your return policy
-    %p{:style => "margin-bottom: 0px;"} In the Additional Information section of the Sell Your Item form, take the following steps:
-    %ul{:style => "margin-top: 6px;"}
-      %li.unorderedList
-        %div{:style => "padding-left:4px;"}
-          %p{:style => ""} Select "Returns accepted"
-      %li.unorderedList
-        %div{:style => "padding-left:4px;"}
-          %p{:style => ""} Select the time limit within which the buyer must return the item to you.
-      %li.unorderedList
-        %div{:style => "padding-left:4px;"}
-          %p{:style => ""} Select the type of refund you will give if the item is returned.
-      %li.unorderedList
-        %div{:style => "padding-left:4px;"}
-          %p{:style => ""} Enter all other details about your return policy in the Return Policy Details text box.
+- if user_signed_in?
+  .text-container
+    %h4 All Refund Policies
+    %table
+      %tr
+        %th Type
+        %th Content
+        %th
+        %th
+        %th
+      - @refunds.each do |refund|
+        %tr
+          %td= refund.title
+          %td= summarize(refund.content, 200).html_safe
+          %td= link_to 'Show', refund
+          %td= link_to 'Edit', edit_refund_path(refund)
+          %td= link_to 'Destroy', refund, confirm: 'Are you sure?', method: :delete
+    %br/
+    = link_to 'New Refund Policy', new_refund_path
+
+-if !@refunds.first.nil?
+  .text-container
+    %h4= "Refund Policy - #{@refunds.first.title}"
+    .cnt
+      = @refunds.first.content.html_safe

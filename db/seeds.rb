@@ -28,7 +28,7 @@ for i in 1..7
 
    @medium_image = ImageUploader.new(u, :medium_image)
    @medium_image.store!(File.open("#{Rails.root}/app/assets/images/img-rim-medium#{i}.png"))
-   
+
    @small_image = ImageUploader.new(u, :small_image)
    @small_image.store!(File.open("#{Rails.root}/app/assets/images/img-rim-small#{i}.png"))
 

@@ -1,4 +1,11 @@
-%p#notice= notice
-= link_to 'Edit', edit_refund_path(@refund)
-|
-\#{link_to 'Back', refunds_path}
+.text-container
+  %p#notice= notice
+  %p
+    %b title:
+    = @refund.title
+  %p
+    %b Content:
+    = @refund.content
+  = link_to 'Edit', edit_refund_path(@refund)
+  |
+  \#{link_to 'Back', refunds_path}

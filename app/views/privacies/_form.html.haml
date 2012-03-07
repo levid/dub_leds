@@ -7,5 +7,13 @@
       %ul
         - @privacy.errors.full_messages.each do |msg|
           %li= msg
+  .field
+    = f.label :title
+    %br/
+    = f.text_field :title
+  .field
+    = f.label :content
+    %br/
+    = f.text_area :content
   .actions
     = f.submit

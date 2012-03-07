@@ -1,4 +1,11 @@
-%p#notice= notice
-= link_to 'Edit', edit_privacy_path(@privacy)
-|
-\#{link_to 'Back', privacies_path}
+.text-container
+  %p#notice= notice
+  %p
+    %b title:
+    = @privacy.title
+  %p
+    %b Content:
+    = @privacy.content
+  = link_to 'Edit', edit_privacy_path(@privacy)
+  |
+  \#{link_to 'Back', privacies_path}

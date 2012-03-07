@@ -3,6 +3,8 @@ DubLeds::Application.routes.draw do
   resources :refunds
   resources :privacies
   resources :resources
+  resources :products, :only => [ :index ]
+  resource :shopping_cart
 
   # Routes for Devise
   devise_for :users, controllers: { :omniauth_callbacks => "users/omniauth_callbacks"} do
@@ -54,8 +56,8 @@ DubLeds::Application.routes.draw do
   post '/contact/create'     => 'contact#create',   :as => :contact_create
   delete '/contact:id'       => 'contact#destroy',  :as => :contact_destroy
 
-  get '/privacy_policy'      => 'privacies#index',  :as => :privacy
-  get '/refund_policy'       => 'refunds#index',    :as => :refund
+  get '/privacy_policy'      => 'privacies#index',  :as => :privacy_policy
+  get '/refund_policy'       => 'refunds#index',    :as => :refund_policy
 
   get '/generator'           => 'generator#index',  :as => :generator
   get '/order'               => 'order#index',      :as => :order

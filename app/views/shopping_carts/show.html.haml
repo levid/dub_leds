@@ -1,0 +1,12 @@
+%h1 Shopping Cart
+= render :partial => 'shopping_cart_item', :collection => @shopping_cart.shopping_cart_items
+%div
+  %div
+    %b SubTotal:
+    = number_to_currency @shopping_cart.subtotal
+  %div
+    %b Taxes:
+    = number_to_currency @shopping_cart.taxes
+  %div
+    %b Total:
+    = number_to_currency @shopping_cart.total
