@@ -11,14 +11,14 @@
       - @privacies.each do |privacy|
         %tr
           %td= privacy.title
-          %td= summarize(privacy.content, 200).html_safe unless privacy.nil?
+          %td= summarize(privacy.content, 200).html_safe unless privacy.content.nil?
           %td= link_to 'Show', privacy
           %td= link_to 'Edit', edit_privacy_path(privacy)
           %td= link_to 'Destroy', privacy, confirm: 'Are you sure?', method: :delete
     %br/
     = link_to 'New Privacy Policy', new_privacy_path
 
-- if !@privacies.first.nil?
+- if @privacies.first.nil?
   .text-container
     %h4= "Privacy Policy - #{@privacies.first.title}"
     = @privacies.first.content.html_safe

@@ -70,12 +70,6 @@ ActiveRecord::Schema.define(:version => 20120307015211) do
     t.datetime "updated_at"
   end
 
-  create_table "roles", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "shopping_cart_items", :force => true do |t|
     t.integer  "owner_id"
     t.string   "owner_type"

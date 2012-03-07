@@ -11,14 +11,14 @@
       - @refunds.each do |refund|
         %tr
           %td= refund.title
-          %td= summarize(refund.content, 200).html_safe
+          %td= summarize(refund.content, 200).html_safe unless refund.content.nil?
           %td= link_to 'Show', refund
           %td= link_to 'Edit', edit_refund_path(refund)
           %td= link_to 'Destroy', refund, confirm: 'Are you sure?', method: :delete
     %br/
     = link_to 'New Refund Policy', new_refund_path
 
--if !@refunds.first.nil?
+-if @refunds.first.nil?
   .text-container
     %h4= "Refund Policy - #{@refunds.first.title}"
     .cnt
