@@ -11,7 +11,7 @@
       - @privacies.each do |privacy|
         %tr
           %td= privacy.title
-          %td= summarize(privacy.content, 200).html_safe
+          %td= summarize(privacy.content, 200).html_safe unless privacy.nil?
           %td= link_to 'Show', privacy
           %td= link_to 'Edit', edit_privacy_path(privacy)
           %td= link_to 'Destroy', privacy, confirm: 'Are you sure?', method: :delete
