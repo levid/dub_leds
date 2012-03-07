@@ -17,3 +17,11 @@ $path           : $base_path + "/assets";
         repeat: $repeat;
     }
 }
+
+@mixin font-face($fontpath, $font-family: EurostileMed, $font-weight: 400) {
+    @font-face {
+        font-family: $font-family;
+        src: url($fontpath);
+        font-weight:$font-weight;
+    }
+}
