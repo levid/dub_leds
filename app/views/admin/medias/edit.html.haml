@@ -1,0 +1,6 @@
+.text-container
+  %h1 Editing media
+  = render 'edit_form'
+  = link_to 'Show', admin_media_path(@media)
+  |
+  \#{link_to 'Back', admin_medias_path}

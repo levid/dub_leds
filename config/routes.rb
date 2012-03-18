@@ -1,8 +1,9 @@
 DubLeds::Application.routes.draw do
 
+  resources :medias
+
   resources :refunds
   resources :privacies
-  resources :resources
   resources :products, :only => [ :index ]
   resource :shopping_cart
 
@@ -26,27 +27,31 @@ DubLeds::Application.routes.draw do
   #   get '/users/auth/:provider' => 'users/omniauth_callbacks#passthru'
   # match '/registrations' => 'registrations#email'
 
-  match '/rims/image_cache'  => 'rims#image_cache', :constraints => { :cache_id => /\d{8}-\d{4}-\d{5}-\d{4}/, :filename => /[a-zA-Z0-9_ ]+\.(jpg|jpeg|png|gif){1}/i }
-  match "/tmp/uploads/*path" => "gridfs#serve"
+  match '/rims/image_cache'   => 'rims#image_cache', :constraints => { :cache_id => /\d{8}-\d{4}-\d{5}-\d{4}/, :filename => /[a-zA-Z0-9_ ]+\.(jpg|jpeg|png|gif){1}/i }
+  match "/tmp/uploads/*path"  => "gridfs#serve"
 
   # match '/signin' => 'sessions#new', :as => :signin
   #
-  match '/users/sign_out'    => 'sessions#destroy', :as => :signout
+  match '/users/sign_out'     => 'sessions#destroy', :as => :signout
 
   post '/cookie' => 'cookies#create'
   #
   #   match '/auth/failure' => 'sessions#failure'
+  
+  # Administration Routes
+  namespace :admin do
+    resources :rims, :resources, :medias, :newsletters
+  end
 
   get '/home'                => 'home#index',       :as => :home
   get '/admin'               => 'admin#index',      :as => :admin
-
-  get '/rims'                => 'rims#index',       :as => :rim
-  get '/rims/new'            => 'rims#new',         :as => :rim_new
-  get '/rims/:id'            => 'rims#show',        :as => :rim_show
-  get '/rims/:id/edit'       => 'rims#edit',        :as => :rim_edit
-  put '/rims/:id'            => 'rims#update',      :as => :rim_update
-  post '/rims/create'        => 'rims#create',      :as => :rim_create
-  delete '/rims/:id'         => 'rims#destroy',     :as => :rim_destroy
+  get '/media'               => 'media#index',    :as => :media
+  #   get '/media/new'           => 'medias#new',      :as => :media_new
+  #   get '/media/:id'           => 'medias#show',     :as => :media_show
+  #   get '/media/:id/edit'      => 'medias#edit',     :as => :media_edit
+  #   put '/media/:id'           => 'medias#update',   :as => :media_update
+  #   post '/media/create'       => 'medias#create',   :as => :media_create
+  #   delete '/media/:id'        => 'medias#destroy',  :as => :media_destroy
 
   get '/contact'             => 'contact#index',    :as => :contact
   get '/contact/new'         => 'contact#new',      :as => :contact_new
@@ -61,7 +66,6 @@ DubLeds::Application.routes.draw do
 
   get '/generator'           => 'generator#index',  :as => :generator
   get '/order'               => 'order#index',      :as => :order
-  get '/media'               => 'media#index',      :as => :media
   get '/technology'          => 'technology#index', :as => :technology
 
   get '/technology/:title'   => 'technology#show',   :as => :technology_show

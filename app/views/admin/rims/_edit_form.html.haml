@@ -1,4 +1,4 @@
-= form_for @rim, :url => rim_update_path(:id => @rim.id), :method => 'put', :html => {:multipart => true} do |f|
+= form_for @rim, :url => admin_rim_path(:id => @rim.id), :method => 'put', :html => {:multipart => true} do |f|
   -# -if @rim.errors.any?
   -#     #error_explanation
   -#       %h2= "#{pluralize(@rim.errors.count, "error")} prohibited this rim from being saved:"

@@ -15,8 +15,8 @@
         %td= resource.title
         %td= resource.sub_title
         %td= resource.description
-        %td= link_to 'Show', resource
-        %td= link_to 'Edit', edit_resource_path(resource)
-        %td= link_to 'Destroy', resource, confirm: 'Are you sure?', method: :delete
+        %td= link_to 'Show', admin_resource_path(resource)
+        %td= link_to 'Edit', edit_admin_resource_path(resource)
+        %td= link_to 'Destroy', admin_resource_path(resource), confirm: 'Are you sure?', method: :delete
   %br/
-  = link_to 'New Resource', new_resource_path
+  = link_to 'New Resource', new_admin_resource_path

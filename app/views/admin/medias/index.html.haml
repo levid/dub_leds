@@ -1,0 +1,18 @@
+.text-container
+  %h1 Listing media
+  %table
+    %tr
+      %th Title
+      %th Video url
+      %th
+      %th
+      %th
+    - @media.each do |media|
+      %tr
+        %td= media.title
+        %td= media.video_url
+        %td= link_to 'Show', admin_media_path(media)
+        %td= link_to 'Edit', edit_admin_media_path(media)
+        %td= link_to 'Destroy', admin_media_path(media), confirm: 'Are you sure?', method: :delete
+  %br/
+  = link_to 'New Video', new_admin_media_path

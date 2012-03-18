@@ -1,0 +1,16 @@
+.text-container
+  %h1 Listing newsletters
+  %table
+    %tr
+      %th Email
+      %th
+      %th
+      %th
+    - @newsletters.each do |newsletter|
+      %tr
+        %td= newsletter.email
+        %td= link_to 'Show', admin_newsletter_path(newsletter)
+        %td= link_to 'Edit', edit_admin_newsletter_path(newsletter)
+        %td= link_to 'Destroy', admin_newsletter_path(newsletter), confirm: 'Are you sure?', method: :delete
+  %br/
+  = link_to 'New Newsletter', new_admin_newsletter_path

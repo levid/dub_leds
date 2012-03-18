@@ -1,0 +1,35 @@
+.text-container
+  %p#notice= notice
+  %p
+    %b Title:
+    = @rim.title
+  %p
+    %b Description:
+    = @rim.description
+  %p
+    %b Color:
+    = @rim.color
+  %p
+    %b Size:
+    = @rim.size
+  %p
+    %b Fitting:
+    = @rim.fitting
+  
+  - if @rim.image.url.present?
+    %p
+      %b Image:
+      = @rim.image
+      = image_tag(@rim.image) 
+    %p
+      %b Medium Image:
+      = @rim.medium_image
+      = image_tag(@rim.medium_image.url)
+    %p
+      %b Small Image:
+      = @rim.small_image
+      = image_tag(@rim.small_image.url)
+
+  = link_to 'Edit', edit_admin_rim_path(@rim)
+  \|
+  = link_to 'Back', admin_rims_path
