@@ -22,5 +22,9 @@ module ApplicationHelper
   def summarize(body, length)
     return simple_format = body[0..length]+'...'
   end
+  
+  def admin?
+    controller.class.name.split("::").first=="Admin"
+  end
 
 end

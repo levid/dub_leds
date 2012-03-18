@@ -1,17 +1,17 @@
 /* line 9, ../../../app/assets/stylesheets/sections/media.scss */
-.content-media {
+.content-medias {
   margin: 0px auto;
   width: 980px;
   height: auto;
 }
 /* line 15, ../../../app/assets/stylesheets/sections/media.scss */
-.content-media .title-container {
+.content-medias .title-container {
   width: auto;
   height: auto;
   display: block;
 }
 /* line 21, ../../../app/assets/stylesheets/sections/media.scss */
-.content-media .title-container .title {
+.content-medias .title-container .title {
   margin: 20px 0px 0px -16px;
   height: 73px;
   width: 188px;
@@ -23,50 +23,50 @@
   background-repeat: no-repeat;
 }
 /* line 32, ../../../app/assets/stylesheets/sections/media.scss */
-.content-media .text-container {
+.content-medias .text-container {
   clear: both;
   text-shadow: 0px 1px 2px #333;
   color: #fafafa;
 }
 /* line 38, ../../../app/assets/stylesheets/sections/media.scss */
-.content-media .text-container h4 {
+.content-medias .text-container h4 {
   font-size: 22px;
   padding: 0px 0px 10px 0px;
   font-family: EurostileMed, Helvetica, Arial, sans-serif;
   font-weight: 700;
 }
 /* line 47, ../../../app/assets/stylesheets/sections/media.scss */
-.content-media .media-content {
+.content-medias .media-content {
   clear: both;
   padding: 17px 0px 0px 0px;
 }
 /* line 52, ../../../app/assets/stylesheets/sections/media.scss */
-.content-media .media-content .left-column {
+.content-medias .media-content .left-column {
   width: 745px;
   height: auto;
   float: left;
 }
 /* line 58, ../../../app/assets/stylesheets/sections/media.scss */
-.content-media .media-content .left-column iframe {
+.content-medias .media-content .left-column iframe {
   position: relative;
   float: left;
   border: 1px solid #2d2d2d;
 }
 /* line 66, ../../../app/assets/stylesheets/sections/media.scss */
-.content-media .media-content .right-column {
+.content-medias .media-content .right-column {
   width: 221px;
   height: auto;
   float: right;
 }
 /* line 72, ../../../app/assets/stylesheets/sections/media.scss */
-.content-media .media-content .right-column ul {
+.content-medias .media-content .right-column ul {
   margin: 0px;
   padding: 0px;
   width: auto;
   height: auto;
 }
 /* line 79, ../../../app/assets/stylesheets/sections/media.scss */
-.content-media .media-content .right-column ul li {
+.content-medias .media-content .right-column ul li {
   padding: 0px 0px 12px 0px;
   list-style-type: none;
 }

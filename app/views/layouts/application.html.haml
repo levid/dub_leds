@@ -14,6 +14,4 @@
 
       = yield
       = render 'layouts/footer'
-  / = debug(params) if Rails.env.development?
-  = javascript_tag :defer => 'defer' do
-    #{@controller_js_args.present? ? "$DUB.initPage('#{controller.class.to_s.split('Controller').first}', #{parse_js_args(@controller_js_args)});" : "$DUB.initPage('#{controller.class.to_s.split('Controller').first}');"}
+

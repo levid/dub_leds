@@ -24,3 +24,11 @@
       .links
         = link_to 'Privacy Policy', privacy_policy_path, :class => "fade"
         = link_to 'Refund Policy', refund_policy_path, :class => "fade"
+        
+/ = controller_path.split('/').first
+/ = debug(params) if Rails.env.development?
+= javascript_tag :defer => 'defer' do
+  -if admin?
+    #{@controller_js_args.present? ? "$DUB.initPage('#{controller.class.to_s.split('Controller').first.split('::').second}Admin', #{parse_js_args(@controller_js_args)});" : "$DUB.initPage('#{controller.class.to_s.split('Controller').first.split('::').second}Admin');"}
+  -else
+    #{@controller_js_args.present? ? "$DUB.initPage('#{controller.class.to_s.split('Controller').first}', #{parse_js_args(@controller_js_args)});" : "$DUB.initPage('#{controller.class.to_s.split('Controller').first}');"}

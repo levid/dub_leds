@@ -52,41 +52,51 @@
 }
 
 /* line 82, ../../../app/assets/stylesheets/global/page-overrides.scss */
-.Media .content-container {
+.Medias .content-container {
   padding: 0px 0px 10px 0px;
 }
 /* line 86, ../../../app/assets/stylesheets/global/page-overrides.scss */
-.Media .content-container.interior {
+.Medias .content-container.interior {
   background: none;
   height: 532px;
 }
 
 /* line 97, ../../../app/assets/stylesheets/global/page-overrides.scss */
-.Technology .content-container {
+.Rims .content-container {
   padding: 0px 0px 10px 0px;
 }
 /* line 101, ../../../app/assets/stylesheets/global/page-overrides.scss */
+.Rims .content-container.interior {
+  background: none;
+  height: auto;
+}
+
+/* line 112, ../../../app/assets/stylesheets/global/page-overrides.scss */
+.Technology .content-container {
+  padding: 0px 0px 10px 0px;
+}
+/* line 116, ../../../app/assets/stylesheets/global/page-overrides.scss */
 .Technology .content-container.interior {
   background: none;
   height: 533px;
 }
 
-/* line 112, ../../../app/assets/stylesheets/global/page-overrides.scss */
+/* line 127, ../../../app/assets/stylesheets/global/page-overrides.scss */
 .Privacies .content-container {
   padding: 0px 0px 10px 0px;
 }
-/* line 116, ../../../app/assets/stylesheets/global/page-overrides.scss */
+/* line 131, ../../../app/assets/stylesheets/global/page-overrides.scss */
 .Privacies .content-container.interior {
   color: #ffffff;
   background: none;
   height: auto;
 }
 
-/* line 128, ../../../app/assets/stylesheets/global/page-overrides.scss */
+/* line 143, ../../../app/assets/stylesheets/global/page-overrides.scss */
 .Refunds .content-container {
   padding: 0px 0px 10px 0px;
 }
-/* line 132, ../../../app/assets/stylesheets/global/page-overrides.scss */
+/* line 147, ../../../app/assets/stylesheets/global/page-overrides.scss */
 .Refunds .content-container.interior {
   color: #ffffff;
   background: none;
