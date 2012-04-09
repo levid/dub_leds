@@ -1,9 +1,8 @@
 # Role model
-class Role
-  include Mongoid::Document
+class Role < ActiveRecord::Base
   
-  field :title, type: String
-  field :name, type: String
+  # field :title, type: String
+  #   field :name, type: String
 
   has_and_belongs_to_many :users
   

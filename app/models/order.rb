@@ -1,3 +1,3 @@
-class Order
-  include Mongoid::Document
+class Order < ActiveRecord::Base
+
 end

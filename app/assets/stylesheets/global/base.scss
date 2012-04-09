@@ -5,7 +5,7 @@
 
 body, select, input, textarea
 {
-	background: #ffffff;
+	background: #040405;
 	color: $text;
 	font-family: EurostileMed, Helvetica, Arial, sans-serif;
   font-weight: 400;
@@ -15,6 +15,9 @@ body, select, input, textarea
 /* always force a scrollbar in non-IE */
 html { overflow-y: scroll; }
 
+h1, h2, h3, h4, h5, h6 {    
+  color: #fafafa !important;
+}
 /* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
 
 strong, th

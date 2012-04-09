@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.1'
+gem 'rails', '3.1.4'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
@@ -15,7 +15,7 @@ group :development, :test do
 end
 
 gem 'jquery-rails'
-gem 'rack', '1.3.3'
+gem 'rack'
 gem 'haml'
 
 # Decorators
@@ -23,11 +23,11 @@ gem 'draper'
 
 # Mongoid
 gem 'bson_ext', '>= 1.3.1'
-gem 'mongoid', '>= 2.3.3'
+# gem 'mongoid', '>= 2.3.3'
 
 # User based authentication
-gem 'devise', '>= 1.5.0' #https://github.com/plataformatec/devise
-gem 'omniauth', '>= 1.0.0'
+gem 'devise'
+gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
 gem 'omniauth-openid'
@@ -35,8 +35,7 @@ gem 'omniauth-openid'
 # Export / Import database dump
 gem 'yaml_db'
 
-# Uploading images to Mongoid
-gem 'carrierwave-mongoid'
+gem 'carrierwave'
 gem 'mini_magick'
 
 # Role based administration
@@ -46,7 +45,7 @@ gem 'cancan'
 gem 'thin'
 
 # Shopping cart
-gem 'acts_as_shopping_cart', :git => "git@github.com:crowdint/acts_as_shopping_cart.git"
+# gem 'acts_as_shopping_cart', :git => "git@github.com:crowdint/acts_as_shopping_cart.git"
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -82,3 +81,6 @@ group :assets do
   gem "compass"
   gem 'sprockets'
 end
+gem 'spree'
+gem 'spree_usa_epay'
+gem 'spree_skrill'

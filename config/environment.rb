@@ -6,3 +6,5 @@ Encoding.default_internal = Encoding::UTF_8
 
 # Initialize the rails application
 DubLeds::Application.initialize!
+
+ActiveRecord::Base.include_root_in_json = true

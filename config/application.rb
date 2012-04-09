@@ -7,8 +7,9 @@ require "action_controller/railtie"
 require "action_mailer/railtie"
 require "active_resource/railtie"
 require "rails/test_unit/railtie"
-require "mongoid/railtie"
-require "carrierwave/mongoid"
+# require "mongoid/railtie"
+# require "carrierwave/mongoid"
+# require "carrierwave/orm/activerecord"
 
 Bundler.require *Rails.groups(:assets) if defined?(Bundler)
 
@@ -21,6 +22,19 @@ Bundler.require *Rails.groups(:assets) if defined?(Bundler)
 
 module DubLeds
   class Application < Rails::Application
+  
+    config.to_prepare do
+      # Load application's model / class decorators
+      Dir.glob(File.join(File.dirname(__FILE__), "../app/**/*_decorator*.rb")) do |c|
+        Rails.configuration.cache_classes ? require(c) : load(c)
+      end
+
+      # Load application's view overrides
+      Dir.glob(File.join(File.dirname(__FILE__), "../app/overrides/*.rb")) do |c|
+        Rails.configuration.cache_classes ? require(c) : load(c)
+      end
+    end
+
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
@@ -60,8 +74,8 @@ module DubLeds
 
     config.assets.initialize_on_precompile = false
 
-    config.generators do |g|
-      g.orm :active_record
-    end
+    # config.generators do |g|
+    #       g.orm :active_record
+    #     end
   end
 end

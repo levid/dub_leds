@@ -6,7 +6,7 @@ footer
 {
     height: 67px;
     width: 100%;
-    @include background($path + '/bg-footer-bar.png', repeat-x, top left, transparent);
+    @include background($path + '/bg-footer-bar.png', repeat-x, top left, #040405);
 
     .footer-container
     {
@@ -162,7 +162,7 @@ footer
     {
         height: 100px;
         width: 100%;
-        @include background($path + '/bg-footer.png', no-repeat, top left, transparent);
+        @include background($path + '/bg-footer.png', no-repeat, top left, #040405);
 
         .copyright
         {

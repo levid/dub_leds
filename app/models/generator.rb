@@ -1,3 +1,3 @@
-class Generator
-  include Mongoid::Document
+class Generator < ActiveRecord::Base
+
 end

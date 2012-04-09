@@ -1,11 +1,11 @@
 DubLeds::Application.routes.draw do
+  # Mount Spree's routes
+  mount Spree::Core::Engine, :at => '/store'
 
   resources :medias
-
   resources :refunds
   resources :privacies
   resources :products, :only => [ :index ]
-  resource :shopping_cart
 
   # Routes for Devise
   devise_for :users, controllers: { :omniauth_callbacks => "users/omniauth_callbacks"} do
@@ -33,10 +33,8 @@ DubLeds::Application.routes.draw do
   # match '/signin' => 'sessions#new', :as => :signin
   #
   match '/users/sign_out'     => 'sessions#destroy', :as => :signout
-
   post '/cookie' => 'cookies#create'
-  #
-  #   match '/auth/failure' => 'sessions#failure'
+
   
   # Administration Routes
   namespace :admin do

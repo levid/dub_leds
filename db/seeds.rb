@@ -37,3 +37,7 @@ for i in 1..7
 
    puts 'New Rim created: ' << r.title
 end
+
+
+Spree::Core::Engine.load_seed if defined?(Spree::Core)
+Spree::Auth::Engine.load_seed if defined?(Spree::Auth)

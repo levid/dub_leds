@@ -1,8 +1,8 @@
 class TechnologyController < ApplicationController
 
   def index
-     @rims = Rim.all.sort!(&:id)
-     @resources = Resource.all.sort!(&:title)
+     @rims = Rim.all.sort!{ |s| s.id }
+     @resources = Resource.all
   end
 
   # GET /technology/:title

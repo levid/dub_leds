@@ -1,7 +1,6 @@
-class Newsletter
-  include Mongoid::Document
+class Newsletter < ActiveRecord::Base
   
-  field :email, :type => String
+  # field :email, :type => String
   
   validates_presence_of :email
 end

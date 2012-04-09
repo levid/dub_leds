@@ -1,8 +1,7 @@
-class Refund
-  include Mongoid::Document
+class Refund < ActiveRecord::Base
 
-  field :title,         :type => String
-  field :content,       :type => String
+  # field :title,         :type => String
+  #   field :content,       :type => String
 
   validates_presence_of :title, :content
 end

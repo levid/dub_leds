@@ -8,6 +8,6 @@ class Cookie extends $DUB.Utilities
       url: "/cookie"
       data: data,
       success: (data) ->
-        alert(data)
+        # console.log(data)
 
 $DUB.Utilities.Cookie = new Cookie

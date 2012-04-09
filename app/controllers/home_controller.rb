@@ -4,7 +4,7 @@ class HomeController < ApplicationController
 
   # GET /home
   def index
-    @rims = Rim.all.sort!(&:id)
+    @rims = Rim.all.sort!{ |s| s.id }
     @controller_js_args = [{ :active_rim => @active_rim }]
     # @controller_js_args = [{ :currentDay => @date_current, :today => @date_today, :environment => 'jit' }]
 
