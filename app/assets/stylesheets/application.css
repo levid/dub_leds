@@ -7,5 +7,6 @@
  *= require_tree ./global
  *= require_tree ./layout
  *= require_tree ./sections
+ *= require_tree ./vendor
  *= require screen
 */

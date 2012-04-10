@@ -9,15 +9,15 @@
     .right-column
       .order
         = link_to('Order', order_path)
-      %ul
+      %ul#sharing-links
         %li
-          %a.facebook.active{:href => "#"} Facebook
+          %a.facebook{:href => "#", :title => 'Follow us on Facebook'} Facebook
         %li
-          %a.twitter{:href => "#"} Twitter
+          %a.twitter{:href => "#", :title => 'Follow us on Twitter'} Twitter
         %li
-          %a.flickr{:href => "#"} Flickr
+          %a.flickr{:href => "#", :title => 'Follow us on Flickr'} Flickr
         %li
-          %a.linkedin{:href => "#"} Linkedin
+          %a.linkedin{:href => "#", :title => 'Email us'} Linkedin
   %section.spacer
     .copyright
       %span (c) 2011 LED Wheels, Inc.

@@ -1,13 +1,22 @@
 class Technology extends $DUB
   constructor: (@options) ->
     $(document).ready =>
-      this.startOverlayButtonListeners()
-      this.startSmallRimButtonListeners()
+      @startOverlayButtonListeners()
+      @startSmallRimButtonListeners()
+      @initTooltips()
 
   startOverlayButtonListeners: () ->
+    # $('.technology-content .overlay .titles a').bind "mouseover", (e) =>
+    #       $('.technology-content .rim').animate({'opacity': '0.4'}, 250)
+    #       
+    #     $('.technology-content .overlay .titles a').bind "mouseout", (e) =>
+    #       $('.technology-content .rim').animate({'opacity': '1.0'}, 250)
+    
+    $('.technology-content .rim .hide').css('opacity', '0.0')
+      
     $('.technology-content .overlay .titles a').bind "click", (e) =>
       e.preventDefault()
-      @title = $(e.target).attr('title')
+      @title = $(e.target).attr('rel')
 
       initTechOverlay = (data) ->
         self                 = this
@@ -21,12 +30,14 @@ class Technology extends $DUB
         @overlayContainerDiv.find('.sub-title h4').text(@overlayContent.sub_title)
 
         openOverlay = (el) =>
+          $('.technology-content .rim').animate({'opacity': '0.4'}, 250)
           @overlayContainerDiv = el.find('.overlay-container')
           el.fadeIn 200, =>
             @overlayContainerDiv.center()
             @overlayContainerDiv.fadeIn 300
 
         closeOverlay = (el) =>
+          $('.technology-content .rim').animate({'opacity': '1.0'}, 250)
           @overlayContainerDiv = el.find('.overlay-container')
           @overlayContainerDiv.fadeOut 300, ->
             el.fadeOut 200
@@ -87,8 +98,19 @@ class Technology extends $DUB
       $(this).addClass('active')
 
       $('.technology-content .rim .show').each ->
-        $(this).removeClass('show').addClass('hide')
-
-      $('.technology-content .rim').find("##{@rimId}").removeClass('hide').addClass('show')
-
+        $(this).removeClass('show').addClass('hide').css('opacity', '0.0')
+        
+      $('.technology-content .rim').find("##{@rimId}").removeClass('hide').addClass('show').animate({'opacity': '1.0'}, 450)
+  
+  initTooltips: () ->
+    $(".titles a").tipTip
+      maxWidth: "auto"
+      edgeOffset: -10
+      defaultPosition: "top"
+      fadeIn: 100
+      delay: 200
+      keepAlive: false
+      enter: () =>
+      exit: () =>
+        
 $DUB.Application = jQuery.extend({}, $DUB.Application, {Technology})

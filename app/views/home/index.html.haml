@@ -20,13 +20,14 @@
       .buttons
         %ul
           - @rims.each do |rim|
+            - @tooltip = { :title => rim.title, :description => rim.description, :order => '/store/1'}
             %li
               - if rim.id.to_s == @active_rim.to_s
-                %a.active{:href => "#"} #{rim.title}
+                %a.active{:href => "#", :title => "#{rim.title.upcase + "<br>" + rim.description + "<br>" + (link_to "Order It", '#')}"} #{rim.title}
               - elsif rim.id == @rims.first.id && @active_rim.nil?
-                %a.active{:href => "#"} #{rim.title}
+                %a.active{:href => "#", :title => "#{rim.description}"}} #{rim.title}
               - else
-                %a{:href => "#"} #{rim.title}
+                %a{:href => "#", :title => "#{rim.description}"}} #{rim.title}
       .reflection.right
   %section.content-container.home
     .content

@@ -3,9 +3,10 @@ class UI extends $DUB
     this
 
   initGlobalUI: (options) ->
-    this.initFadingLinks()
-    this.displayMainNav()
-    this.hideNotifications() if $('.notification')
+    @initTooltips()
+    @initFadingLinks()
+    @displayMainNav()
+    @hideNotifications() if $('.notification')
 
     topNav = new $DUB.UI.Nav
     newsletter = new $DUB.UI.Newsletter
@@ -69,5 +70,16 @@ class UI extends $DUB
 
     setGlowEffect()
     setResize()
+
+  initTooltips: () ->
+    $("#sharing-links a").tipTip
+      maxWidth: "auto"
+      edgeOffset: 5
+      defaultPosition: "top"
+      fadeIn: 100
+      delay: 200
+      keepAlive: false
+      enter: () =>
+      exit: () =>
 
 $DUB.UI = new UI

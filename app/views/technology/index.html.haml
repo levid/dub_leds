@@ -28,13 +28,13 @@
               = image_tag rim.small_image unless !rim.small_image.present?
   .overlay
     .titles
-      %a.title1{:href => "#", :title => 'Pure Titanium Alloy'}
-      %a.title2{:href => "#", :title => 'Integrated Computer Chip'}
-      %a.title3{:href => "#", :title => 'Color Customization'}
-      %a.title4{:href => "#", :title => 'LED Lights System'}
-      %a.title5{:href => "#", :title => 'Power Generator'}
-      %a.title6{:href => "#", :title => 'All-Weather Proof USB Port'}
-      %a.title7{:href => "#", :title => 'Pendulum Arm'}
+      %a.title1{:href => "#", :rel => 'Pure Titanium Alloy', :title => 'Click for more info'}
+      %a.title2{:href => "#", :rel => 'Integrated Computer Chip', :title => 'Click for more info'}
+      %a.title3{:href => "#", :rel => 'Color Customization', :title => 'Click for more info'}
+      %a.title4{:href => "#", :rel => 'LED Lights System', :title => 'Click for more info'}
+      %a.title5{:href => "#", :rel => 'Power Generator', :title => 'Click for more info'}
+      %a.title6{:href => "#", :rel => 'All-Weather Proof USB Port', :title => 'Click for more info'}
+      %a.title7{:href => "#", :rel => 'Pendulum Arm', :title => 'Click for more info'}
   .rim
     - @rims.each do |rim|
       - if rim.id.to_s == @active_rim.to_s
