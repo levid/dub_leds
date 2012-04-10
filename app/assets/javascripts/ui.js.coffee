@@ -3,7 +3,9 @@ class UI extends $DUB
     this
 
   initGlobalUI: (options) ->
+    @initNewsletterInput()
     @initTooltips()
+    @initSharingLinks()
     @initFadingLinks()
     @displayMainNav()
     @hideNotifications() if $('.notification')
@@ -81,5 +83,23 @@ class UI extends $DUB
       keepAlive: false
       enter: () =>
       exit: () =>
+        
+  initNewsletterInput: () ->
+    $(".email-updates input").animate({'opacity': '0.7'}, 150)
+    $(".email-updates input").bind "focus", ->
+      $(this).animate({'opacity': '1.0'}, 150)
+      $(".email-updates input[type=submit]").animate({'opacity': '1.0'}, 150)
+      
+    $(".email-updates input").bind "blur", ->
+      $(this).animate({'opacity': '0.7'}, 150)
+      $(".email-updates input[type=submit]").animate({'opacity': '0.7'}, 150)
+      
+  initSharingLinks: () ->
+    $("#sharing-links a").animate({'opacity': '0.7'}, 150)
+    $("#sharing-links a").mouseover(->
+      $(this).animate({'opacity': '1.0'}, 150)
+    ).mouseout ->
+      $(this).animate({'opacity': '0.7'}, 150)
+
 
 $DUB.UI = new UI
