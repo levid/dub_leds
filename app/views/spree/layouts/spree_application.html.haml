@@ -8,30 +8,31 @@
   / <![endif]
   %head{"data-hook" => "inside_head"}
     = render :partial => 'spree/shared/head'
-  %body{:class => body_class, "data-hook" => "body", :id => @body_id || 'default'}
-    .container
-      %header#header.row{"data-hook" => ""}
-        %figure#logo.columns.alpha.six{"data-hook" => ""}
-          = logo
-        %nav#top-nav-bar.columns.omega.ten
-          %ul#nav-bar.inline{"data-hook" => ""}
-            = render :partial => 'spree/shared/nav_bar'
-        - if store_menu?
-          %nav.columns.alpha.omega.sixteen
-            %ul#main-nav-bar.inline{"data-hook" => ""}
-              = render :partial => 'spree/shared/store_menu'
-      #wrapper.row{"data-hook" => ""}
-        - if content_for?(:sidebar)
-          %aside#sidebar.columns.alpha.four{"data-hook" => ""}
-            = yield :sidebar
-        #content.columns.omega.if.sixteen.alpha.else.twelve{:class => "<haml:silent> !content_for?(:sidebar) </haml:silent><haml:block> </haml:block><haml:silent> </haml:silent><haml:block> </haml:block>", "data-hook" => ""}
-          = breadcrumbs(@taxon)
-          = flash_messages
-          = yield
-      %footer#footer.row{"data-hook" => ""}
-        #footer-left.columns.alpha.eight{"data-hook" => ""}
-          %p
-            = t(:powered_by)
-            = link_to 'Spree', 'http://spreecommerce.com/'
-        #footer-right.columns.omega.eight{"data-hook" => ""}
+  %body{:class => "Store #{action_name.capitalize} #{body_class}", "data-hook" => "body", :id => @body_id || 'default'}
+    %section#dub
+      %section.wrapper
+        %header
+          = render 'spree/shared/user_nav'
+          = render 'spree/shared/main_nav'
+          %section.logo
+
+            / - flash.each do |name, msg|
+            /         = content_tag :div, msg, :id => "flash_\#{name}" if msg.is_a?(String)
+        %section.body
+          %section.content-container.interior
+            %div{:class => "content-store #{action_name.downcase}"}
+              .title-container
+                .title{:class => "Store"}
+                .text-container
+                  #wrapper.row{"data-hook" => ""}
+                    - if content_for?(:sidebar)
+                      %aside#sidebar.columns.alpha.four{"data-hook" => ""}
+                        = yield :sidebar
+                    #content.columns.omega.if.sixteen.alpha.else.twelve{:class => "<haml:silent> !content_for?(:sidebar) </haml:silent><haml:block> </haml:block><haml:silent> </haml:silent><haml:block> </haml:block>", "data-hook" => ""}
+                      = breadcrumbs(@taxon)
+                      = flash_messages
+                      = yield
+                      .push
+                    
+      = render :partial => 'spree/shared/foot'
     = render :partial => 'spree/shared/google_analytics'

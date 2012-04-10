@@ -1,0 +1,3 @@
+.taxon{"data-hook" => "taxon"}
+  %h5.subtaxon-title= link_to taxon.name, seo_url(taxon), :class => 'breadcrumbs'
+  = render :partial => 'spree/shared/products', :locals => { :products => taxon_preview(taxon), :taxon => taxon }

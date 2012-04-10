@@ -2,6 +2,25 @@
 @import "../global/variables";
 @import "../global/mixins";
 
+* {
+margin: 0;
+}
+html, body {
+height: 100%;
+}
+.wrapper {
+min-height: 100%;
+height: auto !important;
+height: 100%;
+margin: 0 auto -167px;
+}
+.footer, .push {
+height: 167px;
+}
+.footer, .push {
+clear: both;
+}
+
 footer
 {
     height: 67px;

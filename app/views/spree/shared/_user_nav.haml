@@ -1,0 +1,26 @@
+%nav.user
+  %ul
+    - if user_signed_in?
+      %li
+        = "Welcome, " + current_user.name
+    - else
+      %li
+        = "Welcome, Guest"
+    %li.divline
+      %span
+    %li
+      - if user_signed_in?
+        = link_to('Admin', admin_path, :class => "fade#{' active' if controller_name == 'admin'}")
+        %span.line &nbsp;
+      %li#link-to-cart.fade{"data-hook" => ""}= link_to_cart
+    %li.divline
+    - if user_signed_in?
+      %li
+        = link_to('My Account', '/users/edit', :class => "my_account #{'active' if controller_name === 'registrations' }")
+      %li
+        = link_to('Logout', '/users/sign_out', :class => 'log_out', :method=>'delete')
+    - else
+      %li
+        = link_to('Sign In', '/users/sign_in', :class => "sign_in #{'active' if controller_name === 'sessions' }")
+      %li
+        = link_to('Sign up', '/users/sign_up', :class => "sign_up #{'active' if controller_name === 'registrations' }")

@@ -4,7 +4,7 @@ class HomeController < ApplicationController
 
   # GET /home
   def index
-    @rims = Rim.all.sort!{ |s| s.id }
+    @rims = Rim.all.sort!
     @controller_js_args = [{ :active_rim => @active_rim }]
     # @controller_js_args = [{ :currentDay => @date_current, :today => @date_today, :environment => 'jit' }]
 
@@ -12,6 +12,9 @@ class HomeController < ApplicationController
 
     @path = :home_path
     @users = User.all
+    
+    @searcher = Spree::Config.searcher_class.new(params)
+    @products = @searcher.retrieve_products
   end
 
   protected

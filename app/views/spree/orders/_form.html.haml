@@ -1,0 +1,12 @@
+= render :partial => 'spree/shared/error_messages', :locals => { :target => @order }
+%table#cart-detail{"data-hook" => ""}
+  %thead
+    %tr{"data-hook" => "cart_items_headers"}
+      %th{:colspan => "2"}= t(:item)
+      %th= t(:price)
+      %th= t(:qty)
+      %th= t(:total)
+      %th
+  %tbody#line_items{"data-hook" => ""}
+    = order_form.fields_for :line_items do |item_form|
+      = render :partial => 'line_item', :locals => { :variant => item_form.object.variant, :line_item => item_form.object, :item_form => item_form }

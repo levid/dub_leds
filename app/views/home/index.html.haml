@@ -23,11 +23,11 @@
             - @tooltip = { :title => rim.title, :description => rim.description, :order => '/store/1'}
             %li
               - if rim.id.to_s == @active_rim.to_s
-                %a.active{:href => "#", :title => "#{rim.title.upcase + "<br>" + rim.description + "<br>" + (link_to "Order It", '#')}"} #{rim.title}
+                %a.active{:href => "#", :title => "#{rim.title.upcase + "<br>" + rim.description + "<br>" + (link_to "Order It", '/store/products/rim-1')}"} #{rim.title}
               - elsif rim.id == @rims.first.id && @active_rim.nil?
-                %a.active{:href => "#", :title => "#{rim.description}"}} #{rim.title}
+                %a.active{:href => "#", :title => "#{rim.title.upcase + "<br>" + rim.description + "<br>" + (link_to "Order It", '/store/products/rim-1')}"}} #{rim.title}
               - else
-                %a{:href => "#", :title => "#{rim.description}"}} #{rim.title}
+                %a{:href => "#", :title => "#{rim.title.upcase + "<br>" + rim.description + "<br>" + (link_to "Order It", '/store/products/rim-1')}"}} #{rim.title}
       .reflection.right
   %section.content-container.home
     .content

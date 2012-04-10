@@ -1,0 +1,34 @@
+%footer
+  %section.footer-container
+    .left-column
+      .logo
+      .email-updates
+        %form
+          %input#email-address{:name => "email-address", :type => "text", :value => "enter email for updates"}/
+          %input{:type => "submit"}/
+    .right-column
+      .order
+        = link_to('Order', '/order')
+      %ul#sharing-links
+        %li
+          %a.facebook{:href => "#", :title => 'Follow us on Facebook'} Facebook
+        %li
+          %a.twitter{:href => "#", :title => 'Follow us on Twitter'} Twitter
+        %li
+          %a.flickr{:href => "#", :title => 'Follow us on Flickr'} Flickr
+        %li
+          %a.linkedin{:href => "#", :title => 'Email us'} Linkedin
+  %section.spacer
+    .copyright
+      %span (c) 2011 LED Wheels, Inc.
+      .links
+        = link_to 'Privacy Policy', '/privacy_policy', :class => "fade"
+        = link_to 'Refund Policy', '/refund_policy', :class => "fade"
+        
+/ = controller_path.split('/').first
+/ = debug(params) if Rails.env.development?
+= javascript_tag :defer => 'defer' do
+  -if admin?
+    #{@controller_js_args.present? ? "$DUB.initPage('#{controller.class.to_s.split('Controller').first.split('::').second}Admin', #{parse_js_args(@controller_js_args)});" : "$DUB.initPage('#{controller.class.to_s.split('Controller').first.split('::').second}Admin');"}
+  -else
+    #{@controller_js_args.present? ? "$DUB.initPage('#{controller.class.to_s.split('Controller').first}', #{parse_js_args(@controller_js_args)});" : "$DUB.initPage('#{controller.class.to_s.split('Controller').first}');"}

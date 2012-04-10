@@ -1,0 +1,96 @@
+.row.steps-data
+  .columns.alpha.four
+    %h6
+      = t(:shipping_address)
+      = link_to "(#{t(:edit)})", checkout_state_path(:address) unless @order.completed?
+    .address
+      = order.ship_address
+  .columns.alpha.four
+    %h6
+      = t(:billing_address)
+      = link_to "(#{t(:edit)})", checkout_state_path(:address) unless @order.completed?
+    .address
+      = order.bill_address
+  .columns.alpha.four
+    %h6
+      = t(:shipping_method)
+      = link_to "(#{t(:edit)})", checkout_state_path(:delivery) unless @order.completed?
+    .delivery
+      = order.shipping_method.name
+  .columns.omega.four
+    %h6
+      = t(:payment_information)
+      = link_to "(#{t(:edit)})", checkout_state_path(:payment) unless @order.completed?
+    .payment-info
+      - unless order.creditcards.empty?
+        %span.cc-type
+          = image_tag "creditcards/icons/#{order.creditcards.first.cc_type}.png"
+          = t(:ending_in)
+          = order.creditcards.first.last_digits
+        %br/
+        %span.full-name
+          = order.creditcards.first.first_name
+          = order.creditcards.first.last_name
+%hr/
+%table.index.columns.alpha.omega.sixteen{"data-hook" => "order_details"}
+  %col{:halign => "center", :valign => "middle", :width => "15%"}
+    %col{:valign => "middle", :width => "70%"}
+      %col{:halign => "center", :valign => "middle", :width => "5%"}
+        %col{:halign => "center", :valign => "middle", :width => "5%"}
+          %col{:halign => "center", :valign => "middle", :width => "5%"}
+            %thead#line-items{"data-hook" => ""}
+              %tr{"data-hook" => "order_details_line_items_headers"}
+                %th{:colspan => "2"}= t(:item)
+                %th.price= t(:price)
+                %th.qty= t(:qty)
+                %th.total
+                  %span= t(:total)
+            %tbody#line-items{"data-hook" => ""}
+              - @order.line_items.each do |item|
+                %tr{"data-hook" => "order_details_line_item_row"}
+                  %td{"data-hook" => "order_item_image"}
+                    - if item.variant.images.length == 0
+                      = link_to small_image(item.variant.product), item.variant.product
+                    - else
+                      = link_to image_tag(item.variant.images.first.attachment.url(:small)), item.variant.product
+                  %td{"data-hook" => "order_item_description"}
+                    %h4= item.variant.product.name
+                    = truncate(item.variant.product.description, :length => 100, :omission => "...")
+                    = "(" + variant_options(item.variant) + ")" unless item.variant .option_values.empty?
+                  %td.price{"data-hook" => "order_item_price"}
+                    %span= number_to_currency item.price
+                  %td{"data-hook" => "order_item_qty"}= item.quantity
+                  %td.total{"data-hook" => "order_item_total"}
+                    %span= number_to_currency (item.price * item.quantity)
+            %tfoot#order-total{"data-hook" => "order_details_total"}
+              %tr.total
+                %td{:colspan => "4"}
+                  %b
+                    = t(:order_total)
+                    \:
+                %td.total
+                  %span#order_total= number_to_currency @order.total
+            - if order.price_adjustment_totals.present?
+              %tfoot#price-adjustments{"data-hook" => "order_details_price_adjustments"}
+                - @order.price_adjustment_totals.keys.each do |key|
+                  %tr.total
+                    %td{:colspan => "4"}
+                      %strong= key
+                    %td.total
+                      %span= number_to_currency @order.price_adjustment_totals[key]
+            %tfoot#subtotal{"data-hook" => "order_details_subtotal"}
+              %tr#subtotal-row.total
+                %td{:colspan => "4"}
+                  %b
+                    = t(:subtotal)
+                    \:
+                %td.total
+                  %span= number_to_currency @order.item_total
+            %tfoot#order-charges{"data-hook" => "order_details_adjustments"}
+              - @order.adjustments.eligible.each do |adjustment|
+                - next if (adjustment.originator_type == 'Spree::TaxRate') and (adjustment.amount == 0)
+                %tr.total
+                  %td{:colspan => "4"}
+                    %strong= adjustment.label
+                  %td.total
+                    %span= number_to_currency adjustment.amount

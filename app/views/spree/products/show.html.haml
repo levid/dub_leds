@@ -1,0 +1,20 @@
+%div{"data-hook" => "product_show", :itemscope => "", :itemtype => "http://schema.org/Product"}
+  - @body_id = 'product-details'
+  .columns.six.alpha{"data-hook" => "product_left_part"}
+    .row{"data-hook" => "product_left_part_wrap"}
+      #product-images{"data-hook" => "product_images"}
+        #main-image{"data-hook" => ""}
+          = render :partial => 'image'
+        #thumbnails{"data-hook" => ""}
+          = render :partial => 'thumbnails', :locals => { :product => @product }
+      %div{"data-hook" => "product_properties"}
+        = render :partial => 'properties'
+  .columns.ten.omega{"data-hook" => "product_right_part"}
+    .row{"data-hook" => "product_right_part_wrap"}
+      #product-description{"data-hook" => "product_description"}
+        %h1.product-title{:itemprop => "name"}= accurate_title
+        %div{"data-hook" => "description", :itemprop => "description"}
+          = product_description(@product) rescue t(:product_has_no_description)
+        #cart-form{"data-hook" => "cart_form"}
+          = render :partial => 'cart_form'
+      = render :partial => 'taxons'

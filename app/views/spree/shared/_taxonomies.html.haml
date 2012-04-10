@@ -1,0 +1,4 @@
+%nav#taxonomies.sidebar-item{"data-hook" => ""}
+  - get_taxonomies.each do |taxonomy|
+    %h6.taxonomy-root= t(:shop_by_taxonomy, :taxonomy => taxonomy.name.singularize)
+    = taxons_tree(taxonomy.root, @taxon, Spree::Config[:max_level_in_taxons_menu] || 1)

@@ -28,6 +28,7 @@
 	font-size: 13px;
 	color: #FAFAFA;
 	text-shadow: 0 0 2px #000;
+	line-height: 22px;
 	padding: 11px;
 	border: none;
 	background-color: rgb(25,25,25);
@@ -99,6 +100,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {	
 	#tiptip_content {
 		padding: 11px;
+		line-height: 22px;
 		background-color: rgba(45,45,45,0.88);
 	}
 	#tiptip_holder.tip_bottom #tiptip_arrow_inner { 

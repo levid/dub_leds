@@ -3,12 +3,12 @@ class UI extends $DUB
     this
 
   initGlobalUI: (options) ->
-    @initNewsletterInput()
-    @initTooltips()
-    @initSharingLinks()
     @initFadingLinks()
     @displayMainNav()
-    @hideNotifications() if $('.notification')
+    @hideNotifications()    if $('.notification').length
+    @initNewsletterInput()  if $(".email-updates").length
+    @initTooltips()         if $("#sharing-links").length
+    @initSharingLinks()     if $("#sharing-links").length
 
     topNav = new $DUB.UI.Nav
     newsletter = new $DUB.UI.Newsletter
