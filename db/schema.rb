@@ -119,17 +119,6 @@ ActiveRecord::Schema.define(:version => 20120409080832) do
     t.integer "user_id"
   end
 
-  create_table "shopping_cart_items", :force => true do |t|
-    t.integer  "owner_id"
-    t.string   "owner_type"
-    t.integer  "quantity"
-    t.integer  "item_id"
-    t.string   "item_type"
-    t.float    "price"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "shopping_carts", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"

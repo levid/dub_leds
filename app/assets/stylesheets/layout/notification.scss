@@ -1,3 +1,7 @@
+/* Include Mixins & CSS3 Stuff */
+@import "../global/variables";
+@import "../global/mixins";
+
 .notification
 {
   margin: 0px auto;
@@ -6,29 +10,29 @@
   display: block;
   background-color: #59B7FF;
   border: 2px solid #00A9ED;
-  
+
   -moz-border-radius: 15px;
   border-radius: 15px;
-  
+
   position: relative;
   z-index: 9999;
-  
+
   // &.notice
   // {
   //   background-color: #59B7FF;
   //   border: 2px solid #00A9ED;
   // }
-  // 
+  //
   // &.error
   // {
   //   background-color: red;
   // }
-  // 
+  //
   // &.success
   // {
   //   background-color: green;
   // }
-  
+
   .text
   {
     width: auto;

@@ -3,22 +3,22 @@
 @import "../global/mixins";
 
 * {
-margin: 0;
+  margin: 0;
 }
 html, body {
-height: 100%;
+  height: 100%;
 }
 .wrapper {
-min-height: 100%;
-height: auto !important;
-height: 100%;
-margin: 0 auto -167px;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -167px;
 }
 .footer, .push {
-height: 167px;
+  height: 167px;
 }
 .footer, .push {
-clear: both;
+  clear: both;
 }
 
 footer
@@ -30,20 +30,22 @@ footer
     .footer-container
     {
         margin: 0px auto;
-        height: 67px;
+        height: inherit;
         width: 980px;
-        position: relative;
-        z-index: 20;
 
-        .left-column
+        .newsletter
         {
-            width: auto;
-            height: auto;
-            float: left;
+            width: 700px;
+            height: inherit;
+            display: inline-block;
+            margin: 0px;
+            padding: 0px;
+            position: relative;
+            left: 0px;
 
             .logo
             {
-                margin: 23px 0px 0px 0px;
+                margin: 24px 0px 0px 0px;
                 height: 15px;
                 width: 102px;
                 float: left;
@@ -52,7 +54,7 @@ footer
 
             .email-updates
             {
-                margin: 13px 0px 0px 20px;
+                margin: 14px 0px 0px 20px;
                 width: auto;
                 height: auto;
                 float: left;
@@ -83,11 +85,15 @@ footer
             }
         }
 
-        .right-column
+        .links
         {
-            width: auto;
-            height: auto;
-            float: right;
+            width: 270px;
+            height: inherit;
+            display: inline-block;
+            margin: 0px;
+            padding: 0px;
+            position: relative;
+            right: 0px;
 
             .order
             {

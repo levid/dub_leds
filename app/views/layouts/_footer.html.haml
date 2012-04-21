@@ -1,12 +1,12 @@
 %footer
   %section.footer-container
-    .left-column
+    .newsletter
       .logo
       .email-updates
         %form
           %input#email-address{:name => "email-address", :type => "text", :value => "enter email for updates"}/
           %input{:type => "submit"}/
-    .right-column
+    .links
       .order
         = link_to('Order', order_path)
       %ul#sharing-links
@@ -24,7 +24,7 @@
       .links
         = link_to 'Privacy Policy', privacy_policy_path, :class => "fade"
         = link_to 'Refund Policy', refund_policy_path, :class => "fade"
-        
+
 / = controller_path.split('/').first
 / = debug(params) if Rails.env.development?
 = javascript_tag :defer => 'defer' do

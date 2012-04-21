@@ -1,0 +1,297 @@
+/**/
+@import "../global/variables";
+@import "../global/mixins";
+
+ .rim-container
+{
+    margin: 0px auto;
+    height: 604px;
+    width: 100%;
+
+    .rim-buttons
+    {
+        margin: -604px auto;
+        width: 980px;
+        height: 604px;
+        position: relative;
+        display: block;
+        z-index: 20;
+        //background: url( 'img-home-rim-large.png' ) no-repeat top left transparent;
+
+        .arrow
+        {
+            width: 107px;
+            height: 176px;
+            @include background($path + '/button-rim-arrows.png', no-repeat, top left, transparent);
+
+            &.left
+            {
+                width: 107px;
+                height: 176px;
+                position: relative;
+                left: -96px;
+                top: 300px;
+                float: left;
+                background-position: top left;
+            }
+
+            &.right
+            {
+                width: 107px;
+                height: 176px;
+                position: relative;
+                right: -96px;
+                top: 300px;
+                float: right;
+                background-position: top right;
+            }
+
+            a
+            {
+                width: 107px;
+                height: 176px;
+                float: left;
+
+            }
+        }
+    }
+
+    .rims-large
+    {
+        margin: 0px auto;
+        width: 980px;
+        height: 604px;
+        overflow: hidden;
+        position: relative;
+        z-index: 10;
+        display: block;
+
+        ul
+        {
+            width: 980px;
+            height: 604px;
+            float: left;
+
+            li
+            {
+                margin: 0px 0px 0px -25px;
+                width: 980px;
+                height: 604px;
+                float: left;
+                list-style-type: none;
+            }
+        }
+    }
+}
+
+.rim-select
+{
+    margin: 0px auto;
+    height: auto;
+    width: 100%;
+    @include background($path + '/bg-rim-select.png', repeat-x, top left, transparent);
+
+    .rim-reflection
+    {
+        margin: 0px auto;
+        width: 980px;
+        height: 44px;
+        @include background($path + '/bg-rim-reflection.png', no-repeat, top left, transparent);
+        display: block;
+
+        .reflection
+        {
+            height: 44px;
+            width: 98px;
+            @include background($path + '/img-arrow-reflection.png', no-repeat, top left, transparent);
+
+            &.left {
+                margin: 0px 0px 0px 0px;
+                background-position: top left;
+                position: relative;
+                left: -98px;
+                float: left;
+            }
+
+            &.right {
+                margin: 0px 0px 0px 0px;
+                background-position: top right;
+                position: relative;
+                right: -98px;
+                float: right;
+            }
+        }
+
+        .buttons
+        {
+            margin: 0px auto;
+            width: 780px;
+            height: inherit;
+            float: left;
+
+            ul
+            {
+                margin: 0px auto;
+                width: auto;
+                width: 315px;
+                height: inherit;
+
+                li
+                {
+                    height: auto;
+                    width: auto;
+                    list-style: none;
+
+                    a {
+                        height: 44px;
+                        width: 45px;
+                        @include background($path + '/button-rim-select.png', no-repeat, bottom center, transparent);
+                        float: left;
+                        text-indent: -9000px;
+
+                        &.active {
+                            height: 44px;
+                            width: 45px;
+                            background-position: top center;
+                        }
+
+                        &:hover {
+                            height: 44px;
+                            width: 45px;
+                            background-position: top center;
+                        }
+
+                        &:active {
+                            height: 44px;
+                            width: 45px;
+                            background-position: top center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.body
+{
+  .left-column
+  {
+      margin: 0px 0px 0px -30px;
+      width: 305px;
+      height: auto;
+      display: inline-block;
+
+      .rim-preview
+      {
+          margin: 0px;
+          height: 303px;
+          width: 313px;
+          @include background($path + '/img-rim-preview.png', no-repeat, top left, transparent);
+      }
+
+      .try-it
+      {
+          margin: -60px 0px 0px 75px;
+          padding: 54px 0px 0px 0px;
+          width: 212px;
+          height: 205px;
+          @include background($path + '/button-tryitout.png', no-repeat, -120px -130px, transparent);
+          position: absolute;
+          z-index: 1;
+
+          a
+          {
+              margin: 0px 0px 0px 18px;
+              width: 141px;
+              height: 37px;
+              display: block;
+              text-indent: -9000px;
+          }
+      }
+  }
+
+  .right-column
+  {
+      width: 700px;
+      height: auto;
+      display: inline-block;
+
+      .title-container
+      {
+          width: auto;
+          height: auto;
+          display: block;
+          color: #fafafa;
+
+          .title
+          {
+              margin: 20px 0px 0px -16px;
+              height: 90px;
+              width: 387px;
+              float: left;
+              text-indent: -9000px;
+              @include background($path + '/title-dubleds.png', no-repeat, top left, transparent);
+          }
+
+          .usb-built-in
+          {
+              margin: 45px 0px 0px 0px;
+              height: 38px;
+              width: 133px;
+              @include background($path + '/img-usb-builtin.png', no-repeat, top left, transparent);
+              float: right;
+          }
+      }
+
+      .text-container
+      {
+          clear: both;
+          text-shadow: 0px 1px 2px #333;
+          font-size: 12px;
+          line-height: 25px;
+          color: #fafafa;
+          letter-spacing: 1.0;
+
+          font-family: EurostileMed, Helvetica, Arial, sans-serif;
+          font-weight: 400;
+
+          h4
+          {
+              font-family: EurostileBld, Helvetica, Arial, sans-serif;
+              font-size: 22px;
+              padding: 10px 0px 20px 0px;
+              font-weight: 400;
+          }
+
+          p
+          {
+              font-size: 15px;
+          }
+
+          ul
+          {
+              margin: 20px 0px 0px -7px;
+              width: auto;
+              height: auto;
+              float: left;
+
+              li
+              {
+                  width: auto;
+                  height: 25px;
+                  @include background($path + '/img-bullet-point.png', no-repeat, 0px 0px, transparent);
+                  list-style-type: none;
+                  margin: 0;
+                  padding: 2px 0px 0px 27px;
+                  vertical-align: middle;
+              }
+          }
+
+          ul + ul
+          {
+              padding: 0px 0px 0px 20px;
+          }
+      }
+  }
+}

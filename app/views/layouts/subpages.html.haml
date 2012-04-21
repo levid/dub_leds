@@ -14,9 +14,9 @@
 
       %section.body
         %section.content-container.interior
-          %div{:class => "content-#{controller_name.downcase} #{action_name.downcase}"}
+          .content
             .title-container
-              .title{:class => "#{controller_name.capitalize}"}
+              -# .title="#{controller_name.capitalize}"
 
               = yield
       .push
