@@ -1,16 +1,16 @@
 DubLeds::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
-  
-  ENV['MONGOID_HOST'] = 'staff.mongohq.com'
-  ENV['MONGOID_PORT'] = '10022'
-  ENV['MONGOID_USERNAME'] = 'levid'
-  ENV['MONGOID_PASSWORD'] = 'wooteni'
-  ENV['MONGOID_DATABASE'] = 'dub_leds'
-  # ENV['MONGOHQ_URL'] = 'mongodb://levid:wooteni@staff.mongohq.com:10022/dub_leds'
-  
-  ENV['MONGOHQ_URL'] = 'mongodb://levid:wooteni@staff.mongohq.com:10064/app2090795'
-  
-  
+
+  # ENV['MONGOID_HOST'] = 'staff.mongohq.com'
+  #   ENV['MONGOID_PORT'] = '10022'
+  #   ENV['MONGOID_USERNAME'] = 'levid'
+  #   ENV['MONGOID_PASSWORD'] = 'wooteni'
+  #   ENV['MONGOID_DATABASE'] = 'dub_leds'
+  #   # ENV['MONGOHQ_URL'] = 'mongodb://levid:wooteni@staff.mongohq.com:10022/dub_leds'
+  #
+  #   ENV['MONGOHQ_URL'] = 'mongodb://levid:wooteni@staff.mongohq.com:10064/app2090795'
+
+
   # Code is not reloaded between requests
   config.cache_classes = true
 
@@ -29,8 +29,8 @@ DubLeds::Application.configure do
 
   # Generate digests for assets URLs
   config.assets.digest = true
-  
-  
+
+
   config.assets.js_compressor  = :uglifier
   config.assets.css_compressor = :yui
 
@@ -68,7 +68,7 @@ DubLeds::Application.configure do
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation can not be found)
   config.i18n.fallbacks = true
-  
+
   # Specifies the header that your server uses for sending files
   config.action_dispatch.x_sendfile_header = "X-Sendfile"
 
