@@ -7,10 +7,10 @@ gem 'rails', '3.1.4'
 
 group :production do
   gem 'pg'
-  gem 'mysql2'
+  gem 'mysql'
 end
 group :development, :test do
-  gem 'mysql2'
+  gem 'mysql'
   gem 'mongrel', '1.2.0.pre2'
   gem 'pry'
 end
