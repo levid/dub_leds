@@ -115,6 +115,7 @@ GEM
       builder (>= 2.1.2)
     haml (3.1.4)
     hashie (1.2.0)
+    heroku_external_db (1.0.3)
     highline (1.6.8)
     hike (1.2.1)
     httpauth (0.1)
@@ -349,6 +350,7 @@ DEPENDENCIES
   guard
   guard-test
   haml
+  heroku_external_db
   jquery-rails
   mini_magick
   mocha

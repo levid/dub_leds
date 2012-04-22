@@ -33,6 +33,7 @@ gem 'omniauth-twitter'
 gem 'omniauth-facebook'
 gem 'omniauth-openid'
 gem 'oa-core'
+gem 'heroku_external_db'
 
 # Export / Import database dump
 gem 'yaml_db'
