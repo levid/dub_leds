@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120422043157) do
+ActiveRecord::Schema.define(:version => 20121219032143) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                             :default => "", :null => false
@@ -108,7 +108,7 @@ ActiveRecord::Schema.define(:version => 20120422043157) do
   end
 
   create_table "rims", :force => true do |t|
-    t.string   "title",        :default => "", :null => false
+    t.string   "title",        :null => false
     t.text     "description"
     t.string   "color"
     t.string   "size"
@@ -201,8 +201,8 @@ ActiveRecord::Schema.define(:version => 20120422043157) do
 
   create_table "spree_calculators", :force => true do |t|
     t.string   "type"
-    t.integer  "calculable_id",                   :null => false
-    t.string   "calculable_type", :default => "", :null => false
+    t.integer  "calculable_id",   :null => false
+    t.string   "calculable_type", :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -374,9 +374,9 @@ ActiveRecord::Schema.define(:version => 20120422043157) do
   end
 
   create_table "spree_preferences", :force => true do |t|
-    t.string   "name",       :default => ""
+    t.string   "name"
     t.integer  "owner_id"
-    t.string   "owner_type", :default => ""
+    t.string   "owner_type"
     t.integer  "group_id"
     t.string   "group_type"
     t.text     "value"
@@ -459,7 +459,7 @@ ActiveRecord::Schema.define(:version => 20120422043157) do
 
   create_table "spree_properties", :force => true do |t|
     t.string   "name"
-    t.string   "presentation", :default => "", :null => false
+    t.string   "presentation", :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -577,7 +577,7 @@ ActiveRecord::Schema.define(:version => 20120422043157) do
   end
 
   create_table "spree_taxonomies", :force => true do |t|
-    t.string   "name",       :default => "", :null => false
+    t.string   "name",       :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -585,7 +585,7 @@ ActiveRecord::Schema.define(:version => 20120422043157) do
   create_table "spree_taxons", :force => true do |t|
     t.integer  "parent_id"
     t.integer  "position",          :default => 0
-    t.string   "name",              :default => "", :null => false
+    t.string   "name",                             :null => false
     t.string   "permalink"
     t.integer  "taxonomy_id"
     t.datetime "created_at"
@@ -612,16 +612,16 @@ ActiveRecord::Schema.define(:version => 20120422043157) do
   end
 
   create_table "spree_users", :force => true do |t|
-    t.string   "crypted_password"
-    t.string   "salt"
+    t.string   "crypted_password",          :limit => 128, :default => "", :null => false
+    t.string   "salt",                      :limit => 128, :default => "", :null => false
     t.string   "email"
     t.string   "remember_token"
     t.string   "remember_token_expires_at"
     t.string   "persistence_token"
     t.string   "single_access_token"
     t.string   "perishable_token"
-    t.integer  "login_count",               :default => 0, :null => false
-    t.integer  "failed_login_count",        :default => 0, :null => false
+    t.integer  "login_count",                              :default => 0,  :null => false
+    t.integer  "failed_login_count",                       :default => 0,  :null => false
     t.datetime "last_request_at"
     t.datetime "current_login_at"
     t.datetime "last_login_at"
@@ -632,10 +632,8 @@ ActiveRecord::Schema.define(:version => 20120422043157) do
     t.integer  "bill_address_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "openid_identifier"
   end
 
-  add_index "spree_users", ["openid_identifier"], :name => "index_users_on_openid_identifier"
   add_index "spree_users", ["persistence_token"], :name => "index_users_on_persistence_token"
 
   create_table "spree_variants", :force => true do |t|
@@ -702,6 +700,7 @@ ActiveRecord::Schema.define(:version => 20120422043157) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "roles_mask"
   end
 
 end
