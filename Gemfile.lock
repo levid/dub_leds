@@ -154,7 +154,7 @@ GEM
       gem_plugin (~> 0.2.3)
     multi_json (1.3.2)
     multipart-post (1.1.5)
-    mysql (2.8.1)
+    mysql2 (0.3.11)
     nested_set (1.6.8)
       activerecord (>= 3.0.0)
       railties (>= 3.0.0)
@@ -353,7 +353,7 @@ DEPENDENCIES
   mini_magick
   mocha
   mongrel (= 1.2.0.pre2)
-  mysql
+  mysql2
   oa-core
   omniauth
   omniauth-facebook
