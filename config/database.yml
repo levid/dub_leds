@@ -37,12 +37,12 @@ defaults: &defaults
 development:
   <<: *defaults
   adapter: mysql2
-  database: db39250_dubleds
-  username: db39250_dubleds
-  password: wooten123
+  database: heroku_4ec93621e47a9fe
+  username: 3d5e029f506420
+  password: 3b0317fc
   pool: 5
   timeout: 5000
-  host: external-db.s39250.gridserver.com
+  host: us-cdbr-east.cleardb.com
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -50,19 +50,19 @@ development:
 test:
   <<: *defaults
   adapter: mysql2
-  database: db39250_dubleds
-  username: db39250_dubleds
-  password: wooten123
+  database: heroku_4ec93621e47a9fe
+  username: 3d5e029f506420
+  password: 3b0317fc
   pool: 5
   timeout: 5000
-  host: external-db.s39250.gridserver.com
+  host: us-cdbr-east.cleardb.com
 
 production:
   <<: *defaults
   adapter: mysql2
-  database: db39250_dubleds
-  username: db39250_dubleds
-  password: wooten123
+  database: heroku_4ec93621e47a9fe
+  username: 3d5e029f506420
+  password: 3b0317fc
   pool: 5
   timeout: 5000
-  host: external-db.s39250.gridserver.com
+  host: us-cdbr-east.cleardb.com
