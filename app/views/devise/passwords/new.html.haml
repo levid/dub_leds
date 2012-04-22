@@ -1,10 +1,16 @@
+.title Forgot your password?
 .text-container
-  %h2 Forgot your password?
-  = form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f|
-    = devise_error_messages!
-    %div
-      = f.label :email
-      %br/
-      = f.email_field :email
-    %div= f.submit "Send me reset password instructions"
-  = render :partial => "devise/shared/links"
+  %fieldset
+    %legend User Information
+    = form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f|
+      = devise_error_messages!
+      .field
+        = f.label :login
+        = f.text_field :login
+      .submit
+        = f.submit "Send me reset password instructions", :style => 'width: 300px'
+
+  %fieldset
+    %legend Other options
+    .links
+      = render :partial => "devise/shared/links"

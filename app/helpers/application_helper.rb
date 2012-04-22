@@ -2,14 +2,14 @@ module ApplicationHelper
 
   def flash_messages
     output = ''
-    %w{notice success error warning}.each { |type| output += flash_message(type.to_sym) }
+    flash.each { |name, msg| output += flash_message(name.to_sym, msg) }
     raw output
   end
 
-  def flash_message(type, opts={})
-    return '' unless flash[type]
+  def flash_message(name, msg, opts={})
+    return '' unless flash[name]
     hide = opts.nil? ? true : (opts[:hide] || true)
-    raw "<div class=\"notification full #{type.to_s} #{(hide ? 'flash' : '')}\"><div class=\"text\"><h2>#{flash[type]}</h2></div></div>"
+    raw "<div class=\"notification full #{name.to_s} #{(hide ? 'flash' : '')}\"><div class=\"text\"><h2>#{flash[name]}</h2></div></div>"
   end
 
   # Parse JS Arguments
@@ -22,7 +22,7 @@ module ApplicationHelper
   def summarize(body, length)
     return simple_format = body[0..length]+'...'
   end
-  
+
   def admin?
     controller.class.name.split("::").first=="Admin"
   end

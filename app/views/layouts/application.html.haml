@@ -3,14 +3,11 @@
   %section#dub
     %section.wrapper
       %header
-        = render 'layouts/user_nav'
-        = render 'layouts/main_nav'
+        %nav
+          = render 'layouts/user_nav'
+          = render 'layouts/main_nav'
+          = flash_messages
         %section.logo
-      / 
-      / - flash.each do |name, msg|
-      /   = content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String)
-
-      = flash_messages
 
       = yield
       = render 'layouts/footer'

@@ -6,8 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-puts ' *** Empty the MongoDB database ***'
-Mongoid.master.collections.reject { |c| c.name =~ /^system/}.each(&:drop)
+# puts ' *** Empty the MongoDB database ***'
+# Mongoid.master.collections.reject { |c| c.name =~ /^system/}.each(&:drop)
 
 puts ' *** Setting up default user login and roles ***'
 

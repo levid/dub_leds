@@ -1,4 +1,4 @@
-%nav.user
+.user
   %ul
     - if user_signed_in?
       %li
@@ -18,7 +18,7 @@
       %li
         = link_to('My Account', edit_user_registration_path, :class => "my_account #{'active' if controller_name === 'registrations' }")
       %li
-        = link_to('Logout', destroy_user_session_path, :class => 'log_out', :method=>'delete')
+        = link_to('Logout', destroy_user_session_path, :class => 'log_out', :method => 'delete')
     - else
       %li
         = link_to('Sign In', new_user_session_path, :class => "sign_in #{'active' if controller_name === 'sessions' }")

@@ -5,7 +5,7 @@ class Nav extends $DUB.UI
     this
 
   initUserNav: () ->
-    userNav = $('nav.user ul')
+    userNav = $('nav .user ul')
     navWidth = userNav.outerWidth() + 10
     userNav.css('width', navWidth)
 

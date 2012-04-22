@@ -45,6 +45,59 @@
             color: #fafafa;
             display: block;
 
+            .grey
+            {
+              color: #7F7F7F;
+            }
+
+            a
+            {
+              &.btn
+              {
+                padding: 7px 10px 6px 10px;
+                width: auto;
+                height: auto;
+                display: block;
+                color: #fafafa;
+                border: none;
+                -moz-border-radius: 5px;
+                -webkit-border-radius: 5px;
+                -o-border-radius: 5px;
+                -ms-border-radius: 5px;
+                -khtml-border-radius: 5px;
+                cursor: pointer;
+                text-shadow: #000 0px 1px 2px;
+                display: inline-block;
+
+                &.blue
+                {
+                  background-color: rgb(26,182,255);
+                  background-color: rgba(26,182,255,0.92);
+                  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#0092ce), to(#003e63));
+                }
+
+                &.black
+                {
+                  background-color: rgb(66,66,66);
+                  background-color: rgba(66,66,66,0.92);
+                  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#424242), to(#161414));
+                }
+              }
+            }
+
+            .border
+            {
+              background: rgba(25, 25, 25, 0.8);
+              border: 1px solid #222;
+              -moz-border-radius: 5px;
+              -webkit-border-radius: 5px;
+              -o-border-radius: 5px;
+              -ms-border-radius: 5px;
+              -khtml-border-radius: 5px;
+              border-radius: 5px;
+              padding: 10px;
+            }
+
             fieldset {
               // background: rgba(0, 0, 0, 0.2);
               width: auto;
@@ -80,6 +133,19 @@
                   padding: 0px;
                   list-style-type: none;
 
+                  &.border
+                  {
+                    background: rgba(25, 25, 25, 0.8);
+                    border: 1px solid #222;
+                    -moz-border-radius: 5px;
+                    -webkit-border-radius: 5px;
+                    -o-border-radius: 5px;
+                    -ms-border-radius: 5px;
+                    -khtml-border-radius: 5px;
+                    border-radius: 5px;
+                    padding: 10px;
+                  }
+
                   &:last-child
                   {
                     margin: 15px 0px 10px 0px;
@@ -94,31 +160,15 @@
                   {
                     display: inline-block;
 
-                    a
+                    &.divider
                     {
-                      &.btn
-                      {
-                        padding: 7px 10px 6px 10px;
-                        width: auto;
-                        height: auto;
-                        display: block;
-                        color: #fafafa;
-                        border: none;
-                        -moz-border-radius: 5px;
-                        -webkit-border-radius: 5px;
-                        -o-border-radius: 5px;
-                        -ms-border-radius: 5px;
-                        -khtml-border-radius: 5px;
-                        cursor: pointer;
-                        text-shadow: #000 0px 1px 2px;
-
-                        &.blue
-                        {
-                          background-color: rgb(26,182,255);
-                          background-color: rgba(26,182,255,0.92);
-                          background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#0092ce), to(#003e63));
-                        }
-                      }
+                      margin: 0px 0px 0px 10px;
+                      padding: 0px 0px 0px 0px;
+                      border-left: 1px dotted;
+                      width: 1px;
+                      height: 20px;
+                      color: #333;
+                      vertical-align: bottom;
                     }
                   }
                 }
@@ -196,4 +246,12 @@
   {
     margin-bottom: 10px;
   }
+}
+
+.uppercase
+{
+  font-family: EurostileMed, Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  color: #aaa;
+  text-transform: uppercase;
 }

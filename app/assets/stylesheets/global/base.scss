@@ -15,7 +15,7 @@ body, select, input, textarea
 /* always force a scrollbar in non-IE */
 html { overflow-y: scroll; }
 
-h1, h2, h3, h4, h5, h6 {    
+h1, h2, h3, h4, h5, h6 {
   color: #fafafa !important;
 }
 /* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
@@ -61,10 +61,17 @@ button, input, select, textarea { margin: 0; outline: none; }
 /* colors for form validity */
 input:valid, textarea:valid   {  }
 input:invalid, textarea:invalid {
-      border-radius: 1px;
-    -moz-box-shadow: 0px 0px 5px red;
- -webkit-box-shadow: 0px 0px 5px red;
-         box-shadow: 0px 0px 5px red;
+    -moz-box-shadow: 0px 0px 10px #cd7d2c;
+ -webkit-box-shadow: 0px 0px 10px #cd7d2c;
+         box-shadow: 0px 0px 10px #cd7d2c;
+         border: 1px solid #cd7d2c !important;
+         -moz-border-radius: 5px;
+         -webkit-border-radius: 5px;
+         -o-border-radius: 5px;
+         -ms-border-radius: 5px;
+         -khtml-border-radius: 5px;
+         border-radius: 5px;
+         color: #cd7d2c;
 }
 .no-boxshadow input:invalid,
 .no-boxshadow textarea:invalid { background-color: #f0dddd; }

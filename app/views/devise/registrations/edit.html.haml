@@ -1,36 +1,40 @@
+.title Edit Account
 .text-container
-  %h2
-    Edit #{resource_name.to_s.humanize}
-  = form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f|
-    = devise_error_messages!
-    %div
-      = f.label :name
-      %br/
-      = f.text_field :name
-    %div
-      = f.label :email
-      %br/
-      = f.email_field :email
-    %div
-      = f.label :password
-      %i (leave blank if you don't want to change it)
-      %br/
-      = f.password_field :password
-    %div
-      = f.label :password_confirmation
-      %br/
-      = f.password_field :password_confirmation
-    %div
-      = f.label :current_password
-      %i (we need your current password to confirm your changes)
-      %br/
-      = f.password_field :current_password
-    - if can? :read, Role
-      %p= f.label :role
-      %ul.no-pad.no-bullets
-      = f.collection_select :id, User::ROLES, :to_s, :humanize
-    %div= f.submit "Update"
-  %h3 Cancel my account
-  %p
-    Unhappy? #{link_to "Cancel my account", registration_path(resource_name), :confirm => "Are you sure?", :method => :delete}.
-  = link_to "Back", :back
+  %fieldset
+    %legend Edit #{resource_name.to_s.humanize}
+    = form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f|
+      = devise_error_messages!
+      .field
+        = f.label :name
+        = f.text_field :name
+      .field
+        = f.label :username
+        = f.text_field :username
+      .field
+        = f.label :email
+        = f.email_field :email
+      .field
+        = f.label :password
+        = f.password_field :password
+        %div.pad.top10.grey (leave blank if you don't want to change it)
+      .field
+        = f.label :password_confirmation
+        = f.password_field :password_confirmation
+      .field
+        = f.label :current_password
+        = f.password_field :current_password
+        %div.pad.top10.grey (we need your current password to confirm your changes)
+      - if can? :read, Role
+        %p= f.label :role
+        %ul.no-pad.no-bullets
+        = f.collection_select :id, User::ROLES, :to_s, :humanize
+      .submit
+        = f.submit "Update"
+
+  %fieldset
+    %legend Cancel my account
+    .links
+      %div.grey If you wish to cancel your account permanently, please click "Cancel my account"
+      %div.pad.top10
+        = link_to "Cancel my account", registration_path(resource_name), :confirm => "Are you sure?", :method => :delete, :class => 'btn blue'
+        = link_to "Back", :back, :class => 'btn black pad left5'

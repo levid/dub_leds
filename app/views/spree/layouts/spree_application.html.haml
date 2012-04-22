@@ -20,7 +20,7 @@
             /         = content_tag :div, msg, :id => "flash_\#{name}" if msg.is_a?(String)
         %section.body
           %section.content-container.interior
-            %div{:class => "content-store #{action_name.downcase}"}
+            .content
               .title-container
                 .title{:class => "Store"}
                 .text-container
@@ -33,6 +33,6 @@
                       = flash_messages
                       = yield
                       .push
-                    
+
       = render :partial => 'spree/shared/foot'
     = render :partial => 'spree/shared/google_analytics'

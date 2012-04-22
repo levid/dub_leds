@@ -8,11 +8,10 @@ DubLeds::Application.routes.draw do
   resources :products, :only => [ :index ]
 
   # Routes for Devise
-  devise_for :users, controllers: { :omniauth_callbacks => "users/omniauth_callbacks"} do
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+
+  devise_scope :user do
     get '/users/auth/:provider' => 'users/omniauth_callbacks#passthru'
-    # match '/users/auth/:provider/callback' => 'authentications#create'
-    # get 'sign_in', :to => 'users/sessions#new', :as => :new_user_session
-    # get 'sign_out', :to => 'users/sessions#destroy', :as => :destroy_user_session
   end
 
 	get '/users/:id(:format)'  => 'users#show', :as => :user
@@ -35,7 +34,7 @@ DubLeds::Application.routes.draw do
   match '/users/sign_out'     => 'sessions#destroy', :as => :signout
   post '/cookie' => 'cookies#create'
 
-  
+
   # Administration Routes
   namespace :admin do
     resources :rims, :resources, :medias, :newsletters

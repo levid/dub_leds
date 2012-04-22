@@ -4,8 +4,10 @@ class UI extends $DUB
 
   initGlobalUI: (options) ->
     @initFadingLinks()
+    @initFadingButtons()
     @displayMainNav()
-    @hideNotifications()    if $('.notification').length
+    @initInputs()
+    @initNotifications()     if $('.notification').length
     @initNewsletterInput()  if $(".email-updates").length
     @initTooltips()         if $("#sharing-links").length
     @initSharingLinks()     if $("#sharing-links").length
@@ -30,10 +32,25 @@ class UI extends $DUB
     $('a.fade').each ->
       self.fadeLink(this)
 
-  hideNotifications: () ->
-    setTimeout ( ->
-      $('.notification').fadeOut(3000)
-    ), 300
+  initFadingButtons: () ->
+    @fadeButton("a.btn")
+    @fadeButton("a.my_account")
+    @fadeButton("a.log_out")
+
+  fadeButton: (buttonEl) ->
+    $(buttonEl).animate({'opacity': '0.9'}, 150)
+    $(buttonEl).mouseover(->
+      $(this).animate({'opacity': '1.0'}, 150)
+    ).mouseout ->
+      $(this).animate({'opacity': '0.9'}, 150)
+
+  initNotifications: () ->
+    # $('.notification')
+
+    hide: () ->
+      setTimeout ( ->
+        $('.notification').fadeOut(3000)
+      ), 300
 
   displayMainNav: () ->
     self = this
@@ -91,15 +108,31 @@ class UI extends $DUB
       $(".email-updates input[type=submit]").animate({'opacity': '1.0'}, 150)
 
     $(".email-updates input").bind "blur", ->
-      $(this).animate({'opacity': '0.7'}, 150)
-      $(".email-updates input[type=submit]").animate({'opacity': '0.7'}, 150)
+      $(this).animate({'opacity': '0.8'}, 150)
+      $(".email-updates input[type=submit]").animate({'opacity': '0.8'}, 150)
 
   initSharingLinks: () ->
-    $("#sharing-links a").animate({'opacity': '0.7'}, 150)
+    $("#sharing-links a").animate({'opacity': '0.8'}, 150)
     $("#sharing-links a").mouseover(->
       $(this).animate({'opacity': '1.0'}, 150)
     ).mouseout ->
-      $(this).animate({'opacity': '0.7'}, 150)
+      $(this).animate({'opacity': '0.8'}, 150)
+
+  initInputs: () ->
+    $('input, select, textarea').bind "focus", ->
+      $(this).css('border', '1px solid #555')
+
+    $('input, select, textarea').bind "blur", ->
+      $(this).css('border', '1px solid #333')
+
+    test: () ->
+      $("input, select, textarea").bind "focus", ->
+        $(this).addClass('active')
+        $("input:not(.active), select:not(.active), textarea:not(.active)").animate({'opacity': '0.4'}, 150)
+        $(".active").animate({'opacity': '1.0'}, 150)
+
+      $("input, select, textarea").bind "blur", ->
+        $(this).removeClass('active')
 
 
 $DUB.UI = new UI

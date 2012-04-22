@@ -2,7 +2,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   def twitter
     # raise env["omniauth.auth"].inspect
-    # render :text => request.env["omniauth.auth"].to_yaml  
+    # render :text => request.env["omniauth.auth"].to_yaml
     @user = User.find_for_twitter_oauth(request.env["omniauth.auth"], current_user)
 
     if @user.persisted?
@@ -41,6 +41,8 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   def passthru
     render :file => "#{Rails.root}/public/404.html", :status => 404, :layout => false
+    # Or alternatively,
+    # raise ActionController::RoutingError.new('Not Found')
   end
 
 end
