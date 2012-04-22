@@ -1,4 +1,10 @@
+.title New resource
 .text-container
-  %h1 New resource
-  = render 'new_form'
-  = link_to 'Back', admin_resources_path
+  %fieldset
+    %legend Resource Information
+    = render 'new_form'
+
+  %fieldset
+    %legend Other options
+    .links
+      = link_to 'Back to list', admin_resources_path, :class => 'btn black'

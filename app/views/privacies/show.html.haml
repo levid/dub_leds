@@ -1,11 +1,16 @@
+.title= @privacy.title
 .text-container
-  %p#notice= notice
-  %p
-    %b title:
-    = @privacy.title
-  %p
-    %b Content:
-    = @privacy.content
-  = link_to 'Edit', edit_privacy_path(@privacy)
-  |
-  \#{link_to 'Back', privacies_path}
+  %fieldset
+    %legend Policy Information
+    .table
+      .field
+        %b Content:
+        .border.pad.top10
+          = @privacy.content
+      .field.pad.top10
+        = link_to 'Edit Content', edit_privacy_path(@privacy), :class => 'btn orange large pad top10 bottom5'
+
+  %fieldset
+    %legend Other options
+    .links
+      = link_to 'Back to list', privacies_path, :class => 'btn black'

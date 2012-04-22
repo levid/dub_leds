@@ -5,21 +5,17 @@
     %ul
     - @contact.errors.full_messages.each do |msg|
       %li= msg
-  .left-column
-    .field
-      = f.label :name
-      = f.text_field :name
-    .field
-      = f.label :email
-      = f.text_field :email
-    .field-select
-      = f.label :subject
-      = f.select :subject, options_for_select(['General Inquiry', 'Business Inquiry', 'Comment'])
-
-  .right-column
-    .field
-      = f.label :body
-      = f.text_area :body, :type => :textarea
-    .send-button
-      .send
-        = f.submit 'Send'
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :email
+    = f.text_field :email
+  .field
+    = f.label :subject
+    = f.select :subject, options_for_select(['General Inquiry', 'Business Inquiry', 'Comment'])
+  .field
+    = f.label :body
+    = f.text_area :body, :type => :textarea
+  .submit.pad.bottom10
+    = f.submit 'Send', :class => 'orange'

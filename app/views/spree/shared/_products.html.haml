@@ -9,10 +9,12 @@
     - products.each do |product|
       - if Spree::Config[:show_zero_stock_products] || product.has_stock?
         %li{:class => "columns three #{cycle("alpha", "secondary", "", "omega secondary")}", "data-hook" => "products_list_item", :id => "product_#{product.id}", :itemscope => "", :itemtype => "http://schema.org/Product"}
-          .product-image
+          .product-image.center
             = link_to small_image(product, :itemprop => "image"), product, :itemprop => 'url'
-          = link_to truncate(product.name, :length => 50), product, :class => 'info', :itemprop => "name", :title => product.name
-          %span.price.selling{:itemprop => "price"}= number_to_currency product.price
+          .pad.bottom10.center
+            %span.price.selling.medium-text{:itemprop => "price"}= number_to_currency product.price
+          = link_to "#{truncate(product.name, :length => 50)} Details", product, :class => 'info', :itemprop => "name", :title => "View Info #{product.name}", :class => 'btn blue pad bottom10'
+
 - if paginated_products.respond_to?(:num_pages)
 - params.delete(:search)
 - params.delete(:taxon)

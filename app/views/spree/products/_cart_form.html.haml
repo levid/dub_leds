@@ -19,14 +19,14 @@
     - if @product.price
       .columns.five.if.alpha.else.omega{:class => "<haml:silent> !@product.has_variants? </haml:silent><haml:block> </haml:block><haml:silent> </haml:silent><haml:block> </haml:block>", "data-hook" => "product_price"}
         #product-price
-          %h6.product-section-title= t(:price)
-          %div
+          %h6.product-section-title.pad.bottom5= t(:price)
+          %div.pad.bottom10.blue.large-text
             %span.price.selling{:itemprop => "price"}= number_to_currency @product.price
         .add-to-cart
           - if @product.has_stock? || Spree::Config[:allow_backorders]
             = number_field_tag (@product.has_variants? ? :quantity : "variants[#{@product.master.id}]"), |
               1, :class => 'title', :in => 1..@product.on_hand                                           |
-            = button_tag :class => 'large primary', :id => 'add-to-cart-button' do
+            = button_tag :class => 'large primary btn orange large', :id => 'add-to-cart-button' do
               = t(:add_to_cart)
           - else
             = content_tag('strong', t(:out_of_stock))

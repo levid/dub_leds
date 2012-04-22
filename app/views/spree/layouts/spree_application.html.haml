@@ -12,8 +12,9 @@
     %section#dub
       %section.wrapper
         %header
-          = render 'spree/shared/user_nav'
-          = render 'spree/shared/main_nav'
+          %nav
+            = render 'spree/shared/user_nav'
+            = render 'spree/shared/main_nav'
           %section.logo
 
             / - flash.each do |name, msg|

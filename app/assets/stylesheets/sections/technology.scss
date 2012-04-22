@@ -5,11 +5,27 @@
 @import "../global/variables";
 @import "../global/mixins";
 
-.content-technology
+.content
 {
+  &.technology
+  {
     margin: 0px auto;
     width: 980px;
     height: auto;
+
+    .title-container
+    {
+      .title
+      {
+        font-size: 50px !important;
+      }
+
+      .sub-title
+      {
+        color: #fafafa;
+        margin: 0px 0px 0px 10px;
+      }
+    }
 
     #tech-overlay
     {
@@ -80,7 +96,7 @@
             line-height: 40px;
             height: auto;
             font-family: EurostileMed, Helvetica, Arial, sans-serif;
-            font-size: 35px;
+            font-size: 35px !important;
             color: #18c6fe;
             background: none;
             float: left;
@@ -97,10 +113,11 @@
 
             h4
             {
-                font-family: EurostileBld, Helvetica, Arial, sans-serif;
+                font-family: EurostileMed, Helvetica, Arial, sans-serif;
                 font-size: 18px;
-                padding: 10px 0px 15px 0px;
+                padding: 10px 0px 10px 0px;
                 font-weight: 400;
+                color: #ccc !important;
             }
 
           }
@@ -118,7 +135,7 @@
             margin: 0px 0px 0px 90px;
             width: 560px;
             height: auto;
-            font-size: 15px;
+            font-size: 14px;
           }
         }
 
@@ -131,47 +148,10 @@
       }
     }
 
-    .title-container
-    {
-        width: auto;
-        height: auto;
-        display: block;
-
-        .title
-        {
-            margin: 20px 0px 0px -16px;
-            height: 73px;
-            width: 357px;
-            float: left;
-            text-indent: -9000px;
-            @include background($path + '/title-technology.png', no-repeat, top left, transparent);
-        }
-    }
-
-    .text-container
-    {
-        clear: both;
-        text-shadow: 0px 1px 2px #333;
-        color: #fafafa;
-
-        h4
-        {
-            font-size: 22px;
-            padding: 0px 0px 10px 0px;
-            font-family: EurostileMed, Helvetica, Arial, sans-serif;
-            font-weight: 700;
-        }
-
-        p
-        {
-            font-size: 15px;
-        }
-    }
-
     .technology-content
     {
         clear: both;
-        padding: 17px 0px 0px 0px;
+        padding: 50px 0px 0px 0px;
 
         .overlay
         {
@@ -352,4 +332,5 @@
             }
         }
     }
+  }
 }

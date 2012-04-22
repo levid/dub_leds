@@ -3,12 +3,12 @@
     .newsletter
       .logo
       .email-updates
-        %form
-          %input#email-address{:name => "email-address", :type => "text", :value => "enter email for updates"}/
-          %input{:type => "submit"}/
+        = form_for(main_app.new_newsletter_path) do |f|
+          = f.email_field :email, :placeholder => "Enter email for updates"
+          = f.submit 'Register'
     .links
       .order
-        = link_to('Order', '/order')
+        = link_to('Store', main_app.store_path)
       %ul#sharing-links
         %li
           %a.facebook{:href => "#", :title => 'Follow us on Facebook'} Facebook
@@ -22,13 +22,10 @@
     .copyright
       %span (c) 2011 LED Wheels, Inc.
       .links
-        = link_to 'Privacy Policy', '/privacy_policy', :class => "fade"
-        = link_to 'Refund Policy', '/refund_policy', :class => "fade"
+        = link_to 'Privacy Policy', main_app.privacy_policy_path, :class => "fade"
+        = link_to 'Refund Policy', main_app.refund_policy_path, :class => "fade"
 
 / = controller_path.split('/').first
 / = debug(params) if Rails.env.development?
 = javascript_tag :defer => 'defer' do
-  -if admin?
-    #{@controller_js_args.present? ? "$DUB.initPage('#{controller.class.to_s.split('Controller').first.split('::').second}Admin', #{parse_js_args(@controller_js_args)});" : "$DUB.initPage('#{controller.class.to_s.split('Controller').first.split('::').second}Admin');"}
-  -else
-    #{@controller_js_args.present? ? "$DUB.initPage('#{controller.class.to_s.split('Controller').first}', #{parse_js_args(@controller_js_args)});" : "$DUB.initPage('#{controller.class.to_s.split('Controller').first}');"}
+  #{@controller_js_args.present? ? "$DUB.initPage('Spree#{controller.class.to_s.split('Controller').first.split('::').second}', #{parse_js_args(@controller_js_args)});" : "$DUB.initPage('Spree#{controller.class.to_s.split('Controller').first.split('::').second}');"}

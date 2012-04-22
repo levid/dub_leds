@@ -65,6 +65,12 @@
 
   &.alert
   {
+    // background-color: rgba(208, 134, 45, 0.7) !important;
+    background-color: rgba(160, 32, 15, 0.7) !important;
+  }
+
+  &.error
+  {
     background-color: rgba(160, 32, 15, 0.7) !important;
   }
 

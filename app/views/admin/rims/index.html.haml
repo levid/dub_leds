@@ -1,39 +1,47 @@
+.title Manage Rims
 .text-container
-  %h1 Listing Rims
-  %table
-    %tr
-      %th Title
-      %th Description
-      %th Color
-      %th Size
-      %th Fitting
-      %th Image
-    - @rims.each do |rim|
-      %tr
-        %td= rim.title
-        %td= rim.description
-        %td= rim.color
-        %td= rim.size
-        %td= rim.fitting
-      
-        -if rim.image.url(:thumb).nil?
-          %td= rim.image.url(:thumb)
-        -else
-          %td= image_tag rim.image.url(:thumb)
-        
-        -if rim.medium_image.url(:thumb).nil?
-          %td= rim.medium_image.url(:thumb)
-        -else
-          %td= image_tag rim.medium_image.url(:thumb)
-        
-        -if rim.small_image.url(:thumb).nil?
-          %td= rim.small_image.url(:thumb)
-        -else
-          %td= image_tag rim.small_image.url(:thumb)
-	    
-        %td= link_to 'Show', admin_rim_path(rim)
-        %td= link_to 'Edit', edit_admin_rim_path(rim)
-        %td= link_to 'Destroy', admin_rim_path(rim), :confirm => 'Are you sure?', :method => :delete
+  %fieldset
+    %legend All Rims
+    .table
+      %table
+        %thead
+          %tr
+            %th Title
+            %th Description
+            %th Color
+            %th Size
+            %th Fitting
+            %th Image
+            %th Medium Image
+            %th Small Image
+            %th{:colspan => 3} Actions
+        %tbody
+          - @rims.each do |rim|
+            %tr
+              %th= rim.title
+              %th= rim.description
+              %th= rim.color
+              %th= rim.size
+              %th= rim.fitting
 
-  %br/
-  = link_to 'New Rim', new_admin_rim_path
+              -if rim.image.url(:thumb).nil?
+                %th= rim.image.url(:thumb)
+              -else
+                %th= image_tag rim.image.url(:thumb)
+
+              -if rim.medium_image.url(:thumb).nil?
+                %th= rim.medium_image.url(:thumb)
+              -else
+                %th= image_tag rim.medium_image.url(:thumb)
+
+              -if rim.small_image.url(:thumb).nil?
+                %th= rim.small_image.url(:thumb)
+              -else
+                %th= image_tag rim.small_image.url(:thumb)
+
+              %th= link_to 'Show', admin_rim_path(rim), :class => 'btn blue'
+              %th= link_to 'Edit', edit_admin_rim_path(rim), :class => 'btn blue'
+              %th= link_to 'Delete', admin_rim_path(rim), :confirm => 'Are you sure?', :method => :delete, :class => 'btn black'
+
+    .links.pad.bottom10
+      = link_to 'Create New Rim', new_admin_rim_path, :class => 'btn orange'

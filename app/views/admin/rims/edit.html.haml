@@ -1,6 +1,11 @@
+.title="Updating: #{@rim.title}"
 .text-container
-  %h1 Editing Rim
-  = render 'edit_form'
-  = link_to 'Show', admin_rim_path(@rim)
-  \|
-  = link_to 'Back', admin_rims_path
+  %fieldset
+    %legend Rim Information
+    = render 'edit_form'
+
+  %fieldset
+    %legend Other options
+    .links
+      = link_to 'Rim Information', admin_rim_path(@rim), :class => 'btn blue'
+      = link_to 'Back to list', admin_rims_path, :class => 'btn black pad left5'

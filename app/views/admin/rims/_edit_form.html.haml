@@ -14,39 +14,52 @@
     = f.text_area :description
   .field
     = f.label :color
-    = f.text_area :color
+    = f.text_field :color
   .field
     = f.label :size
-    = f.text_area :size
+    = f.text_field :size
   .field
     = f.label :fitting
-    = f.text_area :fitting
+    = f.text_field :fitting
   .field
-    = image_tag(@rim.image.url) if @rim.image.url.present?
     = f.label :image
+    .border.pad.bottom10.center
+      - if @rim.image.url.present?
+        = image_tag(@rim.image.url) if @rim.image.url.present?
+      - else
+        No large rim image exists
+
     = f.file_field :image
-  - if @rim.image.url.present?
-    .field
-      = f.label :remove_image
-      = f.check_box :remove_image
-      = f.hidden_field :image_cache
+    .right
+      - if @rim.image.url.present?
+        = f.check_box :remove_image, :class => 'inline'
+        = f.label :remove_image, :class => 'inline grey'
+        = f.hidden_field :image_cache, :class => 'inline'
   .field
-    = image_tag(@rim.medium_image.url) if @rim.medium_image.url.present?
+    .border.pad.bottom10.center
+      - if @rim.medium_image.url.present?
+        = image_tag(@rim.medium_image.url)
+      - else
+        No medium rim image exists
     = f.label :medium_image
     = f.file_field :medium_image
-  - if @rim.medium_image.url.present?
-    .field
-      = f.label :remove_medium_image
-      = f.check_box :remove_medium_image
-      = f.hidden_field :medium_image_cache
+    .right
+      - if @rim.medium_image.url.present?
+        = f.check_box :remove_medium_image, :class => 'inline'
+        = f.label :remove_medium_image, :class => 'inline grey'
+        = f.hidden_field :medium_image_cache, :class => 'inline'
   .field
-    = image_tag(@rim.small_image.url) if @rim.small_image.url.present?
+    .border.pad.bottom10.center
+      - if @rim.small_image.url.present?
+        = image_tag(@rim.small_image.url)
+      - else
+        No small rim image exists
     = f.label :small_image
     = f.file_field :small_image
-  - if @rim.small_image.url.present?
-    .field
-      = f.label :remove_small_image
-      = f.check_box :remove_small_image
-      = f.hidden_field :small_image_cache
-  .actions
-    = f.submit 'Save'
+    .right
+      - if @rim.small_image.url.present?
+        = f.check_box :remove_small_image, :class => 'inline'
+        = f.label :remove_small_image, :class => 'inline grey'
+        = f.hidden_field :small_image_cache, :class => 'inline'
+  .submit
+    = f.submit 'Save Changes', :style => 'width: 200px', :class => 'orange'

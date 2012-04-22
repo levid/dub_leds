@@ -62,7 +62,8 @@ DubLeds::Application.routes.draw do
   get '/refund_policy'       => 'refunds#index',    :as => :refund_policy
 
   get '/generator'           => 'generator#index',  :as => :generator
-  get '/order'               => 'order#index',      :as => :order
+  get '/store'               => 'store#index',      :as => :store
+  get '/store/:id'           => 'store#show',       :as => :store_show
   get '/technology'          => 'technology#index', :as => :technology
 
   get '/technology/:title'   => 'technology#show',   :as => :technology_show

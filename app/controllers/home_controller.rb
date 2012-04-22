@@ -12,9 +12,11 @@ class HomeController < ApplicationController
 
     @path = :home_path
     @users = User.all
-    
+
     @searcher = Spree::Config.searcher_class.new(params)
     @products = @searcher.retrieve_products
+
+    @newsletter = Newsletter.new
   end
 
   protected

@@ -20,14 +20,13 @@
       .buttons
         %ul
           - @rims.each do |rim|
-            - @tooltip = { :title => rim.title, :description => rim.description, :order => '/store/1'}
             %li
               - if rim.id.to_s == @active_rim.to_s
-                %a.active{:href => "#", :title => "#{rim.title.upcase + "<br>" + rim.description + "<br>" + (link_to "Order It", '/store/products/rim-1')}"} #{rim.title}
+                %a.active{:href => "#", :title => "#{"<div class='title'>" + rim.title.upcase + "</div>" + "<div class='grey border pad top5 bottom10'>" + rim.description + "</div>" + (link_to "More Info", "/store/products/rim-#{rim.id}", :class => 'btn blue')}"} #{rim.title}
               - elsif rim.id == @rims.first.id && @active_rim.nil?
-                %a.active{:href => "#", :title => "#{rim.title.upcase + "<br>" + rim.description + "<br>" + (link_to "Order It", '/store/products/rim-1')}"}} #{rim.title}
+                %a.active{:href => "#", :title => "#{"<div class='title'>" + rim.title.upcase + "</div>" + "<div class='grey border pad top5 bottom10'>" + rim.description + "</div>" + (link_to "More Info", "/store/products/rim-#{rim.id}", :class => 'btn blue')}"}} #{rim.title}
               - else
-                %a{:href => "#", :title => "#{rim.title.upcase + "<br>" + rim.description + "<br>" + (link_to "Order It", '/store/products/rim-1')}"}} #{rim.title}
+                %a{:href => "#", :title => "#{"<div class='title'>" + rim.title.upcase + "</div>" + "<div class='grey border pad top5 bottom10'>" + rim.description + "</div>" + (link_to "More Info", "/store/products/rim-#{rim.id}", :class => 'btn blue')}"}} #{rim.title}
       .reflection.right
   %section.content-container.home
     .content

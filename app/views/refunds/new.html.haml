@@ -1,4 +1,10 @@
+.title New refund policy
 .text-container
-  %h1 New refund
-  = render 'form'
-  = link_to 'Back', refunds_path
+  %fieldset
+    %legend Policy Information
+    = render 'form'
+
+  %fieldset
+    %legend Other options
+    .links
+      = link_to 'Back to list', refunds_path, :class => 'btn black'

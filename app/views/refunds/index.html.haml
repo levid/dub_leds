@@ -1,25 +1,30 @@
+.title Refund Policy
+
+- if !@refunds.first.nil?
+  .text-container
+    %fieldset
+      %legend== "Refund Policy - #{@refunds.first.title}"
+      .table
+        = @refunds.first.content.html_safe
+
 - if user_signed_in?
   .text-container
-    %h4 All Refund Policies
-    %table
-      %tr
-        %th Type
-        %th Content
-        %th
-        %th
-        %th
-      - @refunds.each do |refund|
-        %tr
-          %td= refund.title
-          %td= summarize(refund.content, 200).html_safe unless refund.content.nil?
-          %td= link_to 'Show', refund
-          %td= link_to 'Edit', edit_refund_path(refund)
-          %td= link_to 'Destroy', refund, confirm: 'Are you sure?', method: :delete
-    %br/
-    = link_to 'New Refund Policy', new_refund_path
-
--if !@refunds.first.nil?
-  .text-container
-    %h4= "Refund Policy - #{@refunds.first.title}"
-    .cnt
-      = @refunds.first.content.html_safe
+    %fieldset
+      %legend All Refund Policies
+      .table
+        %table
+          %thead
+            %tr
+              %th Type
+              %th Content
+              %th{:colspan => 3} Actions
+          %tbody
+          - @refunds.each do |refund|
+            %tr
+              %th= refund.title
+              %th.align-left= summarize(refund.content, 200).html_safe unless refund.content.nil?
+              %th= link_to 'Show', refund, :class => 'btn blue'
+              %th= link_to 'Edit', edit_refund_path(refund), :class => 'btn blue'
+              %th= link_to 'Delete', refund, confirm: 'Are you sure?', method: :delete, :class => 'btn black'
+      .links
+        = link_to 'New Refund Policy', new_refund_path, :class => 'btn blue'

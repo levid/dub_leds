@@ -1,7 +1,10 @@
+.title Contact
+.sub-title Have questions about DUB LEDS?
+.small-title
+  Use the form below to contact us or email us at:
+  %a{ :href => 'mailto:info@dubleds.com?subject=General Inquiry', :class => 'fade' } info@dubleds.com
+  and we'll get back to you as soon as possible.
 .text-container
-  %h4 Have questions about DUB LEDS?
-  %p
-    Use the form below to contact us or email us at:
-    %a{ :href => 'mailto:info@dubleds.com?subject=General Inquiry', :class => 'fade' } info@dubleds.com
-    and we'll get back to you as soon as possible.
-= render :partial => 'form'
+  %fieldset
+    %legend All Rims
+    = render :partial => 'form'

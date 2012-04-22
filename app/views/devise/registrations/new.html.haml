@@ -20,12 +20,12 @@
         = f.label :password_confirmation
         = f.password_field :password_confirmation, :placeholder => "Required"
       - if can? :read, Role
-        %p= f.label :role
-        %ul.no-pad.no-bullets
-        = f.collection_select :id, User::ROLES, :to_s, :humanize
-      .field.pad.top10
-        .submit
-          = f.submit 'Register'
+        .field
+          %p= f.label :role
+          %ul.no-pad.no-bullets
+          = f.collection_select :id, User::ROLES, :to_s, :humanize
+      .submit
+        = f.submit 'Register', :class => 'orange'
 
   %fieldset
     %legend Other options

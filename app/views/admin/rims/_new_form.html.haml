@@ -14,21 +14,24 @@
     = f.text_area :description
   .field
     = f.label :color
-    = f.text_area :color
+    = f.text_field :color
   .field
     = f.label :size
-    = f.text_area :size
+    = f.text_field :size
   .field
     = f.label :fitting
-    = f.text_area :fitting
+    = f.text_field :fitting
   .field
-    = f.label :image
-    = f.file_field :image
+    .border.pad.bottom10
+      = f.label :image
+      = f.file_field :image
   .field
-    = f.label :medium_image
-    = f.file_field :medium_image
+    .border.pad.bottom10
+      = f.label :medium_image
+      = f.file_field :medium_image
   .field
-    = f.label :small_image
-    = f.file_field :small_image
-  .actions
-    = f.submit 'Save'
+    .border.pad.bottom10
+      = f.label :small_image
+      = f.file_field :small_image
+  .submit
+    = f.submit 'Save', :class => 'orange'

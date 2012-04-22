@@ -1,6 +1,11 @@
+.title Editing resource
 .text-container
-  %h1 Editing resource
-  = render 'edit_form'
-  = link_to 'Show', admin_resource_path(@resource)
-  |
-  \#{link_to 'Back', admin_resources_path}
+  %fieldset
+    %legend Resource Information
+    = render 'edit_form'
+
+  %fieldset
+    %legend Other options
+    .links
+      = link_to 'Resource Information', admin_resource_path(@resource), :class => 'btn blue'
+      = link_to 'Back to list',  admin_resources_path, :class => 'btn black pad left5'

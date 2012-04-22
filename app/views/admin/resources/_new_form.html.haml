@@ -9,20 +9,16 @@
   /               %li= msg
 
   .field
-    = f.label :type
-    %br/
-    = f.text_field :type
+    = f.label :resource_type
+    = f.text_field :resource_type
   .field
     = f.label :title
-    %br/
     = f.text_field :title
   .field
     = f.label :sub_title
-    %br/
     = f.text_field :sub_title
   .field
     = f.label :description
-    %br/
     = f.text_area :description
-  .actions
-    = f.submit 'Save'
+  .submit
+    = f.submit 'Save', :class => 'orange'

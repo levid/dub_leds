@@ -5,27 +5,26 @@
 @import "../global/variables";
 @import "../global/mixins";
 
-.content-media
+.content
 {
+  &.media
+  {
     margin: 0px auto;
     width: 980px;
     height: auto;
 
     .title-container
     {
-        width: auto;
-        height: auto;
-        display: block;
+      .title
+      {
+        font-size: 50px !important;
+      }
 
-        .title
-        {
-            margin: 20px 0px 0px -16px;
-            height: 73px;
-            width: 188px;
-            float: left;
-            text-indent: -9000px;
-            @include background($path + '/title-media.png', no-repeat, top left, transparent);
-        }
+      .sub-title
+      {
+        color: #fafafa;
+        margin: 0px 0px 0px 4px;
+      }
     }
 
     .text-container
@@ -43,30 +42,33 @@
         }
     }
 
-    .media-content
+    .container
     {
-        clear: both;
+        width: auto;
+        height: auto;
         padding: 17px 0px 0px 0px;
+        display: block;
 
         .left-column
         {
-            width: 745px;
+            margin: 0px 0px 0px 10px;
+            width: auto;
             height: auto;
-            float: left;
+            display: inline-block;
 
             iframe
             {
-                position: relative;
-                float: left;
+                display: inline-block;
                 border: 1px solid #2d2d2d;
             }
         }
 
         .right-column
         {
-            width: 221px;
+            margin: 0px 0px 0px 20px;
+            width: auto;
             height: auto;
-            float: right;
+            display: inline-block;
 
             ul
             {
@@ -79,8 +81,10 @@
                 {
                     padding: 0px 0px 12px 0px;
                     list-style-type: none;
+                    display: block;
                 }
             }
         }
     }
+  }
 }

@@ -1,10 +1,11 @@
-%nav.main
-  %ul.topnav  
+.main
+  %ul.topnav
     -@section = controller.class.to_s.split('Controller').first.split('::').first.downcase
-    %li= (link_to "Home", '/home', :id => "home", :class => @section != 'spree' && controller_name === "home" ? "active" : "")
-    %li= (link_to "Technology", '/technology', :id => "technology", :class => @section != 'spree' && controller_name === "technology" ? "active" : "")
-    %li= (link_to "Media", '/media', :id => "media", :class => @section != 'spree' && controller_name === "media" ? "active" : "")
-    %li= (link_to "Generator", '/generator', :id => "generator", :class => @section != 'spree' && controller_name === "generator" ? "active" : "")
-    %li= (link_to "Store", '/store', :id => "store", :class => @section == 'spree' && controller_name === "home" ? "active" : "")
-    %li= (link_to "Contact", '/contact', :id => "contact", :class => @section != 'spree' && controller_name === "contact" ? "active" : "")
+    %li= (link_to "Home", main_app.home_path, :id => "home", :class => @section != 'spree' && controller_name === "home" ? "active" : "")
+    %li= (link_to "Technology", main_app.technology_path, :id => "technology",:class => @section != 'spree' && controller_name === "technology" ? "active" : "")
+    %li= (link_to "Media", main_app.media_path, :id => "media", :class => @section != 'spree' && controller_name === "media" ? "active" : "")
+    %li= (link_to "Generator", main_app.generator_path, :id => "generator", :class => @section != 'spree' && controller_name === "generator" ? "active" : "")
+    %li= (link_to "Store", main_app.store_path, :id => "store", :class => @section == 'spree' && controller_name === "home" ? "active" : "")
+    %li= (link_to "Contact", main_app.contact_path, :id => "contact", :class => @section != 'spree' && controller_name === "contact" ? "active" : "")
+
   .glow

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120422014843) do
+ActiveRecord::Schema.define(:version => 20120422043157) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                             :default => "", :null => false
@@ -99,16 +99,16 @@ ActiveRecord::Schema.define(:version => 20120422014843) do
   end
 
   create_table "resources", :force => true do |t|
+    t.string   "resource_type"
     t.text     "description"
     t.string   "title"
     t.string   "sub_title"
-    t.string   "type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "rims", :force => true do |t|
-    t.string   "title",        :null => false
+    t.string   "title",        :default => "", :null => false
     t.text     "description"
     t.string   "color"
     t.string   "size"
@@ -201,8 +201,8 @@ ActiveRecord::Schema.define(:version => 20120422014843) do
 
   create_table "spree_calculators", :force => true do |t|
     t.string   "type"
-    t.integer  "calculable_id",   :null => false
-    t.string   "calculable_type", :null => false
+    t.integer  "calculable_id",                   :null => false
+    t.string   "calculable_type", :default => "", :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -374,9 +374,9 @@ ActiveRecord::Schema.define(:version => 20120422014843) do
   end
 
   create_table "spree_preferences", :force => true do |t|
-    t.string   "name"
+    t.string   "name",       :default => ""
     t.integer  "owner_id"
-    t.string   "owner_type"
+    t.string   "owner_type", :default => ""
     t.integer  "group_id"
     t.string   "group_type"
     t.text     "value"
@@ -459,7 +459,7 @@ ActiveRecord::Schema.define(:version => 20120422014843) do
 
   create_table "spree_properties", :force => true do |t|
     t.string   "name"
-    t.string   "presentation", :null => false
+    t.string   "presentation", :default => "", :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -577,7 +577,7 @@ ActiveRecord::Schema.define(:version => 20120422014843) do
   end
 
   create_table "spree_taxonomies", :force => true do |t|
-    t.string   "name",       :null => false
+    t.string   "name",       :default => "", :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -585,7 +585,7 @@ ActiveRecord::Schema.define(:version => 20120422014843) do
   create_table "spree_taxons", :force => true do |t|
     t.integer  "parent_id"
     t.integer  "position",          :default => 0
-    t.string   "name",                             :null => false
+    t.string   "name",              :default => "", :null => false
     t.string   "permalink"
     t.integer  "taxonomy_id"
     t.datetime "created_at"
@@ -702,7 +702,6 @@ ActiveRecord::Schema.define(:version => 20120422014843) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "roles_mask"
   end
 
 end

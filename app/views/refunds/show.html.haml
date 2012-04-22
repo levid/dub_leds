@@ -1,11 +1,16 @@
+.title= @refund.title
 .text-container
-  %p#notice= notice
-  %p
-    %b title:
-    = @refund.title
-  %p
-    %b Content:
-    = @refund.content
-  = link_to 'Edit', edit_refund_path(@refund)
-  |
-  \#{link_to 'Back', refunds_path}
+  %fieldset
+    %legend Policy Information
+    .table
+      .field
+        %b Content:
+        .border.pad.top10
+          = @refund.content
+      .field.pad.top10
+        = link_to 'Edit Content', edit_refund_path(@refund), :class => 'btn orange large pad top10 bottom5'
+
+  %fieldset
+    %legend Other options
+    .links
+      = link_to 'Back to list', refunds_path, :class => 'btn black'

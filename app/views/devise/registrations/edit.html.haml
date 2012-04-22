@@ -25,11 +25,12 @@
         = f.password_field :current_password
         %div.pad.top10.grey (we need your current password to confirm your changes)
       - if can? :read, Role
-        %p= f.label :role
-        %ul.no-pad.no-bullets
-        = f.collection_select :id, User::ROLES, :to_s, :humanize
+        .field
+          %p= f.label :role
+          %ul.no-pad.no-bullets
+          = f.collection_select :id, User::ROLES, :to_s, :humanize
       .submit
-        = f.submit "Update"
+        = f.submit "Update", :class => 'orange'
 
   %fieldset
     %legend Cancel my account

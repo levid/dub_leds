@@ -1,24 +1,30 @@
-- if user_signed_in?
-  .text-container
-    %h4 All Privacy Policies
-    %table
-      %tr
-        %th Type
-        %th Content
-        %th
-        %th
-        %th
-      - @privacies.each do |privacy|
-        %tr
-          %td= privacy.title
-          %td= summarize(privacy.content, 200).html_safe unless privacy.content.nil?
-          %td= link_to 'Show', privacy
-          %td= link_to 'Edit', edit_privacy_path(privacy)
-          %td= link_to 'Destroy', privacy, confirm: 'Are you sure?', method: :delete
-    %br/
-    = link_to 'New Privacy Policy', new_privacy_path
+.title Privacy Policy
 
 - if !@privacies.first.nil?
   .text-container
-    %h4= "Privacy Policy - #{@privacies.first.title}"
-    = @privacies.first.content.html_safe
+    %fieldset
+      %legend= "#{@privacies.first.title}"
+      .table
+        = @privacies.first.content.html_safe
+
+- if user_signed_in?
+  .text-container
+    %fieldset
+      %legend All Privacy Policies
+      .table
+        %table
+          %thead
+            %tr
+              %th Type
+              %th Content
+              %th{:colspan => 3} Actions
+          %tbody
+          - @privacies.each do |privacy|
+            %tr
+              %th= privacy.title
+              %th.align-left= summarize(privacy.content, 200).html_safe unless privacy.content.nil?
+              %th= link_to 'Show', privacy, :class => 'btn blue'
+              %th= link_to 'Edit', edit_privacy_path(privacy), :class => 'btn blue'
+              %th= link_to 'Delete', privacy, confirm: 'Are you sure?', method: :delete, :class => 'btn black'
+      .links
+        = link_to 'New Privacy Policy', new_privacy_path, :class => 'btn blue'

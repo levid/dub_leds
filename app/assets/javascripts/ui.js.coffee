@@ -34,6 +34,7 @@ class UI extends $DUB
 
   initFadingButtons: () ->
     @fadeButton("a.btn")
+    @fadeButton("button")
     @fadeButton("a.my_account")
     @fadeButton("a.log_out")
 
@@ -120,10 +121,10 @@ class UI extends $DUB
 
   initInputs: () ->
     $('input, select, textarea').bind "focus", ->
-      $(this).css('border', '1px solid #555')
+      $(this).css('border', '1px solid #444')
 
     $('input, select, textarea').bind "blur", ->
-      $(this).css('border', '1px solid #333')
+      $(this).css('border', '1px solid #222')
 
     test: () ->
       $("input, select, textarea").bind "focus", ->

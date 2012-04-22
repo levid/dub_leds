@@ -1,4 +1,10 @@
+.title New privacy policy
 .text-container
-  %h1 New privacy
-  = render 'form'
-  = link_to 'Back', privacies_path
+  %fieldset
+    %legend Policy Information
+    = render 'form'
+
+  %fieldset
+    %legend Other options
+    .links
+      = link_to 'Back to list', privacies_path, :class => 'btn black'

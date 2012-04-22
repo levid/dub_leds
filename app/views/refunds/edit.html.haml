@@ -1,5 +1,11 @@
-%h1 Editing refund
-= render 'form'
-= link_to 'Show', @refund
-|
-\#{link_to 'Back', refunds_path}
+.title Editing refund
+.text-container
+  %fieldset
+    %legend Policy Information
+    = render 'form'
+
+  %fieldset
+    %legend Other options
+    .links
+      = link_to 'Cancel', @refund, :class => 'btn blue'
+      = link_to 'Back to list', refunds_path, :class => 'btn black pad left5'

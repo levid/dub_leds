@@ -1,35 +1,34 @@
-%h3= t(:order_summary)
 %table{"data-hook" => "order_summary"}
   %tbody
     %tr{"data-hook" => "item_total"}
-      %td
+      %th
         %strong
           = t(:item_total)
           \:
-      %td
+      %th
         %strong= number_to_currency order.item_total
     %tbody#summary-order-charges{"data-hook" => ""}
       - order.adjustments.eligible.each do |adjustment|
         - next if (adjustment.originator_type == 'Spree::TaxRate') and (adjustment.amount == 0)
         %tr
-          %td
+          %th
             = adjustment.label
             \:
-          %td= number_to_currency adjustment.amount
+          %th= number_to_currency adjustment.amount
     %tr{"data-hook" => "order_total"}
-      %td
+      %th
         %strong
           = t(:order_total)
           \:
-      %td
+      %th
         %strong
           %span#summary-order-total= number_to_currency @order.total
     - if order.price_adjustment_totals.present?
       %tbody#price-adjustments{"data-hook" => "order_details_price_adjustments"}
         - @order.price_adjustment_totals.keys.each do |key|
           %tr.total
-            %td
+            %th
               %strong= key
-            %td
+            %th
               %strong
                 %span= number_to_currency @order.price_adjustment_totals[key]

@@ -1,5 +1,11 @@
-%h1 Editing privacy
-= render 'form'
-= link_to 'Show', @privacy
-|
-\#{link_to 'Back', privacies_path}
+.title Editing privacy
+.text-container
+  %fieldset
+    %legend Policy Information
+    = render 'form'
+
+  %fieldset
+    %legend Other options
+    .links
+      = link_to 'Cancel', @privacy, :class => 'btn blue'
+      = link_to 'Back to list', privacies_path, :class => 'btn black pad left5'

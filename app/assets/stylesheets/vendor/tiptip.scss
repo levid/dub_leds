@@ -29,7 +29,7 @@
 	color: #FAFAFA;
 	text-shadow: 0 0 2px #000;
 	line-height: 22px;
-	padding: 0px;
+	padding: 10px;
 	border: none;
 	background-color: rgb(34,34,34);
 	background-color: rgba(34,34,34,0.92);
@@ -37,6 +37,12 @@
 	border-radius: 6px;
 	-webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
+
+	.title
+	{
+	  padding: 5px 0px 0px 0px;
+	  font-size: 17px;
+	}
 }
 
 #tiptip_arrow, #tiptip_arrow_inner {
@@ -99,7 +105,7 @@
 /* Webkit Hacks  */
 @media screen and (-webkit-min-device-pixel-ratio:0) {
 	#tiptip_content {
-		padding: 5px 10px 3px 10px;
+		padding: 10px;
 		line-height: 22px;
 		background-color: rgba(45,45,45,0.88);
 		border: 1px solid #222;

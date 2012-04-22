@@ -1,10 +1,16 @@
+.title Resend confirmation instructions
 .text-container
-  %h2 Resend confirmation instructions
-  = form_for(resource, :as => resource_name, :url => confirmation_path(resource_name), :html => { :method => :post }) do |f|
-    = devise_error_messages!
-    %div
-      = f.label :email
-      %br/
-      = f.email_field :email
-    %div= f.submit "Resend confirmation instructions"
-  = render :partial => "devise/shared/links"
+  %fieldset
+    %legend User Information
+    = form_for(resource, :as => resource_name, :url => confirmation_path(resource_name), :html => { :method => :post }) do |f|
+      = devise_error_messages!
+      .field
+        = f.label :email
+        = f.email_field :email
+      .submit
+        = f.submit "Resend confirmation instructions", :style => 'width: 300px', :class => 'orange'
+
+  %fieldset
+    %legend Other options
+    .links
+      = render :partial => "devise/shared/links"
