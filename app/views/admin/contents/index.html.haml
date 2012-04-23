@@ -6,7 +6,7 @@
       %table
         %thead
           %tr
-            %th Type
+            %th Resource Type
             %th Title
             %th Sub title
             %th Description
@@ -14,7 +14,7 @@
         %tbody
           - @contents.each do |content|
             %tr
-              %th= content.type
+              %th= content.resource_type
               %th= content.title
               %th= content.sub_title
               %th= content.description
@@ -29,5 +29,5 @@
                   No page content was found
 
     .links.pad.bottom10
-      = link_to 'Create New Content', new_admin_content_path, :class => 'btn orange large'
+      = link_to 'Create New Content', new_admin_content_path, :class => 'btn orange'
       = link_to 'Back to admin', admin_path, :class => 'btn black pad left5'

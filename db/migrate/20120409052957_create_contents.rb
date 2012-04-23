@@ -5,7 +5,7 @@ class CreateContents < ActiveRecord::Migration
       t.text     :description
       t.string   :title
       t.string   :sub_title
-      t.string   :type
+      t.string   :resource_type
 
       t.timestamps
     end
