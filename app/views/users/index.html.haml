@@ -22,6 +22,11 @@
               %th= u.created_at.to_date
               %th= link_to_if(can?(:edit, User), 'Edit User', edit_user_path(u.id), :class => 'btn blue') {}
               %th= link_to_if(can?(:delete, User), 'Delete User', user_path(u.id), :confirm => "Are you sure?", :method => :delete, :class => 'btn black') {}
+          - if @users.length <= 0
+            %tr
+              %th{ :colspan => 7 } 
+                .pad.all10
+                  No users found
     
     .links.pad.bottom10
       = link_to 'Create New User', new_user_registration_path, :class => 'btn orange'

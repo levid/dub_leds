@@ -15,5 +15,10 @@
             %th= link_to 'Show', newsletter, :class => 'btn blue'
             %th= link_to 'Edit', edit_newsletter_path(newsletter), :class => 'btn blue'
             %th= link_to 'Destroy', newsletter, confirm: 'Are you sure?', method: :delete, :class => 'btn black'
+        - if @newsletters.length <= 0
+          %tr
+            %th{ :colspan => 4 } 
+              .pad.all10
+                No newsletter signups were found
     .links
       = link_to 'New Signup', new_newsletter_path, :class => 'btn blue'

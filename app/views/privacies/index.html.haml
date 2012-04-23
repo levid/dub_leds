@@ -26,5 +26,10 @@
               %th= link_to 'Show', privacy, :class => 'btn blue'
               %th= link_to 'Edit', edit_privacy_path(privacy), :class => 'btn blue'
               %th= link_to 'Delete', privacy, confirm: 'Are you sure?', method: :delete, :class => 'btn black'
+          - if @privacies.length <= 0
+            %tr
+              %th{ :colspan => 5 } 
+                .pad.all10
+                  No privacy policies found
       .links
         = link_to 'New Privacy Policy', new_privacy_path, :class => 'btn blue'
