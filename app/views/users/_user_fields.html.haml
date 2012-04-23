@@ -8,6 +8,7 @@
   = f.label :email
   = f.text_field :email
 - if current_user.has_role? :admin
-  %p= f.label :role
-  %ul.no-pad.no-bullets
-  = f.collection_select :id, Role.all.map(&:name), :to_s, :humanize
+  .field
+    %p= f.label :role
+    %ul.no-pad.no-bullets
+    = f.collection_select :id, Role.all.map(&:name), :to_s, :humanize
