@@ -7,7 +7,8 @@ class User < ActiveRecord::Base
 
   validates_presence_of :name
   validates_uniqueness_of :name, :email, :case_sensitive => false
-  attr_accessible :name, :username, :email, :password, :password_confirmation, :remember_me, :roles, :authentications, :login
+  attr_accessible :name, :username, :email, :password, :password_confirmation, :remember_me, :roles, :authentications, :login, :confirmed_at, :unconfirmed_email, :last_sign_in_ip, :current_sign_in_ip, :confirmation_sent_at, :current_sign_in_at, :last_sign_in_at, :remember_created_at, :invitation_token, :authentication_token, :locked_at, :reset_password_token, :unlock_token, :reset_password_sent_at, :failed_attempts 
+  
   attr_accessor :login
 
   before_create :create_login
