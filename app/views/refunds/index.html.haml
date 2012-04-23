@@ -26,10 +26,11 @@
               %th= link_to 'Show', refund, :class => 'btn blue'
               %th= link_to 'Edit', edit_refund_path(refund), :class => 'btn blue'
               %th= link_to 'Delete', refund, confirm: 'Are you sure?', method: :delete, :class => 'btn black'
-          - if @privacies.length <= 0
+          - if @refunds.length <= 0
             %tr
               %th{ :colspan => 5 } 
                 .pad.all10
                   No refund olicies found
       .links
         = link_to 'New Refund Policy', new_refund_path, :class => 'btn blue'
+        = link_to 'Back to list', refunds_path, :class => 'btn black pad left5'
