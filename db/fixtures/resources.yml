@@ -1,0 +1,41 @@
+- resource:
+  title: Pure Titanium Alloy
+  sub_title: The world's most technologically advanced rims.
+  resourece_type: technology
+  description: It has been long thought desirable to decorate one's automobile by the addition of decorative wheels. It has further been thought desirable to communicate with others by means of addressable electronic displays. The concept of combining decorative automobile wheels with an addressable electronic display is a relatively new one which produces novel and visually interesting results.
+  
+- resource:
+  title: Integrated Computer Chip
+  sub_title: Sub title goes here
+  resourece_type: technology
+  description: Description goes here
+  
+- resource:
+  title: Color Customization
+  sub_title: Sub title goes here
+  resourece_type: technology
+  description: Description goes here
+ 
+- resource:
+  title: LED Lights System
+  sub_title: Sub title goes here
+  resourece_type: technology
+  description: Description goes here
+ 
+- resource:
+  title: Power Generator
+  sub_title: Sub title goes here
+  resourece_type: technology
+  description: Description goes here
+ 
+- resource:
+  title: All-Weather Proof USB Port
+  sub_title: Sub title goes here
+  resourece_type: technology
+  description: Description goes here
+ 
+- resource:
+  title: Pendulum Arm
+  sub_title: Sub title goes here
+  resourece_type: technology
+  description: Description goes here
