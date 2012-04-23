@@ -71,4 +71,4 @@ puts ' *** Setting up Spree Store ***'
 Spree::Core::Engine.load_seed if defined?(Spree::Core)
 Spree::Auth::Engine.load_seed if defined?(Spree::Auth)
 
-puts ' *** DB Setup Complete ***
+puts ' *** DB Setup Complete *** '

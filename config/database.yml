@@ -1,5 +1,3 @@
-# SQLite version 3.x
-#   gem install sqlite3
 development:
   adapter: mysql2
   database: dub_leds_dev
@@ -20,48 +18,21 @@ test:
   pool: 5
   timeout: 5000
   host: localhost
+  
+staging:
+  adapter: mysql2
+  database: db39250_dubleds
+  username: db39250_dubleds
+  password: wooten123
+  pool: 5
+  timeout: 5000
+  host: us-cdbr-east.cleardb.com
 
 production:
   adapter: mysql2
-  database: dub_leds
-  username: root
-  password:
+  database: heroku_4ec93621e47a9fe
+  username: 3d5e029f506420
+  password: 3b0317fc
   pool: 5
   timeout: 5000
-  host: localhost
-
-
-# # SQLite version 3.x
-# #   gem install sqlite3
-# development:
-#   <<: *defaults
-#   adapter: mysql2
-#   database: db39250_dubleds
-#   username: db39250_dubleds
-#   password: wooten123
-#   pool: 5
-#   timeout: 5000
-#   host: external-db.s39250.gridserver.com
-#
-# # Warning: The database defined as "test" will be erased and
-# # re-generated from your development database when you run "rake".
-# # Do not set this db to the same as development or production.
-# test:
-#   <<: *defaults
-#   adapter: mysql2
-#   database: db39250_dubleds
-#   username: db39250_dubleds
-#   password: wooten123
-#   pool: 5
-#   timeout: 5000
-#   host: external-db.s39250.gridserver.com
-#
-# production:
-#   <<: *defaults
-#   adapter: mysql2
-#   database: db39250_dubleds
-#   username: db39250_dubleds
-#   password: wooten123
-#   pool: 5
-#   timeout: 5000
-#   host: external-db.s39250.gridserver.com
+  host: us-cdbr-east.cleardb.com
