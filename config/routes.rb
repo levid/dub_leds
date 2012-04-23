@@ -1,6 +1,6 @@
 DubLeds::Application.routes.draw do
   # Mount Spree's routes
-  mount Spree::Core::Engine, :at => '/store'
+  mount Spree::Core::Engine, :at => "/store", :as => :store
 
   resources :medias
   resources :refunds
@@ -41,7 +41,7 @@ DubLeds::Application.routes.draw do
 
   get '/home'                => 'home#index',       :as => :home
   get '/admin'               => 'admin#index',      :as => :admin
-  get '/media'               => 'media#index',    :as => :media
+  get '/media'               => 'media#index',      :as => :media
   #   get '/media/new'           => 'medias#new',      :as => :media_new
   #   get '/media/:id'           => 'medias#show',     :as => :media_show
   #   get '/media/:id/edit'      => 'medias#edit',     :as => :media_edit

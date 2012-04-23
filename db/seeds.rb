@@ -3,41 +3,72 @@
 #
 # Examples:
 #
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
+#   cities = City.create({{ name: 'Chicago' }, { name: 'Copenhagen' }}})
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 # puts ' *** Empty the MongoDB database ***'
 # Mongoid.master.collections.reject { |c| c.name =~ /^system/}.each(&:drop)
 
-puts ' *** Setting up default user login and roles ***'
+if Role.all.blank?
+  puts ' *** Setting up default roles ***'
+  r = Role.create title: 'admin', name: 'Admin', role: 'admin'
+  Role.create title: 'user', name: 'User', role: 'user'
+  Role.create title: 'banned', name: 'Banned', role: 'banned'
+end
 
-r = Role.create! title: 'admin'
-Role.create! title: 'moderator'
+if User.all.blank?
+  puts ' *** Setting up default user login ***'
+  u = User.new name: 'Isaac Wooten', username: 'levid', email: 'i.wooten@gmail.com', password: 'wooteni', password_confirmation: 'wooteni'
+  u.roles << r
+  u.save!
+  puts 'New user created: ' << u.name
+end
 
-u = User.new name:'Isaac Wooten', email:'i.wooten@gmail.com', password:'wooteni', password_confirmation:'wooteni'
-u.roles << r
-u.save!
-
-puts 'New user created: ' << u.name
 puts ' *** Setting up Rims ***'
-
 for i in 1..7
+   unless defined?(u)
+    u = User.find(1)
+   end
+     
    ImageUploader.enable_processing = true
    @image = ImageUploader.new(u, :image)
    @image.store!(File.open("#{Rails.root}/app/assets/images/img-home-rim-large#{i}.png"))
-
+   
    @medium_image = ImageUploader.new(u, :medium_image)
    @medium_image.store!(File.open("#{Rails.root}/app/assets/images/img-rim-medium#{i}.png"))
-
+   
    @small_image = ImageUploader.new(u, :small_image)
    @small_image.store!(File.open("#{Rails.root}/app/assets/images/img-rim-small#{i}.png"))
 
-   r = Rim.new title: "Rim #{i}", color: "Silver", description: "This is the description for Rim #{i}", size: '24 Inches', fitting: '22x10', image: @image, medium_image: @medium_image, small_image: @small_image
+   r              = Rim.new
+   r.title        = "Rim #{i}"
+   r.color        = "Silver"
+   r.description  = "This is the description for Rim #{i}"
+   r.size         = '24 Inches'
+   r.fitting      = '22x10'
+   r.image        = @image
+   r.medium_image = @medium_image
+   r.small_image  = @small_image
    r.save!
 
    puts 'New Rim created: ' << r.title
 end
 
+# puts ' *** Setting up Resources ***'
+# 
+# Fixtures.create_fixtures("#{Rails.root}/db/fixtures", "resources")
+# 
+# puts ' *** Setting up Privacy Policy ***'
+# 
+# Fixtures.create_fixtures("#{Rails.root}/db/fixtures", "privacies")
+# 
+# puts ' *** Setting up Refund Policy ***'
+# 
+# Fixtures.create_fixtures("#{Rails.root}/db/fixtures", "refunds")
+# 
+puts ' *** Setting up Spree Store ***'
 
 Spree::Core::Engine.load_seed if defined?(Spree::Core)
 Spree::Auth::Engine.load_seed if defined?(Spree::Auth)
+
+puts ' *** DB Setup Complete ***

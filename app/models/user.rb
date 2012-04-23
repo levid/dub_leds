@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  ROLES = %w[admin moderator author banned]
+  ROLES = %w[admin user banned]
 
   devise :database_authenticatable, :registerable, :recoverable, :confirmable, :rememberable, :trackable, :validatable, :omniauthable, :token_authenticatable, :authentication_keys => [:login]
 

@@ -97,7 +97,7 @@ footer
 
         .links
         {
-            width: 270px;
+            width: 250px;
             height: inherit;
             display: inline-block;
             margin: 0px;
@@ -107,23 +107,18 @@ footer
 
             .order
             {
-                margin: 10px 0px 0px 0px;
-                width: 106px;
-                height: 43px;
+                padding: 0px;
+                margin: 16px 0px 0px 10px;
+                width: auto;
+                height: auto;
                 float: left;
-
+                
                 a
                 {
-                    width: 106px;
-                    height: 43px;
-                    float: left;
-                    text-indent: -9000px;
-                    @include background($path + '/button-order.png', no-repeat, top left, transparent);
-
-                    &:hover
-                    {
-                      background-position: bottom left;
-                    }
+                  padding: 8px 8px 5px 8px;
+                  font-size: 14px;
+                  text-transform: uppercase;
+                  font-weight: 700;
                 }
             }
 
@@ -202,7 +197,7 @@ footer
         .copyright
         {
             margin: 0px auto;
-            padding: 10px 0px 0px 0px;
+            padding: 20px 0px 0px 0px;
             height: 67px;
             width: 980px;
             font-family: EurostileMed, Helvetica, Arial, sans-serif;

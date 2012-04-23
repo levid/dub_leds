@@ -7,10 +7,11 @@ class UI extends $DUB
     @initFadingButtons()
     @displayMainNav()
     @initInputs()
-    @initNotifications()     if $('.notification').length
+    @initNotifications()    if $('.notification').length
     @initNewsletterInput()  if $(".email-updates").length
     @initTooltips()         if $("#sharing-links").length
     @initSharingLinks()     if $("#sharing-links").length
+    @resizeContentContainer()
 
     topNav      = new $DUB.UI.Nav
     newsletter  = new $DUB.UI.Newsletter
@@ -135,5 +136,10 @@ class UI extends $DUB
       $("input, select, textarea").bind "blur", ->
         $(this).removeClass('active')
 
+  resizeContentContainer: () ->
+    currentHeight = $('.content-container.interior').height()
+    newHeight = ($(document).innerHeight() - ($('header').outerHeight() + $('footer').outerHeight())) - $('.rim-container').outerHeight() - 30
+    unless currentHeight > newHeight
+      $('.content-container').css('min-height', newHeight)
 
 $DUB.UI = new UI
