@@ -85,7 +85,10 @@ class UsersController < ApplicationController
     else
       @user.errors[:base] << "The password you entered is incorrect" unless @user.valid_password?(params[:user][:current_password])
     end
-
+    
+    @role = Role.find_by_name(params[:user][:id])
+    @user.add_role @role.name
+   
     respond_to do |format|
       if @user.errors[:base].empty? and @user.update_attributes(params[:user])
         flash[:notice] = "Your account has been updated"
@@ -98,9 +101,6 @@ class UsersController < ApplicationController
         format.html { render :action => :edit, :status => :unprocessable_entity }
       end
     end
-
-  rescue ActiveRecord::RecordNotFound
-    respond_to_not_found(:js, :xml, :html)
   end
 
   # POST /users
