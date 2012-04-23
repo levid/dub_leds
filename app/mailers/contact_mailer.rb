@@ -1,5 +1,5 @@
 class ContactMailer < ActionMailer::Base
-  default from: "i.wooten@gmail.com"
+  default from: APP_CONFIG['default_email']
 
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:

@@ -1,8 +1,16 @@
+.title= @newsletter.email
 .text-container
-  %p#notice= notice
-  %p
-    %b Email:
-    = @newsletter.email
-  = link_to 'Edit', edit_admin_newsletter_path(@newsletter)
-  |
-  \#{link_to 'Back', admin_newsletters_path}
+  %fieldset
+    %legend Newsletter Information
+    .table
+      .field
+        %b Email:
+        .border.pad.top10
+          = @newsletter.email
+      .field.pad.top10
+        = link_to 'Edit Entry', edit_admin_newsletter_path(@newsletter), :class => 'btn orange large pad top10 bottom5'
+
+  %fieldset
+    %legend Other options
+    .links
+      = link_to 'Back to list', admin_newsletters_path, :class => 'btn black'

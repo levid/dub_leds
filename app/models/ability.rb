@@ -29,23 +29,6 @@ class Ability
 
     if user.role? :admin
       can :manage, :all
-      can :manage, Role
-    else
-      can :read, :all
-      can :create, User
-      can :update, User do |u|
-        u == user
-      end
-      # can :create, Comment
-      # can :update, Comment do |comment|
-      #   comment.try(:user) == user || user.role?(:moderator)
-      # end
-      # if user.role?(:author)
-      #   can :create, Article
-      #   can :update, Article do |article|
-      #     article.try(:user) == user
-      #   end
-      # end
     end
     
   end

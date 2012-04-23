@@ -18,7 +18,8 @@
     = f.label :video_url
     = f.text_field :video_url
   .field
-    = f.label :thumbnail
-    = f.file_field :thumbnail
-  .actions
-    = f.submit 'Save'
+    .border.pad.bottom10
+      = f.label :thumbnail
+      = f.file_field :thumbnail
+  .submit
+    = f.submit "Save", :class => 'orange'

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121422014945) do
+ActiveRecord::Schema.define(:version => 20121422014948) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                             :default => "", :null => false
@@ -50,6 +50,15 @@ ActiveRecord::Schema.define(:version => 20121422014945) do
     t.datetime "updated_at"
   end
 
+  create_table "contents", :force => true do |t|
+    t.text     "description"
+    t.string   "title"
+    t.string   "sub_title"
+    t.string   "type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "coupons", :force => true do |t|
     t.string   "code"
     t.string   "description"
@@ -73,7 +82,9 @@ ActiveRecord::Schema.define(:version => 20121422014945) do
 
   create_table "media", :force => true do |t|
     t.string   "title"
+    t.string   "description"
     t.string   "video_url"
+    t.string   "thumbnail"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -98,15 +109,6 @@ ActiveRecord::Schema.define(:version => 20121422014945) do
     t.datetime "updated_at"
   end
 
-  create_table "resources", :force => true do |t|
-    t.string   "resource_type"
-    t.text     "description"
-    t.string   "title"
-    t.string   "sub_title"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "rims", :force => true do |t|
     t.string   "title",        :null => false
     t.text     "description"
@@ -122,16 +124,14 @@ ActiveRecord::Schema.define(:version => 20121422014945) do
 
   create_table "roles", :force => true do |t|
     t.string   "name"
-    t.string   "role"
-    t.string   "title"
+    t.integer  "resource_id"
+    t.string   "resource_type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "roles_users", :id => false, :force => true do |t|
-    t.integer "role_id"
-    t.integer "user_id"
-  end
+  add_index "roles", ["name", "resource_type", "resource_id"], :name => "index_roles_on_name_and_resource_type_and_resource_id"
+  add_index "roles", ["name"], :name => "index_roles_on_name"
 
   create_table "spree_activators", :force => true do |t|
     t.string   "description"
@@ -688,10 +688,16 @@ ActiveRecord::Schema.define(:version => 20121422014945) do
     t.string   "invitation_token"
     t.string   "username"
     t.string   "login"
-    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "roles_mask"
+    t.string   "name"
   end
+
+  create_table "users_roles", :id => false, :force => true do |t|
+    t.integer "user_id"
+    t.integer "role_id"
+  end
+
+  add_index "users_roles", ["user_id", "role_id"], :name => "index_users_roles_on_user_id_and_role_id"
 
 end

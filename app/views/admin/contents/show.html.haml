@@ -1,0 +1,23 @@
+.title="Viewing: #{@content.title}"
+.text-container
+  %fieldset
+    %legend Content Information
+    .table
+      .field
+        %b Page:
+        .grey= @content.type
+      .field
+        %b Title:
+        .grey= @content.title
+      .field
+        %b Sub title:
+        .grey= @content.sub_title
+      .field
+        %b Description:
+        .grey= @content.description
+
+  %fieldset
+    %legend Other options
+    .links
+      = link_to 'Edit Resource', edit_admin_content_path(@rim), :class => 'btn blue'
+      = link_to 'Back to list', admin_contents_path, :class => 'btn black pad left5'

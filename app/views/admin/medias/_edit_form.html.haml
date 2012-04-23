@@ -16,15 +16,19 @@
     = f.text_area :description
   .field
     = f.label :video_url
-    = f.text_area :video_url
+    = f.text_field :video_url
   .field
-    = image_tag(@media.thumbnail.url) if @media.thumbnail.url.present?
+    .border.pad.bottom10.center
+      - if @media.thumbnail.url.present?
+        = image_tag(@media.thumbnail.url)
+      - else
+        No thumbnail image exists
     = f.label :thumbnail
     = f.file_field :thumbnail
-  - if @media.thumbnail.url.present?
-    .field
-      = f.label :remove_thumbnail
-      = f.check_box :remove_thumbnail
-      = f.hidden_field :thumbnail_cache
-  .actions
-    = f.submit 'Save'
+    .right
+      - if @media.thumbnail.url.present?
+        = f.check_box :remove_thumbnail, :class => 'inline'
+        = f.label :remove_thumbnail, :class => 'inline grey'
+        = f.hidden_field :thumbnail_cache, :class => 'inline'
+  .submit
+    = f.submit "Save", :class => 'orange'

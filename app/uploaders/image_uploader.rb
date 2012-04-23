@@ -1,5 +1,7 @@
 # encoding: utf-8
+
 require 'carrierwave/processing/mini_magick'
+# require 'carrierwave/processing/mime_types'
 
 class ImageUploader < CarrierWave::Uploader::Base
   
@@ -14,12 +16,16 @@ class ImageUploader < CarrierWave::Uploader::Base
   # include Sprockets::Helpers::IsolatedHelper
 
   # Choose what kind of storage to use for this uploader:
-  storage :file
+  # storage :file
   # storage :grid_fs
   
-  def cache_dir
-    "#{Rails.root}/tmp/uploads"
-  end
+  storage :fog
+  
+  # process :set_content_type
+  
+  # def cache_dir
+  #     "#{Rails.root}/tmp/uploads"
+  #   end
   
   # storage :fog
 
@@ -31,6 +37,10 @@ class ImageUploader < CarrierWave::Uploader::Base
   
   version :thumb do
     process :resize_to_fill => [80,80]
+  end
+  
+  def store_dir
+    'uploads'
   end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:

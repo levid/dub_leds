@@ -1,21 +1,32 @@
+.title= @media.title
 .text-container
-  %p#notice= notice
-  %p
-    %b Title:
-    = @media.title
-  %p
-    %b Description:
-    = @media.description
-  %p
-    %b Video URL:
-    = @media.video_url
-  
-  - if @media.thumbnail.url.present?
-    %p
-      %b Thumbnail:
-      = @media.thumbnail
-      = image_tag(@media.thumbnail.url)
+  %fieldset
+    %legend Media Information
+    .table
+      .field
+        %b Title:
+        .border.pad.top10
+          = @media.title
+      .field
+        %b Description:
+        .border.pad.top10
+          = @media.description
+      .field
+        %b Video URL:
+        .border.pad.top10
+          = @media.video_url
+    
+      - if @media.thumbnail.url.present?
+        .field
+          %b Thumbnail:
+          .grey.pad.bottom10= @media.thumbnail
+          .border.pad.bottom10.center
+            = image_tag(@media.thumbnail.url)
+          
+      .field.pad.top10
+        = link_to 'Edit Entry', edit_admin_media_path(@media), :class => 'btn orange large pad top10 bottom5'
 
-  = link_to 'Edit', edit_admin_media_path(@media)
-  |
-  \#{link_to 'Back', admin_medias_path}
+  %fieldset
+    %legend Other options
+    .links
+      = link_to 'Back to list', admin_medias_path, :class => 'btn black'

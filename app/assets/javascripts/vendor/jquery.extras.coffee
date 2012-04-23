@@ -3,13 +3,7 @@ $.fn.extend exists: ->
     return true
   else
     return false
-
-$.fn.center = ->
-  @css "position", "fixed"
-  @css "top", (($(window).height() - @outerHeight()) / 2) + "px"
-  @css "left", (($(window).width() - @outerWidth()) / 2) + "px"
-  this
-
+   
 $.fn.spin = (opts) ->
   @each ->
     $this = $(this)
@@ -22,6 +16,24 @@ $.fn.spin = (opts) ->
         color: $this.css("color")
       , opts)).spin(this)
   this
+
+$.fn.extend center: ->
+  @each ->
+    top = ($(window).height() - $(this).outerHeight()) / 2
+    left = ($(window).width() - $(this).width()) / 2
+
+    $(this).css
+      position: "fixed"
+      margin: 0
+      top: (if top > 0 then top else 0) + "px"
+      left: (if left > 0 then left else 0) + "px"
+
+# 
+# $.fn.center = ->
+#   @css "position", "fixed"
+#   @css "top", (($(window).height() - @outerHeight()) / 2) + "px"
+#   @css "left", (($(window).width() - @outerWidth()) / 2) + "px"
+#   this
 
 $.extend $.ajax,
   options:

@@ -33,6 +33,8 @@ gem 'omniauth-twitter'
 gem 'omniauth-facebook'
 gem 'omniauth-openid'
 gem 'oa-core'
+gem 'fog', '>= 1.3.1'
+gem 'rolify'
 
 # Export / Import database dump
 gem 'yaml_db'

@@ -3,12 +3,12 @@
     .newsletter
       .logo
       .email-updates
-        = form_for(new_newsletter_path)  do |f|
+        = form_for(@newsletter)  do |f|
           = f.email_field :email, :placeholder => "Enter email for updates"
           = f.submit 'Register'
     .links
       .order
-        = link_to('Store', store_path, :class => 'btn orange')
+        = link_to('Buy Rims', store_path, :class => 'btn orange')
       %ul#sharing-links
         %li
           %a.facebook{:href => "#", :title => 'Follow us on Facebook'} Facebook

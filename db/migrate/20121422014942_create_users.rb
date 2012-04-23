@@ -40,7 +40,6 @@ class CreateUsers < ActiveRecord::Migration
       t.string :invitation_token
       t.string :username
       t.string :login
-      t.string :name
       t.timestamps
     end
   end

@@ -2,15 +2,15 @@ class TechnologyController < ApplicationController
 
   def index
      @rims = Rim.all.sort!{ |s| s.id }
-     @resources = Resource.all
+     @contents = Content.all
   end
 
   # GET /technology/:title
   def show
-    @resource = Resource.where(title: params[:title])
+    @content = Content.where(title: params[:title])
 
     respond_to do |format|
-      format.json { render json: @resource }
+      format.json { render json: @content }
     end
   end
 end

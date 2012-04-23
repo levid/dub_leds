@@ -12,8 +12,6 @@ class HomeController < ApplicationController
 
     @path = :home_path
     @users = User.all
-
-    @newsletter = Newsletter.new
   end
 
   protected

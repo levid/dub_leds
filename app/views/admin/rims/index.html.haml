@@ -42,6 +42,12 @@
               %th= link_to 'Show', admin_rim_path(rim), :class => 'btn blue'
               %th= link_to 'Edit', edit_admin_rim_path(rim), :class => 'btn blue'
               %th= link_to 'Delete', admin_rim_path(rim), :confirm => 'Are you sure?', :method => :delete, :class => 'btn black'
+          - if @rims.length <= 0
+            %tr
+              %th{ :colspan => 9 } 
+                .pad.all10
+                  No rims were found
 
     .links.pad.bottom10
       = link_to 'Create New Rim', new_admin_rim_path, :class => 'btn orange'
+      = link_to 'Back to admin', admin_path, :class => 'btn black pad left5'

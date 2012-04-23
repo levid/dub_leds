@@ -1,4 +1,10 @@
+.title New Media
 .text-container
-  %h1 New media
-  = render 'new_form'
-  = link_to 'Back', admin_medias_path
+  %fieldset
+    %legend Media Information
+    = render 'new_form'
+
+  %fieldset
+    %legend Other options
+    .links
+      = link_to 'Back to list', admin_medias_path, :class => 'btn black'

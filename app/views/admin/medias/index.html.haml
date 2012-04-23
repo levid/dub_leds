@@ -1,18 +1,35 @@
+.title Listing Media
 .text-container
-  %h1 Listing media
-  %table
-    %tr
-      %th Title
-      %th Video url
-      %th
-      %th
-      %th
-    - @media.each do |media|
-      %tr
-        %td= media.title
-        %td= media.video_url
-        %td= link_to 'Show', admin_media_path(media)
-        %td= link_to 'Edit', edit_admin_media_path(media)
-        %td= link_to 'Destroy', admin_media_path(media), confirm: 'Are you sure?', method: :delete
-  %br/
-  = link_to 'New Video', new_admin_media_path
+  %fieldset
+    %legend Media Information
+    .table
+      %table
+        %thead
+          %tr
+            %th Title
+            %th Video url
+            %th Description
+            %th Thumbnail
+            %th{:colspan => 3} Actions
+        %tbody
+        - @media.each do |media|
+          %tr
+            %th= media.title
+            %th= media.video_url
+            %th= media.description
+            
+            -if media.thumbnail.url(:thumb).nil?
+              %th= media.thumbnail.url(:thumb)
+            -else
+              %th= image_tag media.thumbnail.url(:thumb)
+              
+            %th= link_to 'Show', admin_media_path(media), :class => 'btn blue'
+            %th= link_to 'Edit', edit_admin_media_path(media), :class => 'btn blue'
+            %th= link_to 'Destroy', admin_media_path(media), confirm: 'Are you sure?', method: :delete, :class => 'btn black'
+        - if @media.length <= 0
+          %tr
+            %th{ :colspan => 7 } 
+              .pad.all10
+                No media was found
+    .links
+      = link_to 'New Media', new_admin_media_path, :class => 'btn blue'

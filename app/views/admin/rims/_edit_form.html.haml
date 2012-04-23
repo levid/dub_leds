@@ -62,4 +62,4 @@
         = f.label :remove_small_image, :class => 'inline grey'
         = f.hidden_field :small_image_cache, :class => 'inline'
   .submit
-    = f.submit 'Save Changes', :style => 'width: 200px', :class => 'orange'
+    = f.submit 'Save Changes', :style => 'width: 200px', :class => 'orange', :title => "Updating #{@rim.title}..."

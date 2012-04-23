@@ -23,7 +23,7 @@ class Technology extends $DUB
         @overlayDiv          = $("#tech-overlay")
         @overlayContainerDiv = $('#tech-overlay .overlay-container')
         @closeButton         = $('.close-button a')
-        @overlayContent      = data[0]['resource']
+        @overlayContent      = data[0]['content']
 
         @overlayContainerDiv.find('.middle p').text(@overlayContent.description)
         @overlayContainerDiv.find('.title').text(@overlayContent.title)

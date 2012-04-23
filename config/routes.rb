@@ -36,7 +36,7 @@ DubLeds::Application.routes.draw do
 
   # Administration Routes
   namespace :admin do
-    resources :rims, :resources, :medias, :newsletters
+    resources :rims, :contents, :medias, :newsletters
   end
 
   get '/home'                => 'home#index',       :as => :home
@@ -58,6 +58,7 @@ DubLeds::Application.routes.draw do
   delete '/contact:id'       => 'contact#destroy',  :as => :contact_destroy
   
   get '/users/new'           => 'users#new',        :as => :user_new
+  get '/newsletters/new'     => 'newsletters#new',  :as => :newsletter_new
 
   get '/privacy_policy'      => 'privacies#index',  :as => :privacy_policy
   get '/refund_policy'       => 'refunds#index',    :as => :refund_policy
@@ -125,6 +126,10 @@ DubLeds::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
 
-  root :to => 'home#index'
+  authenticated :user do
+    root :to => 'home#index'
+  end
+
+  root :to => "home#index"
 
 end

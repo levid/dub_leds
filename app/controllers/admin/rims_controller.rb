@@ -55,6 +55,23 @@ class Admin::RimsController < AdminController
   # POST /admin/rims.json
   def create
     @rim = Rim.new(params[:rim])
+    
+    ImageUploader.enable_processing = true
+    
+    if params[:rim][:image]
+      @rim.image = ImageUploader.new
+      @rim.image.store!(params[:rim][:image])
+    end
+
+    if params[:rim][:medium_image]
+      @rim.medium_image = ImageUploader.new
+      @rim.medium_image.store!(params[:rim][:medium_image])
+    end
+
+    if params[:rim][:small_image]
+      @rim.small_image = ImageUploader.new
+      @rim.small_image.store!(params[:rim][:small_image])
+    end
 
     respond_to do |format|
       if @rim.save
@@ -73,6 +90,23 @@ class Admin::RimsController < AdminController
   # PUT /admin/rims/:id.json
   def update
     @rim = Rim.find(params[:id])
+    
+    ImageUploader.enable_processing = true
+    
+    if params[:rim][:image]
+      @rim.image = ImageUploader.new
+      @rim.image.store!(params[:rim][:image])
+    end
+
+    if params[:rim][:medium_image]
+      @rim.medium_image = ImageUploader.new
+      @rim.medium_image.store!(params[:rim][:medium_image])
+    end
+
+    if params[:rim][:small_image]
+      @rim.small_image = ImageUploader.new
+      @rim.small_image.store!(params[:rim][:small_image])
+    end
 
     respond_to do |format|
       if @rim.update_attributes(params[:rim])

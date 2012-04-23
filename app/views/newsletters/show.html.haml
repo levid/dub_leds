@@ -1,7 +1,9 @@
-%p#notice= notice
-%p
-  %b Email:
-  = @newsletter.email
-= link_to 'Edit', edit_newsletter_path(@newsletter)
-|
-\#{link_to 'Back', newsletters_path}
+.title= "Thank you!"
+.text-container
+  %fieldset
+    %legend Information
+    .table
+      .field
+        You are now signed up to receive important DUB LED updates at the email address:
+      .blue
+        = "#{@newsletter.email}"

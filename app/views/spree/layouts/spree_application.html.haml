@@ -33,7 +33,11 @@
                       = breadcrumbs(@taxon)
                       = flash_messages
                       = yield
+                      
                       .push
 
       = render :partial => 'spree/shared/foot'
     = render :partial => 'spree/shared/google_analytics'
+    
+    #modal_global_progress
+      .spinner

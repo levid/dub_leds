@@ -1,0 +1,39 @@
+development:
+  default_emaiL: i.wooten@gmail.com
+  default_host: http://localhost:3000
+
+  smtp:
+    address: smtp.gmail.com
+    port: 587
+    user_name: i.wooten@gmail.com
+    password: $rdc#isaacw
+   
+test:
+  default_emaiL: i.wooten@gmail.com
+  default_host: http://dub-leds.herokuapp.com
+
+  smtp:
+    address: smtp.gmail.com
+    port: 587
+    user_name: i.wooten@gmail.com
+    password: $rdc#isaacw
+   
+staging:
+  default_emaiL: i.wooten@gmail.com
+  default_host: http://dub-leds.herokuapp.com
+
+  smtp:
+    address: smtp.gmail.com
+    port: 587
+    user_name: i.wooten@gmail.com
+    password: $rdc#isaacw
+    
+production:
+  default_emaiL: i.wooten@gmail.com
+  default_host: http://dub-leds.herokuapp.com
+
+  smtp:
+    address: smtp.gmail.com
+    port: 587
+    user_name: i.wooten@gmail.com
+    password: $rdc#isaacw

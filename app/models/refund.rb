@@ -1,7 +1,4 @@
 class Refund < ActiveRecord::Base
-
-  # field :title,         :type => String
-  #   field :content,       :type => String
-
+  attr_accessible :title, :content
   validates_presence_of :title, :content
 end

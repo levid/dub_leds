@@ -1,5 +1,11 @@
-%h1 Editing newsletter
-= render 'form'
-= link_to 'Show', @newsletter
-|
-\#{link_to 'Back', newsletters_path}
+.title Editing Newsletter Signup
+.text-container
+  %fieldset
+    %legend Signup Information
+    = render 'form'
+
+  %fieldset
+    %legend Other options
+    .links
+      = link_to 'Cancel', @newsletter, :class => 'btn blue'
+      = link_to 'Back to list', newsletters_path, :class => 'btn black pad left5'

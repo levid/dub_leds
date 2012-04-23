@@ -1,0 +1,11 @@
+.title Editing content
+.text-container
+  %fieldset
+    %legend Content Information
+    = render 'edit_form'
+
+  %fieldset
+    %legend Other options
+    .links
+      = link_to 'Resource Information', admin_content_path(@content), :class => 'btn blue'
+      = link_to 'Back to list',  admin_contents_path, :class => 'btn black pad left5'

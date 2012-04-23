@@ -4,16 +4,23 @@
     %legend Management
     %ul
       %li
-        = link_to('Users', users_path, :class => 'fade')
+        = link_to("Users", users_path, :class => 'fade inline')
+        =" (#{User.all.size})"
       %li
-        = link_to('Media', admin_medias_path, :class => 'fade')
+        = link_to("Media", admin_medias_path, :class => 'fade')
+        =" (#{Media.all.size})"
       %li
-        = link_to('Rims', admin_rims_path, :class => 'fade')
+        = link_to("Rims", admin_rims_path, :class => 'fade')
+        =" (#{Rim.all.size})"
       %li
-        = link_to('Resources', admin_resources_path, :class => 'fade')
+        = link_to("Page Content", admin_contents_path, :class => 'fade')
+        =" (#{Content.all.size})"
       %li
-        = link_to('Refund Policy', refunds_path, :class => 'fade')
+        = link_to("Refund Policy", refunds_path, :class => 'fade')
+        =" (#{Refund.all.size})"
       %li
-        = link_to('Privacy Policy', privacies_path, :class => 'fade')
+        = link_to("Privacy Policy", privacies_path, :class => 'fade')
+        =" (#{Privacy.all.size})"
       %li
-        = link_to('Newsletters', admin_newsletters_path, :class => 'fade')
+        = link_to("Newsletter Signups", admin_newsletters_path, :class => 'fade')
+        =" (#{Newsletter.all.size})"

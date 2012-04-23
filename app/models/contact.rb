@@ -1,10 +1,5 @@
 class Contact < ActiveRecord::Base
-  
-  # field :name,           :type => String
-  #   field :email,          :type => String
-  #   field :subject,        :type => String
-  #   field :body,           :type => String
-  
+  attr_accessible :name, :email, :subject, :body
   validates_presence_of :name, :subject, :body
   validates_format_of :email, :with => /^(\S+)@(\S+)\.(\S+)$/
 end

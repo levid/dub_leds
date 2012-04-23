@@ -1,0 +1,10 @@
+.title New content
+.text-container
+  %fieldset
+    %legend Content Information
+    = render 'new_form'
+
+  %fieldset
+    %legend Other options
+    .links
+      = link_to 'Back to list', admin_contents_path, :class => 'btn black'

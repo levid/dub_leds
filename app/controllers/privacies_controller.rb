@@ -43,7 +43,7 @@ class PrivaciesController < ApplicationController
     @privacy = Privacy.new(params[:privacy])
 
     respond_to do |format|
-      if @privacy.save
+      if @privacy.save!
         format.html { redirect_to @privacy, notice: 'Privacy was successfully created.' }
         format.json { render json: @privacy, status: :created, location: @privacy }
       else

@@ -9,7 +9,6 @@
           %li= msg
   .field
     = f.label :email
-    %br/
     = f.text_field :email
-  .actions
-    = f.submit
+  .submit
+    = f.submit "Submit", :class => 'orange'

@@ -1,17 +1,15 @@
 class UsersController < ApplicationController
-  before_filter :authenticate_user!,
-		:except => [:show]
+  before_filter :authenticate_user!, :except => [:show]
   
   before_filter :get_user, :only => [:index, :edit]
-  before_filter :accessible_roles, :only => [:new, :edit, :show, :update, :create]
-  load_and_authorize_resource :only => [:show,:new,:destroy,:edit,:update]
+  before_filter :only_allow_admin
   
   # GET /users
   # GET /users.xml                                                
   # GET /users.json                                       HTML and AJAX
   #-----------------------------------------------------------------------
   def index
-    @users = User.accessible_by(current_ability, :index)
+    @users = User.all
     respond_to do |format|
       format.json { render :json => @users }
       format.xml  { render :xml => @users }

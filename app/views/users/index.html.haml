@@ -10,6 +10,7 @@
             %th User Name
             %th Email
             %th Role
+            %th Signed Up
             %th{:colspan => 2} Actions
         %tbody
           - @users.each do |u|
@@ -18,6 +19,7 @@
               %th= u.username
               %th= u.email
               %th= u.roles.collect{|r| r.title}
+              %th= u.created_at.to_date
               %th= link_to_if(can?(:edit, User), 'Edit User', edit_user_path(u.id), :class => 'btn blue') {}
               %th= link_to_if(can?(:delete, User), 'Delete User', user_path(u.id), :confirm => "Are you sure?", :method => :delete, :class => 'btn black') {}
     / 

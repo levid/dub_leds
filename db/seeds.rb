@@ -9,17 +9,10 @@
 # puts ' *** Empty the MongoDB database ***'
 # Mongoid.master.collections.reject { |c| c.name =~ /^system/}.each(&:drop)
 
-if Role.all.blank?
-  puts ' *** Setting up default roles ***'
-  r = Role.create title: 'admin', name: 'Admin', role: 'admin'
-  Role.create title: 'user', name: 'User', role: 'user'
-  Role.create title: 'banned', name: 'Banned', role: 'banned'
-end
-
 if User.all.blank?
   puts ' *** Setting up default user login ***'
-  u = User.new name: 'Isaac Wooten', username: 'levid', email: 'i.wooten@gmail.com', password: 'wooteni', password_confirmation: 'wooteni'
-  u.roles << r
+  u = User.create! name: 'Isaac Wooten', username: 'levid', email: 'i.wooten@gmail.com', password: 'wooteni', password_confirmation: 'wooteni', :confirmed_at => DateTime.now
+  u.add_role :admin
   u.save!
   puts 'New user created: ' << u.name
 end
@@ -31,6 +24,7 @@ for i in 1..7
    end
      
    ImageUploader.enable_processing = true
+   
    @image = ImageUploader.new(u, :image)
    @image.store!(File.open("#{Rails.root}/app/assets/images/img-home-rim-large#{i}.png"))
    
@@ -54,9 +48,9 @@ for i in 1..7
    puts 'New Rim created: ' << r.title
 end
 
-# puts ' *** Setting up Resources ***'
+# puts ' *** Setting up Contents ***'
 # 
-# Fixtures.create_fixtures("#{Rails.root}/db/fixtures", "resources")
+# Fixtures.create_fixtures("#{Rails.root}/db/fixtures", "contents")
 # 
 # puts ' *** Setting up Privacy Policy ***'
 # 

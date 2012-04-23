@@ -1,0 +1,33 @@
+.title Manage Content
+.text-container
+  %fieldset
+    %legend All Content
+    .table
+      %table
+        %thead
+          %tr
+            %th Type
+            %th Title
+            %th Sub title
+            %th Description
+            %th{ :colspan => 3 } Actions
+        %tbody
+          - @contents.each do |content|
+            %tr
+              %th= content.type
+              %th= content.title
+              %th= content.sub_title
+              %th= content.description
+
+              %th= link_to 'Show', admin_content_path(content), :class => 'btn blue'
+              %th= link_to 'Edit', edit_admin_content_path(content), :class => 'btn blue'
+              %th= link_to 'Destroy', admin_content_path(content), :confirm => 'Are you sure?', :method => :delete, :class => 'btn black'
+          - if @contents.length <= 0
+            %tr
+              %th{ :colspan => 5 } 
+                .pad.all10
+                  No page content was found
+
+    .links.pad.bottom10
+      = link_to 'Create New Content', new_admin_content_path, :class => 'btn orange large'
+      = link_to 'Back to admin', admin_path, :class => 'btn black pad left5'

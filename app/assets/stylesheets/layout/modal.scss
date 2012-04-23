@@ -1,0 +1,53 @@
+/**/
+@import "../global/variables";
+@import "../global/mixins";
+
+// .body
+// {
+//     margin: 0px auto;
+//     padding: 0px 0px 0px 0px;
+//    height: auto;
+//    width: 100%;
+//     overflow: hidden;
+// }
+
+#modal_global_progress
+{
+  background: rgba(0,0,0,0.45);
+  opacity: 0.0;
+  position: fixed;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+
+  &.show
+  {
+    opacity: 1.0;
+    z-index: 1001;
+  }
+
+  .spinner
+  {
+    @include background($path + '/img-loading-large.gif', no-repeat, center 100px, #000);
+    -webkit-border-radius: 8px;
+    -khtml-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    border-radius: 8px;
+    color: #fff;
+    font-family: EurostileMed, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    height: 170px;
+    left: 50%;
+    margin: 0 0 0 -100px;
+    opacity: 0.9;
+    padding: 15px;
+    position: absolute;
+    text-align: center;
+    top: 150px;
+    width: 170px;
+  }
+}

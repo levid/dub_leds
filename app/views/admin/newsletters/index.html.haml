@@ -1,16 +1,19 @@
+.title Listing Newsletter Signups
 .text-container
-  %h1 Listing newsletters
-  %table
-    %tr
-      %th Email
-      %th
-      %th
-      %th
-    - @newsletters.each do |newsletter|
-      %tr
-        %td= newsletter.email
-        %td= link_to 'Show', admin_newsletter_path(newsletter)
-        %td= link_to 'Edit', edit_admin_newsletter_path(newsletter)
-        %td= link_to 'Destroy', admin_newsletter_path(newsletter), confirm: 'Are you sure?', method: :delete
-  %br/
-  = link_to 'New Newsletter', new_admin_newsletter_path
+  %fieldset
+    %legend Contact Info
+    .table
+      %table
+        %thead
+          %tr
+            %th Email
+            %th{:colspan => 3} Actions
+        %tbody
+        - @newsletters.each do |newsletter|
+          %tr
+            %th{:style => 'width: 80%'}= newsletter.email
+            %th= link_to 'Show',admin_newsletter_path(newsletter), :class => 'btn blue'
+            %th= link_to 'Edit', edit_admin_newsletter_path(newsletter), :class => 'btn blue'
+            %th= link_to 'Destroy', admin_newsletter_path(newsletter), confirm: 'Are you sure?', method: :delete, :class => 'btn black'
+    .links
+      = link_to 'New Signup', new_admin_newsletter_path, :class => 'btn blue'

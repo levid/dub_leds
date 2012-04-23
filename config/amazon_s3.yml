@@ -1,0 +1,31 @@
+development:
+  access_key_id: AKIAIHXNGFCN3DDF266A
+  secret_access_key: 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
+  bucket: dubleds
+  directory: dubleds
+  host: http://dub_leds.s3-website-us-west-1.amazonaws.com/
+  region: us-west-1
+
+test:
+  access_key_id: AKIAIHXNGFCN3DDF266A
+  secret_access_key: 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
+  bucket: dubleds
+  directory: dubleds
+  host: http://dub_leds.s3-website-us-west-1.amazonaws.com/
+  region: us-west-1
+  
+staging:
+  access_key_id: AKIAIHXNGFCN3DDF266A
+  secret_access_key: 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
+  bucket: dubleds
+  directory: dubleds
+  host: http://dub_leds.s3-website-us-west-1.amazonaws.com/
+  region: us-west-1
+
+production:
+  access_key_id: AKIAIHXNGFCN3DDF266A
+  secret_access_key: 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
+  bucket: dubleds
+  directory: dubleds
+  host: http://dub_leds.s3-website-us-west-1.amazonaws.com/
+  region: us-west-1

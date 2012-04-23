@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   before_filter :set_names
   before_filter :set_year
   before_filter :find_rim
+  before_filter :newsletter_signup
 
   layout :set_layout
 
@@ -48,6 +49,14 @@ class ApplicationController < ActionController::Base
 
   def get_cookie(cookie_name)
     return cookies[":#{cookie_name}"]
+  end
+  
+  def only_allow_admin
+    redirect_to root_path, :alert => 'Not authorized as an administrator.' unless current_user.has_role? :admin
+  end
+  
+  def newsletter_signup
+    @newsletter = Newsletter.new
   end
 
 end

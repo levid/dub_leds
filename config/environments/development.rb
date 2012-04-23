@@ -1,4 +1,8 @@
 DubLeds::Application.configure do
+  APP_CONFIG      = YAML.load_file(Rails.root.join('config', 'app.yml'))[Rails.env]
+  S3_CONFIG       = YAML.load_file(Rails.root.join('config', 'amazon_s3.yml'))[Rails.env]
+  OMNIAUTH_CONFIG = YAML.load_file(Rails.root.join('config', 'omniauth.yml'))[Rails.env]
+  
   # Settings specified here will take precedence over those in config/application.rb
 
   # In the development environment your application's code is reloaded on
@@ -17,15 +21,15 @@ DubLeds::Application.configure do
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.perform_deliveries = true
   config.action_mailer.default :charset => "utf-8"
-  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  config.action_mailer.default_url_options = { :host => APP_CONFIG['default_host'] }
 
   # Set up email server
   ActionMailer::Base.delivery_method = :smtp
   ActionMailer::Base.smtp_settings = {
-      :address => "smtp.gmail.com",
-      :port => 587,
-      :user_name => "i.wooten@gmail.com",
-      :password => '$rdc#isaacw',
+      :address => APP_CONFIG['smtp']['address'],
+      :port => APP_CONFIG['smtp']['port'],
+      :user_name => APP_CONFIG['smtp']['user_name'],
+      :password => APP_CONFIG['smtp']['password'],
       :authentication => :plain,
       :enable_starttls_auto => true
   }

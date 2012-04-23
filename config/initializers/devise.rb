@@ -4,7 +4,7 @@ Devise.setup do |config|
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class with default "from" parameter.
-  config.mailer_sender = "i.wooten@gmail.com"
+  config.mailer_sender = 'i.wooten@gmail.com'
 
   # Configure the class responsible to send e-mails.
   # config.mailer = "Devise::Mailer"
@@ -20,9 +20,8 @@ Devise.setup do |config|
   require "omniauth-twitter"
   require 'openid/store/filesystem'
 
-  config.omniauth :twitter, 'qW7eyIXhRoMK8N84Kc5g', 'TIoQRdth1ZYGZzny77LGmgOmiJSTwXqBEkIdAsyjEw'
-  config.omniauth :facebook, '42844466516', 'cf9fd40144a2f6d26d4a1fbd152bbca5', {:scope => 'email, offline_access', :client_options => {:ssl => {:ca_file => '/usr/lib/ssl/certs/ca-certificates.crt'}}}
-  # config.omniauth :facebook, '42844466516', 'cf9fd40144a2f6d26d4a1fbd152bbca5', {:scope => 'email, offline_access', :client_options => {:ssl => {:ca_file => '/usr/lib/ssl/certs/ca-certificates.crt'}}}
+  config.omniauth :twitter, OMNIAUTH_CONFIG['twitter']['consumer_key'], OMNIAUTH_CONFIG['twitter']['consumer_secret']
+  config.omniauth :facebook, OMNIAUTH_CONFIG['facebook']['consumer_key'], OMNIAUTH_CONFIG['facebook']['consumer_secret'], {:scope => 'email, offline_access', :client_options => {:ssl => {:ca_file => '/usr/lib/ssl/certs/ca-certificates.crt'}}}
   config.omniauth :open_id, :store => OpenID::Store::Filesystem.new('/tmp'), :name => 'open_id', :require => 'omniauth-openid'
   config.omniauth :open_id, :store => OpenID::Store::Filesystem.new('/tmp'), :name => 'google', :identifier => 'https://www.google.com/accounts/o8/id', :require => 'omniauth-openid'
 

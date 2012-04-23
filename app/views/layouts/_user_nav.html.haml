@@ -10,8 +10,9 @@
       %span
     %li
       - if user_signed_in?
-        = link_to('Admin', admin_path, :class => "fade#{' active' if controller_name == 'admin'}")
-        %span.line &nbsp;
+        - if current_user.has_role? :admin
+          = link_to('Admin', admin_path, :class => "fade#{' active' if controller_name == 'admin'}")
+          %span.line &nbsp;
       = link_to('CART (0)', '/store', :class => "fade#{' active' if controller_name == 'store'}")
     %li.divline
     - if user_signed_in?

@@ -1,0 +1,35 @@
+development:
+  twitter:
+    consumer_key: qW7eyIXhRoMK8N84Kc5g
+    consumer_secret: TIoQRdth1ZYGZzny77LGmgOmiJSTwXqBEkIdAsyjEw
+ 
+  facebook:
+    consumer_key: 42844466516
+    consumer_secret: cf9fd40144a2f6d26d4a1fbd152bbca5
+   
+test:
+  twitter:
+    consumer_key: qW7eyIXhRoMK8N84Kc5g
+    consumer_secret: TIoQRdth1ZYGZzny77LGmgOmiJSTwXqBEkIdAsyjEw
+
+  facebook:
+    consumer_key: 42844466516
+    consumer_secret: cf9fd40144a2f6d26d4a1fbd152bbca5
+    
+staging:
+  twitter:
+    consumer_key: qW7eyIXhRoMK8N84Kc5g
+    consumer_secret: TIoQRdth1ZYGZzny77LGmgOmiJSTwXqBEkIdAsyjEw
+
+  facebook:
+    consumer_key: 42844466516
+    consumer_secret: cf9fd40144a2f6d26d4a1fbd152bbca5
+
+production:
+  twitter:
+    consumer_key: qW7eyIXhRoMK8N84Kc5g
+    consumer_secret: TIoQRdth1ZYGZzny77LGmgOmiJSTwXqBEkIdAsyjEw
+
+  facebook:
+    consumer_key: 42844466516
+    consumer_secret: cf9fd40144a2f6d26d4a1fbd152bbca5

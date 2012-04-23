@@ -1,10 +1,9 @@
 class User < ActiveRecord::Base
-  ROLES = %w[admin user banned]
+	rolify
 
   devise :database_authenticatable, :registerable, :recoverable, :confirmable, :rememberable, :trackable, :validatable, :omniauthable, :token_authenticatable, :authentication_keys => [:login]
 
   has_many :authentications
-  has_and_belongs_to_many :roles
 
   validates_presence_of :name
   validates_uniqueness_of :name, :email, :case_sensitive => false
@@ -24,7 +23,7 @@ class User < ActiveRecord::Base
   end
 
   def role?(role)
-    return !self.roles.where(role: role.to_s).empty?
+    return !self.roles.where(name: role.to_s).empty?
   end
 
   def apply_omniauth(omniauth)
