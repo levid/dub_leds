@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_filter :authenticate_user!, :except => [:show]
   
-  before_filter :get_user, :only => [:index, :edit]
+  before_filter :get_user, :only => [:index, :edit, :update]
   before_filter :only_allow_admin
   
   # GET /users
