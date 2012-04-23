@@ -38,4 +38,4 @@
       %div.grey If you wish to cancel your account permanently, please click "Cancel my account"
       %div.pad.top10
         = link_to "Cancel my account", registration_path(resource_name), :confirm => "Are you sure?", :method => :delete, :class => 'btn blue'
-        = link_to "Back to list", :back, :class => 'btn black pad left5'
+        = link_to "Back to list", users_path, :class => 'btn black pad left5'

@@ -1,6 +1,6 @@
 development:
   default_emaiL: i.wooten@gmail.com
-  default_host: http://localhost:3000
+  default_host: localhost:3000
 
   smtp:
     address: smtp.gmail.com
@@ -10,7 +10,7 @@ development:
    
 test:
   default_emaiL: i.wooten@gmail.com
-  default_host: http://dub-leds.herokuapp.com
+  default_host: dub-leds.herokuapp.com
 
   smtp:
     address: smtp.gmail.com
@@ -20,7 +20,7 @@ test:
    
 staging:
   default_emaiL: i.wooten@gmail.com
-  default_host: http://dub-leds.herokuapp.com
+  default_host: dub-leds.herokuapp.com
 
   smtp:
     address: smtp.gmail.com
@@ -30,7 +30,7 @@ staging:
     
 production:
   default_emaiL: i.wooten@gmail.com
-  default_host: http://dub-leds.herokuapp.com
+  default_host: dub-leds.herokuapp.com
 
   smtp:
     address: smtp.gmail.com

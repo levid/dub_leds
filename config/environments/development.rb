@@ -21,7 +21,7 @@ DubLeds::Application.configure do
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.perform_deliveries = true
   config.action_mailer.default :charset => "utf-8"
-  config.action_mailer.default_url_options = { :host => APP_CONFIG['default_host'] }
+  config.action_mailer.default_url_options = { :host => APP_CONFIG['default_host'].to_s }
 
   # Set up email server
   ActionMailer::Base.delivery_method = :smtp
