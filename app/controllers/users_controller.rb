@@ -88,6 +88,7 @@ class UsersController < ApplicationController
   # PUT /users/1.json                                            HTML AND AJAX
   #----------------------------------------------------------------------------
   def update
+    @user = current_user
     if params[:user][:password].blank?
       [:password,:password_confirmation,:current_password].collect{|p| params[:user].delete(p) }
     else
