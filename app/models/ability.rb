@@ -29,6 +29,7 @@ class Ability
 
     if user.role? :admin
       can :manage, :all
+      can :manage, Role
     else
       can :read, :all
       can :create, User

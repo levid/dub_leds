@@ -29,8 +29,8 @@ class AuthenticationsController < ApplicationController
         flash[:notice] = "Signed in successfully."
         sign_in_and_redirect(:user, user)
       else
-        session["devise.omniauth_data"] = omniauth.except('extra')
-        # session[:omniauth] = omniauth
+        # session["devise.omniauth_data"] = omniauth.except('extra')
+        session[:omniauth] = omniauth
         redirect_to new_user_registration_url
       end
     end

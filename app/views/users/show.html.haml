@@ -1,23 +1,32 @@
+.title Manage User
 .text-container
-  %h3= @user.name
-  = link_to_if(can?(:update,@user), "Edit", edit_user_path(@user))
-  %br
-  = link_to_if(can?(:delete, @user), "Delete", user_path(@user), :confirm => "Are you sure?", :method => :delete) {}
-  %table.one-column-emphasis
-    %tbody
-      %tr
-        %td.oce-first Email:
-        %td= @user.email
-      %tr
-        %td.oce-first Role:
-        %td= @user.roles.first.name
-      - if can?(:see_timestamps,User)
-        %tr
-          %td.oce-first Created at:
-          %td= @user.created_at
-        %tr
-          %td.oce-first Last Sign In:
-          %td= @user.last_sign_in_at
-        %tr
-          %td.oce-first Sign In Count:
-          %td= @user.sign_in_count
+  %fieldset
+    %legend User Information
+    .table
+      %table
+        %thead
+          %tr
+            %th Name
+            %th User Name
+            %th Email
+            %th Role
+            %th Created At
+            %th Last Sign In
+            %th Sign In Count
+        %tbody
+          %tr
+            %th= @user.name
+            %th= @user.username
+            %th= @user.email
+            %th= @user.roles.first.name
+            %th= @user.created_at
+            %th= @user.last_sign_in_at
+            %th= @user.sign_in_count
+          
+  %fieldset
+    %legend Other Options
+    .links
+      = link_to_if(can?(:update,@user), "Edit User", edit_user_path(@user), :class => 'btn blue')
+      = link_to_if(can?(:delete, @user), "Delete", user_path(@user), :confirm => "Are you sure?", :method => :delete, :class => 'btn black pad left5') {}
+      = link_to "Back to list", users_path, :class => 'btn black pad left5'
+      

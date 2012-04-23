@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.4'
+gem 'rails'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
@@ -46,6 +46,10 @@ gem 'cancan'
 # thin server
 gem 'thin'
 
+gem 'spree', '0.7.0 '
+gem 'spree_usa_epay'
+gem 'spree_skrill'
+
 # Shopping cart
 # gem 'acts_as_shopping_cart', :git => "git@github.com:crowdint/acts_as_shopping_cart.git"
 
@@ -83,6 +87,3 @@ group :assets do
   gem "compass"
   gem 'sprockets'
 end
-gem 'spree'
-gem 'spree_usa_epay'
-gem 'spree_skrill'

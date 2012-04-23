@@ -8,15 +8,15 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   def create
     super
-    session['devise.omniauth_data'] = nil unless @user.new_record?
+    session[:omniauth] = nil unless @user.new_record?
   end
 
   private
 
   def build_resource(*args)
     super
-    if session['devise.omniauth_data']
-      @user.apply_omniauth(session['devise.omniauth_data'])
+    if session[:omniauth]
+      @user.apply_omniauth(session[:omniauth])
       @user.valid?
     end
   end

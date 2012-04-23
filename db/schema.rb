@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121219032143) do
+ActiveRecord::Schema.define(:version => 20121422014945) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                             :default => "", :null => false
@@ -530,17 +530,6 @@ ActiveRecord::Schema.define(:version => 20121219032143) do
     t.boolean  "match_one"
   end
 
-  create_table "spree_skrill_transactions", :force => true do |t|
-    t.string   "email"
-    t.float    "amount"
-    t.string   "currency"
-    t.integer  "transaction_id"
-    t.integer  "customer_id"
-    t.string   "payment_type"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "spree_state_events", :force => true do |t|
     t.string   "name"
     t.string   "previous_state"
@@ -612,16 +601,16 @@ ActiveRecord::Schema.define(:version => 20121219032143) do
   end
 
   create_table "spree_users", :force => true do |t|
-    t.string   "crypted_password",          :limit => 128, :default => "", :null => false
-    t.string   "salt",                      :limit => 128, :default => "", :null => false
+    t.string   "crypted_password"
+    t.string   "salt"
     t.string   "email"
     t.string   "remember_token"
     t.string   "remember_token_expires_at"
     t.string   "persistence_token"
     t.string   "single_access_token"
     t.string   "perishable_token"
-    t.integer  "login_count",                              :default => 0,  :null => false
-    t.integer  "failed_login_count",                       :default => 0,  :null => false
+    t.integer  "login_count",               :default => 0, :null => false
+    t.integer  "failed_login_count",        :default => 0, :null => false
     t.datetime "last_request_at"
     t.datetime "current_login_at"
     t.datetime "last_login_at"
@@ -632,8 +621,10 @@ ActiveRecord::Schema.define(:version => 20121219032143) do
     t.integer  "bill_address_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "openid_identifier"
   end
 
+  add_index "spree_users", ["openid_identifier"], :name => "index_users_on_openid_identifier"
   add_index "spree_users", ["persistence_token"], :name => "index_users_on_persistence_token"
 
   create_table "spree_variants", :force => true do |t|

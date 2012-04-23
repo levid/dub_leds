@@ -1,7 +1,12 @@
-%p= f.label :name
-%p= f.text_field :name
-%p= f.label :email
-%p= f.text_field :email
+.field
+  = f.label :name
+  = f.text_field :name
+.field
+  = f.label :username
+  = f.text_field :username
+.field
+  = f.label :email
+  = f.text_field :email
 - if can? :manage, Role
   %p= f.label :role
   %ul.no-pad.no-bullets

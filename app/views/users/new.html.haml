@@ -1,7 +1,7 @@
+.title New User
 .text-container
-  %h2 Register User
   %fieldset
-    %legend Register User
+    %legend User Information
     = form_for(@user) do |f|
       -if @user.errors.any?
         error_explanation
@@ -10,9 +10,16 @@
         - @user.errors.full_messages.each do |msg|
           %li= msg
       = render :partial => 'user_fields', :locals => { :f => f }
-      %p= f.label :password
-      %p= f.password_field :password
-      %p= f.label :password_confirmation
-      %p= f.password_field :password_confirmation
-      %p= f.submit "Register"
-    = link_to "Back", :back
+      .field
+        = f.label :password
+        = f.password_field :password
+      .field
+        = f.label :password_confirmation
+        = f.password_field :password_confirmation
+      .submit
+        = f.submit "Register", :class => 'btn orange'
+
+  %fieldset
+    %legend Other Options
+    .links
+      = link_to "Back to list", users_path, :class => 'btn black'

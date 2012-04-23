@@ -5,7 +5,6 @@ DubLeds::Application.routes.draw do
   resources :medias
   resources :refunds
   resources :privacies
-  resources :products, :only => [ :index ]
 
   # Routes for Devise
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
@@ -57,6 +56,8 @@ DubLeds::Application.routes.draw do
   put '/contact/:id'         => 'contact#update',   :as => :contact_update
   post '/contact/create'     => 'contact#create',   :as => :contact_create
   delete '/contact:id'       => 'contact#destroy',  :as => :contact_destroy
+  
+  get '/users/new'           => 'users#new',        :as => :user_new
 
   get '/privacy_policy'      => 'privacies#index',  :as => :privacy_policy
   get '/refund_policy'       => 'refunds#index',    :as => :refund_policy
