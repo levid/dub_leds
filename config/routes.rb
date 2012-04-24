@@ -1,24 +1,32 @@
 DubLeds::Application.routes.draw do
   # Mount Spree's routes
-  mount Spree::Core::Engine, :at => "/store", :as => :store
+  mount Spree::Core::Engine, :at => "/store", :as => :spree
 
   resources :medias
   resources :refunds
   resources :privacies
 
   # Routes for Devise
-  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+  # devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+  
+  devise_for :user,
+             :class_name => 'Spree::User',
+             :controllers => { :sessions => 'spree/user_sessions',
+                               :registrations => 'spree/user_registrations',
+                               :passwords => 'spree/user_passwords' },
+             :skip => [:unlocks, :omniauth_callbacks],
+             :path_names => { :sign_out => 'logout' }
 
-  devise_scope :user do
-    get '/users/auth/:provider' => 'users/omniauth_callbacks#passthru'
-  end
+  # devise_scope :user do
+  #     get '/users/auth/:provider' => 'users/omniauth_callbacks#passthru'
+  #   end
 
-	get '/users/:id(:format)'  => 'users#show', :as => :user
+  # get '/users/:id(:format)'  => 'users#show', :as => :user
 
   # Resources
   resources :newsletters
   resources :contact
-  resources :users
+  # resources :users
   resources :authentications
 
   # match '/users/auth/:provider/callback' => 'authentications#create'
@@ -30,7 +38,7 @@ DubLeds::Application.routes.draw do
 
   # match '/signin' => 'sessions#new', :as => :signin
   #
-  match '/users/sign_out'     => 'sessions#destroy', :as => :signout
+  # match '/users/sign_out'     => 'sessions#destroy', :as => :signout
   post '/cookie' => 'cookies#create'
 
 
@@ -132,4 +140,15 @@ DubLeds::Application.routes.draw do
 
   root :to => "home#index"
 
+end
+
+DubLeds::Application.routes.prepend do
+  resources :users, :only => [:edit, :update]
+
+  devise_scope :user do
+    get '/login' => 'spree/user_sessions#new', :as => :login
+    get '/signup' => 'spree/user_registrations#new', :as => :signup
+  end
+
+  resource :account, :controller => 'users'
 end

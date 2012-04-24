@@ -4,7 +4,6 @@ require 'carrierwave/processing/mini_magick'
 # require 'carrierwave/processing/mime_types'
 
 class ImageUploader < CarrierWave::Uploader::Base
-  
   include CarrierWave::MiniMagick
 
   # Include RMagick or MiniMagick support:
@@ -35,9 +34,9 @@ class ImageUploader < CarrierWave::Uploader::Base
   #     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   #   end
   
-  version :thumb do
-    process :resize_to_fill => [80,80]
-  end
+  # version :thumb do
+  #     process :resize_to_fill => [80,80]
+  #   end
   
   def store_dir
     'uploads'

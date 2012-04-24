@@ -6,22 +6,23 @@
     - else
       %li
         = "Welcome, Guest"
-    %li.divline
-      %span
-    %li
-      - if user_signed_in?
-        - if current_user.has_role? :admin
+    - if user_signed_in?
+      - if current_user.has_role? :admin
+        %li.divline
+          %span
+        %li
           = link_to('Admin', main_app.admin_path, :class => "fade#{' active' if controller_name == 'admin'}")
           %span.line &nbsp;
+      %li.divline
       %li#link-to-cart{"data-hook" => ""}= link_to_cart
     %li.divline
     - if user_signed_in?
       %li
-        = link_to('My Account', main_app.edit_user_registration_path, :class => "my_account #{'active' if controller_name === 'registrations' }")
+        = link_to('My Account', spree.account_path, :class => "my_account #{'active' if controller_name === 'registrations' }")
       %li
-        = link_to('Logout', main_app.destroy_user_session_path, :class => 'log_out', :method=>'delete')
+        = link_to('Logout', spree.destroy_user_session_path, :class => 'log_out')
     - else
       %li
-        = link_to('Sign In', main_app.new_user_session_path, :class => "sign_in #{'active' if controller_name === 'sessions' }")
+        = link_to('Sign In', spree.login_path, :class => "sign_in #{'active' if controller_name === 'sessions' }")
       %li
-        = link_to('Sign up', main_app.new_user_registration_path, :class => "sign_up #{'active' if controller_name === 'registrations' }")
+        = link_to('Sign up', spree.signup_path, :class => "sign_up #{'active' if controller_name === 'registrations' }")

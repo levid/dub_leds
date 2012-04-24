@@ -8,7 +8,7 @@
           = f.submit 'Register'
     .links
       .order
-        = link_to('Buy Rims', store_path, :class => 'btn orange')
+        = link_to('Buy Rims', spree.products_path, :class => 'btn orange')
       %ul#sharing-links
         %li
           %a.facebook{:href => "#", :title => 'Follow us on Facebook'} Facebook

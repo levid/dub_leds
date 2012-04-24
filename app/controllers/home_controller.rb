@@ -11,7 +11,6 @@ class HomeController < ApplicationController
     # puts YAML::dump(@rims)
 
     @path = :home_path
-    @users = User.all
   end
 
   protected

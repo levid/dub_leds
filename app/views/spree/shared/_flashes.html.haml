@@ -1,0 +1,6 @@
+- if flash.any?
+  #flash
+    = flash_messages
+    - flash.each do |key, value|
+      %p
+        = value

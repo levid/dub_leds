@@ -1,6 +1,6 @@
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 
-gem 'rails'
+gem 'rails', '3.1.4'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
@@ -23,17 +23,21 @@ gem 'haml'
 gem 'draper'
 
 # Mongoid
-gem 'bson_ext', '>= 1.3.1'
+gem 'bson_ext', '~> 1.3.1'
 # gem 'mongoid', '>= 2.3.3'
 
 # User based authentication
-gem 'devise'
-gem 'omniauth'
-gem 'omniauth-twitter'
-gem 'omniauth-facebook'
-gem 'omniauth-openid'
-gem 'oa-core'
-gem 'fog', '>= 1.3.1'
+# gem 'devise'
+# gem 'omniauth'
+# gem 'omniauth-twitter'
+# gem 'omniauth-facebook'
+# gem 'omniauth-openid'
+# gem 'oa-core'
+
+# Amazon S3 uploader
+gem 'fog', '~> 1.3.1'
+
+# Role based stuff
 gem 'rolify'
 
 # Export / Import database dump
@@ -47,10 +51,6 @@ gem 'cancan'
 
 # thin server
 gem 'thin'
-
-gem 'spree', '0.7.0 '
-gem 'spree_usa_epay'
-gem 'spree_skrill'
 
 # Shopping cart
 # gem 'acts_as_shopping_cart', :git => "git@github.com:crowdint/acts_as_shopping_cart.git"
@@ -75,7 +75,7 @@ group :test do
   gem 'vcr'
   gem 'fakeweb'
   gem 'simplecov', :require => false
-  gem "capybara", ">= 1.1.2"
+  gem "capybara", "~> 1.1.2"
 end
 
 # Gems used only for assets and not required
@@ -89,3 +89,8 @@ group :assets do
   gem "compass"
   gem 'sprockets'
 end
+
+
+gem 'spree'
+gem 'spree_usa_epay'
+gem 'spree_skrill'

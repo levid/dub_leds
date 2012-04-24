@@ -22,7 +22,7 @@ class UI extends $DUB
 
     $ => # basically the same thing as $(document).ready =>
       $('.centered').center()
-        
+      
       $('.submit input').bind 'click', (e, clicked) =>
         e.preventDefault()
         title = $(e.target).attr('title') || 'Saving Data...'

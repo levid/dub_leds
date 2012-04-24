@@ -7,6 +7,10 @@ class ApplicationController < ActionController::Base
   before_filter :newsletter_signup
 
   layout :set_layout
+  
+  def current_ability
+    @current_ability ||= Spree::Ability.new(current_user)
+  end
 
   rescue_from CanCan::AccessDenied do |exception|
     flash[:error] = exception.message

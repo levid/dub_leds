@@ -1,0 +1,13 @@
+.title Forgot Password
+.text-container
+  %fieldset
+    %legend= t(:email_address)
+    #forgot-password
+      .instructions= t(:instructions_to_reset_password)
+      = form_for Spree::User.new, :as => :user, :url => spree.user_password_path do |f|
+        = devise_error_messages!
+        .field
+          = f.label :email, t(:email)
+          = f.email_field :email
+        .submit
+          = f.submit t(:reset_password), :class => 'button primary orange', :style => 'width: 200px'

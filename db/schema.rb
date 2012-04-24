@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121422014948) do
+ActiveRecord::Schema.define(:version => 20121422015064) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                             :default => "", :null => false
@@ -54,18 +54,7 @@ ActiveRecord::Schema.define(:version => 20121422014948) do
     t.text     "description"
     t.string   "title"
     t.string   "sub_title"
-    t.string   "type"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "coupons", :force => true do |t|
-    t.string   "code"
-    t.string   "description"
-    t.integer  "usage_limit"
-    t.boolean  "combine"
-    t.datetime "expires_at"
-    t.datetime "starts_at"
+    t.string   "resource_type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -122,17 +111,6 @@ ActiveRecord::Schema.define(:version => 20121422014948) do
     t.datetime "updated_at"
   end
 
-  create_table "roles", :force => true do |t|
-    t.string   "name"
-    t.integer  "resource_id"
-    t.string   "resource_type"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "roles", ["name", "resource_type", "resource_id"], :name => "index_roles_on_name_and_resource_type_and_resource_id"
-  add_index "roles", ["name"], :name => "index_roles_on_name"
-
   create_table "spree_activators", :force => true do |t|
     t.string   "description"
     t.datetime "expires_at"
@@ -142,6 +120,11 @@ ActiveRecord::Schema.define(:version => 20121422014948) do
     t.string   "name"
     t.string   "event_name"
     t.string   "type"
+    t.integer  "usage_limit"
+    t.string   "match_policy", :default => "all"
+    t.string   "code"
+    t.boolean  "advertise",    :default => false
+    t.string   "path"
   end
 
   create_table "spree_addresses", :force => true do |t|
@@ -373,12 +356,18 @@ ActiveRecord::Schema.define(:version => 20121422014948) do
     t.string   "avs_response"
   end
 
+  create_table "spree_pending_promotions", :force => true do |t|
+    t.integer "user_id"
+    t.integer "promotion_id"
+  end
+
+  add_index "spree_pending_promotions", ["promotion_id"], :name => "index_spree_pending_promotions_on_promotion_id"
+  add_index "spree_pending_promotions", ["user_id"], :name => "index_spree_pending_promotions_on_user_id"
+
   create_table "spree_preferences", :force => true do |t|
     t.string   "name"
     t.integer  "owner_id"
     t.string   "owner_type"
-    t.integer  "group_id"
-    t.string   "group_type"
     t.text     "value"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -449,6 +438,14 @@ ActiveRecord::Schema.define(:version => 20121422014948) do
   add_index "spree_products", ["name"], :name => "index_products_on_name"
   add_index "spree_products", ["permalink"], :name => "index_products_on_permalink"
 
+  create_table "spree_products_promotion_rules", :id => false, :force => true do |t|
+    t.integer "product_id"
+    t.integer "promotion_rule_id"
+  end
+
+  add_index "spree_products_promotion_rules", ["product_id"], :name => "index_products_promotion_rules_on_product_id"
+  add_index "spree_products_promotion_rules", ["promotion_rule_id"], :name => "index_products_promotion_rules_on_promotion_rule_id"
+
   create_table "spree_products_taxons", :id => false, :force => true do |t|
     t.integer "product_id"
     t.integer "taxon_id"
@@ -456,6 +453,38 @@ ActiveRecord::Schema.define(:version => 20121422014948) do
 
   add_index "spree_products_taxons", ["product_id"], :name => "index_products_taxons_on_product_id"
   add_index "spree_products_taxons", ["taxon_id"], :name => "index_products_taxons_on_taxon_id"
+
+  create_table "spree_promotion_action_line_items", :force => true do |t|
+    t.integer "promotion_action_id"
+    t.integer "variant_id"
+    t.integer "quantity",            :default => 1
+  end
+
+  create_table "spree_promotion_actions", :force => true do |t|
+    t.integer "activator_id"
+    t.integer "position"
+    t.string  "type"
+  end
+
+  create_table "spree_promotion_rules", :force => true do |t|
+    t.integer  "activator_id"
+    t.integer  "user_id"
+    t.integer  "product_group_id"
+    t.string   "type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "spree_promotion_rules", ["product_group_id"], :name => "index_promotion_rules_on_product_group_id"
+  add_index "spree_promotion_rules", ["user_id"], :name => "index_promotion_rules_on_user_id"
+
+  create_table "spree_promotion_rules_users", :id => false, :force => true do |t|
+    t.integer "user_id"
+    t.integer "promotion_rule_id"
+  end
+
+  add_index "spree_promotion_rules_users", ["promotion_rule_id"], :name => "index_promotion_rules_users_on_promotion_rule_id"
+  add_index "spree_promotion_rules_users", ["user_id"], :name => "index_promotion_rules_users_on_user_id"
 
   create_table "spree_properties", :force => true do |t|
     t.string   "name"
@@ -530,6 +559,17 @@ ActiveRecord::Schema.define(:version => 20121422014948) do
     t.boolean  "match_one"
   end
 
+  create_table "spree_skrill_transactions", :force => true do |t|
+    t.string   "email"
+    t.float    "amount"
+    t.string   "currency"
+    t.integer  "transaction_id"
+    t.integer  "customer_id"
+    t.string   "payment_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "spree_state_events", :force => true do |t|
     t.string   "name"
     t.string   "previous_state"
@@ -592,6 +632,16 @@ ActiveRecord::Schema.define(:version => 20121422014948) do
   add_index "spree_taxons", ["permalink"], :name => "index_taxons_on_permalink"
   add_index "spree_taxons", ["taxonomy_id"], :name => "index_taxons_on_taxonomy_id"
 
+  create_table "spree_tokenized_permissions", :force => true do |t|
+    t.integer  "permissable_id"
+    t.string   "permissable_type"
+    t.string   "token"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "spree_tokenized_permissions", ["permissable_id", "permissable_type"], :name => "index_tokenized_name_and_type"
+
   create_table "spree_trackers", :force => true do |t|
     t.string   "environment"
     t.string   "analytics_id"
@@ -601,30 +651,34 @@ ActiveRecord::Schema.define(:version => 20121422014948) do
   end
 
   create_table "spree_users", :force => true do |t|
-    t.string   "crypted_password"
-    t.string   "salt"
+    t.string   "encrypted_password"
+    t.string   "password_salt"
     t.string   "email"
     t.string   "remember_token"
-    t.string   "remember_token_expires_at"
     t.string   "persistence_token"
-    t.string   "single_access_token"
+    t.string   "reset_password_token"
     t.string   "perishable_token"
-    t.integer  "login_count",               :default => 0, :null => false
-    t.integer  "failed_login_count",        :default => 0, :null => false
+    t.integer  "sign_in_count",                      :default => 0, :null => false
+    t.integer  "failed_attempts",                    :default => 0, :null => false
     t.datetime "last_request_at"
-    t.datetime "current_login_at"
-    t.datetime "last_login_at"
-    t.string   "current_login_ip"
-    t.string   "last_login_ip"
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
     t.string   "login"
     t.integer  "ship_address_id"
     t.integer  "bill_address_id"
+    t.string   "username"
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "openid_identifier"
+    t.string   "authentication_token"
+    t.string   "unlock_token"
+    t.datetime "locked_at"
+    t.datetime "remember_created_at"
+    t.string   "api_key",              :limit => 40
   end
 
-  add_index "spree_users", ["openid_identifier"], :name => "index_users_on_openid_identifier"
   add_index "spree_users", ["persistence_token"], :name => "index_users_on_persistence_token"
 
   create_table "spree_variants", :force => true do |t|
@@ -663,34 +717,6 @@ ActiveRecord::Schema.define(:version => 20121422014948) do
   create_table "technologies", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "users", :force => true do |t|
-    t.string   "email",                  :default => "", :null => false
-    t.string   "encrypted_password",     :default => "", :null => false
-    t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          :default => 0
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
-    t.string   "password_salt"
-    t.string   "confirmation_token"
-    t.datetime "confirmed_at"
-    t.datetime "confirmation_sent_at"
-    t.string   "unconfirmed_email"
-    t.integer  "failed_attempts",        :default => 0
-    t.string   "unlock_token"
-    t.datetime "locked_at"
-    t.string   "authentication_token"
-    t.string   "invitation_token"
-    t.string   "username"
-    t.string   "login"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "name"
   end
 
   create_table "users_roles", :id => false, :force => true do |t|

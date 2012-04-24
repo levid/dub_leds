@@ -1,0 +1,14 @@
+= form_for :user, :url => user_session_path do |f|
+  #password-credentials
+    .field
+      = f.label :email, t(:email)
+      = f.email_field :email, :tabindex => 1
+    .field
+      = f.label :password, t(:password)
+      = f.password_field :password, :tabindex => 2
+    .field
+      %label
+        = f.check_box :remember_me, :class => 'inline'
+        = f.label :remember_me, t(:remember_me), :class => 'inline'
+  .submit
+    = f.submit t(:login), :class => 'button primary orange', :title => 'logging In...'

@@ -14,4 +14,3 @@
 #= require_tree ./utils
 #= require_tree ./dub
 #= require_tree ./spree
-#= require_tree ./store

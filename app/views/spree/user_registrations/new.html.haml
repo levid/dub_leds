@@ -1,0 +1,20 @@
+.title Sign Up
+.text-container
+  %fieldset
+    %legend User Information
+    / = render :partial => 'spree/shared/error_messages', :locals => { :target => @user }
+    #new-customer
+    %div{"data-hook" => "signup"}
+    = form_for :user, :url => spree.user_registration_path(@user) do |f|
+      = devise_error_messages!
+      %div{"data-hook" => "signup_inside_form"}
+        = render :partial => 'spree/shared/user_form', :locals => { :f => f }
+        .submit
+          = f.submit 'Sign up', :class => 'button primary orange', :title => 'Verifying Data...'
+
+  %fieldset
+    %legend Other options
+    .links
+      = link_to t(:login_as_existing), spree.login_path, :class => 'btn blue'
+
+%div{"data-hook" => "login_extras"}

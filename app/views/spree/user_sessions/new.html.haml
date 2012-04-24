@@ -1,0 +1,15 @@
+.title Sign in
+- @body_id = 'login'
+#existing-customer
+  .text-container
+    %fieldset
+      %legend= t(:login_as_existing)
+      = render :partial => 'spree/shared/login'
+
+    %fieldset
+      %legend Other options
+      .links.pad.bottom10
+        = link_to t(:create_a_new_account), spree.signup_path, :class => 'btn blue'
+        = link_to t(:forgot_password), spree.new_user_password_path, :class => 'btn black'
+      
+%div{"data-hook" => "login_extras"}

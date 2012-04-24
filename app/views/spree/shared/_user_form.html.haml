@@ -1,0 +1,18 @@
+.field
+  = f.label :name
+  = f.text_field :name, :placeholder => "Optional"
+.field
+  = f.label :username
+  = f.text_field :username, :placeholder => "Optional"
+.field
+  = f.label :email
+  = f.email_field :email, :placeholder => "Required"
+#password-credentials
+  .field
+    = f.label :password
+    = f.password_field :password, :placeholder => "Required"
+  .field
+    = f.label :password_confirmation
+    = f.password_field :password_confirmation, :placeholder => "Required"
+    
+%div{"data-hook" => "signup_below_password_fields"}

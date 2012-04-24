@@ -11,6 +11,25 @@ nav
   display: block;
   width: 100%;
   height: auto;
+  
+  &.sidebar-item
+  {
+    position: relative !important;
+    z-index: 0 !important;
+    display: block;
+    
+    ul
+    {
+      display: inline-block;
+      width: auto;
+      height: auto;
+      
+      li
+      {
+        display: block;
+      }
+    }
+  }
 
   .user
   {

@@ -15,10 +15,9 @@
           %nav
             = render 'spree/shared/user_nav'
             = render 'spree/shared/main_nav'
+            = flash_messages
           %section.logo
 
-            / - flash.each do |name, msg|
-            /         = content_tag :div, msg, :id => "flash_\#{name}" if msg.is_a?(String)
         %section.body
           %section.content-container.interior
             .content
@@ -26,15 +25,11 @@
                 .title{:class => "Store"}
                 .text-container
                   #wrapper.row{"data-hook" => ""}
-                    - if content_for?(:sidebar)
-                      %aside#sidebar.columns.alpha.four{"data-hook" => ""}
-                        = yield :sidebar
-                    #content.columns.omega.if.sixteen.alpha.else.twelve{:class => "<haml:silent> !content_for?(:sidebar) </haml:silent><haml:block> </haml:block><haml:silent> </haml:silent><haml:block> </haml:block>", "data-hook" => ""}
-                      = breadcrumbs(@taxon)
-                      = flash_messages
-                      = yield
-                      
-                      .push
+                    = breadcrumbs(@taxon)
+                    
+                    = yield
+                    
+                    .push
 
       = render :partial => 'spree/shared/foot'
     = render :partial => 'spree/shared/google_analytics'

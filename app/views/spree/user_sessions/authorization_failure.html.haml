@@ -1,0 +1,14 @@
+%div{:style => "height:50px; padding-top:20px;"}
+  %strong= t(:authorization_failure)
+/ Add your own custom access denied message here if you like
+
+.title W'ere Sorry
+.text-container
+  %fieldset
+    %legend= t(:login_as_existing)
+      .table
+        You are not authorized to access this area
+      .links.pad.bottom10
+        = link_to t(:back_to_store), spree.products_path, :class => 'btn blue'
+
+    

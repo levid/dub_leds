@@ -6,13 +6,14 @@
         %nav
           = render 'layouts/user_nav'
           = render 'layouts/main_nav'
+          = flash_messages
         %section.logo
 
       %section.body
         %section.content-container.interior
           .content{:class => "#{controller_name}"}
             .title-container
-              = flash_messages
+              
               = yield
 
       .push

@@ -27,7 +27,7 @@ class Ability
     
     user ||= User.new # guest user
 
-    if user.role? :admin
+    if user.has_role?('admin')
       can :manage, :all
     end
     

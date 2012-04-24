@@ -1,0 +1,14 @@
+= render :partial => 'spree/shared/error_messages', :locals => { :target => @user }
+.title= t(:editing_user)
+.text-container
+  %fieldset
+    %legend="Your Information"
+    = form_for @user, :url => spree.user_path(@user), :method => :put do |f|
+      = render :partial => 'spree/shared/user_form', :locals => { :f => f }
+      .submit
+        = f.submit "Update", :class => 'orange'
+        
+  %fieldset
+    %legend Other options
+    .links.pad.bottom10
+      = link_to t(:my_account), spree.account_path, :class => 'btn blue'
