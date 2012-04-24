@@ -1,5 +1,5 @@
 class CreateUsers < ActiveRecord::Migration
-  def up
+  def change
     create_table :users do |t|
       ## Database authenticatable
       t.string :email,              :null => false, :default => ""
@@ -42,8 +42,5 @@ class CreateUsers < ActiveRecord::Migration
       t.string :login
       t.timestamps
     end
-  end
-
-  def down
   end
 end
