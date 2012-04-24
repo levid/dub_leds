@@ -11,10 +11,6 @@ Spree.config do |config|
   # config.site_name = "Spree Demo Site"
   
   config.site_name = "DUB LED Store"
-  config.attachment_default_url = '/spree/products/:id/:style/:basename.:extension'
-  config.attachment_path = ':rails_root/public/spree/products/:id/:style/:basename.:extension'
-  config.attachment_styles = "{\"mini\":\"48x48>\",\"small\":\"100x100>\",\"product\":\"240x240>\",\"large\":\"600x600>\"}"
-  config.attachment_default_style = 'product'
   config.s3_access_key = 'AKIAIHXNGFCN3DDF266A'
   config.s3_secret = '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'
   config.s3_bucket = 'dubleds'
