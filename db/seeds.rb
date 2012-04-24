@@ -11,14 +11,14 @@
 # puts ' *** Empty the MongoDB database ***'
 # Mongoid.master.collections.reject { |c| c.name =~ /^system/}.each(&:drop)
 
-# if User.first.blank?
-#   puts ' *** Setting up default user login ***'
-#   # u = Spree::User.create! name: 'Isaac Wooten', username: 'levid', email: 'i.wooten@gmail.com', password: 'wooteni', password_confirmation: 'wooteni', :confirmed_at => DateTime.now
-#   u = User.create! name: 'Isaac Wooten', username: 'levid', email: 'i.wooten@gmail.com', password: 'wooteni', password_confirmation: 'wooteni'
-#   u.add_role :admin
-#   u.save!
-#   puts 'New user created: ' << u.name
-# end
+if Spree::User.first.blank?
+  puts ' *** Setting up default user login ***'
+  # u = Spree::User.create! name: 'Isaac Wooten', username: 'levid', email: 'i.wooten@gmail.com', password: 'wooteni', password_confirmation: 'wooteni', :confirmed_at => DateTime.now
+  u = Spree::User.create! name: 'Isaac Wooten', username: 'levid', email: 'i.wooten@gmail.com', password: 'wooteni', password_confirmation: 'wooteni'
+  # u.add_role :admin
+  u.save!
+  puts 'New user created: ' << u.name
+end
 
 puts ' *** Setting up Rims ***'
 for i in 1..7
