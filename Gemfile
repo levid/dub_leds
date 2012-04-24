@@ -33,7 +33,6 @@ gem 'bson_ext', '~> 1.3.1'
 # gem 'omniauth-facebook'
 # gem 'omniauth-openid'
 # gem 'oa-core'
-gem 'rails_warden'
 
 # Amazon S3 uploader
 gem 'fog', '~> 1.3.1'

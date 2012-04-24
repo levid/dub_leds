@@ -141,14 +141,3 @@ DubLeds::Application.routes.draw do
   root :to => "home#index"
 
 end
-
-DubLeds::Application.routes.prepend do
-  resources :users, :only => [:edit, :update]
-
-  devise_scope :user do
-    get '/login' => 'spree/user_sessions#new', :as => :login
-    get '/signup' => 'spree/user_registrations#new', :as => :signup
-  end
-
-  resource :account, :controller => 'users'
-end

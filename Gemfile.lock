@@ -198,8 +198,6 @@ GEM
       activesupport (= 3.1.4)
       bundler (~> 1.0)
       railties (= 3.1.4)
-    rails_warden (0.5.6)
-      warden (>= 1.0.0)
     railties (3.1.4)
       actionpack (= 3.1.4)
       activesupport (= 3.1.4)
@@ -341,7 +339,6 @@ DEPENDENCIES
   pry
   rack
   rails (= 3.1.4)
-  rails_warden
   rolify
   sass-rails (= 3.1.4)
   simplecov
