@@ -10,4 +10,5 @@
  *= require admin/spree_promo
 
  *= require_self
+ *= require_tree .
 */
