@@ -10,13 +10,6 @@ Spree.config do |config|
   # Uncomment to override the default site name.
   # config.site_name = "Spree Demo Site"
   
-  Spree::Config.set(site_name: "DUB LED Store")
-  Spree::Config.set(s3_access_key: "AKIAIHXNGFCN3DDF266A")
-  Spree::Config.set(s3_secret: "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")
-  Spree::Config.set(s3_bucket: "dubleds")
-  Spree::Config.set(s3_headers: "{\"Cache-Control\":\"max-age=31557600\"}")
-  Spree::Config.set(use_s3: true)
-  
   # # Alphabetized to more easily lookup particular preferences
   #   preference :address_requires_state, :boolean, :default => true # should state/state_name be required
   #   preference :admin_interface_logo, :string, :default => 'admin/bg/spree_50.png'
