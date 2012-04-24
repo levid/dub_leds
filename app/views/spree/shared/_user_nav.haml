@@ -14,7 +14,7 @@
           = link_to('Admin', main_app.admin_path, :class => "fade#{' active' if controller_name == 'admin'}")
           / %span.line &nbsp;
       %li.divline
-      %li#link-to-cart{"data-hook" => ""}= link_to_cart
+      %li#link-to-cart{"data-hook" => ""}= link_to_cart  if store_menu?
     %li.divline
     - if user_signed_in?
       %li
@@ -26,3 +26,4 @@
         = link_to('Sign In', spree.login_path, :class => "sign_in #{'active' if controller_name === 'sessions' }")
       %li
         = link_to('Sign up', spree.signup_path, :class => "sign_up #{'active' if controller_name === 'registrations' }")
+        
