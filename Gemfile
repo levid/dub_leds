@@ -41,7 +41,7 @@ gem 'fog', '~> 1.3.1'
 gem 'rolify'
 
 # Export / Import database dump
-gem 'yaml_db'
+gem 'yaml_db', :git => 'https://github.com/lostapathy/yaml_db'
 
 gem 'carrierwave'
 gem 'mini_magick'
@@ -51,8 +51,6 @@ gem 'cancan'
 
 # thin server
 gem 'thin'
-
-gem 'authorize-net'
 
 # Shopping cart
 # gem 'acts_as_shopping_cart', :git => "git@github.com:crowdint/acts_as_shopping_cart.git"
@@ -94,5 +92,4 @@ end
 
 
 gem 'spree', :git => 'git://github.com/spree/spree.git'
-gem 'spree_usa_epay'
-gem 'spree_skrill'
+gem 'spree_gateway', :git => 'git://github.com/spree/spree_gateway.git'

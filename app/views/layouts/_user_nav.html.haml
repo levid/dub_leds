@@ -12,8 +12,9 @@
           %span
         %li
           = link_to('Admin', admin_path, :class => "fade#{' active' if controller_name == 'admin'}")
-          / %span.line &nbsp;
-      / #link-to-cart{"data-hook" => ""}= link_to_cart
+          /%span.line &nbsp;
+      -# %li.divline
+      /#link-to-cart{"data-hook" => ""}= link_to_cart
     %li.divline
     - if user_signed_in?
       %li
