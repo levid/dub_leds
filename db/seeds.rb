@@ -54,6 +54,22 @@ for i in 1..7
    puts 'New Rim created: ' << r.title
 end
 
+puts ' *** Setting up Media ***'
+for i in 1..3
+  @thumb = File.open(File.join(Rails.root,"/app/assets/images/media-thumb#{i}.png"))
+  m = Media.create!(title: "Video #{i}", video_url: "http://player.vimeo.com/video/27974233", description: "This is the description for Video #{i}", thumbnail: @thumb)
+
+  puts 'New Media added: ' << m.title
+end
+
+puts ' *** Setting up Software ***'
+for i in 1..2
+  @img = File.open(File.join(Rails.root,"/app/assets/images/img-home-rim-large.png"))
+  s = Software.create!(name: "DUB LED Software #{i}", download_url: "http://www.dubleds.com", image: @img)
+
+  puts 'New Software added: ' << s.name
+end
+
 puts ' *** Setting up Contents ***'
 Content.create! title: "Pure Titanium Alloy", sub_title: "The world's most technologically advanced rims.", resource_type: "technology", description: "It has been long thought desirable to decorate one's automobile by the addition of decorative wheels. It has further been thought desirable to communicate with others by means of addressable electronic displays. The concept of combining decorative automobile wheels with an addressable electronic display is a relatively new one which produces novel and visually interesting results."
 Content.create! title: "Integrated Computer Chip", sub_title: "Sub title goes here", resource_type: "technology", description: "Description goes here"

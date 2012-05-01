@@ -2,7 +2,6 @@ class MediaController < ApplicationController
   
   def index
     @media = Media.all
-    @media = :media_path
   end
 
   def new

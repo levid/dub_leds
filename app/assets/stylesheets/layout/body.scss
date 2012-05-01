@@ -581,9 +581,21 @@
                   .left-column
                   {
                       margin: 0px 0px 0px 10px;
-                      width: auto;
-                      height: auto;
+                      width: 702px;
+                      height: 372px;
+                      position: relative;
+                      left: 0px;
+                      top: 0px;
                       display: inline-block;
+                      
+                      .video-title
+                      {
+                        margin: 0px 0px 10px 0px;
+                        font-family: EurostileMed, Helvetica, Arial, sans-serif;
+                        font-weight: 400;
+                        font-size: 14px !important;
+                        color: #ffffff;
+                      }
 
                       iframe
                       {
@@ -594,17 +606,21 @@
 
                   .right-column
                   {
-                      margin: 0px 0px 0px 20px;
-                      width: auto;
-                      height: auto;
+                      margin: 0px 0px 0px 10px;
+                      width: 245px;
+                      height: 372px;
+                      position: relative;
+                      right: 0px;
+                      top: 0px;
                       display: inline-block;
 
                       ul
                       {
                           margin: 0px;
                           padding: 0px;
-                          width: auto;
-                          height: auto;
+                          width: inherit;
+                          height: inherit;
+                          overflow: auto;
 
                           li
                           {

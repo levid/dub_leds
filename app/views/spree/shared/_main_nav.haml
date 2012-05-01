@@ -7,5 +7,6 @@
     %li= (link_to "Generator", main_app.generator_path, :id => "generator", :class => @section != 'spree' && controller_name === "generator" ? "active" : "")
     %li= (link_to "Store", main_app.store_path, :id => "store", :class => @section == 'spree' && controller_name === "home" ? "active" : "")
     %li= (link_to "Contact", main_app.contact_path, :id => "contact", :class => @section != 'spree' && controller_name === "contact" ? "active" : "")
+    %li= (link_to "Software", main_app.software_path, :id => "software", :class => @section != 'spree' && controller_name === "software" ? "active" : "")
 
   .glow

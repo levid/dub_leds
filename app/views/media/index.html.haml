@@ -2,15 +2,17 @@
 .sub-title Visuals on the road.
 .container
   .left-column
-    %iframe{:allowFullScreen => "", :frameborder => "0", :height => "348", :src => "http://player.vimeo.com/video/27974233?portrait=0", :webkitAllowFullScreen => "", :width => "700"}
+    - if @media.length > 1
+      %div.video-title= @media.first.title
+      %iframe{:allowFullScreen => "", :frameborder => "0", :height => "348", :src => "#{@media.first.video_url}", :webkitAllowFullScreen => "", :width => "700", :id => 'video_player'}
+    - else
+      %div No media has been added yet.
   .right-column
-    %ul
-      %li
-        %a{:href => "#"}
-          %img{:src => "assets/media-thumb1.png"}/
-      %li
-        %a{:href => "#"}
-          %img{:src => "assets/media-thumb2.png"}/
-      %li
-        %a{:href => "#"}
-          %img{:src => "assets/media-thumb3.png"}/
+    %ul.thumbs
+      - @media.each do |media|
+        %li
+          %a{:href => "#", :rel => media.video_url, :title => media.title}
+            -if media.thumbnail.url().nil?
+              %th= media.thumbnail.url()
+            -else
+              %th= image_tag media.thumbnail.url()
