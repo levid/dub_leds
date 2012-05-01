@@ -25,17 +25,17 @@ for i in 1..7
    # unless defined?(u)
    #  u = User.find(1)
    # end
-   #   
+   #
    ImageUploader.enable_processing = true
-   
+
    @image = File.open(File.join(Rails.root,"/app/assets/images/img-home-rim-large#{i}.png"))
    # @image.store!(File.open(File.join(Rails.root,"/app/assets/images/img-home-rim-large#{i}.png")))
-   
+
    @medium_image = File.open(File.join(Rails.root, "/app/assets/images/img-rim-medium#{i}.png"))
-   
-   # @medium_image = ImageUploader.create! :medium_image => 
+
+   # @medium_image = ImageUploader.create! :medium_image =>
    # @medium_image.store!(File.open(File.join(Rails.root, "/app/assets/images/img-rim-medium#{i}.png")))
-   
+
    @small_image = File.open(File.join(Rails.root,"/app/assets/images/img-rim-small#{i}.png"))
    # @small_image = ImageUploader.new u, :small_image
    # @small_image.store!(File.open(File.join(Rails.root,"/app/assets/images/img-rim-small#{i}.png")))
@@ -176,17 +176,17 @@ style="padding-left:4px;"> <p style="">Select the type of refund you will give i
 return policy in the Return Policy Details text box.</p> </div> </li> </ul> </div>}
 
 # puts ' *** Setting up Contents ***'
-# 
+#
 # Fixtures.create_fixtures("#{Rails.root}/db/fixtures", "contents")
-# 
+#
 # puts ' *** Setting up Privacy Policy ***'
-# 
+#
 # Fixtures.create_fixtures("#{Rails.root}/db/fixtures", "privacies")
-# 
+#
 # puts ' *** Setting up Refund Policy ***'
-# 
+#
 # Fixtures.create_fixtures("#{Rails.root}/db/fixtures", "refunds")
-# 
+#
 puts ' *** Setting up Spree Store ***'
 
 Spree::Core::Engine.load_seed if defined?(Spree::Core)
