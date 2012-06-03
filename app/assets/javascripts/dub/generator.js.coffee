@@ -44,6 +44,6 @@ class Generator extends $DUB
       $('.generator .rim .show').each ->
         $(this).removeClass('show').addClass('hide').css('opacity', '0.0')
 
-      $('.generator .rim').find("##{@rimId}").removeClass('hide').addClass('show').animate({'opacity': '1.0'}, 450)
+      $('.generator .rim').find("##{@rimId}").removeClass('hide').addClass('show').css('opacity', '1.0')
 
 $DUB.Application = jQuery.extend({}, $DUB.Application, {Generator})

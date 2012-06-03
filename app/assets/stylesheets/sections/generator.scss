@@ -101,6 +101,8 @@
             width: 114px;
             height: 191px;
             float: left;
+            position: relative;
+            z-index: 10;
 
             .arrow
             {
@@ -209,9 +211,40 @@
             {
                 width: 532px;
                 height: 461px;
-                @include background($path + '/bg-generator-preview.png', no-repeat, 60px -111px, transparent);
-                z-index: 22;
+                // @include background($path + '/bg-generator-preview.png', no-repeat, 60px -111px, transparent);
+                z-index: 3;
                 position: relative;
+                
+                .rim
+                {
+                    margin: 0px 0px 0px 0px;
+                    width: 532px;
+                    height: 461px;
+                    z-index: 1;
+                    position: absolute;
+                    left: 60px;
+                    top: -111px;
+                    
+                    div
+                    {
+                      display: block;
+                    }
+
+                    img
+                    {
+                      position: absolute;
+                    }
+
+                    .show
+                    {
+                      display: block;
+                    }
+
+                    .hide
+                    {
+                      display: none;
+                    }
+                }
             }
             
             .image

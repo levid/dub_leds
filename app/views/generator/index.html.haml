@@ -29,6 +29,18 @@
               %a.rim-small{:href => "#", :rel => "#{rim.id}"}
                 = image_tag rim.small_image unless !rim.small_image.present?
     .rim-preview
+      .rim
+        - @rims.each do |rim|
+          - if rim.id.to_s == @active_rim.to_s
+            %div{:id => "#{rim.id}", :class => 'show'}
+              = image_tag "img-rim-generator#{rim.id}.png"
+          -elsif rim.id == @rims.first.id && @active_rim.nil?
+            %div{:id => "#{rim.id}", :class => 'show'}
+              = image_tag "img-rim-generator#{rim.id}.png"
+          -else
+            %div{:id => "#{rim.id}", :class => 'hide'}
+              = image_tag "img-rim-generator#{rim.id}.png"
+      
     .image
       -if @generator.first.thumbnail.url.present?
         %th= image_tag @generator.first.thumbnail.url(:preview)
