@@ -1,0 +1,14 @@
+= form_for :generator, :url => admin_generators_path, :html => {:multipart => true, :class => 'generator-form'} do |f|
+  - if @generator.errors.any?
+    Error Summary:
+    %h2= "#{pluralize(@generator.errors.count, "error")} prohibited this generator from being saved:"
+    %ul
+    - @generator.errors.full_messages.each do |msg|
+      %li= msg
+  .field
+    .border.pad.bottom10
+      = f.label :thumbnail
+      = f.file_field :thumbnail
+
+  .submit.pad.bottom10
+    = f.submit 'Save', :class => 'orange'

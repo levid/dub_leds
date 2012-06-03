@@ -1,0 +1,19 @@
+.title Generator
+.text-container
+  %fieldset
+    %legend Generator Information
+    .table
+      - if @generator.thumbnail.url.present?
+        .field
+          %b Thumbnail:
+          .grey.pad.bottom10= @generator.thumbnail
+          .border.pad.bottom10.center
+            = image_tag @generator.thumbnail.url(), :style => 'max-height: 500px; max-width: 500px;'
+          
+      .field.pad.top10
+        = link_to 'Edit Entry', edit_admin_generator_path(@generator), :class => 'btn orange large pad top10 bottom5'
+
+  %fieldset
+    %legend Other options
+    .links
+      = link_to 'Back to list', admin_generators_path, :class => 'btn black'

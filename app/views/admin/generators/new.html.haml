@@ -1,0 +1,10 @@
+.title Generator
+.text-container
+  %fieldset
+    %legend Generator Information
+    = render 'new_form'
+
+  %fieldset
+    %legend Other options
+    .links
+      = link_to 'Back to list', admin_generators_path, :class => 'btn black'

@@ -1,0 +1,29 @@
+.title Listing Generator
+.text-container
+  %fieldset
+    %legend Generator Information
+    .table
+      %table
+        %thead
+          %tr
+            %th Thumbnail
+            %th Preview
+            %th{:colspan => 3} Actions
+        %tbody
+        - @generator.each do |generator|
+          %tr
+            -if generator.thumbnail.url(:thumb).nil?
+              %th= generator.thumbnail.url(:thumb)
+            -else
+              %th= image_tag generator.thumbnail.url(:thumb)
+            
+            %th= link_to 'Show', admin_generator_path(generator), :class => 'btn blue'
+            %th= link_to 'Edit', edit_admin_generator_path(generator), :class => 'btn blue'
+            %th= link_to 'Destroy', admin_generator_path(generator), confirm: 'Are you sure?', method: :delete, :class => 'btn black'
+        - if @generator.length <= 0
+          %tr
+            %th{ :colspan => 7 } 
+              .pad.all10
+                No generator
+    .links
+      = link_to 'New Generator', new_admin_generator_path, :class => 'btn blue'

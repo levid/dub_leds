@@ -51,7 +51,7 @@ DubLeds::Application.routes.draw do
 
   # Administration Routes
   namespace :admin do
-    resources :rims, :contents, :medias, :newsletters, :softwares
+    resources :rims, :contents, :medias, :newsletters, :softwares, :generators
   end
 
   get '/home'               => 'home#index',        :as => :home

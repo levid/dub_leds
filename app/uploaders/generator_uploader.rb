@@ -4,6 +4,8 @@ require 'carrierwave/processing/mini_magick'
 # require 'carrierwave/processing/mime_types'
 
 class GeneratorUploader < CarrierWave::Uploader::Base
+  
+  # Include RMagick or ImageScience support:
   include CarrierWave::MiniMagick
 
   # Include RMagick or MiniMagick support:
@@ -22,9 +24,9 @@ class GeneratorUploader < CarrierWave::Uploader::Base
   
   # process :set_content_type
   
-  # def cache_dir
-  #     "#{Rails.root}/tmp/uploads"
-  #   end
+  def cache_dir
+    "#{Rails.root}/tmp/generator"
+  end
   
   # storage :fog
 
@@ -39,20 +41,20 @@ class GeneratorUploader < CarrierWave::Uploader::Base
   end
   
   version :preview do
-    process :resize_to_fill => [300,317]
+    process :resize_to_fill => [400,333]
   end
   
   def store_dir
     'generator'
   end
 
-  def filename
-    model.id ? "#{model.id}-#{original_filename}" : original_filename
-  end
-
-  def url
-    "/#{store_dir}/#{model.id}-#{model.file_before_type_cast}"
-  end
+  # def filename
+  #    model.id ? "#{model.id}-#{original_filename}" : original_filename
+  #  end
+  # 
+  #  def url
+  #    "/#{store_dir}/#{model.id}-#{model.file_before_type_cast}"
+  #  end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url

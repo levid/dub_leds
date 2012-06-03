@@ -25,6 +25,9 @@
         = link_to("Software", admin_softwares_path, :class => 'fade')
         =" (#{Software.all.size})"
       %li
+        = link_to("Generator", admin_generators_path, :class => 'fade')
+        =" (#{Generator.all.size})"
+      %li
         = link_to("Newsletter Signups", admin_newsletters_path, :class => 'fade')
         =" (#{Newsletter.all.size})"
       %li

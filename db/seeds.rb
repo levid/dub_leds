@@ -71,6 +71,13 @@ for i in 1..2
   puts 'New Software added: ' << s.name
 end
 
+puts ' *** Setting up Generator ***'
+GeneratorUploader.enable_processing = true
+@thumbnail = File.open(File.join(Rails.root,"/app/assets/images/img-uploaded.png"))
+@preview   = File.open(File.join(Rails.root,"/app/assets/images/img-generator-preview.png"))
+g = Generator.create!(thumbnail: @thumbnail, preview: @preview)
+puts 'New Generator added: '
+
 puts ' *** Setting up Contents ***'
 Content.create! title: "Pure Titanium Alloy", sub_title: "The world's most technologically advanced rims.", resource_type: "technology", description: "It has been long thought desirable to decorate one's automobile by the addition of decorative wheels. It has further been thought desirable to communicate with others by means of addressable electronic displays. The concept of combining decorative automobile wheels with an addressable electronic display is a relatively new one which produces novel and visually interesting results."
 Content.create! title: "Integrated Computer Chip", sub_title: "Sub title goes here", resource_type: "technology", description: "Description goes here"

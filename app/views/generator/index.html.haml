@@ -8,6 +8,8 @@
         %a{:href => "#"} Upload
     .overlay
     .image
+      -if @generator.first.thumbnail.url.present?
+        %th= image_tag @generator.first.thumbnail.url(:thumb)
     .frame
   .middle-column
     .arrow
@@ -15,18 +17,18 @@
     .preview-title
     .choices
       %ul
-        %li
-          %a.rim1.active{:href => "#"}
-        %li
-          %a.rim2{:href => "#"}
-        %li
-          %a.rim3{:href => "#"}
-        %li
-          %a.rim4{:href => "#"}
-        %li
-          %a.rim5{:href => "#"}
-        %li
-          %a.rim6{:href => "#"}
-        %li
-          %a.rim7{:href => "#"}
+        - @rims.each do |rim|
+          %li
+            - if rim.id.to_s == @active_rim.to_s
+              %a.rim-small.active{:href => "#", :rel => "#{rim.id}"}
+                = image_tag rim.small_image unless !rim.small_image.present?
+            -elsif rim.id == @rims.first.id && @active_rim.nil?
+              %a.rim-small.active{:href => "#", :rel => "#{rim.id}"}
+                = image_tag rim.small_image unless !rim.small_image.present?
+            -else
+              %a.rim-small{:href => "#", :rel => "#{rim.id}"}
+                = image_tag rim.small_image unless !rim.small_image.present?
     .rim-preview
+    .image
+      -if @generator.first.thumbnail.url.present?
+        %th= image_tag @generator.first.thumbnail.url(:preview)

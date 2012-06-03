@@ -56,7 +56,6 @@ ActiveRecord::Schema.define(:version => 20121422015076) do
 
   create_table "generators", :force => true do |t|
     t.string   "thumbnail"
-    t.string   "preview"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

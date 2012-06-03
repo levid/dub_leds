@@ -1,0 +1,23 @@
+= form_for :generator, :url => admin_generator_path(:id => @generator.id), :method => 'put', :html => {:multipart => true, :class => 'generator-form'} do |f|
+  - if @generator.errors.any?
+    Error Summary:
+    %h2= "#{pluralize(@generator.errors.count, "error")} prohibited this generator from being saved:"
+    %ul
+    - @generator.errors.full_messages.each do |msg|
+      %li= msg
+  .field
+    .border.pad.bottom10.center
+      - if @generator.thumbnail.url.present?
+        = image_tag(@generator.thumbnail.url, :style => 'max-height: 500px; max-width: 500px;')
+      - else
+        No generator image exists
+    = f.label :thumbnail
+    = f.file_field :thumbnail
+    .right
+      - if @generator.thumbnail.url.present?
+        = f.check_box :remove_thumbnail, :class => 'inline'
+        = f.label :remove_thumbnail, :class => 'inline grey'
+        = f.hidden_field :thumbnail_cache, :class => 'inline'
+
+  .submit.pad.bottom10
+    = f.submit 'Save', :class => 'orange'

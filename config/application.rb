@@ -13,6 +13,8 @@ require "rails/test_unit/railtie"
 
 Bundler.require *Rails.groups(:assets) if defined?(Bundler)
 
+ENV['PATH'] = "/usr/local/bin:#{ENV['PATH']}"
+
 # if defined?(Bundler)
 #   # If you precompile assets before deploying to production, use this line
 #   Bundler.require(*Rails.groups(:assets => %w(development test)))
@@ -113,6 +115,9 @@ module DubLeds
 
     config.assets.initialize_on_precompile = false
     config.active_record.whitelist_attributes = true
+    
+    config.delete_tmp_file_after_storage = false
+    config.delete_cache_id_after_storage = false
 
     # config.generators do |g|
     #       g.orm :active_record

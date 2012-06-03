@@ -4,6 +4,8 @@ require 'carrierwave/processing/mini_magick'
 # require 'carrierwave/processing/mime_types'
 
 class ImageUploader < CarrierWave::Uploader::Base
+  
+  # Include RMagick or ImageScience support:
   include CarrierWave::MiniMagick
 
   # Include RMagick or MiniMagick support:
@@ -20,11 +22,12 @@ class ImageUploader < CarrierWave::Uploader::Base
   
   storage :fog
   
+  
   # process :set_content_type
   
-  # def cache_dir
-  #     "#{Rails.root}/tmp/uploads"
-  #   end
+  def cache_dir
+    "#{Rails.root}/tmp/uploads"
+  end
   
   # storage :fog
 

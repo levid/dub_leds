@@ -1,11 +1,11 @@
 class Technology extends $DUB
   constructor: (@options) ->
     $(document).ready =>
-      @startOverlayButtonListeners()
-      @startSmallRimButtonListeners()
+      @overlayButtonListeners()
+      @smallRimButtonListeners()
       @initTooltips()
 
-  startOverlayButtonListeners: () ->
+  overlayButtonListeners: () ->
     # $('.technology-content .overlay .titles a').bind "mouseover", (e) =>
     #       $('.technology-content .rim').animate({'opacity': '0.4'}, 250)
     #
@@ -64,7 +64,7 @@ class Technology extends $DUB
         success: (resp) =>
           initTechOverlay(resp)
 
-  startSmallRimButtonListeners: () ->
+  smallRimButtonListeners: () ->
     self = this
     @smallRimButton = $('.technology .choices a.rim-small')
 
