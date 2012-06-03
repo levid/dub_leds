@@ -1,7 +1,5 @@
 DubLeds::Application.routes.draw do
-
-  resources :software
-
+                  
   # This line mounts Spree's routes at the root of your application.
   # This means, any requests to URLs such as /products, will go to Spree::ProductsController.
   # If you would like to change where this engine is mounted, simply change the :at option to something different.
@@ -12,6 +10,7 @@ DubLeds::Application.routes.draw do
   resources :medias
   resources :refunds
   resources :privacies
+  resources :software
 
   # Routes for Devise
   # devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
@@ -33,6 +32,7 @@ DubLeds::Application.routes.draw do
   # Resources
   resources :newsletters
   resources :contact
+  resources :software
   # resources :users
   resources :authentications
 
@@ -51,7 +51,7 @@ DubLeds::Application.routes.draw do
 
   # Administration Routes
   namespace :admin do
-    resources :rims, :contents, :medias, :newsletters
+    resources :rims, :contents, :medias, :newsletters, :softwares
   end
 
   get '/home'               => 'home#index',        :as => :home

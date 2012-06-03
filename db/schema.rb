@@ -36,11 +36,6 @@ ActiveRecord::Schema.define(:version => 20121422015076) do
     t.string   "token"
   end
 
-  create_table "authentications_users", :id => false, :force => true do |t|
-    t.integer "authentication_id"
-    t.integer "user_id"
-  end
-
   create_table "contacts", :force => true do |t|
     t.string   "name"
     t.string   "email"
@@ -60,6 +55,8 @@ ActiveRecord::Schema.define(:version => 20121422015076) do
   end
 
   create_table "generators", :force => true do |t|
+    t.string   "thumbnail"
+    t.string   "preview"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -110,17 +107,6 @@ ActiveRecord::Schema.define(:version => 20121422015076) do
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
   end
-
-  create_table "roles", :force => true do |t|
-    t.string   "name"
-    t.integer  "resource_id"
-    t.string   "resource_type"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
-  end
-
-  add_index "roles", ["name", "resource_type", "resource_id"], :name => "index_roles_on_name_and_resource_type_and_resource_id"
-  add_index "roles", ["name"], :name => "index_roles_on_name"
 
   create_table "softwares", :force => true do |t|
     t.string   "name"
@@ -396,20 +382,6 @@ ActiveRecord::Schema.define(:version => 20121422015076) do
 
   add_index "spree_preferences", ["key"], :name => "index_spree_preferences_on_key", :unique => true
 
-  create_table "spree_product_groups", :force => true do |t|
-    t.string "name"
-    t.string "permalink"
-    t.string "order"
-  end
-
-  add_index "spree_product_groups", ["name"], :name => "index_product_groups_on_name"
-  add_index "spree_product_groups", ["permalink"], :name => "index_product_groups_on_permalink"
-
-  create_table "spree_product_groups_products", :id => false, :force => true do |t|
-    t.integer "product_id"
-    t.integer "product_group_id"
-  end
-
   create_table "spree_product_option_types", :force => true do |t|
     t.integer  "position"
     t.integer  "product_id"
@@ -427,15 +399,6 @@ ActiveRecord::Schema.define(:version => 20121422015076) do
   end
 
   add_index "spree_product_properties", ["product_id"], :name => "index_product_properties_on_product_id"
-
-  create_table "spree_product_scopes", :force => true do |t|
-    t.string  "name"
-    t.text    "arguments"
-    t.integer "product_group_id"
-  end
-
-  add_index "spree_product_scopes", ["name"], :name => "index_product_scopes_on_name"
-  add_index "spree_product_scopes", ["product_group_id"], :name => "index_product_scopes_on_product_group_id"
 
   create_table "spree_products", :force => true do |t|
     t.string   "name",                 :default => "", :null => false
@@ -616,7 +579,7 @@ ActiveRecord::Schema.define(:version => 20121422015076) do
   end
 
   create_table "spree_tax_rates", :force => true do |t|
-    t.decimal  "amount",            :precision => 8, :scale => 4
+    t.decimal  "amount",            :precision => 8, :scale => 5
     t.integer  "zone_id"
     t.integer  "tax_category_id"
     t.datetime "created_at",                                                         :null => false
@@ -738,40 +701,5 @@ ActiveRecord::Schema.define(:version => 20121422015076) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
-
-  create_table "users", :force => true do |t|
-    t.string   "email",                  :default => "", :null => false
-    t.string   "encrypted_password",     :default => "", :null => false
-    t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          :default => 0
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
-    t.string   "password_salt"
-    t.string   "confirmation_token"
-    t.datetime "confirmed_at"
-    t.datetime "confirmation_sent_at"
-    t.string   "unconfirmed_email"
-    t.integer  "failed_attempts",        :default => 0
-    t.string   "unlock_token"
-    t.datetime "locked_at"
-    t.string   "authentication_token"
-    t.string   "invitation_token"
-    t.string   "username"
-    t.string   "login"
-    t.datetime "created_at",                             :null => false
-    t.datetime "updated_at",                             :null => false
-    t.string   "name"
-  end
-
-  create_table "users_roles", :id => false, :force => true do |t|
-    t.integer "user_id"
-    t.integer "role_id"
-  end
-
-  add_index "users_roles", ["user_id", "role_id"], :name => "index_users_roles_on_user_id_and_role_id"
 
 end

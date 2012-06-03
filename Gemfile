@@ -91,5 +91,5 @@ group :assets do
 end
 
 
-gem 'spree', :git => 'git://github.com/spree/spree.git'
+gem 'spree'
 gem 'spree_gateway', :git => 'git://github.com/spree/spree_gateway.git'

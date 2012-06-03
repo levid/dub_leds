@@ -1,0 +1,50 @@
+.content
+{
+  &.contact
+  {
+      margin: 0px auto;
+      width: 980px;
+      height: auto;
+
+      .title-container
+      {
+        .title
+        {
+          font-size: 50px !important;
+        }
+
+        .sub-title
+        {
+          margin: 0px 0px 0px 4px;
+          color: #fafafa;
+        }
+
+        .small-title
+        {
+          margin: 0px 0px 0px 4px;
+          font-size: 15px;
+          color: #ccc;
+        }
+      }
+
+      .text-container
+      {
+          clear: both;
+          text-shadow: 0px 1px 2px #333;
+          color: #fafafa;
+
+          h4
+          {
+              font-size: 22px;
+              padding: 0px 0px 10px 0px;
+              font-family: EurostileMed, Helvetica, Arial, sans-serif;
+              font-weight: 700;
+          }
+
+          p
+          {
+              font-size: 15px;
+          }
+      }
+  }
+}

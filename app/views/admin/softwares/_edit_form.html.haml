@@ -1,0 +1,28 @@
+= form_for :software, :url => admin_software_path(:id => @software.id), :method => 'put', :html => {:multipart => true, :class => 'software-form'} do |f|
+  - if @software.errors.any?
+    Error Summary:
+    %h2= "#{pluralize(@software.errors.count, "error")} prohibited this software from being saved:"
+    %ul
+    - @software.errors.full_messages.each do |msg|
+      %li= msg
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :download_url
+    = f.text_field :download_url
+  .field
+    .border.pad.bottom10.center
+      - if @software.image.url.present?
+        = image_tag(@software.image.url)
+      - else
+        No software image exists
+    = f.label :image
+    = f.file_field :image
+    .right
+      - if @software.image.url.present?
+        = f.check_box :remove_image, :class => 'inline'
+        = f.label :remove_image, :class => 'inline grey'
+        = f.hidden_field :image_cache, :class => 'inline'
+  .submit.pad.bottom10
+    = f.submit 'Save', :class => 'orange'

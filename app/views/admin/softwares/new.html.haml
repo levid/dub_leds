@@ -1,0 +1,10 @@
+.title Software
+.text-container
+  %fieldset
+    %legend Software Information
+    = render 'new_form'
+
+  %fieldset
+    %legend Other options
+    .links
+      = link_to 'Back to list', admin_softwares_path, :class => 'btn black'

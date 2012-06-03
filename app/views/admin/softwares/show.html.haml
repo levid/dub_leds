@@ -1,0 +1,28 @@
+.title= @software.name
+.text-container
+  %fieldset
+    %legend Software Information
+    .table
+      .field
+        %b Name:
+        .border.pad.top10
+          = @software.name
+      .field
+        %b Download URL:
+        .border.pad.top10
+          = @software.download_url
+
+      -if @software.image.url().present?
+        .field
+          %b Image:
+          .grey.pad.bottom10= @software.image
+          .border.pad.bottom10.center
+            = image_tag @software.image.url()
+          
+      .field.pad.top10
+        = link_to 'Edit Entry', edit_admin_software_path(@software), :class => 'btn orange large pad top10 bottom5'
+
+  %fieldset
+    %legend Other options
+    .links
+      = link_to 'Back to list', admin_softwares_path, :class => 'btn black'

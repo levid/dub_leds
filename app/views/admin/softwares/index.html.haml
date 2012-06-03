@@ -1,0 +1,33 @@
+.title Listing Software
+.text-container
+  %fieldset
+    %legend Software Information
+    .table
+      %table
+        %thead
+          %tr
+            %th Name
+            %th Download URL
+            %th Image
+            %th{:colspan => 3} Actions
+        %tbody
+        - @software.each do |software|
+          %tr
+            %th= software.name
+            %th= software.download_url
+            
+            -if software.image.url(:thumb).nil?
+              %th= software.image.url(:thumb)
+            -else
+              %th= image_tag software.image.url(:thumb)
+              
+            %th= link_to 'Show', admin_software_path(software), :class => 'btn blue'
+            %th= link_to 'Edit', edit_admin_software_path(software), :class => 'btn blue'
+            %th= link_to 'Destroy', admin_software_path(software), confirm: 'Are you sure?', method: :delete, :class => 'btn black'
+        - if @software.length <= 0
+          %tr
+            %th{ :colspan => 7 } 
+              .pad.all10
+                No software
+    .links
+      = link_to 'New Software', new_admin_software_path, :class => 'btn blue'

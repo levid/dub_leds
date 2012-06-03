@@ -194,7 +194,7 @@ a:hover { color: #00A9ED; text-decoration: underline; }
 .clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
 .clearfix:after { clear: both; }
 /* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
-.clearfix { zoom: 1; }
+.clearfix { zoom: 1; clear: both; }
 
 
 

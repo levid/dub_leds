@@ -1,7 +1,5 @@
 @charset "utf-8";
 
-
-
 @import "global/fonts";
 @import "global/ie";
 @import "global/mixins";
@@ -18,13 +16,6 @@
 @import "global/base";
 
 /* Layout Styles */
-@import "layout/header";
-@import "layout/nav";
-@import "layout/body";
-@import "layout/notification";
-@import "layout/home";
-@import "layout/form";
-@import "layout/modal";
-@import "layout/footer";
-
-@import "vendor/tiptip";
+@import "layout/*";
+@import "sections/*";
+@import "vendor/*";

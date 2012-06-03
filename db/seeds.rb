@@ -12,6 +12,7 @@
 # Mongoid.master.collections.reject { |c| c.name =~ /^system/}.each(&:drop)
 
 if Spree::User.first.blank?
+  
   puts ' *** Setting up default user login ***'
   # u = Spree::User.create! name: 'Isaac Wooten', username: 'levid', email: 'i.wooten@gmail.com', password: 'wooteni', password_confirmation: 'wooteni', :confirmed_at => DateTime.now
   u = Spree::User.create! name: 'Isaac Wooten', username: 'levid', email: 'i.wooten@gmail.com', password: 'wooteni', password_confirmation: 'wooteni'

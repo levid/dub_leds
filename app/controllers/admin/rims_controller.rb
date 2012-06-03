@@ -6,7 +6,7 @@ class Admin::RimsController < AdminController
   def index
     @rims = Rim.all
     @path = :rim_path
-    @users = User.all
+    @users = Spree::User.all
 
     respond_to do |format|
       format.html

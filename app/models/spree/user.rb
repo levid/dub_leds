@@ -1,14 +1,15 @@
+# Default implementation of User.  This class is intended to be modified by extensions (ex. spree_auth)
 module Spree
-  class User < ActiveRecord::Base
+  class User< ActiveRecord::Base
     include Core::UserBanners
-
+    
     devise :database_authenticatable, :token_authenticatable, :registerable, :recoverable,
            :rememberable, :trackable, :validatable, :encryptable, :encryptor => 'authlogic_sha512'
 
-    has_many :orders
-    has_and_belongs_to_many :roles, :join_table => 'spree_roles_users'
-    belongs_to :ship_address, :foreign_key => 'ship_address_id', :class_name => 'Spree::Address'
-    belongs_to :bill_address, :foreign_key => 'bill_address_id', :class_name => 'Spree::Address'
+    has_many :orders, :class_name => "Spree::Order"
+    has_and_belongs_to_many :roles, :join_table => 'spree_roles_users', :class_name => "Spree::Role"
+    belongs_to :ship_address, :class_name => 'Spree::Address'
+    belongs_to :bill_address, :class_name => 'Spree::Address'
 
     before_save :check_admin
     before_validation :set_login
@@ -17,8 +18,8 @@ module Spree
     # Setup accessible (or protected) attributes for your model
     attr_accessible :name, :username, :email, :password, :password_confirmation, :remember_me, :persistence_token, :login, :role_ids
 
-    users_table_name = Spree::User.table_name
-    roles_table_name = Spree::Role.table_name
+    users_table_name = User.table_name
+    roles_table_name = Role.table_name
 
     scope :admin, lambda { includes(:roles).where("#{roles_table_name}.name" => "admin") }
     scope :registered, where("#{users_table_name}.email NOT LIKE ?", "%@example.net")
@@ -34,12 +35,12 @@ module Spree
     # behind the scenes and its completely transparently to the customer.  All +Orders+ must have a +User+ so this is necessary
     # when adding to the "cart" (which is really an order) and before the customer has a chance to provide an email or to register.
     def self.anonymous!
-      token = Spree::User.generate_token(:persistence_token)
-      Spree::User.create(:email => "#{token}@example.net", :password => token, :password_confirmation => token, :persistence_token => token)
+      token = User.generate_token(:persistence_token)
+      User.create(:email => "#{token}@example.net", :password => token, :password_confirmation => token, :persistence_token => token)
     end
 
     def self.admin_created?
-      Spree::User.admin.count > 0
+      User.admin.count > 0
     end
 
     def anonymous?
@@ -48,7 +49,11 @@ module Spree
 
     def send_reset_password_instructions
       generate_reset_password_token!
-      Spree::UserMailer.reset_password_instructions(self).deliver
+      UserMailer.reset_password_instructions(self).deliver
+    end
+
+    def last_incomplete_order
+      orders.incomplete.order("created_at desc").last
     end
 
     protected
@@ -64,7 +69,7 @@ module Spree
 
       def check_admin
         return if self.class.admin_created?
-        admin_role = Spree::Role.find_or_create_by_name 'admin'
+        admin_role = Role.find_or_create_by_name 'admin'
         self.roles << admin_role
       end
 

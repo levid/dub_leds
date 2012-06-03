@@ -1,0 +1,11 @@
+.title Editing software
+.text-container
+  %fieldset
+    %legend Software Information
+    = render 'edit_form'
+
+  %fieldset
+    %legend Other options
+    .links
+      = link_to 'Cancel', admin_software_path(@software), :class => 'btn blue'
+      = link_to 'Back to list', admin_softwares_path, :class => 'btn black pad left5'
