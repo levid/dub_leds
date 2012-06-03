@@ -17,6 +17,8 @@
       {
         margin: 0px 0px 0px 4px;
         color: #fafafa;
+        position: relative;
+        z-index: 34;
       }
 
       .small-title
@@ -24,6 +26,8 @@
         margin: 0px 0px 0px 4px;
         font-size: 15px;
         color: #ccc;
+        position: relative;
+        z-index: 35;
       }
     }
 
@@ -40,6 +44,7 @@
             height: 332px;
             float: left;
             margin: 20px 0px 0px -10px;
+            position: relative;
 
             .overlay
             {
@@ -83,6 +88,7 @@
                 @include background($path + '/button-upload-image.png', no-repeat, 0px -70px, transparent);
                 position: absolute;
                 z-index: 30;
+                cursor: pointer;
 
                 a
                 {
