@@ -1,0 +1,10 @@
+.title New User
+.text-container
+  %fieldset
+    %legend User Information
+    = render 'new_form'
+
+  %fieldset
+    %legend Other Options
+    .links
+      = link_to "Back to list", admin_users_path, :class => 'btn black'

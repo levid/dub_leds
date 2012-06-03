@@ -1,0 +1,11 @@
+.title Edit Account
+.text-container
+  %fieldset
+    %legend= @user == @current_user ? "Your Account Settings" : "Edit User"
+    = render 'edit_form'
+        
+  %fieldset
+    %legend Other Options
+    .links
+      = link_to 'Cancel', admin_user_path(@user), :class => 'btn blue'
+      = link_to "Back to list", admin_users_path, :class => 'btn black pad left5'

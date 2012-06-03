@@ -4,7 +4,7 @@
     %legend Management
     %ul
       %li
-        = link_to("Users", spree.admin_users_path, :class => 'fade inline')
+        = link_to("Users", admin_users_path, :class => 'fade inline')
         =" (#{Spree::User.all.size})"
       %li
         = link_to("Media", admin_medias_path, :class => 'fade')

@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+class Admin::UsersController < AdminController
   before_filter :authenticate_user!, :except => [:show]
   
   before_filter :get_user, :only => [:index, :edit, :update]
@@ -9,7 +9,7 @@ class UsersController < ApplicationController
   # GET /users.json                                       HTML and AJAX
   #-----------------------------------------------------------------------
   def index
-    @users = User.all
+    @users = Spree::User.all
     respond_to do |format|
       format.json { render :json => @users }
       format.xml  { render :xml => @users }
@@ -22,7 +22,7 @@ class UsersController < ApplicationController
   # GET /users/new.json                                    HTML AND AJAX
   #-------------------------------------------------------------------
   def new
-    @user = User.new
+    @user = Spree::User.new
     
     respond_to do |format|
       format.json { render :json => @user }   
@@ -36,7 +36,7 @@ class UsersController < ApplicationController
   # GET /users/1.json                                     HTML AND AJAX
   #-------------------------------------------------------------------
   def show
-    @user = User.find(params[:id])
+    @user = Spree::User.find(params[:id])
     
     respond_to do |format|
       format.json { render :json => @user }
@@ -50,7 +50,7 @@ class UsersController < ApplicationController
   # GET /users/1/edit.json                                HTML AND AJAX
   #-------------------------------------------------------------------
   def edit
-    @user = User.find(params[:id])
+    @user = Spree::User.find(params[:id])
      
     respond_to do |format|
       format.json { render :json => @user }   
@@ -64,7 +64,7 @@ class UsersController < ApplicationController
   # DELETE /users/1.json                                  HTML AND AJAX
   #-------------------------------------------------------------------
   def destroy
-    @user = User.find(params[:id])
+    @user = Spree::User.find(params[:id])
     @user.destroy
 
     respond_to do |format|
@@ -78,7 +78,7 @@ class UsersController < ApplicationController
   # PUT /users/1.json                                            HTML AND AJAX
   #----------------------------------------------------------------------------
   def update
-    @user = User.find(params[:id])
+    @user = Spree::User.find(params[:id])
     if params[:user][:password].blank?
       [:password,:password_confirmation,:current_password].collect{|p| params[:user].delete(p) }
     else
@@ -107,7 +107,7 @@ class UsersController < ApplicationController
   # POST /users.json                                      HTML AND AJAX
   #-----------------------------------------------------------------
   def create
-    @user = User.new(params[:user])
+    @user = Spree::User.new(params[:user])
 
     if @user.save
       respond_to do |format|
