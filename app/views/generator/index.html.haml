@@ -58,7 +58,7 @@
       = form_for :generator, :url => generator_create_path, :html => {:multipart => true, :class => 'generator-form'} do |f|
         .field
           .border
-            = f.file_field :thumbnail
+            = f.file_field :thumbnail, :id => 'uploader'
 
         .submit
           = f.submit 'Save', :class => 'orange'
