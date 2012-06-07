@@ -2,12 +2,12 @@ class Generator extends $DUB
   constructor: (@options) ->
     $(document).ready =>
       @smallRimButtonListeners()
+      @overlayButtonListeners()
       
       setTimeout ( ->
         $('.image').fadeIn()
       ), 700
       
-  
   smallRimButtonListeners: () ->
     self = this
     @smallRimButton = $('.generator .choices a.rim-small')
@@ -45,5 +45,46 @@ class Generator extends $DUB
         $(this).removeClass('show').addClass('hide').css('opacity', '0.0')
 
       $('.generator .rim').find("##{@rimId}").removeClass('hide').addClass('show').css('opacity', '1.0')
+      
+      
+  overlayButtonListeners: () ->
+    $('.upload a').bind "click", (e) ->
+      e.preventDefault()
+      
+      @title = $(e.target).attr('rel')
+
+      initGeneratorOverlay = (data) ->
+        self                 = this
+        @overlayDiv          = $("#generator-overlay")
+        @overlayContainerDiv = $('#generator-overlay .overlay-container')
+        @closeButton         = $('.close-button a')
+
+        openOverlay = (el) =>
+          @overlayContainerDiv = el.find('.overlay-container')
+          el.fadeIn 200, =>
+            @overlayContainerDiv.center()
+            @overlayContainerDiv.fadeIn 300
+
+        closeOverlay = (el) =>
+          @overlayContainerDiv = el.find('.overlay-container')
+          @overlayContainerDiv.fadeOut 300, ->
+            el.fadeOut 200
+
+        openOverlay(@overlayDiv)
+
+        @closeButton.click (e) =>
+          e.preventDefault()
+          closeOverlay(@overlayDiv)
+
+        @overlayDiv.click (e) =>
+          e.preventDefault()
+          if $(e.target).attr('id') == @overlayDiv.attr('id')
+            closeOverlay(@overlayDiv)
+
+        $(window).bind "resize", =>
+          @overlayContainerDiv.center
+            transition: 300
+            
+      initGeneratorOverlay()
 
 $DUB.Application = jQuery.extend({}, $DUB.Application, {Generator})

@@ -10,8 +10,16 @@ class GeneratorController < ApplicationController
 
   end
 
+  # POST /generator
+  # POST /generator.json
   def create
-
+    @generator = Generator.new(params[:generator])
+  
+    if @generator.save
+      render json: @generator, status: :created
+    else
+      render json: @generator.errors, status: :unprocessable_entity
+    end
   end
 
   def edit

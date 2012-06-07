@@ -26,7 +26,7 @@ footer
     height: 67px;
     width: 100%;
     position: absolute;
-    z-index: 999;
+    z-index: 500;
     @include background($path + '/bg-footer-bar.png', repeat-x, top left, #040405);
 
     .footer-container

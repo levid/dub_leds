@@ -44,3 +44,23 @@
     .image
       -if @generator.first.thumbnail.url.present?
         %th= image_tag @generator.first.thumbnail.url(:preview)
+       
+#generator-overlay
+  .overlay-container
+    .top
+      .close-button
+        %a{:href => "#"}
+      .title
+        Upload Image
+      .sub-title
+        %h4 Choose an image you would like to upload
+    .middle
+      = form_for :generator, :url => generator_create_path, :html => {:multipart => true, :class => 'generator-form'} do |f|
+        .field
+          .border
+            = f.file_field :thumbnail
+
+        .submit
+          = f.submit 'Save', :class => 'orange'
+      
+    .bottom
