@@ -215,14 +215,38 @@
 
             .upload-button
             {
-                margin: 205px 0px 0px 55px;
+                margin: 205px 0px 0px 110px;
                 padding: 54px 0px 0px 0px;
-                width: 323px;
-                height: 212px;
-                @include background($path + '/button-upload-image.png', no-repeat, 0px -70px, transparent);
+                width: auto;
+                height: auto;
                 position: absolute;
                 z-index: 30;
                 cursor: pointer;
+                display: inline-block;
+                
+                div
+                {
+                  cursor: pointer;
+                }
+                
+                .file
+                {
+                  display: none !important;
+                }
+                
+                #generator_thumbnail
+                {
+                  display: inline-block !important;
+                }
+                
+                input.uploader
+                {
+                  margin: 0px !important;
+                  padding: 0px !important;
+                  width: 185px !important;
+                  height: 51px !important;
+                  display: none !important;
+                }
 
                 a
                 {
@@ -363,7 +387,7 @@
                     z-index: 1;
                     position: absolute;
                     left: 60px;
-                    top: -111px;
+                    top: -107px;
                     
                     div
                     {

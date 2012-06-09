@@ -2,7 +2,19 @@ class Generator extends $DUB
   constructor: (@options) ->
     $(document).ready =>
       @smallRimButtonListeners()
-      @overlayButtonListeners()
+      # @overlayButtonListeners()
+      
+      $("input[type=file]").filestyle
+        image: "/assets/button-upload-image-small.png"
+        imageheight: 51
+        imagewidth: 185
+        width: 100
+        
+      $(".file").css('display', 'none')
+      
+      $("input[type=file]").change ->
+        $('.generator-form').submit()
+        $DUB.UI.showProgressOverlay()
       
       setTimeout ( ->
         $('.image').fadeIn()

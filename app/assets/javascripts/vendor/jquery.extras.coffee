@@ -59,17 +59,17 @@ $.extend $.ajax,
     this.unbind "complete", @completeCheck
 
 
-$.fn.extend clone: ->
-  i = @length
-  clone = new Array(i)
-  clone[i] = this.cloneOf(this[i])  while i--
-  clone
-
-  cloneOf: (item) ->
-    switch typeOf(item)
-      when "array"
-        item.clone()
-      when "object"
-        Object.clone item
-      else
-        item
+# $.fn.extend clone: ->
+#   i = @length
+#   clone = new Array(i)
+#   clone[i] = this.cloneOf(this[i])  while i--
+#   clone
+# 
+#   cloneOf: (item) ->
+#     switch typeOf(item)
+#       when "array"
+#         item.clone()
+#       when "object"
+#         Object.clone item
+#       else
+#         item

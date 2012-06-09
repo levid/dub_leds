@@ -12,6 +12,7 @@ class UI extends $DUB
     @initTooltips()         if $("#sharing-links").length
     @initSharingLinks()     if $("#sharing-links").length
     @resizeContentContainer()
+    @hideNotification()
 
     topNav      = new $DUB.UI.Nav
     newsletter  = new $DUB.UI.Newsletter
@@ -117,6 +118,12 @@ class UI extends $DUB
 
     setGlowEffect()
     setResize()
+    
+  hideNotification: () ->
+    setTimeout ( ->
+      if $('.notification').length
+        $('.notification').fadeOut(5000)
+    ), 500
 
   initTooltips: () ->
     $("#sharing-links a").tipTip
