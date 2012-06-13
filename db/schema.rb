@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121422015076) do
+ActiveRecord::Schema.define(:version => 20121422015080) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                             :default => "", :null => false
@@ -58,6 +58,7 @@ ActiveRecord::Schema.define(:version => 20121422015076) do
     t.string   "thumbnail"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "user_id"
   end
 
   create_table "homes", :force => true do |t|
@@ -659,6 +660,7 @@ ActiveRecord::Schema.define(:version => 20121422015076) do
     t.datetime "remember_created_at"
     t.datetime "reset_password_sent_at"
     t.string   "api_key",                :limit => 48
+    t.integer  "generator_id"
   end
 
   add_index "spree_users", ["persistence_token"], :name => "index_users_on_persistence_token"

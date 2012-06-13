@@ -5,13 +5,21 @@
   .left-column
     .upload-button
       .upload
-        = form_for :generator, :url => generator_create_path, :html => {:multipart => true, :class => 'generator-form'} do |f|
-          = f.file_field :thumbnail, :class => 'uploader'
+        -if @user
+          = form_for :generator, :url => generator_upload_path(:id => @user.id), :method => 'put', :html => {:multipart => true, :class => 'generator-form'} do |f|
+            = f.file_field :thumbnail, :class => 'uploader'
+        -else
+          Login to upload a new image
+          / = link_to('Create an account to upload', spree.signup_path, :class => "sign_up")
               
     .overlay
     .image
-      -if @generator.first.thumbnail.url.present?
-        %th= image_tag @generator.first.thumbnail.url(:thumb)
+      -if @user
+        -if @user.generator.thumbnail.url.present?
+          %th= image_tag @user.generator.thumbnail.url(:thumb)
+      -else
+        -if @generator.thumbnail.url.present?
+          %th= image_tag @generator.thumbnail.url(:thumb)
     .frame
   .middle-column
     .arrow
@@ -44,6 +52,10 @@
               = image_tag "img-rim-generator#{rim.id}.png"
       
     .image
-      -if @generator.first.thumbnail.url.present?
-        %th= image_tag @generator.first.thumbnail.url(:preview)
+      -if @user
+        -if @user.generator.thumbnail.url.present?
+          %th= image_tag @user.generator.thumbnail.url(:preview)
+      -else
+        -if @generator.thumbnail.url.present?
+          %th= image_tag @generator.thumbnail.url(:preview)
       

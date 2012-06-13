@@ -10,13 +10,14 @@ module Spree
     has_and_belongs_to_many :roles, :join_table => 'spree_roles_users', :class_name => "Spree::Role"
     belongs_to :ship_address, :class_name => 'Spree::Address'
     belongs_to :bill_address, :class_name => 'Spree::Address'
+    has_one :generator, :class_name => 'Generator'
 
     before_save :check_admin
     before_validation :set_login
     before_destroy :check_completed_orders
 
     # Setup accessible (or protected) attributes for your model
-    attr_accessible :name, :username, :email, :password, :password_confirmation, :remember_me, :persistence_token, :login, :role_ids
+    attr_accessible :name, :username, :email, :password, :password_confirmation, :remember_me, :persistence_token, :login, :role_ids, :generator_id
 
     users_table_name = User.table_name
     roles_table_name = Role.table_name
