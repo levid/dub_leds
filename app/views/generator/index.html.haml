@@ -14,7 +14,7 @@
               
     .overlay
     .image
-      -if @user
+      -if @user && @user.generator
         -if @user.generator.thumbnail.url.present?
           %th= image_tag @user.generator.thumbnail.url(:thumb)
       -else
@@ -52,7 +52,7 @@
               = image_tag "img-rim-generator#{rim.id}.png"
       
     .image
-      -if @user
+      -if @user && @user.generator
         -if @user.generator.thumbnail.url.present?
           %th= image_tag @user.generator.thumbnail.url(:preview)
       -else
