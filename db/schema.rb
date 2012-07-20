@@ -46,9 +46,9 @@ ActiveRecord::Schema.define(:version => 20121422015080) do
   end
 
   create_table "contents", :force => true do |t|
-    t.text     "description"
+    t.text     "page_content"
     t.string   "title"
-    t.string   "sub_title"
+    t.text     "sub_title"
     t.string   "resource_type"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
@@ -96,6 +96,7 @@ ActiveRecord::Schema.define(:version => 20121422015080) do
   end
 
   create_table "rims", :force => true do |t|
+    t.integer  "product_id"
     t.string   "title",        :null => false
     t.text     "description"
     t.string   "color"

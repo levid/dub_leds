@@ -21,32 +21,29 @@
         %ul
           - @rims.each do |rim|
             %li
-              - if rim.id.to_s == @active_rim.to_s
-                %a.active{:href => "#", :title => "#{"<div class='title'>" + rim.title.upcase + "</div>" + "<div class='grey border pad top5 bottom10'>" + rim.description + "</div>" + (link_to "More Info", "/store/products/rim-#{rim.id}", :class => 'btn blue')}"} #{rim.title}
-              - elsif rim.id == @rims.first.id && @active_rim.nil?
-                %a.active{:href => "#", :title => "#{"<div class='title'>" + rim.title.upcase + "</div>" + "<div class='grey border pad top5 bottom10'>" + rim.description + "</div>" + (link_to "More Info", "/store/products/rim-#{rim.id}", :class => 'btn blue')}"}} #{rim.title}
+              - if !@products.nil? && !rim.product_id.nil?
+                - string = "#{"<div class='title'>" + rim.title.upcase + "</div>" + "<div class='grey border pad top5 bottom10'>" + rim.description + "</div>" + (link_to "More Info", "#{spree.product_path(@products.detect{ |id, permalink| id == rim.product_id}[1])}", :class => 'btn blue')}"
               - else
-                %a{:href => "#", :title => "#{"<div class='title'>" + rim.title.upcase + "</div>" + "<div class='grey border pad top5 bottom10'>" + rim.description + "</div>" + (link_to "More Info", "/store/products/rim-#{rim.id}", :class => 'btn blue')}"}} #{rim.title}
+                - string = "#{"<div class='title'>" + rim.title.upcase + "</div>" + "<div class='grey border pad top5 bottom10'>" + rim.description + "</div>"}"
+
+              - if rim.id.to_s == @active_rim.to_s
+                %a.active{:href => "#", :title => string} #{rim.title}
+              - elsif rim.id == @rims.first.id && @active_rim.nil?
+                %a.active{:href => "#", :title => string} #{rim.title}
+              - else
+                %a{:href => "#", :title => string} #{rim.title}
       .reflection.right
   %section.content-container.home
     .content
       .left-column
         .rim-preview
         .try-it
-          %a{:href => "#"} Try It Out
+          = link_to 'Try It Out',  generator_path
       .right-column
         .title-container
           .title DUB LEDS
           .usb-built-in
         .text-container
-          %h4 The world's most technologically advanced rims.
-          %p It has been long thought desirable to decorate one's automobile by the addition of decorative wheels. It has further been thought desirable to communicate with others by means of addressable electronic displays. The concept of combining decorative automobile wheels with an addressable electronic display is a relatively new one which produces novel and visually interesting results.
-          %ul
-            %li Digital images displayed on Rims
-            %li No-hassle easy install, no wires to plug into the car battery
-            %li Self-Generating power
-            %li USB Port built-in
-          %ul
-            %li Wireless remote control
-            %li Turn off / switch next to image while driving
-            %li Universal fit on most vehicles!
+          %h4= @page_content.title rescue nil
+          %p= @page_content.sub_title rescue nil
+          %div= @page_content.page_content.html_safe rescue nil

@@ -9,6 +9,8 @@ class HomeController < ApplicationController
     # @controller_js_args = [{ :currentDay => @date_current, :today => @date_today, :environment => 'jit' }]
 
     # puts YAML::dump(@rims)
+    @page_content = Content.where(:resource_type => 'home').first
+    @products = Spree::Product.all.collect.map { |s| [s.id, s.permalink] }
 
     @path = :home_path
   end

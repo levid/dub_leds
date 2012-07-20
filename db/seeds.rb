@@ -12,7 +12,7 @@
 # Mongoid.master.collections.reject { |c| c.name =~ /^system/}.each(&:drop)
 
 if Spree::User.first.blank?
-  
+
   puts ' *** Setting up default user login ***'
   # u = Spree::User.create! name: 'Isaac Wooten', username: 'levid', email: 'i.wooten@gmail.com', password: 'wooteni', password_confirmation: 'wooteni', :confirmed_at => DateTime.now
   u = Spree::User.create! name: 'Isaac Wooten', username: 'levid', email: 'i.wooten@gmail.com', password: 'wooteni', password_confirmation: 'wooteni'
@@ -79,13 +79,14 @@ g = Generator.create!(thumbnail: @thumbnail, preview: @preview)
 puts 'New Generator added: '
 
 puts ' *** Setting up Contents ***'
-Content.create! title: "Pure Titanium Alloy", sub_title: "The world's most technologically advanced rims.", resource_type: "technology", description: "It has been long thought desirable to decorate one's automobile by the addition of decorative wheels. It has further been thought desirable to communicate with others by means of addressable electronic displays. The concept of combining decorative automobile wheels with an addressable electronic display is a relatively new one which produces novel and visually interesting results."
-Content.create! title: "Integrated Computer Chip", sub_title: "Sub title goes here", resource_type: "technology", description: "Description goes here"
-Content.create! title: "Color Customization", sub_title: "Sub title goes here", resource_type: "technology", description: "Description goes here"
-Content.create! title: "LED Lights System", sub_title: "Sub title goes here", resource_type: "technology", description: "Description goes here"
-Content.create! title: "Power Generator", sub_title: "Sub title goes here", resource_type: "technology", description: "Description goes here"
-Content.create! title: "All-Weather Proof USB Port", sub_title: "Sub title goes here", resource_type: "technology", description: "Description goes here"
-Content.create! title: "Pendulum Arm", sub_title: "Sub title goes here", resource_type: "technology", description: "Description goes here"
+Content.create! title: "Pure Titanium Alloy", sub_title: "The world's most technologically advanced rims.", resource_type: "technology", page_content: "It has been long thought desirable to decorate one's automobile by the addition of decorative wheels. It has further been thought desirable to communicate with others by means of addressable electronic displays. The concept of combining decorative automobile wheels with an addressable electronic display is a relatively new one which produces novel and visually interesting results."
+Content.create! title: "Integrated Computer Chip", sub_title: "Sub title goes here", resource_type: "technology", page_content: "Description goes here"
+Content.create! title: "Color Customization", sub_title: "Sub title goes here", resource_type: "technology", page_content: "Description goes here"
+Content.create! title: "LED Lights System", sub_title: "Sub title goes here", resource_type: "technology", page_content: "Description goes here"
+Content.create! title: "Power Generator", sub_title: "Sub title goes here", resource_type: "technology", page_content: "Description goes here"
+Content.create! title: "All-Weather Proof USB Port", sub_title: "Sub title goes here", resource_type: "technology", page_content: "Description goes here"
+Content.create! title: "Pendulum Arm", sub_title: "Sub title goes here", resource_type: "technology", page_content: "Description goes here"
+Content.create! title: "The world's most technologically advanced rims.", sub_title: "It has been long thought desirable to decorate one's automobile by the addition of decorative wheels. It has further been thought desirable to communicate with others by means of addressable electronic displays. The concept of combining decorative automobile wheels with an addressable electronic display is a relatively new one which produces novel and visually interesting results.", resource_type: "home", page_content: "<ul> <li>Digital images displayed on Rims</li> <li>No-hassle easy install, no wires to plug into the car battery</li> <li>Self-Generating power</li> <li>USB Port built-in</li> </ul> <ul> <li>Wireless remote control</li> <li>Turn off / switch next to image while driving</li> <li>Universal fit on most vehicles!</li> </ul>"
 
 puts ' *** Setting up Privacy Policy ***'
 Privacy.create! title: "test", content: %{<div> <h2>What information do we collect?</h2> <br> <br>We collect information from you when you register on our site or place an order. <br> <br>When ordering or registering on our site, as appropriate, you may be asked to

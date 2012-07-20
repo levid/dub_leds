@@ -2,6 +2,7 @@ class CreateRims < ActiveRecord::Migration
   def self.up
     create_table :rims do |t|
       t.integer  :id,             :null => false
+      t.integer  :product_id
       t.string   :title,          :null => false
       t.text     :description
       t.string   :color

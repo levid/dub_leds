@@ -11,6 +11,7 @@
             %th Color
             %th Size
             %th Fitting
+            %th Store Product ID
             %th Image
             %th Medium Image
             %th Small Image
@@ -23,6 +24,7 @@
               %th= rim.color
               %th= rim.size
               %th= rim.fitting
+              %th= rim.product_id
 
               -if rim.image.url(:thumb).nil?
                 %th= rim.image.url(:thumb)
@@ -44,7 +46,7 @@
               %th= link_to 'Delete', admin_rim_path(rim), :confirm => 'Are you sure?', :method => :delete, :class => 'btn black'
           - if @rims.length <= 0
             %tr
-              %th{ :colspan => 9 } 
+              %th{ :colspan => 9 }
                 .pad.all10
                   No rims were found
 

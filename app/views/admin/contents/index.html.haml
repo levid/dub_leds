@@ -9,7 +9,7 @@
             %th Resource Type
             %th Title
             %th Sub title
-            %th Description
+            %th Page Content
             %th{ :colspan => 3 } Actions
         %tbody
           - @contents.each do |content|
@@ -17,14 +17,14 @@
               %th= content.resource_type
               %th= content.title
               %th= content.sub_title
-              %th= content.description
+              %th= content.page_content
 
               %th= link_to 'Show', admin_content_path(content), :class => 'btn blue'
               %th= link_to 'Edit', edit_admin_content_path(content), :class => 'btn blue'
               %th= link_to 'Destroy', admin_content_path(content), :confirm => 'Are you sure?', :method => :delete, :class => 'btn black'
           - if @contents.length <= 0
             %tr
-              %th{ :colspan => 5 } 
+              %th{ :colspan => 5 }
                 .pad.all10
                   No page content was found
 

@@ -25,7 +25,7 @@ class Technology extends $DUB
         @closeButton         = $('.close-button a')
         @overlayContent      = data[0]['content']
 
-        @overlayContainerDiv.find('.middle p').text(@overlayContent.description)
+        @overlayContainerDiv.find('.middle p').text(@overlayContent.page_content)
         @overlayContainerDiv.find('.title').text(@overlayContent.title)
         @overlayContainerDiv.find('.sub-title h4').text(@overlayContent.sub_title)
 
