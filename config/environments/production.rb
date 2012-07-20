@@ -2,6 +2,9 @@ DubLeds::Application.configure do
   APP_CONFIG      = YAML.load_file(Rails.root.join('config', 'app.yml'))[Rails.env]
   S3_CONFIG       = YAML.load_file(Rails.root.join('config', 's3.yml'))[Rails.env]
   OMNIAUTH_CONFIG = YAML.load_file(Rails.root.join('config', 'omniauth.yml'))[Rails.env]
+
+  Fog::Logger[:warning] = nil
+
   # Settings specified here will take precedence over those in config/application.rb
 
   # ENV['MONGOID_HOST'] = 'staff.mongohq.com'

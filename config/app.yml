@@ -7,7 +7,7 @@ development:
     port: 587
     user_name: i.wooten@gmail.com
     password: $rdc#isaacw
-   
+
 test:
   default_emaiL: i.wooten@gmail.com
   default_host: dub-leds.herokuapp.com
@@ -17,7 +17,7 @@ test:
     port: 587
     user_name: i.wooten@gmail.com
     password: $rdc#isaacw
-   
+
 staging:
   default_emaiL: i.wooten@gmail.com
   default_host: dub-leds.herokuapp.com
@@ -27,7 +27,7 @@ staging:
     port: 587
     user_name: i.wooten@gmail.com
     password: $rdc#isaacw
-    
+
 production:
   default_emaiL: i.wooten@gmail.com
   default_host: dub-leds.herokuapp.com
@@ -37,3 +37,44 @@ production:
     port: 587
     user_name: i.wooten@gmail.com
     password: $rdc#isaacw
+
+    #
+    # development:
+    #   default_emaiL: info@dubleds.com
+    #   default_host: dubleds.com
+    #
+    #   smtp:
+    #     address: smtp.gmail.com
+    #     port: 587
+    #     user_name: info@dubleds.com
+    #     password: letdubinn0w
+    #
+    # test:
+    #   default_emaiL: info@dubleds.com
+    #   default_host: dubleds.com
+    #
+    #   smtp:
+    #     address: smtp.gmail.com
+    #     port: 587
+    #     user_name: info@dubleds.com
+    #     password: letdubinn0w
+    #
+    # staging:
+    #   default_emaiL: info@dubleds.com
+    #   default_host: dubleds.com
+    #
+    #   smtp:
+    #     address: smtp.gmail.com
+    #     port: 587
+    #     user_name: info@dubleds.com
+    #     password: letdubinn0w
+    #
+    # production:
+    #   default_emaiL: info@dubleds.com
+    #   default_host: dubleds.com
+    #
+    #   smtp:
+    #     address: smtp.gmail.com
+    #     port: 587
+    #     user_name: info@dubleds.com
+    #     password: letdubinn0w

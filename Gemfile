@@ -6,7 +6,7 @@ gem 'rails', '3.2.3'
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 group :production do
-  gem 'pg'
+  # gem 'pg'
   gem 'mysql2'
 end
 group :development, :test do
@@ -52,6 +52,8 @@ gem 'cancan'
 # thin server
 gem 'thin'
 
+gem 'therubyracer', require: "v8"
+
 # Shopping cart
 # gem 'acts_as_shopping_cart', :git => "git@github.com:crowdint/acts_as_shopping_cart.git"
 
@@ -93,3 +95,4 @@ end
 
 gem 'spree'
 gem 'spree_gateway', :git => 'git://github.com/spree/spree_gateway.git'
+gem 'spree_analytics', :git => "git@github.com:spree/spree_analytics.git"
