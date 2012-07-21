@@ -44,30 +44,30 @@
             = f.text_field :state_name, :class => 'required'
             %span.required*
 
-          /
-          / -if Spree::Config[:address_requires_state]
-          /   %p.field#bstate
-          /     -have_states = !@order.bill_address.country.states.empty?
-          /     = f.label :state, t(:state)
-          /       %span.required*
-          /       %br/
-          /     %noscript
-          /       = f.text_field :state_name, :class => 'required'
-          /
-          /     state_elements = [
-          /       f.collection_select(:state_id, @order.bill_address.country.states,
-          /                           :id, :name,
-          /                           {:include_blank => true},
-          /                           {:class => have_states ? 'required' : 'hidden',
-          /                           :disabled => !have_states}) +
-          /        f.text_field(:state_name,
-          /                           :class => !have_states ? 'required' : 'hidden',
-          /                           :disabled => have_states)
-          /        ].join.gsub('"', "'").gsub("\n", "")
-          /
-          /     = javascript_tag :defer => 'defer' do
-          /       document.write("== state_elements");
-          /
+          -# /
+          -# / -if Spree::Config[:address_requires_state]
+          -# /   %p.field#bstate
+          -# /     -have_states = !@order.bill_address.country.states.empty?
+          -# /     = f.label :state, t(:state)
+          -# /       %span.required*
+          -# /       %br/
+          -# /     %noscript
+          -# /       = f.text_field :state_name, :class => 'required'
+          -# /
+          -# /     state_elements = [
+          -# /       f.collection_select(:state_id, @order.bill_address.country.states,
+          -# /                           :id, :name,
+          -# /                           {:include_blank => true},
+          -# /                           {:class => have_states ? 'required' : 'hidden',
+          -# /                           :disabled => !have_states}) +
+          -# /        f.text_field(:state_name,
+          -# /                           :class => !have_states ? 'required' : 'hidden',
+          -# /                           :disabled => have_states)
+          -# /        ].join.gsub('"', "'").gsub("\n", "")
+          -# /
+          -# /     = javascript_tag :defer => 'defer' do
+          -# /       document.write("== state_elements");
+          -# /
 
           #bzipcode.field
             = f.label :zipcode, t(:zip)
@@ -112,7 +112,7 @@
           #scity.field
             = s.label :city, t(:city)
             = s.text_field :city, :class => 'required'
-             %span.required *
+            %span.required *
           #scountry.field
             = s.label :country_id, t(:country)
             %span#scountry
@@ -125,30 +125,30 @@
             = s.label :state, t(:state)
             = s.text_field :state_name, :class => 'required'
             %span.required*
-        /
-        / - if Spree::Config[:address_requires_state]
-        /  %p.fieldid#sstate
-        /     -have_states = !@order.ship_address.country.states.empty?
-        /     = s.label :state, t(:state)
-        /     %span.required*
-        /     %br/
-        /     %noscript
-        /       = s.text_field :state_name, :class => 'required'
-        /
-        /     -state_elements = [
-        /        s.collection_select(:state_id, @order.ship_address.country.states,
-        /                           :id, :name,
-        /                           {:include_blank => true},
-        /                           {:class => have_states ? 'required' : 'hidden',
-        /                           :disabled => !have_states}) +
-        /        s.text_field(:state_name,
-        /                           :class => !have_states ? 'required' : 'hidden',
-        /                           :disabled => have_states)
-        /        ].join.gsub('"', "'").gsub("\n", "")
-        /
-        /     = javascript_tag :defer => 'defer' do
-        /       document.write("== state_elements");
-        /
+        -# /
+        -# / - if Spree::Config[:address_requires_state]
+        -# /  %p.fieldid#sstate
+        -# /     -have_states = !@order.ship_address.country.states.empty?
+        -# /     = s.label :state, t(:state)
+        -# /     %span.required*
+        -# /     %br/
+        -# /     %noscript
+        -# /       = s.text_field :state_name, :class => 'required'
+        -# /
+        -# /     -state_elements = [
+        -# /        s.collection_select(:state_id, @order.ship_address.country.states,
+        -# /                           :id, :name,
+        -# /                           {:include_blank => true},
+        -# /                           {:class => have_states ? 'required' : 'hidden',
+        -# /                           :disabled => !have_states}) +
+        -# /        s.text_field(:state_name,
+        -# /                           :class => !have_states ? 'required' : 'hidden',
+        -# /                           :disabled => have_states)
+        -# /        ].join.gsub('"', "'").gsub("\n", "")
+        -# /
+        -# /     = javascript_tag :defer => 'defer' do
+        -# /       document.write("== state_elements");
+        -# /
           #szipcode.field
             = s.label :zipcode, t(:zip)
             = s.text_field :zipcode, :class => 'required'
