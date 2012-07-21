@@ -1,23 +1,21 @@
 class GeneratorController < ApplicationController
   def index
-    @rims = Rim.all
-    @path = :generator_path
+    @rims         = Rim.all
+    @path         = :generator_path
     # @generator = Generator.all.last(1).reverse
-    @generator = Generator.first
-    @user = Spree::User.find(current_user) rescue nil
-  end
-
-  def new
+    @generator    = Generator.first
+    @user         = Spree::User.find(current_user) rescue nil
+    @page_content = Content.where(:resource_type => 'generator').first
   end
 
   # PUT /generator
   # PUT /generator.json
   def upload
-    @user = Spree::User.find(params[:id])
-    @generator = Generator.new(params[:generator])
-    
+    @user       = Spree::User.find(params[:id])
+    @generator  = Generator.new(params[:generator])
+
     GeneratorUploader.enable_processing = true
-    
+
     if params[:generator][:thumbnail]
       @generator.thumbnail = GeneratorUploader.new
       @generator.thumbnail.store!(params[:generator][:thumbnail])
@@ -39,14 +37,4 @@ class GeneratorController < ApplicationController
       end
     end
   end
-
-  def edit
-  end
-
-  def update
-  end
-
-  def destroy
-  end
-
 end

@@ -56,7 +56,7 @@
         .top
         {
           width: 724px;
-          height: 159px;
+          height: 125px;
           @include background($path + '/bg-tech-overlay-top.png', no-repeat, top left, transparent);
 
           .close-button
@@ -89,20 +89,28 @@
             line-height: 40px;
             height: auto;
             font-family: EurostileMed, Helvetica, Arial, sans-serif;
-            font-size: 35px !important;
+            font-size: 33px !important;
             color: #18c6fe;
             background: none;
-            float: left;
+            display: inline-block;
             text-indent: 0px;
             text-transform: uppercase;
           }
+        }
+
+        .middle
+        {
+          width: 724px;
+          height: auto;
+          display: inline-block;
+          @include background($path + '/bg-tech-overlay-middle.png', repeat-y, top left, transparent);
 
           .sub-title
           {
             margin: 0px 0px 0px 90px;
             width: 605px;
             height: auto;
-            float: left;
+            display: inline-block;
 
             h4
             {
@@ -112,16 +120,7 @@
                 font-weight: 400;
                 color: #ccc !important;
             }
-
           }
-        }
-
-        .middle
-        {
-          width: 724px;
-          height: auto;
-          @include background($path + '/bg-tech-overlay-middle.png', repeat-y, top left, transparent);
-          display: block;
 
           p
           {

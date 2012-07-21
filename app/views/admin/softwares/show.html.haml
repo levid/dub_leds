@@ -18,7 +18,12 @@
           .grey.pad.bottom10= @software.image
           .border.pad.bottom10.center
             = image_tag @software.image.url()
-          
+
+      .field
+        %b Default:
+        .border.pad.top10
+          = @software.default_id.to_s.to_bool
+
       .field.pad.top10
         = link_to 'Edit Entry', edit_admin_software_path(@software), :class => 'btn orange large pad top10 bottom5'
 

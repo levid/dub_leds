@@ -1,5 +1,5 @@
-.title Media
-.sub-title Visuals on the road.
+.title= @page_content.title rescue nil
+.sub-title= @page_content.sub_title rescue nil
 .container
   .left-column
     - if @media.length > 1

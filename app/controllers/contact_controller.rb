@@ -1,10 +1,10 @@
 class ContactController < ApplicationController
-  
   # GET /contact
   def index
-    @contact = Contact.new
+    @contact      = Contact.new
+    @page_content = Content.where(:resource_type => 'contact').first
   end
-  
+
   # GET /contact/:id
   def show
     @contact = Contact.find(params[:id])
@@ -74,5 +74,4 @@ class ContactController < ApplicationController
       format.json { head :ok }
     end
   end
-
 end

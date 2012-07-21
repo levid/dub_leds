@@ -7,9 +7,9 @@
         %a{:href => "#"}
       .title
         Pure Titanium Alloy
+    .middle
       .sub-title
         %h4 The world’s most technologically advanced rims.
-    .middle
       %p It has been long thought desirable to decorate one’s automobile by the addition of decorative wheels. It has further been thought desirable to communicate with others by means of addressable electronic displays. The concept of combining decorative automobile wheels with an addressable electronic display is a relatively new one which produces novel and visually interesting results.
     .bottom
 .technology-content
@@ -28,13 +28,9 @@
               = image_tag rim.small_image unless !rim.small_image.present?
   .overlay
     .titles
-      %a.title1{:href => "#", :rel => 'Pure Titanium Alloy', :title => 'Click for more info'}
-      %a.title2{:href => "#", :rel => 'Integrated Computer Chip', :title => 'Click for more info'}
-      %a.title3{:href => "#", :rel => 'Color Customization', :title => 'Click for more info'}
-      %a.title4{:href => "#", :rel => 'LED Lights System', :title => 'Click for more info'}
-      %a.title5{:href => "#", :rel => 'Power Generator', :title => 'Click for more info'}
-      %a.title6{:href => "#", :rel => 'All-Weather Proof USB Port', :title => 'Click for more info'}
-      %a.title7{:href => "#", :rel => 'Pendulum Arm', :title => 'Click for more info'}
+      - @modal_content.each_with_index do |modal, index|
+        %a{:href => "#", :rel => "#{modal.title}", :title => 'Click for more info', :class => "title#{index+1}"}
+
   .rim
     - @rims.each do |rim|
       - if rim.id.to_s == @active_rim.to_s
@@ -48,3 +44,10 @@
           = image_tag rim.medium_image unless !rim.medium_image.present?
 
 
+
+
+
+
+          .title= @page_content.title rescue nil
+          .sub-title= @page_content.sub_title rescue nil
+          .small-title= @page_content.page_content.html_safe rescue nil

@@ -79,14 +79,22 @@ g = Generator.create!(thumbnail: @thumbnail, preview: @preview)
 puts 'New Generator added: '
 
 puts ' *** Setting up Contents ***'
-Content.create! title: "Pure Titanium Alloy", sub_title: "The world's most technologically advanced rims.", resource_type: "technology", page_content: "It has been long thought desirable to decorate one's automobile by the addition of decorative wheels. It has further been thought desirable to communicate with others by means of addressable electronic displays. The concept of combining decorative automobile wheels with an addressable electronic display is a relatively new one which produces novel and visually interesting results."
-Content.create! title: "Integrated Computer Chip", sub_title: "Sub title goes here", resource_type: "technology", page_content: "Description goes here"
-Content.create! title: "Color Customization", sub_title: "Sub title goes here", resource_type: "technology", page_content: "Description goes here"
-Content.create! title: "LED Lights System", sub_title: "Sub title goes here", resource_type: "technology", page_content: "Description goes here"
-Content.create! title: "Power Generator", sub_title: "Sub title goes here", resource_type: "technology", page_content: "Description goes here"
-Content.create! title: "All-Weather Proof USB Port", sub_title: "Sub title goes here", resource_type: "technology", page_content: "Description goes here"
-Content.create! title: "Pendulum Arm", sub_title: "Sub title goes here", resource_type: "technology", page_content: "Description goes here"
+Content.create! title: "Technology", sub_title: "Brains and Beauty.", resource_type: "technology", page_content: ""
+Content.create! title: "Pure Titanium Alloy", sub_title: "The world's most technologically advanced rims.", resource_type: "technology_modal", page_content: "It has been long thought desirable to decorate one's automobile by the addition of decorative wheels. It has further been thought desirable to communicate with others by means of addressable electronic displays. The concept of combining decorative automobile wheels with an addressable electronic display is a relatively new one which produces novel and visually interesting results."
+Content.create! title: "Integrated Computer Chip", sub_title: "Sub title goes here", resource_type: "technology_modal", page_content: "Description goes here"
+Content.create! title: "Color Customization", sub_title: "Sub title goes here", resource_type: "technology_modal", page_content: "Description goes here"
+Content.create! title: "LED Lights System", sub_title: "Sub title goes here", resource_type: "technology_modal", page_content: "Description goes here"
+Content.create! title: "Power Generator", sub_title: "Sub title goes here", resource_type: "technology_modal", page_content: "Description goes here"
+Content.create! title: "All-Weather Proof USB Port", sub_title: "Sub title goes here", resource_type: "technology_modal", page_content: "Description goes here"
+Content.create! title: "Pendulum Arm", sub_title: "Sub title goes here", resource_type: "technology_modal", page_content: "Description goes here"
 Content.create! title: "The world's most technologically advanced rims.", sub_title: "It has been long thought desirable to decorate one's automobile by the addition of decorative wheels. It has further been thought desirable to communicate with others by means of addressable electronic displays. The concept of combining decorative automobile wheels with an addressable electronic display is a relatively new one which produces novel and visually interesting results.", resource_type: "home", page_content: "<ul> <li>Digital images displayed on Rims</li> <li>No-hassle easy install, no wires to plug into the car battery</li> <li>Self-Generating power</li> <li>USB Port built-in</li> </ul> <ul> <li>Wireless remote control</li> <li>Turn off / switch next to image while driving</li> <li>Universal fit on most vehicles!</li> </ul>"
+Content.create! title: "Contact Us", sub_title: "Have questions about DUB LEDS?", resource_type: "contact", page_content: "Use the form below to contact us or email us at:<a class=\"fade\" href=\"mailto:info@dubleds.com?subject=General Inquiry\" style=\"color: rgb(0, 169, 237); \">info@dubleds.com</a>and we'll get back to you as soon as possible."
+Content.create! title: "Media", sub_title: "Visuals on the road.", resource_type: "media", page_content: ""
+Content.create! title: "Generator", sub_title: "Generate your own LED RIM images.", resource_type: "generator", page_content: "Want to see how your images will look on your rims? Take a virtual test drive ..."
+
+puts ' *** Setting up Store ***'
+Spree::Product.create! id: 1, name: "This is Rim 1", description: "Rim 1 Store Description goes here...", available_on: "2012-07-01 00:00:00", deleted_at: nil, permalink: "this-is-rim-1", meta_description: "", meta_keywords: "", tax_category_id: nil, shipping_category_id: nil, created_at: "2012-07-20 22:30:07", updated_at: "2012-07-20 22:30:22", count_on_hand: 3, price: 0.01
+Spree::Product.create! id: 2, name: "Here is Rim 2", description: "Rim 2 Store Description goes here...", available_on: "2012-07-01 00:00:00", deleted_at: nil, permalink: "this-is-rim-2", meta_description: "", meta_keywords: "", tax_category_id: nil, shipping_category_id: nil, created_at: "2012-07-20 22:30:07", updated_at: "2012-07-20 22:30:22", count_on_hand: 3, price: 0.01
 
 puts ' *** Setting up Privacy Policy ***'
 Privacy.create! title: "test", content: %{<div> <h2>What information do we collect?</h2> <br> <br>We collect information from you when you register on our site or place an order. <br> <br>When ordering or registering on our site, as appropriate, you may be asked to

@@ -3,23 +3,23 @@ class Generator extends $DUB
     $(document).ready =>
       @smallRimButtonListeners()
       # @overlayButtonListeners()
-      
+
       $("input[type=file]").filestyle
         image: "/assets/button-upload-image-small.png"
         imageheight: 51
         imagewidth: 185
         width: 100
-        
+
       $(".file").css('display', 'none')
-      
+
       $("input[type=file]").change ->
         $('.generator-form').submit()
         $DUB.UI.showProgressOverlay()
-      
+
       setTimeout ( ->
         $('.image').fadeIn()
       ), 700
-      
+
   smallRimButtonListeners: () ->
     self = this
     @smallRimButton = $('.generator .choices a.rim-small')
@@ -57,12 +57,12 @@ class Generator extends $DUB
         $(this).removeClass('show').addClass('hide').css('opacity', '0.0')
 
       $('.generator .rim').find("##{@rimId}").removeClass('hide').addClass('show').css('opacity', '1.0')
-      
-      
+
+
   overlayButtonListeners: () ->
     $('.upload a').bind "click", (e) ->
       e.preventDefault()
-      
+
       @title = $(e.target).attr('rel')
 
       initGeneratorOverlay = (data) ->
@@ -96,7 +96,7 @@ class Generator extends $DUB
         $(window).bind "resize", =>
           @overlayContainerDiv.center
             transition: 300
-            
+
       initGeneratorOverlay()
 
 $DUB.Application = jQuery.extend({}, $DUB.Application, {Generator})

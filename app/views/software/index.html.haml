@@ -5,7 +5,7 @@
   / Download
 .container
   %div
-    - if @software.first.image.url.present?
+    - if @software.first.image.present? && @software.first.image.url.present?
       = image_tag(@software.first.image.url)
 
   .links

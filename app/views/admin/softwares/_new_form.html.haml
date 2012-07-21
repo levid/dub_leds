@@ -12,6 +12,9 @@
     = f.label :download_url
     = f.text_field :download_url
   .field
+    = f.label :default_id, 'Make default'
+    = check_box_tag :default_id, nil, false, :class => 'inline'
+  .field
     .border.pad.bottom10
       = f.label :image
       = f.file_field :image

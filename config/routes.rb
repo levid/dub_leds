@@ -1,5 +1,5 @@
 DubLeds::Application.routes.draw do
-                  
+
   # This line mounts Spree's routes at the root of your application.
   # This means, any requests to URLs such as /products, will go to Spree::ProductsController.
   # If you would like to change where this engine is mounted, simply change the :at option to something different.
@@ -63,11 +63,12 @@ DubLeds::Application.routes.draw do
   #   put '/media/:id'           => 'medias#update',   :as => :media_update
   #   post '/media/create'       => 'medias#create',   :as => :media_create
   #   delete '/media/:id'        => 'medias#destroy',  :as => :media_destroy
-  
+
   get '/software'           => 'software#index',    :as => :software
   get '/software/new'       => 'software#new',      :as => :software_new
   get '/software/:id'       => 'software#show',     :as => :software_show
   get '/software/:id/edit'  => 'software#edit',     :as => :software_edit
+  get '/admin/softwares/:id/make_default'  => 'admin/softwares#make_default',     :as => :admin_software_make_default
   put '/software/:id'       => 'software#update',   :as => :software_update
   post '/software/create'   => 'software#create',   :as => :software_create
   delete '/software:id'     => 'software#destroy',  :as => :software_destroy

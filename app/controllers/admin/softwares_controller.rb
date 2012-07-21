@@ -44,9 +44,11 @@ class Admin::SoftwaresController < AdminController
   def create
     @software = Software.new(params[:software])
 
+    binding.pry
+
     respond_to do |format|
       if @software.save
-        format.html { redirect_to software_path, notice: 'Software was successfully created.' }
+        format.html { redirect_to admin_software_path(@software), notice: 'Software was successfully created.' }
         format.json { render json: @software, status: :created, location: @software }
       else
         format.html { render action: "new" }
@@ -58,11 +60,34 @@ class Admin::SoftwaresController < AdminController
   # PUT /software/1
   # PUT /software/1.json
   def update
-    @software = Software.find(params[:id])
+    if params[:default_id]
+      clear_all_defaults
+    end
+
+    @software             = Software.find(params[:id])
+    @software.default_id  = params[:id]
 
     respond_to do |format|
       if @software.update_attributes(params[:software])
-        format.html { redirect_to software_edit_path(@software), notice: 'Software was successfully updated.' }
+        format.html { redirect_to admin_software_path(@software), notice: 'Software was successfully updated.' }
+        format.json { head :no_content }
+      else
+        format.html { render action: "edit" }
+        format.json { render json: @software.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  ## GET /software/1/make_default
+  def make_default
+    clear_all_defaults
+
+    @software             = Software.find(params[:id])
+    @software.default_id  = params[:id]
+
+    respond_to do |format|
+      if @software.save
+        format.html { redirect_to admin_softwares_path, notice: 'Software was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -78,8 +103,17 @@ class Admin::SoftwaresController < AdminController
     @software.destroy
 
     respond_to do |format|
-      format.html { redirect_to software_url }
+      format.html { redirect_to admin_softwares_path }
       format.json { head :no_content }
     end
   end
+
+  protected
+    def clear_all_defaults
+      @all_software = Software.all
+      @all_software.each do |software|
+        software.default_id = nil
+        software.save
+      end
+    end
 end

@@ -1,9 +1,6 @@
-.title Contact
-.sub-title Have questions about DUB LEDS?
-.small-title
-  Use the form below to contact us or email us at:
-  %a{ :href => 'mailto:info@dubleds.com?subject=General Inquiry', :class => 'fade' } info@dubleds.com
-  and we'll get back to you as soon as possible.
+.title= @page_content.title rescue nil
+.sub-title= @page_content.sub_title rescue nil
+.small-title= @page_content.page_content.html_safe rescue nil
 .clearfix &nbsp;
 .text-container
   %fieldset

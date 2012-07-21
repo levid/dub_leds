@@ -1,5 +1,4 @@
 class HomeController < ApplicationController
-
   before_filter :set_date
 
   # GET /home
@@ -23,5 +22,4 @@ class HomeController < ApplicationController
       @date_current = params[:day].present? ? DateTime.parse(params[:day]).strftime("%Y-%m-%d") : today
       @current_day  = params[:day].present? ? DateTime.parse(params[:day]).strftime("%b %d, %Y") : 'Today'
     end
-
 end

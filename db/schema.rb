@@ -113,6 +113,7 @@ ActiveRecord::Schema.define(:version => 20121422015080) do
     t.string   "name"
     t.string   "image"
     t.string   "download_url"
+    t.string   "default_id"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
   end

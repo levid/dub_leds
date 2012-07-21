@@ -1,6 +1,6 @@
-.title Generator
-.sub-title Generate your own LED RIM images.
-.small-title Want to see how your images will look on your rims? Take a virtual test drive ...
+.title= @page_content.title rescue nil
+.sub-title= @page_content.sub_title rescue nil
+.small-title= @page_content.page_content.html_safe rescue nil
 .container
   .left-column
     .upload-button
@@ -11,7 +11,7 @@
         -else
           Login to upload a new image
           / = link_to('Create an account to upload', spree.signup_path, :class => "sign_up")
-              
+
     .overlay
     .image
       -if @user && @user.generator
@@ -50,7 +50,7 @@
           -else
             %div{:id => "#{rim.id}", :class => 'hide'}
               = image_tag "img-rim-generator#{rim.id}.png"
-      
+
     .image
       -if @user && @user.generator
         -if @user.generator.thumbnail.url.present?
@@ -58,4 +58,3 @@
       -else
         -if @generator.thumbnail.url.present?
           %th= image_tag @generator.thumbnail.url(:preview)
-      
