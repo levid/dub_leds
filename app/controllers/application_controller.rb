@@ -2,12 +2,14 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
 
   before_filter :set_names
+  before_filter :set_copyright
+  before_filter :set_sharing_links
   before_filter :set_year
   before_filter :find_rim
   before_filter :newsletter_signup
 
   layout :set_layout
-  
+
   def current_ability
     @current_ability ||= Spree::Ability.new(current_user)
   end
@@ -15,6 +17,14 @@ class ApplicationController < ActionController::Base
   rescue_from CanCan::AccessDenied do |exception|
     flash[:error] = exception.message
     redirect_to root_url
+  end
+
+  def set_copyright
+    @copyright = Content.where(:resource_type => 'copyright').first
+  end
+
+  def set_sharing_links
+    @sharing_links = Content.where(:resource_type => 'sharing_links')
   end
 
   def set_names
@@ -54,11 +64,11 @@ class ApplicationController < ActionController::Base
   def get_cookie(cookie_name)
     return cookies[":#{cookie_name}"]
   end
-  
+
   def only_allow_admin
     redirect_to root_path, :alert => 'Not authorized as an administrator.' unless current_user.has_role? :admin
   end
-  
+
   def newsletter_signup
     @newsletter = Newsletter.new
   end

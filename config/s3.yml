@@ -1,64 +1,63 @@
-# development:
-#   access_key_id: AKIAIHXNGFCN3DDF266A
-#   secret_access_key: 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
-#   bucket: dubleds
-#   directory: dubleds
-#   host: http://dub_leds.s3-website-us-west-1.amazonaws.com/
-#   region: us-west-1
-#
-# test:
-#   access_key_id: AKIAIHXNGFCN3DDF266A
-#   secret_access_key: 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
-#   bucket: dubleds
-#   directory: dubleds
-#   host: http://dub_leds.s3-website-us-west-1.amazonaws.com/
-#   region: us-west-1
-#
-# staging:
-#   access_key_id: AKIAIHXNGFCN3DDF266A
-#   secret_access_key: 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
-#   bucket: dubleds
-#   directory: dubleds
-#   host: http://dub_leds.s3-website-us-west-1.amazonaws.com/
-#   region: us-west-1
-#
-# production:
-#   access_key_id: AKIAIHXNGFCN3DDF266A
-#   secret_access_key: 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
-#   bucket: dubleds
-#   directory: dubleds
-#   host: http://dub_leds.s3-website-us-west-1.amazonaws.com/
-#   region: us-west-1
-
-#
 development:
-  access_key_id: AKIAJS77MCJ6H3PY3P3Q
-  secret_access_key: 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
-  bucket: dubledsprod
-  directory: dubledsprod
-  host: http://dubledsprod.s3-website-us-east-1.amazonaws.com/
-  region: us-east-1
+  access_key_id: AKIAIHXNGFCN3DDF266A
+  secret_access_key: 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
+  bucket: dubleds
+  directory: dubleds
+  host: http://dubleds.s3-website-us-west-1.amazonaws.com/
+  region: us-west-1
 
 test:
   access_key_id: AKIAIHXNGFCN3DDF266A
   secret_access_key: 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
-  bucket: dubledsprod
-  directory: dubledsprod
-  host: http://dubledsprod.s3-website-us-east-1.amazonaws.com/
-  region: us-east-1
+  bucket: dubleds
+  directory: dubleds
+  host: http://dubleds.s3-website-us-west-1.amazonaws.com/
+  region: us-west-1
 
 staging:
   access_key_id: AKIAIHXNGFCN3DDF266A
   secret_access_key: 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
-  bucket: dubledsprod
-  directory: dubledsprod
-  host: http://dubledsprod.s3-website-us-east-1.amazonaws.com/
-  region: us-east-1
+  bucket: dubleds
+  directory: dubleds
+  host: http://dubleds.s3-website-us-west-1.amazonaws.com/
+  region: us-west-1
 
 production:
   access_key_id: AKIAIHXNGFCN3DDF266A
   secret_access_key: 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
-  bucket: dubledsprod
-  directory: dubledsprod
-  host: http://dubledsprod.s3-website-us-east-1.amazonaws.com/
-  region: us-east-1
+  bucket: dubleds
+  directory: dubleds
+  host: http://dubleds.s3-website-us-west-1.amazonaws.com/
+  region: us-west-1
+#
+# development:
+#   access_key_id: AKIAJZOJ72NESXHJOTPQ
+#   secret_access_key: 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
+#   bucket: dubledsprod
+#   directory: dubledsprod
+#   host: http://dubledsprod.s3-website-us-east-1.amazonaws.com/
+#   region: us-east-1
+#
+# test:
+#   access_key_id: AKIAJZOJ72NESXHJOTPQ
+#   secret_access_key: 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
+#   bucket: dubledsprod
+#   directory: dubledsprod
+#   host: http://dubledsprod.s3-website-us-east-1.amazonaws.com/
+#   region: us-east-1
+#
+# staging:
+#   access_key_id: AKIAJZOJ72NESXHJOTPQ
+#   secret_access_key: 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
+#   bucket: dubledsprod
+#   directory: dubledsprod
+#   host: http://dubledsprod.s3-website-us-east-1.amazonaws.com/
+#   region: us-east-1
+#
+# production:
+#   access_key_id: AKIAJZOJ72NESXHJOTPQ
+#   secret_access_key: 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
+#   bucket: dubledsprod
+#   directory: dubledsprod
+#   host: http://dubledsprod.s3-website-us-east-1.amazonaws.com/
+#   region: us-east-1

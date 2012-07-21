@@ -35,7 +35,7 @@ gem 'bson_ext', '~> 1.3.1'
 # gem 'oa-core'
 
 # Amazon S3 uploader
-gem 'fog', '~> 1.3.1'
+gem 'fog'
 
 # Role based stuff
 gem 'rolify'

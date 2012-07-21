@@ -10,17 +10,12 @@
       .order
         = link_to('Buy Rims', spree.products_path, :class => 'btn orange')
       %ul#sharing-links
-        %li
-          %a.facebook{:href => "#", :title => 'Follow us on Facebook'} Facebook
-        %li
-          %a.twitter{:href => "#", :title => 'Follow us on Twitter'} Twitter
-        %li
-          %a.flickr{:href => "#", :title => 'Follow us on Flickr'} Flickr
-        %li
-          %a.linkedin{:href => "#", :title => 'Email us'} Linkedin
+        - @sharing_links.each do |link|
+          %li
+            %a{:href => "#{link.sub_title}", :title => "Check us out on #{link.title}", :target => '_blank', :class => "#{link.title.downcase}"}=link.title
   %section.spacer
     .copyright
-      %span (c) 2011 LED Wheels, Inc.
+      %span= @copyright.sub_title rescue nil
       .links
         = link_to 'Privacy Policy', privacy_policy_path, :class => "fade"
         = link_to 'Refund Policy', refund_policy_path, :class => "fade"

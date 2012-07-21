@@ -91,8 +91,13 @@ Content.create! title: "The world's most technologically advanced rims.", sub_ti
 Content.create! title: "Contact Us", sub_title: "Have questions about DUB LEDS?", resource_type: "contact", page_content: "Use the form below to contact us or email us at:<a class=\"fade\" href=\"mailto:info@dubleds.com?subject=General Inquiry\" style=\"color: rgb(0, 169, 237); \">info@dubleds.com</a>and we'll get back to you as soon as possible."
 Content.create! title: "Media", sub_title: "Visuals on the road.", resource_type: "media", page_content: ""
 Content.create! title: "Generator", sub_title: "Generate your own LED RIM images.", resource_type: "generator", page_content: "Want to see how your images will look on your rims? Take a virtual test drive ..."
+Content.create! title: "Copyright", sub_title: "(c) 2011 LED Wheels, Inc.", resource_type: "copyright", page_content: ""
+Content.create! title: "Facebook", sub_title: "http://www.facebook.com", resource_type: "sharing_links", page_content: ""
+Content.create! title: "Twitter", sub_title: "http://www.twitter.com", resource_type: "sharing_links", page_content: ""
+Content.create! title: "Flickr", sub_title: "http://www.flickr.com", resource_type: "sharing_links", page_content: ""
+Content.create! title: "Linkedin", sub_title: "http://www.linkedin.com", resource_type: "sharing_links", page_content: ""
 
-puts ' *** Setting up Store ***'
+puts ' *** Setting up Products in Store ***'
 Spree::Product.create! id: 1, name: "This is Rim 1", description: "Rim 1 Store Description goes here...", available_on: "2012-07-01 00:00:00", deleted_at: nil, permalink: "this-is-rim-1", meta_description: "", meta_keywords: "", tax_category_id: nil, shipping_category_id: nil, created_at: "2012-07-20 22:30:07", updated_at: "2012-07-20 22:30:22", count_on_hand: 3, price: 0.01
 Spree::Product.create! id: 2, name: "Here is Rim 2", description: "Rim 2 Store Description goes here...", available_on: "2012-07-01 00:00:00", deleted_at: nil, permalink: "this-is-rim-2", meta_description: "", meta_keywords: "", tax_category_id: nil, shipping_category_id: nil, created_at: "2012-07-20 22:30:07", updated_at: "2012-07-20 22:30:22", count_on_hand: 3, price: 0.01
 

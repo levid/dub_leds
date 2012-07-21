@@ -15,7 +15,11 @@ CarrierWave.configure do |config|
   config.fog_directory  = S3_CONFIG['directory']                  # required
   config.fog_public     = false                                   # optional, defaults to true
   config.fog_attributes = {'Cache-Control'=>'max-age=315576000'}  # optional, defaults to {}
-  config.fog_host       = "http://#{S3_CONFIG['directory']}.s3.amazonaws.com"
+  config.fog_host       = "http://#{S3_CONFIG['directory']}.s3.amazonaws.com/"
+
+  # compute = Fog::Compute.new(:provider => 'AWS', :aws_access_key_id => S3_CONFIG['access_key_id'], :aws_secret_access_key => S3_CONFIG['secret_access_key'])
+  # storage = Fog::Storage.new(:provider => 'AWS', :aws_access_key_id => S3_CONFIG['access_key_id'], :aws_secret_access_key => S3_CONFIG['secret_access_key'])
+  # storage.sync_clock
 end
 
 CarrierWave::SanitizedFile.sanitize_regexp = /[^[:word:]\.\-\+]/
