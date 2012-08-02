@@ -4,8 +4,8 @@
     <% @order.available_payment_methods.each do |method| %>
     <p>
       <label>
-        <%= radio_button_tag "order[payments_attributes][][payment_method_id]", method.id, method == @order.payment_method %>
-        <%= t(method.name, :scope => :payment_methods, :default => method.name) %>
+        <%= radio_button_tag "order[payments_attributes][][payment_method_id]", method.id, method == @order.payment_method, :style => 'width: 20px; margin: 0px 0px 0px 20px;' %>
+        <span style="margin-top: 15px; position: absolute;"><%= t(method.name, :scope => :payment_methods, :default => method.name) %></span>
       </label>
     </p>
     <% end %>
@@ -13,9 +13,7 @@
     <ul id="payment-methods" data-hook>
       <% @order.available_payment_methods.each do |method| %>
         <li id="payment_method_<%= method.id %>" class="<%= 'last' if method == @order.available_payment_methods.last %>" data-hook>
-          <fieldset>
-            <%= render :partial => "spree/checkout/payment/#{method.method_type}", :locals => { :payment_method => method } %>
-          </fieldset>
+          <%= render :partial => "spree/checkout/payment/#{method.method_type}", :locals => { :payment_method => method } %>
         </li>
       <% end %>
     </ul>
@@ -26,7 +24,7 @@
 
 <br class="space" />
 
-<div class="form-buttons" data-hook="buttons">
-  <%= submit_tag t(:save_and_continue), :class => 'continue button primary' %>
+<div class="form-buttons submit pad bottom10 top10" data-hook="buttons">
+  <%= submit_tag t(:save_and_continue), :class => 'continue  btn orange', :style => 'width: 200px' %>
   <script>disableSaveOnClick();</script>
 </div>

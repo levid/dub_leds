@@ -14,22 +14,23 @@
           %div{"data-hook" => "inside_cart_form"}
             %div{"data-hook" => "cart_items"}
               = render :partial => 'form', :locals => { :order_form => order_form }
-            .columns.ten.alpha.pad.top10{"data-hook" => "cart_buttons"}
-              = button_tag :class => 'btn black primary', :id => 'update-button' do
-                = t(:update)
-              = link_to t(:checkout), checkout_path, :class => 'button checkout primary', :id => 'checkout-link', :class => 'btn orange'
-            .pad.top10
+            .pad.top10.bottom10
               #subtotal.columns.six.omega{"data-hook" => ""}
                 %h5
                   = t(:subtotal)
                   \:
                   %span.order-total= order_subtotal(@order)
+            .columns.ten.alpha.pad.top10.bottom10{"data-hook" => "cart_buttons"}
+              = button_tag :class => 'btn blue primary pad right5', :id => 'update-button' do
+                = t(:update)
+              = link_to t(:checkout), checkout_path, :class => 'button checkout primary btn orange', :id => 'checkout-link'
+
   %fieldset
     %legend Other options
     #empty-cart{"data-hook" => ""}
       = form_tag empty_cart_path, :method => :put do
         %p#clear_cart_link{"data-hook" => ""}
           .submit.pad.bottom10
-            = submit_tag t(:empty_cart), :class => 'button', :style => 'width: 150px'
-          = t(:or)
-          = link_to t(:continue_shopping), products_path, :class => 'continue button fade'
+            = submit_tag t(:empty_cart), :class => 'button btn black inline pad left10', :style => 'width: 150px'
+            = t(:or)
+            = link_to t(:continue_shopping), products_path, :class => 'continue button fade'

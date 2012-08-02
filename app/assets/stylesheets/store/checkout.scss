@@ -2,3 +2,77 @@
 {
   padding: 20px;
 }
+
+#checkout-summary
+{
+  tbody
+  {
+    td
+    {
+      &:first-child
+      {
+        width: 20%;
+      }
+
+      padding: 10px;
+      font-family: EurostileMed, Helvetica, Arial, sans-serif;
+      font-size: 20px;
+
+      strong
+      {
+        font-family: EurostileMed, Helvetica, Arial, sans-serif;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+#order_use_billing
+{
+  margin: 0px 0px 0px 20px;
+  width: 13px;
+}
+
+#use_billing
+{
+  margin: 15px 0px 0px 5px;
+  position: absolute;
+}
+
+#order_summary
+{
+
+  h6
+  {
+    font-size: 15px;
+    padding: 0px 0px 10px 0px;
+  }
+
+  .address, .delivery, .shipping-info
+  {
+    font-size: 20px;
+
+    span
+    {
+      font-size: 16px;
+    }
+  }
+}
+
+#subtotal, #order-charges, #order-total
+{
+
+  font-family: EurostileMed, Helvetica, Arial, sans-serif;
+  font-size: 20px;
+
+  strong
+  {
+    font-family: EurostileMed, Helvetica, Arial, sans-serif;
+    font-size: 20px;
+  }
+
+  td
+  {
+    padding: 10px;
+  }
+}

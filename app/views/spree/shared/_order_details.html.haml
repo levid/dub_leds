@@ -1,37 +1,35 @@
-.row.steps-data
-  .columns.alpha.four
-    %h6
-      = t(:shipping_address)
-      = link_to "(#{t(:edit)})", checkout_state_path(:address) unless @order.completed?
-    .address
-      = order.ship_address
-  .columns.alpha.four
-    %h6
-      = t(:billing_address)
-      = link_to "(#{t(:edit)})", checkout_state_path(:address) unless @order.completed?
-    .address
-      = order.bill_address
-  .columns.alpha.four
-    %h6
-      = t(:shipping_method)
-      = link_to "(#{t(:edit)})", checkout_state_path(:delivery) unless @order.completed?
-    .delivery
-      = order.shipping_method.name
-  .columns.omega.four
-    %h6
-      = t(:payment_information)
-      = link_to "(#{t(:edit)})", checkout_state_path(:payment) unless @order.completed?
-    .payment-info
-      - unless order.creditcards.empty?
-        %span.cc-type
-          = image_tag "creditcards/icons/#{order.creditcards.first.cc_type}.png"
-          = t(:ending_in)
-          = order.creditcards.first.last_digits
-        %br/
-        %span.full-name
-          = order.creditcards.first.first_name
-          = order.creditcards.first.last_name
-%hr/
+.border.pad.bottom10
+  %h6
+    = t(:shipping_address)
+    = link_to "(#{t(:edit)})", checkout_state_path(:address) unless @order.completed?
+  .address
+    .grey= order.ship_address
+.border.pad.bottom10
+  %h6
+    = t(:billing_address)
+    = link_to "(#{t(:edit)})", checkout_state_path(:address) unless @order.completed?
+  .address
+    .grey= order.bill_address
+.border.pad.bottom10
+  %h6
+    = t(:shipping_method)
+    = link_to "(#{t(:edit)})", checkout_state_path(:delivery) unless @order.completed?
+  .delivery
+    .grey= order.shipping_method.name
+.border.pad.bottom10
+  %h6
+    = t(:payment_information)
+    = link_to "(#{t(:edit)})", checkout_state_path(:payment) unless @order.completed?
+  .payment-info
+    - unless order.creditcards.empty?
+      %span= image_tag "creditcards/icons/#{order.creditcards.first.cc_type}.png"
+      %span.cc-type{:style => 'margin-top: 0px; margin-left: 5px; position: absolute;'}
+
+        = t(:ending_in)
+        = order.creditcards.first.last_digits
+      %span.full-name{:style => 'margin-left: 5px; position: relative;'}
+        .inline.blue="#{order.creditcards.first.first_name} #{order.creditcards.first.last_name}"
+
 %table.index.columns.alpha.omega.sixteen{"data-hook" => "order_details"}
   %col{:halign => "center", :valign => "middle", :width => "15%"}
     %col{:valign => "middle", :width => "70%"}
@@ -50,22 +48,23 @@
                 %tr{"data-hook" => "order_details_line_item_row"}
                   %td{"data-hook" => "order_item_image"}
                     - if item.variant.images.length == 0
-                      = link_to small_image(item.variant.product), item.variant.product
+                      .pad.top10= link_to small_image(item.variant.product), item.variant.product
                     - else
-                      = link_to image_tag(item.variant.images.first.attachment.url(:small)), item.variant.product
+                      .pad.top10= link_to image_tag(item.variant.images.first.attachment.url(:small)), item.variant.product
                   %td{"data-hook" => "order_item_description"}
-                    %h4= item.variant.product.name
-                    = truncate(item.variant.product.description, :length => 100, :omission => "...")
+                    %h4.pad.top10= item.variant.product.name
+                    .pad.top10= truncate(item.variant.product.description, :length => 100, :omission => "...")
                     = "(" + variant_options(item.variant) + ")" unless item.variant .option_values.empty?
                   %td.price{"data-hook" => "order_item_price"}
-                    %span= number_to_currency item.price
-                  %td{"data-hook" => "order_item_qty"}= item.quantity
+                    %span.pad.top10= number_to_currency item.price
+                  %td.pad.top10{"data-hook" => "order_item_qty"}= item.quantity
                   %td.total{"data-hook" => "order_item_total"}
-                    %span= number_to_currency (item.price * item.quantity)
+                    %span.pad.top10= number_to_currency (item.price * item.quantity)
+
             %tfoot#order-total{"data-hook" => "order_details_total"}
               %tr.total
                 %td{:colspan => "4"}
-                  %b
+                  .pad
                     = t(:order_total)
                     \:
                 %td.total
@@ -81,7 +80,7 @@
             %tfoot#subtotal{"data-hook" => "order_details_subtotal"}
               %tr#subtotal-row.total
                 %td{:colspan => "4"}
-                  %b
+                  .pad
                     = t(:subtotal)
                     \:
                 %td.total

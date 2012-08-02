@@ -1,13 +1,16 @@
 %fieldset#order_summary{"data-hook" => ""}
   %legend= t(:order) + " #" + @order.number
   %h1= accurate_title
-  #order{"data-hook" => ""}
+  #order{"data-hook" => "", :class => 'inner'}
     - if params.has_key? :checkout_complete
       %h3= t(:thank_you_for_your_order)
     = render :partial => 'spree/shared/order_details', :locals => { :order => @order }
-    %br.clear/
+
+%fieldset
+  %legend Other options
+  .links
     %p{"data-hook" => "links"}
-      = link_to t(:back_to_store), spree.root_path, :class => "button"
+      = link_to t(:back_to_store), spree.root_path, :class => "btn blue", :style => "opacity: 0.9; "
       - unless params.has_key? :checkout_complete
         - if respond_to?(:current_user) && current_user
-          = link_to t(:my_account), spree.account_path, :class => "button"
+          = link_to t(:my_account), spree.account_path, :class => "btn black pad left5", :style => "opacity: 0.9; "

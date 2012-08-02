@@ -1,25 +1,36 @@
 <% content_for :head do %>
   <%= javascript_include_tag states_url(:format => :js) %>
 <% end %>
-<div id="checkout" data-hook>  
+<div id="checkout" data-hook>
+  <div class="title">Checkout</div>
+  <div class="sub-title">Please enter your shipping and billing information</div>
+
   <%= render :partial => 'spree/shared/error_messages', :locals => { :target => @order } %>
-  
-  <div class="row" data-hook="checkout_header">
-    <h1 class="columns three alpha" data-hook="checkout_title"><%= t(:checkout) %></h1>
-    <div class="columns thirteen omega" data-hook="checkout_progress"><%= checkout_progress %></div>
-  </div>
-  
+
+  <fieldset>
+    <legend>Progress</legend>
+    <div class="row inner" data-hook="checkout_header">
+      <div class="columns thirteen omega" data-hook="checkout_progress"><%= checkout_progress %></div>
+    </div>
+  </fieldset>
+
   <div class="row" data-hook="checkout_content">
+
+    <% if @order.state != 'confirm' %>
+      <fieldset>
+        <legend>Order Summary</legend>
+        <div class="row inner" data-hook="checkout_header">
+          <div id="checkout-summary" data-hook="checkout_summary_box" class="">
+            <%= render :partial => 'summary', :locals => { :order => @order } %>
+          </div>
+        </div>
+      </fieldset>
+    <% end %>
     <div class="columns <%= if @order.state != 'confirm' then 'alpha twelve' else 'alpha omega sixteen' end %>" data-hook="checkout_form_wrapper">
       <%= form_for @order, :url => update_checkout_path(@order.state), :html => { :id => "checkout_form_#{@order.state}" } do |form| %>
         <%= render @order.state, :form => form %>
       <% end %>
-    </div>    
-    <% if @order.state != 'confirm' %>
-      <div id="checkout-summary" data-hook="checkout_summary_box" class="columns omega four">
-        <%= render :partial => 'summary', :locals => { :order => @order } %>
-      </div>
-    <% end %>
+    </div>
   </div>
 
 </div>

@@ -5,11 +5,13 @@
       <p class="field radios">
         <% @order.rate_hash.each do |shipping_method| %>
           <label>
-            <%= radio_button(:order, :shipping_method_id, shipping_method[:id]) %>
+            <%= radio_button(:order, :shipping_method_id, shipping_method[:id], :style => 'width: 20px;') %>
             <% if Spree::Config[:shipment_inc_vat] %>
-              <%= shipping_method[:name] %> <%= format_price (1 + Spree::TaxRate.default) * shipping_method[:cost] %>
+              <span style="margin-top: 15px; position: absolute;">
+                <%= shipping_method[:name] %> <%= format_price (1 + Spree::TaxRate.default) * shipping_method[:cost] %>
+              </span>
             <% else %>
-            <%= shipping_method[:name] %> <%= number_to_currency shipping_method[:cost] %>
+            <span style="margin-top: 15px; position: absolute;"><%= shipping_method[:name] %> <%= number_to_currency shipping_method[:cost] %></span>
             <% end %>
           </label>
         <% end %>
@@ -26,6 +28,6 @@
 
 <br />
 
-<div class="form-buttons" data-hook="buttons">
-  <%= submit_tag t(:save_and_continue), :class => 'continue button primary' %>
+<div class="form-buttons submit pad bottom10 top10" data-hook="buttons">
+  <%= submit_tag t(:save_and_continue), :class => 'continue  btn orange', :style => 'width: 200px' %>
 </div>
