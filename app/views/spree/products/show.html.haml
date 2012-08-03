@@ -12,7 +12,7 @@
               = render :partial => 'image'
             #thumbnails{"data-hook" => ""}
               = render :partial => 'thumbnails', :locals => { :product => @product }
-          %div.border{"data-hook" => "product_properties"}
+          %div{"data-hook" => "product_properties"}
             = render :partial => 'properties'
       .columns.ten.omega{"data-hook" => "product_right_part"}
         .row{"data-hook" => "product_right_part_wrap"}
