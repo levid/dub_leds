@@ -1,7 +1,0 @@
-%fieldset#order_details{"data-hook" => ""}
-  .clear
-  %legend= t(@order.state, :scope => :order_state).titleize
-  = render :partial => 'spree/shared/order_details', :locals => { :order => @order }
-%br/
-.form-buttons{"data-hook" => "buttons"}
-  = submit_tag t(:place_order), :class => 'continue button primary'

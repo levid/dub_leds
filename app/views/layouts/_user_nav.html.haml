@@ -13,11 +13,11 @@
         %li
           = link_to('Admin', admin_path, :class => "fade#{' active' if controller_name == 'admin'}")
           /%span.line &nbsp;
-      -if @current_order
-        %li.divline
-          %span
-        %li
-          = link_to("My Cart (#{@current_order.item_count})", spree.cart_path, :class => "fade")
+    -if @current_order
+      %li.divline
+        %span
+      %li
+        = link_to("My Cart (#{@current_order.item_count})", spree.cart_path, :class => "fade")
     %li.divline
     - if user_signed_in?
       %li
