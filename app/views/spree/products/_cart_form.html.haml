@@ -1,7 +1,7 @@
 = form_for :order, :url => populate_orders_url do |f|
   #inside-product-cart-form{"data-hook" => "inside_product_cart_form", :itemprop => "offers", :itemscope => "", :itemtype => "http://schema.org/Offer"}
     - if @product.has_variants?
-      #product-variants.columns.five.alpha
+      #product-variants.columns.five.alpha.border.pad.bottom10
         %h6.product-section-title= t(:variants)
         %ul
           - has_checked = false
@@ -9,25 +9,26 @@
           - next if v.option_values.empty? || (!v.in_stock && !Spree::Config[:show_zero_stock_products])
           - checked = !has_checked && (v.in_stock || Spree::Config[:allow_backorders])
           - has_checked = true if checked
-            %li
-              = radio_button_tag "products[#{@product.id}]", v.id, checked, :disabled => !v.in_stock && !Spree::Config[:allow_backorders]
-              %label{:for => ['products', @product.id, v.id].join('_')}
-                %span.variant-description
-                  = variant_options v
-                - if variant_price_diff v
-                  %span.price.diff= variant_price_diff v
+            %li{:style => 'display: block; padding: 0px'}
+              = radio_button_tag "products[#{@product.id}]", v.id, checked, :disabled => !v.in_stock && !Spree::Config[:allow_backorders], :style => 'width: 20px; margin: 0px 0px 0px 0px;'
+              %span{:style => 'top: -11px; position: relative; display: inline-block;'}
+                %label.inline{:for => ['products', @product.id, v.id].join('_')}
+                  %span.variant-description
+                    = variant_options v
+                  - if variant_price_diff v
+                    %span.price.diff= variant_price_diff v
     - if @product.price
       .columns.five.if.alpha.else.omega{:class => "<haml:silent> !@product.has_variants? </haml:silent><haml:block> </haml:block><haml:silent> </haml:silent><haml:block> </haml:block>", "data-hook" => "product_price"}
-        #product-price
+        #product-price.border.pad.top20
           %h6.product-section-title.pad.bottom5= t(:price)
           %div.pad.bottom10.blue.large-text
             %span.price.selling{:itemprop => "price"}= number_to_currency @product.price
-        .add-to-cart
+        .add-to-cart.pad.top20
           - if @product.has_stock? || Spree::Config[:allow_backorders]
             = number_field_tag (@product.has_variants? ? :quantity : "variants[#{@product.master.id}]"), |
               1, :class => '', :in => 1..@product.on_hand
             .clearfix                               |
-              = button_tag :class => 'large primary btn orange large pad top10 bottom10', :id => 'add-to-cart-button' do
+              = button_tag :class => 'large primary btn orange large pad top20 bottom10', :id => 'add-to-cart-button' do
                 = t(:add_to_cart)
           - else
             = content_tag('strong', t(:out_of_stock))
