@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
   before_filter :set_sharing_links
   before_filter :set_year
   before_filter :find_rim
+  before_filter :current_order
   before_filter :newsletter_signup
 
   layout :set_layout
@@ -37,6 +38,12 @@ class ApplicationController < ActionController::Base
   def set_year
     t = Time.now
     @year = t.strftime("%Y")
+  end
+
+  def current_order
+    if session[:order_id]
+      @current_order = Spree::Order.find(session[:order_id])
+    end
   end
 
   def after_sign_in_path_for(resource)

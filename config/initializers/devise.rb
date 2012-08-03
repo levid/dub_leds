@@ -18,6 +18,8 @@ Devise.setup do |config|
   # available as additional gems.
   # require 'devise/orm/mongoid'
   require 'devise/orm/active_record'
+
+  config.sign_out_via = :get
   #
   # require "omniauth-facebook"
   # require "omniauth-twitter"

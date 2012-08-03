@@ -21,21 +21,39 @@ test:
 
 staging:
   adapter: mysql2
-  database: db39250_dubleds
-  username: db39250_dubleds
-  password: wooten123
+  database: dub_leds_staging
+  username: root
+  password:
   pool: 5
   timeout: 5000
-  host: us-cdbr-east.cleardb.com
+  host: localhost
 
 production:
   adapter: mysql2
-  database: heroku_4ec93621e47a9fe
-  username: 3d5e029f506420
-  password: 3b0317fc
+  database: dub_leds_prod
+  username: root
+  password:
   pool: 5
   timeout: 5000
-  host: us-cdbr-east.cleardb.com
+  host: localhost
+
+# staging:
+#   adapter: mysql2
+#   database: db39250_dubleds
+#   username: db39250_dubleds
+#   password: wooten123
+#   pool: 5
+#   timeout: 5000
+#   host: us-cdbr-east.cleardb.com
+#
+# production:
+#   adapter: mysql2
+#   database: heroku_4ec93621e47a9fe
+#   username: 3d5e029f506420
+#   password: 3b0317fc
+#   pool: 5
+#   timeout: 5000
+#   host: us-cdbr-east.cleardb.com
 #
 # development:
 #   adapter: mysql2

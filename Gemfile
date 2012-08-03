@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.3'
+gem 'rails', '3.2.7'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
@@ -93,6 +93,6 @@ group :assets do
 end
 
 
-gem 'spree'
+gem 'spree', '1.1.3'
 gem 'spree_gateway', :git => 'git://github.com/spree/spree_gateway.git'
-gem 'spree_analytics', :git => "git@github.com:spree/spree_analytics.git"
+gem 'spree_analytics', :git => "git://github.com/spree/spree_analytics.git"

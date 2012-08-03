@@ -17,7 +17,11 @@
             -# %span.line &nbsp;
 
         - if store_menu?
-          -# %li#link-to-cart.pad.left5{"data-hook" => ""}= link_to_cart
+          -if @current_order
+            %li.divline
+              %span
+            %li
+              = link_to("My Cart (#{@current_order.item_count})", spree.cart_path, :class => "fade")
       %li.divline
 
     - if user_signed_in?

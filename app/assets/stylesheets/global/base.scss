@@ -108,9 +108,10 @@ body {
     height: 100%;
     width: 100%;
 }
-@media only all and (max-width: 1500px) and (max-height: 970px) {
-    body { -moz-background-size: 1500px 970px; background-size: 1500px 970px; }
-}
+
+// @media only all and (max-width: 1500px) and (max-height: 970px) {
+//     body { -moz-background-size: 1500px 970px; background-size: 1500px 970px; }
+// }
 
 a:link,
 a:hover,

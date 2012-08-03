@@ -6,9 +6,9 @@ class Nav extends $DUB.UI
 
   initUserNav: () ->
     userNav = $('nav .user ul')
-    navWidth = userNav.outerWidth() + 10
+    navWidth = userNav.outerWidth() + 20
     userNav.css('width', navWidth)
-    
+
     $('#link-to-cart').find('a').addClass('fade') if $('#link-to-cart').length
 
   initMainNav: () ->
