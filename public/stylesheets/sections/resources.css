@@ -1,0 +1,59 @@
+/* line 9, ../../../app/assets/stylesheets/sections/resources.scss */
+.content-resources {
+  margin: 0px auto;
+  width: 980px;
+  height: auto;
+}
+/* line 17, ../../../app/assets/stylesheets/sections/resources.scss */
+.content-resources.edit .title-container, .content-resources.update .title-container {
+  width: auto;
+  height: auto;
+  display: block;
+}
+/* line 23, ../../../app/assets/stylesheets/sections/resources.scss */
+.content-resources.edit .title-container .title, .content-resources.update .title-container .title {
+  margin: 20px 0px 0px -16px;
+  height: 73px;
+  width: 284px;
+  float: left;
+  text-indent: -9000px;
+  background-color: transparent;
+  background-image: url("/assets/title-edit-user.png");
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+/* line 37, ../../../app/assets/stylesheets/sections/resources.scss */
+.content-resources.new .title-container {
+  width: auto;
+  height: auto;
+  display: block;
+}
+/* line 43, ../../../app/assets/stylesheets/sections/resources.scss */
+.content-resources.new .title-container .title {
+  margin: 20px 0px 0px -16px;
+  height: 73px;
+  width: 234px;
+  float: left;
+  text-indent: -9000px;
+  background-color: transparent;
+  background-image: url("/assets/title-sign-up.png");
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+/* line 57, ../../../app/assets/stylesheets/sections/resources.scss */
+.content-resources .text-container {
+  clear: both;
+  text-shadow: 0px 1px 2px #333;
+  color: #fafafa;
+}
+/* line 63, ../../../app/assets/stylesheets/sections/resources.scss */
+.content-resources .text-container h4 {
+  font-size: 22px;
+  padding: 0px 0px 10px 0px;
+  font-family: EurostileMed, Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+/* line 71, ../../../app/assets/stylesheets/sections/resources.scss */
+.content-resources .text-container p {
+  font-size: 15px;
+}

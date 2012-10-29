@@ -1,0 +1,20 @@
+%fieldset#payment{"data-hook" => ""}
+  %legend= t(:payment_information)
+  %div{"data-hook" => "checkout_payment_step"}
+    - @order.available_payment_methods.each do |method|
+      %p
+        %label
+          = radio_button_tag "order[payments_attributes][][payment_method_id]", method.id, method == @order.payment_method
+          = t(method.name, :scope => :payment_methods, :default => method.name)
+    %ul#payment-methods{"data-hook" => ""}
+      - @order.available_payment_methods.each do |method|
+        %li{:class => 'last' if method == @order.available_payment_methods.last, "data-hook" => "", :id => "payment_method_#{method.id}"}
+          %fieldset
+            = render :partial => "spree/checkout/payment/#{method.method_type}", :locals => { :payment_method => method }
+    %br{:style => "clear:both;"}/
+    %div{"data-hook" => ""}
+%br.space/
+.form-buttons{"data-hook" => "buttons"}
+  = submit_tag t(:save_and_continue), :class => 'continue button primary'
+  :javascript
+    disableSaveOnClick();

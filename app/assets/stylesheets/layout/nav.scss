@@ -173,9 +173,11 @@ nav
                   float: left;
                   text-transform: uppercase;
                   cursor: pointer;
+                  @include transition(all .1s linear);
 
                   &:hover
                   {
+                      @include transition(all .1s linear);
                       color: #59b7ff;
                       text-decoration: none;
                   }
@@ -187,7 +189,7 @@ nav
               }
 
               a {
-                  color: #59b7ff;
+                  // color: #59b7ff;
                   background-position: left bottom;
               }
               span {

@@ -38,6 +38,6 @@ class Dub
       F.prototype = @Application[name].prototype
       this[name] = new F
     else
-      throw "#{name} not found in Application namespace"
+      # throw "#{name} not found in Application namespace"
 
 window._Dub = new Dub

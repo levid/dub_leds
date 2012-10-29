@@ -1,7 +1,7 @@
 class Nav extends $DUB.UI
   constructor: (@options) ->
     this.initUserNav()
-    this.initMainNav()
+    # this.initMainNav()
     this
 
   initUserNav: () ->

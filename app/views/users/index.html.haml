@@ -1,0 +1,32 @@
+.title Manage Users
+.text-container
+  %fieldset
+    %legend All Users
+    .table
+      %table
+        %thead
+          %tr
+            %th Full Name
+            %th User Name
+            %th Email
+            %th Role
+            %th Signed Up
+            %th{:colspan => 2} Actions
+        %tbody
+          - @users.each do |u|
+            %tr
+              %th= link_to_if(can?(:read, User), "#{u.name}", user_path(u.id)) {}
+              %th= u.username
+              %th= u.email
+              %th= u.roles.collect{|r| r.name}
+              %th= u.created_at.to_date
+              %th= link_to_if(can?(:edit, User), 'Edit User', edit_user_path(u.id), :class => 'btn blue') {}
+              %th= link_to_if(can?(:delete, User), 'Delete User', user_path(u.id), :confirm => "Are you sure?", :method => :delete, :class => 'btn black') {}
+          - if @users.length <= 0
+            %tr
+              %th{ :colspan => 7 } 
+                .pad.all10
+                  No users found
+    
+    .links.pad.bottom10
+      = link_to 'Create New User', new_user_path, :class => 'btn orange'

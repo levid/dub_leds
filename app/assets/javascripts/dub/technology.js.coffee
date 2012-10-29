@@ -31,16 +31,16 @@ class Technology extends $DUB
 
         openOverlay = (el) =>
           $('.technology .rim').animate({'opacity': '0.4'}, 250)
-          @overlayContainerDiv = el.find('.overlay-container')
-          el.fadeIn 200, =>
+          @overlayContainerDiv = $(el).find('.overlay-container')
+          $(el).fadeIn 200, =>
             @overlayContainerDiv.center()
             @overlayContainerDiv.fadeIn 300
 
         closeOverlay = (el) =>
           $('.technology .rim').animate({'opacity': '1.0'}, 250)
-          @overlayContainerDiv = el.find('.overlay-container')
+          @overlayContainerDiv = $(el).find('.overlay-container')
           @overlayContainerDiv.fadeOut 300, ->
-            el.fadeOut 200
+            $(el).fadeOut 200
 
         openOverlay(@overlayDiv)
 
