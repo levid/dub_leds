@@ -2,6 +2,23 @@
 @import "../global/variables";
 @import "../global/mixins";
 
+#sema-tag {
+  width: 210px;
+  height: 208px;
+  display: inline-block;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  z-index: 10000;
+  
+  a {
+    width: inherit;
+    height: inherit;
+    display: inline-block;
+    @include background($path + '/tag-sema12press.png', no-repeat, top left, transparent);
+  }
+}
+
 .body
 {
     margin: 0px auto;
