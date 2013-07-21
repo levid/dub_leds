@@ -1,62 +1,30 @@
-# development:
-#   access_key_id: AKIAIHXNGFCN3DDF266A
-#   secret_access_key: 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
-#   bucket: dubleds
-#   directory: dubleds
-#   host: http://dubleds.s3-website-us-west-1.amazonaws.com/
-#   region: us-west-1
-
-# test:
-#   access_key_id: AKIAIHXNGFCN3DDF266A
-#   secret_access_key: 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
-#   bucket: dubleds
-#   directory: dubleds
-#   host: http://dubleds.s3-website-us-west-1.amazonaws.com/
-#   region: us-west-1
-
-# staging:
-#   access_key_id: AKIAIHXNGFCN3DDF266A
-#   secret_access_key: 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
-#   bucket: dubleds
-#   directory: dubleds
-#   host: http://dubleds.s3-website-us-west-1.amazonaws.com/
-#   region: us-west-1
-
-# production:
-#   access_key_id: AKIAIHXNGFCN3DDF266A
-#   secret_access_key: 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
-#   bucket: dubleds
-#   directory: dubleds
-#   host: http://dubleds.s3-website-us-west-1.amazonaws.com/
-#   region: us-west-1
-
 development:
-  access_key_id: AKIAJZOJ72NESXHJOTPQ
-  secret_access_key: 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
+  access_key_id: ENV['S3_KEY_ID']
+  secret_access_key: ENV['S3_SECRET_KEY']
   bucket: dubledsprod
   directory: dubledsprod
   host: http://dubledsprod.s3-website-us-east-1.amazonaws.com/
   region: us-east-1
 
 test:
-  access_key_id: AKIAJZOJ72NESXHJOTPQ
-  secret_access_key: 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
+  access_key_id: ENV['S3_KEY_ID']
+  secret_access_key: ENV['S3_SECRET_KEY']
   bucket: dubledsprod
   directory: dubledsprod
   host: http://dubledsprod.s3-website-us-east-1.amazonaws.com/
   region: us-east-1
 
 staging:
-  access_key_id: AKIAJZOJ72NESXHJOTPQ
-  secret_access_key: 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
+  access_key_id: ENV['S3_KEY_ID']
+  secret_access_key: ENV['S3_SECRET_KEY']
   bucket: dubledsprod
   directory: dubledsprod
   host: http://dubledsprod.s3-website-us-east-1.amazonaws.com/
   region: us-east-1
 
 production:
-  access_key_id: AKIAJZOJ72NESXHJOTPQ
-  secret_access_key: 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
+  access_key_id: ENV['S3_KEY_ID']
+  secret_access_key: ENV['S3_SECRET_KEY']
   bucket: dubledsprod
   directory: dubledsprod
   host: http://dubledsprod.s3-website-us-east-1.amazonaws.com/
