@@ -1,80 +1,39 @@
 development:
-  default_emaiL: i.wooten@gmail.com
-  default_host: localhost:3000
+  default_emaiL: info@dubleds.com
+  default_host: dubleds.com
 
   smtp:
     address: smtp.gmail.com
     port: 587
-    user_name: i.wooten@gmail.com
-    password: $rdc#isaacw
+    user_name: info@dubleds.com
+    password: letdubinn0w
 
 test:
-  default_emaiL: i.wooten@gmail.com
-  default_host: dub-leds.herokuapp.com
+  default_emaiL: info@dubleds.com
+  default_host: dubleds.com
 
   smtp:
     address: smtp.gmail.com
     port: 587
-    user_name: i.wooten@gmail.com
-    password: $rdc#isaacw
+    user_name: info@dubleds.com
+    password: letdubinn0w
 
 staging:
-  default_emaiL: i.wooten@gmail.com
-  default_host: dub-leds.herokuapp.com
+  default_emaiL: info@dubleds.com
+  default_host: dubleds.com
 
   smtp:
     address: smtp.gmail.com
     port: 587
-    user_name: i.wooten@gmail.com
-    password: $rdc#isaacw
+    user_name: info@dubleds.com
+    password: letdubinn0w
 
 production:
-  default_emaiL: i.wooten@gmail.com
-  default_host: dub-leds.herokuapp.com
+  default_emaiL: info@dubleds.com
+  default_host: dubleds.com
 
   smtp:
     address: smtp.gmail.com
     port: 587
-    user_name: i.wooten@gmail.com
-    password: $rdc#isaacw
-
-    #
-    # development:
-    #   default_emaiL: info@dubleds.com
-    #   default_host: dubleds.com
-    #
-    #   smtp:
-    #     address: smtp.gmail.com
-    #     port: 587
-    #     user_name: info@dubleds.com
-    #     password: letdubinn0w
-    #
-    # test:
-    #   default_emaiL: info@dubleds.com
-    #   default_host: dubleds.com
-    #
-    #   smtp:
-    #     address: smtp.gmail.com
-    #     port: 587
-    #     user_name: info@dubleds.com
-    #     password: letdubinn0w
-    #
-    # staging:
-    #   default_emaiL: info@dubleds.com
-    #   default_host: dubleds.com
-    #
-    #   smtp:
-    #     address: smtp.gmail.com
-    #     port: 587
-    #     user_name: info@dubleds.com
-    #     password: letdubinn0w
-    #
-    # production:
-    #   default_emaiL: info@dubleds.com
-    #   default_host: dubleds.com
-    #
-    #   smtp:
-    #     address: smtp.gmail.com
-    #     port: 587
-    #     user_name: info@dubleds.com
-    #     password: letdubinn0w
+    user_name: info@dubleds.com
+    password: letdubinn0w
