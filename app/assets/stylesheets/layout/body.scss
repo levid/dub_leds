@@ -26,7 +26,6 @@
     height: auto;
     width: 100%;
     @include background($path + '/bg-content.png', repeat-x, top center, transparent);
-    overflow: hidden;
 
     .content-container
     {
