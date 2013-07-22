@@ -5,8 +5,8 @@ development:
   smtp:
     address: smtp.gmail.com
     port: 587
-    user_name: ENV['GMAIL_USERNAME']
-    password: ENV['GMAIL_PASSWORD']
+    user_name: <%= ENV['GMAIL_USERNAME'] %>
+    password: <%= ENV['GMAIL_PASSWORD'] %>
 
 test:
   default_emaiL: info@dubleds.com
@@ -15,8 +15,8 @@ test:
   smtp:
     address: smtp.gmail.com
     port: 587
-    user_name: ENV['GMAIL_USERNAME']
-    password: ENV['GMAIL_PASSWORD']
+    user_name: <%= ENV['GMAIL_USERNAME'] %>
+    password: <%= ENV['GMAIL_PASSWORD'] %>
 
 staging:
   default_emaiL: info@dubleds.com
@@ -25,8 +25,8 @@ staging:
   smtp:
     address: smtp.gmail.com
     port: 587
-    user_name: ENV['GMAIL_USERNAME']
-    password: ENV['GMAIL_PASSWORD']
+    user_name: <%= ENV['GMAIL_USERNAME'] %>
+    password: <%= ENV['GMAIL_PASSWORD'] %>
 
 production:
   default_emaiL: info@dubleds.com
@@ -35,5 +35,5 @@ production:
   smtp:
     address: smtp.gmail.com
     port: 587
-    user_name: ENV['GMAIL_USERNAME']
-    password: ENV['GMAIL_PASSWORD']
+    user_name: <%= ENV['GMAIL_USERNAME'] %>
+    password: <%= ENV['GMAIL_PASSWORD'] %>
