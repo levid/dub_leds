@@ -95,4 +95,4 @@ end
 gem 'acts_as_shopping_cart', '~> 0.1.6'
 gem 'spree', '1.1.3'
 gem 'spree_gateway', github: 'spree/spree_gateway', branch: '1-3-stable'
-gem 'spree_analytics', :git => "git@github.com:spree/spree_analytics.git"
+gem 'spree_analytics', :git => "git://github.com/spree/spree_analytics.git"
