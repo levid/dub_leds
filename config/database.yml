@@ -44,8 +44,8 @@
 
 development:
   adapter: mysql2
-  database: dubleds_dev
-  username: dubleds_admin
+  database: dub_leds_dev
+  username: dub_leds_admin
   password: l3d5dub
   pool: 5
   timeout: 5000
@@ -56,8 +56,8 @@ development:
 # Do not set this db to the same as development or production.
 test:
   adapter: mysql2
-  database: dubleds_test
-  username: dubleds_admin
+  database: dub_leds_test
+  username: dub_leds_admin
   password: l3d5dub
   pool: 5
   timeout: 5000
@@ -65,8 +65,8 @@ test:
 
 staging:
   adapter: mysql2
-  database: dubleds_staging
-  username: dubleds_admin
+  database: dub_leds_staging
+  username: dub_leds_admin
   password: l3d5dub
   pool: 5
   timeout: 5000
@@ -74,8 +74,8 @@ staging:
 
 production:
   adapter: mysql2
-  database: dubleds_prod
-  username: dubleds_admin
+  database: dub_leds_prod
+  username: dub_leds_admin
   password: l3d5dub
   pool: 5
   timeout: 5000

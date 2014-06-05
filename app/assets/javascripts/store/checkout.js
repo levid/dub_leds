@@ -1,5 +1,6 @@
 (function($){
   $(document).ready(function(){
+
     if($('#checkout_form_address').is('*')){
 
       $('#checkout_form_address').validate();
