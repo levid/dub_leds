@@ -6,19 +6,19 @@ GIT
       spree_core (>= 1.0.0.rc1)
 
 GIT
-  remote: git://github.com/spree/spree_gateway.git
-  revision: 68758463a28cea89c3cba2ddc64e7a3f281505e0
+  remote: https://github.com/lostapathy/yaml_db
+  revision: 98e9a5dca43e3fedd3268c76a73af40d1bdf1dfd
+  specs:
+    yaml_db (0.2.2)
+
+GIT
+  remote: https://github.com/spree/spree_gateway.git
+  revision: 1e07f8e5835c5772d5e5db6d5e81478af3e11987
   branch: 1-3-stable
   specs:
     spree_gateway (1.2.0.rc2)
       savon (~> 1.2)
       spree_core (~> 1.0)
-
-GIT
-  remote: https://github.com/lostapathy/yaml_db
-  revision: 98e9a5dca43e3fedd3268c76a73af40d1bdf1dfd
-  specs:
-    yaml_db (0.2.2)
 
 GEM
   remote: https://rubygems.org/
@@ -68,10 +68,11 @@ GEM
     acts_as_list (0.1.4)
     acts_as_shopping_cart (0.1.6)
       activerecord (~> 3.0)
-    addressable (2.3.2)
-    akami (1.2.0)
+    addressable (2.8.1)
+      public_suffix (>= 2.0.2, < 6.0)
+    akami (1.2.2)
       gyoku (>= 0.4.0)
-      nokogiri (>= 1.4.0)
+      nokogiri
     arel (3.0.2)
     aws-sdk (1.3.9)
       httparty (~> 0.7)
@@ -217,6 +218,7 @@ GEM
       coderay (~> 1.0.5)
       method_source (~> 0.8)
       slop (~> 3.3.1)
+    public_suffix (5.0.0)
     rabl (0.6.5)
       activesupport (>= 2.3.14)
       multi_json (~> 1.0)
